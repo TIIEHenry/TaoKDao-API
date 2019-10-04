@@ -30,7 +30,7 @@ ScriptEngineCore's method is to separate the various engines from the App code b
 
     
 
-|    |  Code coupling  |  flexible  |  readable  |  learning costs  |
+|    |  code coupling  |  flexible  |  readable  |  learning costs  |
 |  :----:  |  :----:  | :----:  |  :----:  |  :----:  |
 |  Traditional Method  | high |  high  |  low  |  high  |
 |  ScriptEngineCore  | low |  high  |  high  |  low  |
@@ -73,7 +73,9 @@ ScriptEngineCore的方法是通过编写一个通用的中间层(Wrapper)，将�
 
 ## Project Framework(项目架构)
 
-The various engines are separated from the App code by writing a generic Wrapper, and the App interfaces with the Wrapper(通过编写一个通用的中间层(Wrapper)，将各种引擎与App代码分离，而App与Wrapper对接)
+The various engines are separated from the App code by writing a generic Wrapper, and the App interfaces with the Wrapper
+
+通过编写一个通用的中间层(Wrapper)，将各种引擎与App代码分离，而App与Wrapper对接
 
 
 |  Level(层次结构)  |
@@ -83,7 +85,7 @@ The various engines are separated from the App code by writing a generic Wrapper
 |  Script Engine Layer(脚本引擎层)  |
 
 
-|  Package(包)  |  Info(说明)  |
+|  Package  |  Info  |
 |  :----:  |  :----:  |
 |  android  |  Script languages interact with android components(脚本与安卓组件交互)  |
 |  bridge  |  Script languages interact with host code(脚本语言与宿主代码交互)  |
@@ -94,5 +96,8 @@ The various engines are separated from the App code by writing a generic Wrapper
 
 ## Usage(使用说明)
 
-[Repo:ScriptEngine](https://github.com/TIIEHenry/ScriptEngine)With a few existing engines available, it's easy to adapt to other engines(提供了现有的几个已经适配的引擎，照猫画虎就可以轻松地适配其他引擎)
+[Repo:ScriptEngine](https://github.com/TIIEHenry/ScriptEngine) offers several existing engines that have already been adapted, which can easily be adapted to other engines
+
+[Repo:ScriptEngine](https://github.com/TIIEHenry/ScriptEngine)(提供了现有的几个已经适配的引擎，照猫画虎就可以轻松地适配其他引擎)
+
 
