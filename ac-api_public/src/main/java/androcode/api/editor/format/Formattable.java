@@ -1,7 +1,12 @@
 package androcode.api.editor.format;
 
+import android.graphics.drawable.Drawable;
+
+
 public interface Formattable {
 
+
+    boolean isFormattable();
     /**
      * selectionMode会formatSelection
      * 否则formatAll

@@ -13,8 +13,9 @@ import androcode.api.plugin.IPluginManager;
 import androcode.api.tabpager.ITabPagerManager;
 import androcode.api.tabwin.ITabWinIOManager;
 import androcode.api.tabwin.ITabWinManager;
+import dalvik.system.DexClassLoader;
 
-public interface IMainActivity extends LifecycleOwner, ILifecycle {
+public interface IMainActivity extends LifecycleOwner {
     ITabWinManager getTabWinManager();
 
     ITabWinIOManager getTabWinIOManager();
@@ -37,6 +38,10 @@ public interface IMainActivity extends LifecycleOwner, ILifecycle {
     void toast(int id);
 
     void refreshExplorer();
+
+    DexClassLoader loadDex(String filePath);
+
+    DexClassLoader loadDexFile(File file);
 
     /**
      * 与explorer打开相同

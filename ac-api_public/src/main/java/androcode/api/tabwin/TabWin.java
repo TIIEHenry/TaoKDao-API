@@ -9,6 +9,7 @@ import androcode.api.editor.IEditor;
 
 public class TabWin {
     public Drawable icon;
+    public Drawable formatIcon;
     public String label;
     public String path;
     public IEditor editor;

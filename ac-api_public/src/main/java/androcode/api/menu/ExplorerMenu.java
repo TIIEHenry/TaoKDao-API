@@ -34,4 +34,8 @@ public class ExplorerMenu {
     public interface Callback {
         boolean onAction(IMainActivity main, File file);
     }
+    public boolean isSupportSuffix(String suffix){
+        return supportSuffix.contains(suffix) ||
+                (supportSuffix.size() == 0 && !unsupportSuffix.contains(suffix));
+    }
 }

@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-import androcode.api.tabpager.TabPagerMenu;
-
 public interface ITabPager {
     String getTitle();
 

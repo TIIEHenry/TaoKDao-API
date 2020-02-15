@@ -21,7 +21,7 @@
     <string name="tabpager_build">Build</string>
     <string name="tabpager_error">Error</string>
     <string name="drawerleft_spinnar_projectfiles">Project Files</string>
-    <string name="drawerleft_spinnar_projectstructure">Peoject Structure</string>
+    <string name="drawerleft_spinnar_projectstructure">Project Structure</string>
     <string name="drawerleft_spinnar_fileexplorer">File Explorer</string>
     <string name="tabpager_logcat">Logcat</string>
     <string name="tabpager_log_filter_content">Filter Content</string>

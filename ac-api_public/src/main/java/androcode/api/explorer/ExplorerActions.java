@@ -1,18 +1,16 @@
-package androcode.api.activity;
+package androcode.api.explorer;
+
 
 import java.util.ArrayList;
 
-public enum MainActions  {
-    onCreate("onCreate"), onDestory("onDestory"),
-    onPause("onPause"), onResume("onResume"),
-    onStart("onStart"), onStop("onStop"),
-    onAny("onAny"),
+import androcode.api.activity.IMainActivity;
 
-    AllFilesSaved("AllFilesSaved"), AllFilesSavedInThread("AllFilesSavedInThread");
+public enum ExplorerActions {
+    onRefresh("onRefresh");
 
     public String name;
 
-    MainActions(String name) {
+    ExplorerActions(String name) {
         this.name = name;
     }
 

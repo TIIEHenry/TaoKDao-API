@@ -22,7 +22,14 @@ public interface ITabWinManager {
 
     void closeAlltotheRight();
 
-    void createTabWin(TabWin tabWin, boolean selectNewWin);
+    void addTabWin(TabWin tabWin, boolean selectNewWin);
+
+    /**
+     * selectNewWin true
+     */
+    void addTabWin(TabWin tabWin);
+
+    void removeTabWin(TabWin tabWin);
 
     boolean selectTabWin(TabWin tabWin);
 

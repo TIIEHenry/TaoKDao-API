@@ -8,9 +8,9 @@ public interface IPluginLoader {
 
     void initPluginModules();
 
-    void initPluginModule(String id);
+    void initPluginModule(PluginInfo pluginInfo);
 
-    void runPluginModule(String id);
+    void runPluginModule(PluginInfo pluginInfo);
 
     PluginInfo getPluginInfo(String id);
 
