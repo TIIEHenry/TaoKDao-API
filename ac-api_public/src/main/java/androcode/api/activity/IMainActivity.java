@@ -2,14 +2,18 @@ package androcode.api.activity;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LifecycleOwner;
 
 import java.io.File;
 
 import androcode.api.editor.IEditor;
 import androcode.api.plugin.IPluginManager;
+import androcode.api.project.IProjectCreator;
+import androcode.api.project.IProjectLoader;
 import androcode.api.tabpager.ITabPagerManager;
 import androcode.api.tabwin.ITabWinIOManager;
 import androcode.api.tabwin.ITabWinManager;
@@ -22,22 +26,38 @@ public interface IMainActivity extends LifecycleOwner {
 
     IPluginManager getPluginManager();
 
+    IProjectLoader getProjectLoader();
+
+    IProjectCreator getProjectCreator();
+
+    LayoutInflater getLayoutInflater();
+
+    void runOnUiThread(Runnable runnable);
+
+    void reloadPlugin();
+
     void updateIndicatorText(String txt);
 
-    Activity getActivity();
+    AppCompatActivity getActivity();
 
     IEditor getCurrentEditor();
+
+    @Nullable
+    String getProject();
+
+    void setProject(@Nullable String project);
 
     ITabPagerManager getTabPagerManager();
 
     @Nullable
     String getCurrentEditingPath();
 
+//    void setCurrentEditingPath(@Nullable String path);
+
     void toast(Object o);
 
     void toast(int id);
 
-    void refreshExplorer();
 
     DexClassLoader loadDex(String filePath);
 

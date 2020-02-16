@@ -7,6 +7,11 @@ public enum MainActions  {
     onPause("onPause"), onResume("onResume"),
     onStart("onStart"), onStop("onStop"),
     onAny("onAny"),
+    onProjectOpened("onProjectOpened"),
+    onProjectClosed("onProjectClosed"),
+    onFileRenamed("onFileRenamed"),
+    onFileCreated("onFileCreated"),
+    onFileDeleted("onFileDeleted"),
 
     AllFilesSaved("AllFilesSaved"), AllFilesSavedInThread("AllFilesSavedInThread");
 

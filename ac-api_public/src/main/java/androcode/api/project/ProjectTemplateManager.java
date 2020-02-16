@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ProjectTemplateManager {
+
+    //instance for restart activity
+
     public static ProjectTemplateManager instance = new ProjectTemplateManager();
 
     public static ProjectTemplateManager newInstance() {

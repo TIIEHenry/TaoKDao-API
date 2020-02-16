@@ -8,20 +8,20 @@ public class ProjectTemplate {
     public Drawable icon;
     public String label;
     public String description;
-    public Callback click;
-    public Callback longClick;
+    public Callback onCreateTemplate;
+    public Callback onShowDescribtion;
 
-    public ProjectTemplate(Drawable icon, String label, String description, Callback click) {
+    public ProjectTemplate(Drawable icon, String label, String description, Callback onCreateTemplate) {
         this.icon = icon;
         this.label = label;
         this.description = description;
-        this.click = click;
+        this.onCreateTemplate = onCreateTemplate;
     }
 
-    public ProjectTemplate(String label, String description, Callback click) {
+    public ProjectTemplate(String label, String description, Callback onCreateTemplate) {
         this.label = label;
         this.description = description;
-        this.click = click;
+        this.onCreateTemplate = onCreateTemplate;
     }
 
     public interface Callback {

@@ -47,6 +47,8 @@ public interface ITabWinManager {
 
     void openNew(String path);
 
+    List<String> getOpenedFilePaths();
+
     boolean isFileOpened(String path);
 
     //    void setCurrentEditor(IEditor editor);
