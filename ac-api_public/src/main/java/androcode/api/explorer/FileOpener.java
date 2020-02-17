@@ -6,22 +6,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 import androcode.api.activity.IMainActivity;
 import androcode.api.tabwin.ITabWinManager;
 
 public class FileOpener {
     public final String id;
+    @Nullable
     public Drawable icon;
     public String label;
     public String description;
+    @Nullable
     public Callback click;
+    @Nullable
     public Callback longClick;
 
-    public FileOpener(String id, Drawable icon, String label, String description, Callback click) {
+    public FileOpener(String id, @Nullable Drawable icon, String label, String description, Callback click) {
         this.id = id;
         this.icon = icon;
         this.label = label;
@@ -31,6 +31,14 @@ public class FileOpener {
 
     public FileOpener(String id, String label, String description, Callback click) {
         this(id, null, label, description, click);
+    }
+
+    public FileOpener(String id, Drawable icon, String label, String description) {
+        this(id, icon, label, description, null);
+    }
+
+    public FileOpener(String id, String label, String description) {
+        this(id, null, label, description, null);
     }
 
     @Override

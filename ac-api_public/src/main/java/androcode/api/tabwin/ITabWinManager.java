@@ -3,6 +3,7 @@ package androcode.api.tabwin;
 import androidx.annotation.Nullable;
 
 import java.io.File;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -22,12 +23,12 @@ public interface ITabWinManager {
 
     void closeAlltotheRight();
 
-    void addTabWin(TabWin tabWin, boolean selectNewWin);
+    void addTabWin(TabWin tabWin, boolean selectNewWin,FileOpener opener);
 
     /**
      * selectNewWin true
      */
-    void addTabWin(TabWin tabWin);
+    void addTabWin(TabWin tabWin,FileOpener opener);
 
     void removeTabWin(TabWin tabWin);
 
@@ -47,7 +48,12 @@ public interface ITabWinManager {
 
     void openNew(String path);
 
+    boolean openNew(String path,String opener);
+
     List<String> getOpenedFilePaths();
+
+
+    LinkedHashMap<String, FileOpener> getPathOpenerMap();
 
     boolean isFileOpened(String path);
 }

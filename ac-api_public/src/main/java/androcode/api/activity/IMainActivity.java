@@ -68,6 +68,8 @@ public interface IMainActivity extends LifecycleOwner {
      */
     Boolean openFile(File file);
 
+    Boolean openFile(File file, String openerId);
+
     /**
      * 与explorer打开相同
      */

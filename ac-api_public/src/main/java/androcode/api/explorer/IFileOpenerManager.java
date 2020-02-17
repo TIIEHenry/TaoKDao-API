@@ -1,10 +1,13 @@
 package androcode.api.explorer;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+
+import androcode.api.activity.IMainActivity;
 
 public interface IFileOpenerManager {
     HashMap<String, Set<FileOpener>> map = new HashMap<>();
@@ -26,13 +29,13 @@ public interface IFileOpenerManager {
         return list.add(opener);
     }
 
-    default void add(String[] suffix, FileOpener opener){
+    default void add(String[] suffix, FileOpener opener) {
         for (String s : suffix) {
             add(s, opener);
         }
     }
 
-    default Set<FileOpener> get(String suffix){
+    default Set<FileOpener> get(String suffix) {
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             list = new HashSet<>();
@@ -41,7 +44,15 @@ public interface IFileOpenerManager {
         return list;
     }
 
-    default boolean remove(String suffix, FileOpener opener){
+    default HashSet<FileOpener> getAll() {
+        HashSet<FileOpener> openers=new HashSet<>();
+        for (Set<FileOpener> value : map.values()) {
+            openers.addAll(value);
+        }
+        return openers;
+    }
+
+    default boolean remove(String suffix, FileOpener opener) {
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             return false;
@@ -49,7 +60,7 @@ public interface IFileOpenerManager {
         return list.remove(opener);
     }
 
-    default boolean remove(String suffix, String id){
+    default boolean remove(String suffix, String id) {
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             return false;
@@ -65,20 +76,31 @@ public interface IFileOpenerManager {
         return list.remove(fileOpener);
     }
 
-    default void remove(String[] suffixes, FileOpener opener){
+    default void remove(String[] suffixes, FileOpener opener) {
         for (String s : suffixes) {
             remove(s, opener);
         }
     }
 
-    default void remove(String[] suffixes, String id){
+    default void remove(String[] suffixes, String id) {
         for (String s : suffixes) {
             remove(s, id);
         }
     }
 
-    default void clear(){
+    default void clear() {
         map.clear();
+    }
+
+    @Nullable
+    default FileOpener getForId(String id) {
+        for (Set<FileOpener> value : map.values()) {
+            for (FileOpener opener : value) {
+                if (opener.id.equals(id))
+                    return opener;
+            }
+        }
+        return null;
     }
 
 }
