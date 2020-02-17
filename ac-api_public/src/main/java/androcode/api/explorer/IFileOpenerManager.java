@@ -1,31 +1,15 @@
 package androcode.api.explorer;
 
+import androidx.annotation.NonNull;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FileOpenerManager {
-    private static class SingletonInner {
-        private static FileOpenerManager instance = new FileOpenerManager();
-    }
+public interface IFileOpenerManager {
+    HashMap<String, Set<FileOpener>> map = new HashMap<>();
 
-    public static FileOpenerManager getInstance() {
-        return SingletonInner.instance;
-    }
-
-    private FileOpenerManager() {
-
-    }
-
-
-    public HashMap<String, Set<FileOpener>> map = new HashMap<>();
-
-    /**
-     * @param suffix 后缀
-     * @param opener fileopener
-     * @return issuccess
-     */
-    public boolean add(String suffix, FileOpener opener) {
+    default boolean add(String suffix, FileOpener opener) {
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             list = new HashSet<>();
@@ -42,13 +26,13 @@ public class FileOpenerManager {
         return list.add(opener);
     }
 
-    public void add(String[] suffix, FileOpener opener) {
+    default void add(String[] suffix, FileOpener opener){
         for (String s : suffix) {
             add(s, opener);
         }
     }
 
-    public Set<FileOpener> get(String suffix) {
+    default Set<FileOpener> get(String suffix){
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             list = new HashSet<>();
@@ -57,8 +41,7 @@ public class FileOpenerManager {
         return list;
     }
 
-
-    public boolean remove(String suffix, FileOpener opener) {
+    default boolean remove(String suffix, FileOpener opener){
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             return false;
@@ -66,7 +49,7 @@ public class FileOpenerManager {
         return list.remove(opener);
     }
 
-    public boolean remove(String suffix, String id) {
+    default boolean remove(String suffix, String id){
         Set<FileOpener> list = map.get(suffix);
         if (list == null) {
             return false;
@@ -82,19 +65,20 @@ public class FileOpenerManager {
         return list.remove(fileOpener);
     }
 
-    public void remove(String[] suffixs, FileOpener opener) {
-        for (String s : suffixs) {
+    default void remove(String[] suffixes, FileOpener opener){
+        for (String s : suffixes) {
             remove(s, opener);
         }
     }
 
-    public void remove(String[] suffixs, String id) {
-        for (String s : suffixs) {
+    default void remove(String[] suffixes, String id){
+        for (String s : suffixes) {
             remove(s, id);
         }
     }
 
-    public void clear() {
+    default void clear(){
         map.clear();
     }
+
 }

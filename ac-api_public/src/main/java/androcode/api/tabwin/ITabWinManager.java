@@ -50,7 +50,4 @@ public interface ITabWinManager {
     List<String> getOpenedFilePaths();
 
     boolean isFileOpened(String path);
-
-    //    void setCurrentEditor(IEditor editor);
-    void showOpenerChooserDialog(Set<FileOpener> set, File file);
 }
