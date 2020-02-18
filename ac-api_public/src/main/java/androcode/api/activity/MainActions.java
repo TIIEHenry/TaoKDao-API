@@ -12,6 +12,10 @@ public enum MainActions  {
     onFileRenamed("onFileRenamed"),
     onFileCreated("onFileCreated"),
     onFileDeleted("onFileDeleted"),
+    //screen onOrientationChanged
+    onOrientationChanged("onOrientationChanged"),
+    onHorizontal("onHorizontal"),
+    onVertical("onVertical"),
 
     AllFilesSaved("AllFilesSaved"), AllFilesSavedInThread("AllFilesSavedInThread");
 

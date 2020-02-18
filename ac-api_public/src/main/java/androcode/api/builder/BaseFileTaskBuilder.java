@@ -49,26 +49,20 @@ public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
     @Override
     public boolean onBuild(final IMainActivity activity, final File config, final ICallback<File> callback) {
         callback.onPrepare();
-        mExecutorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                callback.onPrepareInThread();
-                ProgressUser.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
-                try {
-                    buildTask(activity, config);
-                    callback.onDone(config);
-                    activity.getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
+        mExecutorService.execute(() -> {
+            callback.onPrepareInThread();
+            ProgressUser.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
+            try {
+                buildTask(activity, config);
+                callback.onDone(config);
+                activity.getActivity().runOnUiThread(() -> {
 
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    callback.onError(e.getMessage());
-                } finally {
-                    ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
-                }
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+                callback.onError(e.getMessage());
+            } finally {
+                ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
             }
         });
         return true;
