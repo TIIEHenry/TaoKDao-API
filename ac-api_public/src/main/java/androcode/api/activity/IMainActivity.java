@@ -1,6 +1,5 @@
 package androcode.api.activity;
 
-import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 
@@ -10,13 +9,15 @@ import androidx.lifecycle.LifecycleOwner;
 
 import java.io.File;
 
+import androcode.api.drawer.IDrawerBottom;
+import androcode.api.drawer.IDrawerStart;
 import androcode.api.editor.IEditor;
+import androcode.api.explorer.IFileOpenerManager;
 import androcode.api.plugin.IPluginManager;
 import androcode.api.project.IProjectCreator;
 import androcode.api.project.IProjectLoader;
-import androcode.api.tabpager.ITabPagerManager;
-import androcode.api.tabwin.ITabWinIOManager;
-import androcode.api.tabwin.ITabWinManager;
+import androcode.api.content.ITabWinIOManager;
+import androcode.api.content.ITabWinManager;
 import dalvik.system.DexClassLoader;
 
 public interface IMainActivity extends LifecycleOwner {
@@ -27,8 +28,11 @@ public interface IMainActivity extends LifecycleOwner {
     IPluginManager getPluginManager();
 
     IProjectLoader getProjectLoader();
+//    IProjectBuilder getProjectBuilder();
 
     IProjectCreator getProjectCreator();
+
+    IFileOpenerManager getFileOpenerManager();
 
     LayoutInflater getLayoutInflater();
 
@@ -47,7 +51,8 @@ public interface IMainActivity extends LifecycleOwner {
 
     void setProject(@Nullable String project);
 
-    ITabPagerManager getTabPagerManager();
+    IDrawerStart getDrawerStart();
+    IDrawerBottom getDrawerBottom();
 
     @Nullable
     String getCurrentEditingPath();

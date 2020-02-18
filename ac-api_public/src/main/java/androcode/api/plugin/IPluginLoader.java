@@ -21,4 +21,10 @@ public interface IPluginLoader {
     PluginInfo getPluginInfoFromAPK(File apk);
 
     PluginInfo getPluginInfoFromZIP(File zip);
+
+
+    void runPluginModuleFunc(String funcName, String id);
+
+    void runPluginModuleFunc(String funcName);
+
 }

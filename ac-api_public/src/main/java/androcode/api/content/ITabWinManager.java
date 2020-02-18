@@ -1,11 +1,9 @@
-package androcode.api.tabwin;
+package androcode.api.content;
 
 import androidx.annotation.Nullable;
 
-import java.io.File;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Set;
 
 import androcode.api.editor.IEditor;
 import androcode.api.explorer.FileOpener;
@@ -23,12 +21,12 @@ public interface ITabWinManager {
 
     void closeAlltotheRight();
 
-    void addTabWin(TabWin tabWin, boolean selectNewWin,FileOpener opener);
+    void addTabWin(TabWin tabWin, boolean selectNewWin, FileOpener opener);
 
     /**
      * selectNewWin true
      */
-    void addTabWin(TabWin tabWin,FileOpener opener);
+    void addTabWin(TabWin tabWin, FileOpener opener);
 
     void removeTabWin(TabWin tabWin);
 

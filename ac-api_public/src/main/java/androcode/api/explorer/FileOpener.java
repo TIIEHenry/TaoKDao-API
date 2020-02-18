@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 
 import androcode.api.activity.IMainActivity;
-import androcode.api.tabwin.ITabWinManager;
+import androcode.api.content.ITabWinManager;
 
 public class FileOpener {
     public final String id;

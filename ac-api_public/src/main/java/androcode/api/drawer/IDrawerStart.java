@@ -7,5 +7,5 @@ public interface IDrawerStart extends IDrawer {
 
     boolean removeExplorerFragment(IExplorerFragment iExplorerFragment);
 
-    void setCurrentExplorerFragment(IExplorerFragment iExplorerFragment);
+    void showExplorerFragment(IExplorerFragment iExplorerFragment);
 }

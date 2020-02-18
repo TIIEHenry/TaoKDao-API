@@ -4,17 +4,17 @@ import android.content.Intent;
 
 import java.io.File;
 
-//install unistall  file manage
+//install uninstall  file manage
 public interface IPluginManager {
     IPluginLoader getPluginLoader();
 
-    void reinitPlugin();
+    void reloadPlugin();
 
     boolean requestInstallFromIntent(Intent intent);
 
     boolean requestInstallFromFile(File file);
 
-    void requestUnistall(String id);
+    void requestUninstall(String id);
 
     File getPluginModuleDirFile(String id);
 

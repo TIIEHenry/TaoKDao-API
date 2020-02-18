@@ -1,4 +1,4 @@
-package androcode.api.tabwin;
+package androcode.api.content;
 
 public interface ITabWinIOManager {
     void saveCurrent();

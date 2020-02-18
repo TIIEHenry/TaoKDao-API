@@ -1,4 +1,4 @@
-package androcode.api.tabwin;
+package androcode.api.content;
 
 import android.graphics.drawable.Drawable;
 import android.view.View;

@@ -1,4 +1,4 @@
-package androcode.api.tabpager;
+package androcode.api.drawer.drawerbottom;
 
 import android.graphics.drawable.Drawable;
 
@@ -6,15 +6,15 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public interface ITabPager {
+public interface ITabFragment {
     String getTitle();
 
     Drawable getIcon();
 
     Fragment getFragment();
 
-    ArrayList<TabPagerMenu> getStartMenuList();
+    ArrayList<TabFragmentMenu> getStartMenuList();
 
-    ArrayList<TabPagerMenu> getEndMenuList();
+    ArrayList<TabFragmentMenu> getEndMenuList();
 
 }

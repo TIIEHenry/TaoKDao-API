@@ -1,28 +1,26 @@
-package androcode.api.tabwin;
-
+package androcode.api.drawer.drawerbottom;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
-public class TabWinViewPager extends ViewPager {
+public class TabFragmentViewPager extends ViewPager {
     public static int dp2px(float dpValue) {
         return (int) (0.5f + dpValue * Resources.getSystem().getDisplayMetrics().density);
     }
 
-    public TabWinViewPager(@NonNull Context context) {
+    public TabFragmentViewPager(@NonNull Context context) {
         super(context);
         init();
     }
 
-    public TabWinViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public TabFragmentViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -30,8 +28,8 @@ public class TabWinViewPager extends ViewPager {
         setTouchEdge(20, 40, 55);
     }
 
-    public void setTouchEdge(int horizental, int top, int bottom) {
-        touchEdgeHorizental = dp2px(horizental);
+    public void setTouchEdge(int horizontal, int top, int bottom) {
+        touchEdgeHorizontal = dp2px(horizontal);
         touchEdgeTop = dp2px(top);
         touchEdgeBottom = dp2px(bottom);
     }
@@ -43,13 +41,13 @@ public class TabWinViewPager extends ViewPager {
         return rect.contains(ev.getX(), ev.getY());
     }
 
-    private static int touchEdgeHorizental = 100;
+    private static int touchEdgeHorizontal = 100;
     private static int touchEdgeTop = 100;
     private static int touchEdgeBottom = 100;
 
     public RectF calcViewScreenLocation() {
         // 获取控件在屏幕中的位置，返回的数组分别为控件左顶点的 x、y 的值
-        return new RectF(touchEdgeHorizental, touchEdgeTop, getWidth() - touchEdgeHorizental,
+        return new RectF(touchEdgeHorizontal, touchEdgeTop, getWidth() - touchEdgeHorizontal,
                 getHeight() - touchEdgeBottom);
     }
 
