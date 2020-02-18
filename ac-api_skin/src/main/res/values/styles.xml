@@ -1,10 +1,9 @@
 <resources>
 
     <style name="AppTheme" parent="XUITheme.Phone">
-        <item name="android:windowBackground">@drawable/app_splash</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowTranslucentStatus">true</item>
-
+        <!--        <item name="android:windowBackground">@drawable/app_splash</item>-->
+        <!--        <item name="android:windowTranslucentNavigation">true</item>-->
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
     </style>
 
     <style name="MainLightDefault" parent="MainBaseDefault">
@@ -14,12 +13,14 @@
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
         <item name="colorAccent">#222222</item>
         <!-- 控件选中时的颜色,默认使用colorAccent -->
-<!--        <item name="android:colorControlActivated">#FF7F50</item>-->
+        <!--        <item name="android:colorControlActivated">#FF7F50</item>-->
         <!-- 控件按压时的色调-->
         <item name="android:colorControlHighlight">#222222</item>
         <!--如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+
+        <item name="android:windowBackground">#f2f2f2</item>
 
         <item name="main_appbar_less_color">#78909c</item>
         <item name="main_appbar_color">#546e7a</item>
@@ -63,6 +64,8 @@
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
 
+        <item name="android:windowBackground">#343635</item>
+
         <item name="main_appbar_less_color">#424242</item>
         <item name="main_appbar_color">#2c2e2d</item>
         <item name="main_appbar_more_color">#202121</item>
@@ -92,10 +95,20 @@
         <item name="main_bottom_log_a_color">#ee3333</item>
     </style>
 
-    <style name="MainBaseDefault" parent="XUITheme.Phone">
+    <style name="MainBaseDefault" parent="AppTheme">
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@color/splash_background</item>
+    </style>
+
+    <style name="ActivitySplash" parent="AppTheme">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/splash_background</item>
+        <item name="colorPrimary">@color/splash_background</item>
+        <item name="colorPrimaryDark">@color/splash_background</item>
+        <item name="android:windowBackground">@drawable/app_splash</item>
     </style>
 </resources>
