@@ -10,12 +10,20 @@
         <item name="android:statusBarColor">#546e7a</item>
         <item name="colorPrimaryDark">#546e7a</item>
         <item name="colorPrimary">#546e7a</item>
+
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
-        <item name="colorAccent">#222222</item>
+        <item name="colorAccent">#546e7a</item>
         <!-- 控件选中时的颜色,默认使用colorAccent -->
-        <!--        <item name="android:colorControlActivated">#FF7F50</item>-->
+<!--        <item name="android:colorControlActivated">#000000</item>-->
         <!-- 控件按压时的色调-->
-        <item name="android:colorControlHighlight">#222222</item>
+
+        <item name="android:colorControlHighlight">#546e7a</item>
+        <!--        Button，textView的文字颜色-->
+        <item name="android:textColor">#222222</item>
+        <!--        默认EditView输入框字体的颜色。-->
+        <item name="android:editTextColor">#222222</item>
+        <!--        应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
+        <item name="android:textColorPrimary">#000000</item>
         <!--如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
@@ -58,8 +66,16 @@
         <item name="colorPrimary">#2c2e2d</item>
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
         <item name="colorAccent">#dddddd</item>
+        <!--        <item name="android:colorControlActivated">#202121</item>-->
         <!-- 控件按压时的色调-->
-        <item name="android:colorControlHighlight">#444444</item>
+
+        <item name="android:colorControlHighlight">#dddddd</item>
+        <!--        Button，textView的文字颜色-->
+        <item name="android:textColor">#CCCCCC</item>
+        <!--        默认EditView输入框字体的颜色。-->
+        <item name="android:editTextColor">#CCCCCC</item>
+        <!--        应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
+        <item name="android:textColorPrimary">#dddddd</item>
         <!--如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
@@ -99,7 +115,6 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/splash_background</item>
     </style>
 
     <style name="ActivitySplash" parent="AppTheme">

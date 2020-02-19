@@ -44,7 +44,7 @@ public interface ITabWinManager {
 
     List<TabWin> getTabWinList();
 
-    void openNew(String path);
+    boolean openNew(String path);
 
     boolean openNew(String path,String opener);
 

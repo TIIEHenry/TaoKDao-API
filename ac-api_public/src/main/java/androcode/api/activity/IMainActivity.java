@@ -46,6 +46,8 @@ public interface IMainActivity extends LifecycleOwner {
 
     IEditor getCurrentEditor();
 
+    String getLanguageCountry();
+
     @Nullable
     String getProject();
 
