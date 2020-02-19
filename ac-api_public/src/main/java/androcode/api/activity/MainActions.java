@@ -14,8 +14,8 @@ public enum MainActions  {
     onFileDeleted("onFileDeleted"),
     //screen onOrientationChanged
     onOrientationChanged("onOrientationChanged"),
-    onHorizontal("onHorizontal"),
-    onVertical("onVertical"),
+    onLandscape("onLandscape"),
+    onPortrait("onPortrait"),
 
     AllFilesSaved("AllFilesSaved"), AllFilesSavedInThread("AllFilesSavedInThread");
 
