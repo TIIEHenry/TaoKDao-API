@@ -1,6 +1,6 @@
 package androcode.api.builder.base;
 
-import androcode.api.activity.IMainActivity;
+import androcode.api.main.IMainActivity;
 
 public interface ITask<I>  {
         boolean runTask(IMainActivity activity, I config) throws Exception;

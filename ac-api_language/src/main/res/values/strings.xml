@@ -17,14 +17,15 @@
     <string name="file_saved_all">All files have been saved</string>
     <string name="error">Error</string>
     <string name="plugin">Plugin</string>
-    <string name="tabpager_search">Search</string>
-    <string name="tabpager_build">Build</string>
-    <string name="tabpager_error">Error</string>
     <string name="drawerleft_spinnar_projectfiles">Project Files</string>
     <string name="drawerleft_spinnar_projectstructure">Project Structure</string>
     <string name="drawerleft_spinnar_fileexplorer">File Explorer</string>
-    <string name="tabpager_logcat">Logcat</string>
-    <string name="tabpager_log_filter_content">Filter Content</string>
+    <string name="tabfragment_search">Search</string>
+    <string name="tabfragment_build">Build</string>
+    <string name="tabfragment_tips">Tips</string>
+    <string name="tabfragment_terminal">Terminal</string>
+    <string name="tabfragment_logcat">Logcat</string>
+    <string name="tabfragment_logcat_filter_content">Filter Content</string>
     <string name="main_tab_popupmenu_closecurrent">Close Current</string>
     <string name="main_tab_popupmenu_closeother">Close Other</string>
     <string name="main_tab_popupmenu_closeall">Close All</string>
@@ -60,6 +61,5 @@
     <string name="genkey_state_name">State Name:</string>
     <string name="genkey_country">Country@</string>
     <string name="splash_initializing">Initializing</string>
-    <string name="tabpager_terminal">Terminal</string>
 
 </resources>

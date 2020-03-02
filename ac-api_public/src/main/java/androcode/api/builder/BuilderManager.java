@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import androcode.api.activity.IMainActivity;
+import androcode.api.main.IMainActivity;
 import androcode.api.builder.base.ICallback;
 import androcode.api.project.ProjectConfig;
 

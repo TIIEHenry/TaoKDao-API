@@ -2,12 +2,9 @@ package androcode.api.explorer;
 
 import androidx.annotation.Nullable;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-
-import androcode.api.activity.IMainActivity;
 
 public interface IFileOpenerManager {
     HashMap<String, Set<FileOpener>> map = new HashMap<>();

@@ -17,14 +17,15 @@
 	<string name="setting_help">帮助</string>
 	<string name="setting_build">构建</string>
 	<string name="setting_editor">代码编辑器</string>
-	<string name="tabpager_search">搜索</string>
-	<string name="tabpager_build">构建</string>
-	<string name="tabpager_error">错误</string>
+	<string name="tabfragment_search">搜索</string>
+	<string name="tabfragment_build">构建</string>
+	<string name="tabfragment_tips">建议</string>
+	<string name="tabfragment_terminal">终端</string>
+    <string name="tabfragment_logcat">日志</string>
+	<string name="tabfragment_logcat_filter_content">过滤内容</string>
 	<string name="drawerleft_spinnar_projectfiles">项目文件</string>
 	<string name="drawerleft_spinnar_projectstructure">项目结构</string>
 	<string name="drawerleft_spinnar_fileexplorer">文件浏览</string>
-    <string name="tabpager_logcat">日志</string>
-	<string name="tabpager_log_filter_content">过滤内容</string>
     <string name="main_tab_popupmenu_closecurrent">关闭当前</string>
 	<string name="main_tab_popupmenu_closeother">关闭其他</string>
 	<string name="main_tab_popupmenu_closeall">关闭所有</string>
@@ -59,5 +60,4 @@
 	<string name="genkey_state_name">地区：</string>
 	<string name="genkey_country">国家：</string>
     <string name="splash_initializing">正在初始化…</string>
-	<string name="tabpager_terminal">终端</string>
 </resources>

@@ -29,8 +29,9 @@ android {
 
 dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:2.2.0"
-    implementation 'androidx.fragment:fragment:1.2.1'
+    implementation 'androidx.fragment:fragment:1.2.2'
 
-    implementation 'com.google.android.material:material:1.2.0-alpha04'
+    implementation 'com.github.xuexiangjys:XUI:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
     implementation 'com.alibaba:fastjson:1.1.71.android'
 }

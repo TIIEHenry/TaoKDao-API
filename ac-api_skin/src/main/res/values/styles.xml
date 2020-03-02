@@ -6,115 +6,126 @@
         <!--        <item name="android:windowTranslucentStatus">true</item>-->
     </style>
 
-    <style name="MainLightDefault" parent="MainBaseDefault">
-        <item name="android:statusBarColor">#546e7a</item>
-        <item name="colorPrimaryDark">#546e7a</item>
-        <item name="colorPrimary">#546e7a</item>
+    <style name="MainLightDefault" parent="MainBaseLightDefault">
+        <item name="xui_config_color_background">@color/main_content_color_light</item>
+
+        <item name="android:statusBarColor">@color/main_appbar_color_light</item>
+        <item name="colorPrimaryDark">@color/main_appbar_color_light</item>
+        <item name="colorPrimary">@color/main_appbar_color_light</item>
 
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
-        <item name="colorAccent">#546e7a</item>
+        <item name="colorAccent">@color/main_appbar_color_light</item>
         <!-- 控件选中时的颜色,默认使用colorAccent -->
 <!--        <item name="android:colorControlActivated">#000000</item>-->
         <!-- 控件按压时的色调-->
 
-        <item name="android:colorControlHighlight">#546e7a</item>
+        <item name="android:colorControlHighlight">@color/main_appbar_color_light</item>
         <!--        Button，textView的文字颜色-->
-        <item name="android:textColor">#222222</item>
+        <item name="android:textColor">@color/main_content_text_color_light</item>
         <!--        默认EditView输入框字体的颜色。-->
-        <item name="android:editTextColor">#222222</item>
+        <item name="android:editTextColor">@color/main_content_text_color_light</item>
         <!--        应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
         <item name="android:textColorPrimary">#000000</item>
         <!--如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
 
-        <item name="android:windowBackground">#f2f2f2</item>
+        <item name="android:windowBackground">@color/main_bottom_color_light</item>
 
-        <item name="main_appbar_less_color">#78909c</item>
-        <item name="main_appbar_color">#546e7a</item>
-        <item name="main_appbar_more_color">#455a64</item>
-        <item name="main_appbar_text_less_color">#bbbbbb</item>
-        <item name="main_appbar_text_color">#f2f2f2</item>
-        <item name="main_appbar_text_more_color">#ffffff</item>
-
-        <item name="main_content_less_color">#bbbbbb</item>
-        <item name="main_content_color">#f2f2f2</item>
-        <item name="main_content_more_color">#ffffff</item>
-        <item name="main_content_text_less_color">#303030</item>
-        <item name="main_content_text_color">#222222</item>
-        <item name="main_content_text_more_color">#000000</item>
-
-        <item name="main_bottom_less_color">#999999</item>
-        <item name="main_bottom_color">#f2f2f2</item>
-        <item name="main_bottom_more_color">#ffffff</item>
-        <item name="main_bottom_text_less_color">#303030</item>
-        <item name="main_bottom_text_color">#333333</item>
-        <item name="main_bottom_text_more_color">#222222</item>
-
-        <item name="main_bottom_log_v_color">#333333</item>
-        <item name="main_bottom_log_d_color">#333333</item>
-        <item name="main_bottom_log_i_color">#333333</item>
-        <item name="main_bottom_log_w_color">#333333</item>
-        <item name="main_bottom_log_e_color">#ee3333</item>
-        <item name="main_bottom_log_a_color">#ee3333</item>
     </style>
 
 
-    <style name="MainDarkDefault" parent="MainBaseDefault">
-        <item name="android:statusBarColor">#2c2e2d</item>
-        <item name="colorPrimaryDark">#2c2e2d</item>
-        <item name="colorPrimary">#2c2e2d</item>
+    <style name="MainDarkDefault" parent="MainBaseDarkDefault">
+
+        <item name="xui_config_color_background">@color/main_content_color_dark</item>
+
+        <item name="android:statusBarColor">@color/main_appbar_color_dark</item>
+        <item name="colorPrimaryDark">@color/main_appbar_color_dark</item>
+        <item name="colorPrimary">@color/main_appbar_color_dark</item>
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
-        <item name="colorAccent">#dddddd</item>
+        <item name="colorAccent">@color/main_appbar_text_color_dark</item>
         <!--        <item name="android:colorControlActivated">#202121</item>-->
         <!-- 控件按压时的色调-->
 
-        <item name="android:colorControlHighlight">#dddddd</item>
+        <item name="android:colorControlHighlight">@color/main_appbar_text_color_dark</item>
         <!--        Button，textView的文字颜色-->
-        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:textColor">@color/main_content_text_color_dark</item>
         <!--        默认EditView输入框字体的颜色。-->
-        <item name="android:editTextColor">#CCCCCC</item>
+        <item name="android:editTextColor">@color/main_content_text_color_dark</item>
         <!--        应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
-        <item name="android:textColorPrimary">#dddddd</item>
+        <item name="android:textColorPrimary">@color/main_appbar_text_color_dark</item>
         <!--如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
 
-        <item name="android:windowBackground">#343635</item>
+        <item name="android:windowBackground">@color/main_bottom_color_dark</item>
 
-        <item name="main_appbar_less_color">#424242</item>
-        <item name="main_appbar_color">#2c2e2d</item>
-        <item name="main_appbar_more_color">#202121</item>
-        <item name="main_appbar_text_less_color">#bbbbbb</item>
-        <item name="main_appbar_text_color">#dddddd</item>
-        <item name="main_appbar_text_more_color">#eeffffff</item>
-
-        <item name="main_content_less_color">#444444</item>
-        <item name="main_content_color">#343635</item>
-        <item name="main_content_more_color">#202121</item>
-        <item name="main_content_text_less_color">#aaaaaa</item>
-        <item name="main_content_text_color">#CCCCCC</item>
-        <item name="main_content_text_more_color">#ffffff</item>
-
-        <item name="main_bottom_less_color">#444444</item>
-        <item name="main_bottom_color">#343635</item>
-        <item name="main_bottom_more_color">#202121</item>
-        <item name="main_bottom_text_less_color">#bbbbbb</item>
-        <item name="main_bottom_text_color">#dddddd</item>
-        <item name="main_bottom_text_more_color">#eeffffff</item>
-
-        <item name="main_bottom_log_v_color">#dddddd</item>
-        <item name="main_bottom_log_d_color">#dddddd</item>
-        <item name="main_bottom_log_i_color">#dddddd</item>
-        <item name="main_bottom_log_w_color">#dddddd</item>
-        <item name="main_bottom_log_e_color">#ee3333</item>
-        <item name="main_bottom_log_a_color">#ee3333</item>
     </style>
 
+    <style name="MainBaseLightDefault" parent="MainBaseDefault">
+        <item name="main_appbar_less_color">@color/main_appbar_less_color_light</item>
+        <item name="main_appbar_color">@color/main_appbar_color_light</item>
+        <item name="main_appbar_more_color">@color/main_appbar_more_color_light</item>
+        <item name="main_appbar_text_less_color">@color/main_appbar_text_less_color_light</item>
+        <item name="main_appbar_text_color">@color/main_appbar_text_color_light</item>
+        <item name="main_appbar_text_more_color">@color/main_appbar_text_more_color_light</item>
+
+        <item name="main_content_less_color">@color/main_content_less_color_light</item>
+        <item name="main_content_color">@color/main_content_color_light</item>
+        <item name="main_content_color_highlight">@color/main_content_color_highlight_light</item>
+        <item name="main_content_text_less_color">@color/main_content_text_less_color_light</item>
+        <item name="main_content_text_color">@color/main_content_text_color_light</item>
+        <item name="main_content_text_more_color">@color/main_content_text_more_color_light</item>
+
+        <item name="main_bottom_less_color">@color/main_bottom_less_color_light</item>
+        <item name="main_bottom_color">@color/main_bottom_color_light</item>
+        <item name="main_bottom_more_color">@color/main_bottom_more_color_light</item>
+        <item name="main_bottom_text_less_color">@color/main_bottom_text_less_color_light</item>
+        <item name="main_bottom_text_color">@color/main_bottom_text_color_light</item>
+        <item name="main_bottom_text_more_color">@color/main_bottom_text_more_color_light</item>
+
+        <item name="main_bottom_log_v_color">@color/main_bottom_log_v_color_light</item>
+        <item name="main_bottom_log_d_color">@color/main_bottom_log_d_color_light</item>
+        <item name="main_bottom_log_i_color">@color/main_bottom_log_i_color_light</item>
+        <item name="main_bottom_log_w_color">@color/main_bottom_log_w_color_light</item>
+        <item name="main_bottom_log_e_color">@color/main_bottom_log_e_color_light</item>
+        <item name="main_bottom_log_a_color">@color/main_bottom_log_a_color_light</item>
+    </style>
+    <style name="MainBaseDarkDefault" parent="MainBaseDefault">
+        <item name="main_appbar_less_color">@color/main_appbar_less_color_dark</item>
+        <item name="main_appbar_color">@color/main_appbar_color_dark</item>
+        <item name="main_appbar_more_color">@color/main_appbar_more_color_dark</item>
+        <item name="main_appbar_text_less_color">@color/main_appbar_text_less_color_dark</item>
+        <item name="main_appbar_text_color">@color/main_appbar_text_color_dark</item>
+        <item name="main_appbar_text_more_color">@color/main_appbar_text_more_color_dark</item>
+
+        <item name="main_content_less_color">@color/main_content_less_color_dark</item>
+        <item name="main_content_color">@color/main_content_color_dark</item>
+        <item name="main_content_color_highlight">@color/main_content_color_highlight_dark</item>
+        <item name="main_content_text_less_color">@color/main_content_text_less_color_dark</item>
+        <item name="main_content_text_color">@color/main_content_text_color_dark</item>
+        <item name="main_content_text_more_color">@color/main_content_text_more_color_dark</item>
+
+        <item name="main_bottom_less_color">@color/main_bottom_less_color_dark</item>
+        <item name="main_bottom_color">@color/main_bottom_color_dark</item>
+        <item name="main_bottom_more_color">@color/main_bottom_more_color_dark</item>
+        <item name="main_bottom_text_less_color">@color/main_bottom_text_less_color_dark</item>
+        <item name="main_bottom_text_color">@color/main_bottom_text_color_dark</item>
+        <item name="main_bottom_text_more_color">@color/main_bottom_text_more_color_dark</item>
+
+        <item name="main_bottom_log_v_color">@color/main_bottom_log_v_color_dark</item>
+        <item name="main_bottom_log_d_color">@color/main_bottom_log_d_color_dark</item>
+        <item name="main_bottom_log_i_color">@color/main_bottom_log_i_color_dark</item>
+        <item name="main_bottom_log_w_color">@color/main_bottom_log_w_color_dark</item>
+        <item name="main_bottom_log_e_color">@color/main_bottom_log_e_color_dark</item>
+        <item name="main_bottom_log_a_color">@color/main_bottom_log_a_color_dark</item>
+    </style>
     <style name="MainBaseDefault" parent="AppTheme">
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="main_content_float_background_color">#44000000</item>
+        <item name="main_content_float_foreground_color">#ffffff</item>
     </style>
 
     <style name="ActivitySplash" parent="AppTheme">

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_appbar_less_color_light">#64808E</color>
+    <color name="main_appbar_color_light">#546e7a</color>
+    <color name="main_appbar_more_color_light">#455a64</color>
+    <color name="main_appbar_text_less_color_light">#bbbbbb</color>
+    <color name="main_appbar_text_color_light">#f2f2f2</color>
+    <color name="main_appbar_text_more_color_light">#ffffff</color>
+
+    <color name="main_content_less_color_light">#bbbbbb</color>
+    <color name="main_content_color_light">#ffffff</color>
+    <color name="main_content_color_highlight_light">#f2f2f2</color>
+    <color name="main_content_text_less_color_light">#303030</color>
+    <color name="main_content_text_color_light">#222222</color>
+    <color name="main_content_text_more_color_light">#000000</color>
+
+    <color name="main_bottom_less_color_light">#999999</color>
+    <color name="main_bottom_color_light">#f2f2f2</color>
+    <color name="main_bottom_more_color_light">#ffffff</color>
+    <color name="main_bottom_text_less_color_light">#303030</color>
+    <color name="main_bottom_text_color_light">#333333</color>
+    <color name="main_bottom_text_more_color_light">#222222</color>
+
+    <color name="main_bottom_log_v_color_light">#333333</color>
+    <color name="main_bottom_log_d_color_light">#333333</color>
+    <color name="main_bottom_log_i_color_light">#333333</color>
+    <color name="main_bottom_log_w_color_light">#333333</color>
+    <color name="main_bottom_log_e_color_light">#ee3333</color>
+    <color name="main_bottom_log_a_color_light">#ee3333</color>
+
+    <color name="main_appbar_less_color_dark">#424242</color>
+    <color name="main_appbar_color_dark">#2c2e2d</color>
+    <color name="main_appbar_more_color_dark">#202121</color>
+    <color name="main_appbar_text_less_color_dark">#bbbbbb</color>
+    <color name="main_appbar_text_color_dark">#dddddd</color>
+    <color name="main_appbar_text_more_color_dark">#eeffffff</color>
+
+    <color name="main_content_less_color_dark">#444444</color>
+    <color name="main_content_color_dark">#343635</color>
+    <color name="main_content_color_highlight_dark">#202121</color>
+    <color name="main_content_text_less_color_dark">#aaaaaa</color>
+    <color name="main_content_text_color_dark">#CCCCCC</color>
+    <color name="main_content_text_more_color_dark">#ffffff</color>
+
+    <color name="main_bottom_less_color_dark">#444444</color>
+    <color name="main_bottom_color_dark">#343635</color>
+    <color name="main_bottom_more_color_dark">#202121</color>
+    <color name="main_bottom_text_less_color_dark">#bbbbbb</color>
+    <color name="main_bottom_text_color_dark">#dddddd</color>
+    <color name="main_bottom_text_more_color_dark">#eeffffff</color>
+
+    <color name="main_bottom_log_v_color_dark">#dddddd</color>
+    <color name="main_bottom_log_d_color_dark">#dddddd</color>
+    <color name="main_bottom_log_i_color_dark">#dddddd</color>
+    <color name="main_bottom_log_w_color_dark">#dddddd</color>
+    <color name="main_bottom_log_e_color_dark">#ee3333</color>
+    <color name="main_bottom_log_a_color_dark">#ee3333</color>
+</resources>

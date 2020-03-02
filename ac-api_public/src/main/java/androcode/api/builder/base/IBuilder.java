@@ -1,6 +1,6 @@
 package androcode.api.builder.base;
 
-import androcode.api.activity.IMainActivity;
+import androcode.api.main.IMainActivity;
 
 public interface IBuilder<I> {
     boolean onRun(IMainActivity activity, I config, ICallback<I> callback);

@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import androcode.api.activity.IMainActivity;
+import androcode.api.main.IMainActivity;
 import androcode.api.builder.base.ICallback;
-import androcode.api.progressbar.ProgressUser;
+import androcode.api.main.progressbar.ProgressUser;
 
 public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
     private static final ExecutorService mExecutorService;

@@ -11,10 +11,12 @@
 
         <attr name="main_content_less_color" format="color" />
         <attr name="main_content_color" format="color" />
-        <attr name="main_content_more_color" format="color" />
+        <attr name="main_content_color_highlight" format="color" />
         <attr name="main_content_text_less_color" format="color" />
         <attr name="main_content_text_color" format="color" />
         <attr name="main_content_text_more_color" format="color" />
+        <attr name="main_content_float_background_color" format="color" />
+        <attr name="main_content_float_foreground_color" format="color" />
 
         <attr name="main_bottom_less_color" format="color" />
         <attr name="main_bottom_color" format="color" />

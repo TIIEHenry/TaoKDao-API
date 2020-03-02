@@ -28,7 +28,7 @@ public class WorkSpace {
         public static class Public {
             public static String libsDir;
             public static String jniLibsDir;
-            public static String m2reponsitoryDir;
+            public static String m2repositoryDir;
         }
     }
 
@@ -46,7 +46,7 @@ public class WorkSpace {
         Dir.Editor.themeDir = Dir.editorDir + "theme/";
         Dir.Public.libsDir = Dir.publicDir + "libs/";
         Dir.Public.jniLibsDir = Dir.publicDir + "jniLibs/";
-        Dir.Public.m2reponsitoryDir = Dir.publicDir + "m2reponsitory/";
+        Dir.Public.m2repositoryDir = Dir.publicDir + "m2repository/";
         return Dir.workDir;
     }
 
@@ -61,7 +61,7 @@ public class WorkSpace {
         new File(Dir.Editor.themeDir).mkdirs();
         new File(Dir.Public.libsDir).mkdirs();
         new File(Dir.Public.jniLibsDir).mkdirs();
-        new File(Dir.Public.m2reponsitoryDir).mkdirs();
+        new File(Dir.Public.m2repositoryDir).mkdirs();
         return Dir.workDir;
     }
 }

@@ -2,44 +2,117 @@ package androcode.api.editor;
 
 import android.view.View;
 
-import androcode.api.editor.edit.LineEditable;
-import androcode.api.editor.edit.RegionEditable;
-import androcode.api.editor.edit.TextEditable;
-import androcode.api.editor.format.Formattable;
-import androcode.api.editor.io.IOManager;
-import androcode.api.editor.select.Selectable;
-import androcode.api.editor.theme.EditorTheme;
-import androcode.api.editor.ui.IIMEControl;
-import androcode.api.editor.undo.Undoable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-public interface IEditor extends TextEditable, Undoable, Formattable, Selectable, LineEditable, RegionEditable, IIMEControl {
-    //获取EditorView
-    View getView();
+import androcode.api.editor.edit.ILineEditor;
+import androcode.api.editor.edit.IBlockEditor;
+import androcode.api.editor.edit.IDataManager;
+import androcode.api.editor.edit.ISearcher;
+import androcode.api.editor.io.IIOManager;
+import androcode.api.editor.select.ICursorController;
+import androcode.api.editor.select.ISelector;
+import androcode.api.editor.ui.IIMEController;
+import androcode.api.editor.edit.IUndoManager;
 
+/**
+ * @param <D> 数据形式
+ * @param <I> 位置的类型
+ */
+public interface IEditor<D, I> {
 
     /**
-     * 是否支持撤销重做
+     * 获取显示的布局
      */
-    boolean isUndoable();
+    @NonNull
+    View getView();
 
-    IOManager getIOManager();
+    /**
+     * @return 撤销重做管理器
+     */
+    @Nullable
+    IUndoManager getUndoManager();
 
-    void onThemeChanged(EditorTheme theme);//主题切换
-//    void setDark(boolean isDark);
+    /**
+     * @return 格式化工具
+     */
+    @Nullable
+    IFormatter<D> getFormatter();
+
+    /**
+     * @return 行编辑器
+     */
+    @Nullable
+    ILineEditor<D> getLineEditor();
+
+    /**
+     * @return 块编辑器
+     */
+    @Nullable
+    IBlockEditor getBlockEditor();
+
+//    /**
+//     * @return 属性
+//     */
+//    @Nullable
+//    IEditorProperties getProperties();
+
+    /**
+     * @return 选择器
+     */
+    @Nullable
+    ISelector<D, I> getSelector();
+
+    /**
+     * @return 输入法控制器
+     */
+    @Nullable
+    IIMEController getIMEController();
+
+    /**
+     * @return 位置控制器
+     */
+    @Nullable
+    ICursorController<I> getCursorController();
+
+    /**
+     * @return 数据输入输出管理
+     */
+    @Nullable
+    IIOManager<D> getIOManager();
+
+    /**
+     * @return 数据管理
+     */
+    @NonNull
+    IDataManager<D> getDataManager();
+
+    /**
+     * @return 搜索工具
+     */
+    @Nullable
+    ISearcher<D, I> getSearcher();
+//
+//    /**
+//     * @return 主题管理器
+//     */
+//    @Nullable
+//    IThemeManager getThemeManager();
+
 
     boolean requestFocus();
 
-    /**
-     * 非工程下运行
-     *
-     * @return false-调用FileBuilder,true-编辑器处理
-     */
-    boolean runFile();
-
-    /**
-     * 非工程下构建
-     *
-     * @return false-调用FileBuilder,true-编辑器处理
-     */
-    boolean buildFile();
+//    /**
+//     * 非工程下运行
+//     *
+//     * @return false-调用FileBuilder,true-编辑器处理
+//     */
+//    boolean runFile();
+//
+//    /**
+//     * 非工程下构建
+//     *
+//     * @return false-调用FileBuilder,true-编辑器处理
+//     */
+//    boolean buildFile();
 }
