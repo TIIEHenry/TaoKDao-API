@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import androcode.api.main.IMainActivity;
 
 public enum MainActions  {
-    onCreate("onCreate"), onDestory("onDestory"),
+    onCreate("onCreate"), onDestroy("onDestroy"),
     onPause("onPause"), onResume("onResume"),
     onStart("onStart"), onStop("onStop"),
     onAny("onAny"),
@@ -45,5 +45,15 @@ public enum MainActions  {
 
     public interface Observer {
         void onAction(IMainActivity main);
+    }
+
+    public void clear() {
+        list.clear();
+    }
+
+    public static void clearAll() {
+        for (MainActions value : values()) {
+            value.clear();
+        }
     }
 }

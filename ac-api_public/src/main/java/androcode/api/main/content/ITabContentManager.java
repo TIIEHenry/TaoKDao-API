@@ -6,9 +6,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import androcode.api.editor.IEditor;
-import androcode.api.explorer.FileOpener;
+import androcode.api.file.opener.FileOpener;
 
-public interface ITabWinManager {
+public interface ITabContentManager {
     void onCreate();
 
     void closeCurrent();
@@ -21,23 +21,23 @@ public interface ITabWinManager {
 
     void closeAlltotheRight();
 
-    void addTabWin(TabWin tabWin, boolean selectNewWin, FileOpener opener);
+    void addTabContent(TabContent tabContent, boolean selectNewWin, FileOpener opener);
 
     /**
      * selectNewWin true
      */
-    void addTabWin(TabWin tabWin, FileOpener opener);
+    void addTabContent(TabContent tabContent, FileOpener opener);
 
-    void removeTabWin(TabWin tabWin);
+    void removeTabContent(TabContent tabContent);
 
-    boolean selectTabWin(TabWin tabWin);
+    boolean selectTabContent(TabContent tabContent);
 
-    boolean selectTabWin(String path);
+    boolean selectTabContent(String path);
 
-    boolean selectTabWin(int index);
+    boolean selectTabContent(int index);
 
     @Nullable
-    TabWin getCurrentTabWin();
+    TabContent getCurrentTabContent();
 
     @Nullable
     IEditor getCurrentEditor();
@@ -45,7 +45,7 @@ public interface ITabWinManager {
     @Nullable
     String getCurrentPath();
 
-    List<TabWin> getTabWinList();
+    List<TabContent> getTabContentList();
 
     boolean openNew(String path);
 

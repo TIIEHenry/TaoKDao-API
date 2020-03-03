@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import tiiehenry.androcode.api.main.R;
 
-public enum CategoryMenuSet {
+public enum CategoryMenus {
     FILE(R.id.main_menu_file),
     EDIT(R.id.main_menu_edit),
     BUILD(R.id.main_menu_build),
@@ -16,7 +16,7 @@ public enum CategoryMenuSet {
     //view
     public int id;
 
-    CategoryMenuSet(int id) {
+    CategoryMenus(int id) {
         this.id = id;
     }
 
@@ -40,5 +40,16 @@ public enum CategoryMenuSet {
         CategoryMenu action = new CategoryMenu(label, menuCallback);
         list.add(action);
         return action;
+    }
+
+
+    public void clear() {
+        list.clear();
+    }
+
+    public static void clearAll() {
+        for (CategoryMenus value : values()) {
+            value.clear();
+        }
     }
 }

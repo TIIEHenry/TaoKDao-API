@@ -1,4 +1,4 @@
-package androcode.api.project;
+package androcode.api.project.template;
 
 import android.graphics.drawable.Drawable;
 
@@ -9,19 +9,21 @@ public class ProjectTemplate {
     public String label;
     public String description;
     public Callback onCreateTemplate;
-    public Callback onShowDescribtion;
+    public Callback onShowTemplateInfo;
 
-    public ProjectTemplate(Drawable icon, String label, String description, Callback onCreateTemplate) {
+    public ProjectTemplate(Drawable icon, String label, String description, Callback onCreateTemplate,Callback onShowTemplateInfo) {
         this.icon = icon;
         this.label = label;
         this.description = description;
         this.onCreateTemplate = onCreateTemplate;
+        this.onShowTemplateInfo = onShowTemplateInfo;
+    }
+    public ProjectTemplate(Drawable icon, String label, String description, Callback onCreateTemplate) {
+        this(icon,label,description,onCreateTemplate,null);
     }
 
     public ProjectTemplate(String label, String description, Callback onCreateTemplate) {
-        this.label = label;
-        this.description = description;
-        this.onCreateTemplate = onCreateTemplate;
+        this(null,label,description,onCreateTemplate,null);
     }
 
     public interface Callback {

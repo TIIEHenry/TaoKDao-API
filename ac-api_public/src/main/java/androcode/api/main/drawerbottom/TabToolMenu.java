@@ -3,7 +3,7 @@ package androcode.api.main.drawerbottom;
 import android.graphics.drawable.Drawable;
 
 
-public class TabFragmentMenu {
+public class TabToolMenu {
     public Drawable icon;
     public String label;
     public Runnable click;
@@ -11,7 +11,7 @@ public class TabFragmentMenu {
     public boolean showIcon = false;
     public boolean showLabel = false;
 
-    public TabFragmentMenu(Drawable icon, String label, Runnable click, Runnable longClick) {
+    public TabToolMenu(Drawable icon, String label, Runnable click, Runnable longClick) {
         this.icon = icon;
         if (icon != null)
             showIcon = true;
@@ -22,15 +22,15 @@ public class TabFragmentMenu {
         this.longClick = longClick;
     }
 
-    public TabFragmentMenu(Drawable icon, String label, Runnable click) {
+    public TabToolMenu(Drawable icon, String label, Runnable click) {
         this(icon, label, click, null);
     }
 
-    public TabFragmentMenu(Drawable icon, Runnable click) {
+    public TabToolMenu(Drawable icon, Runnable click) {
         this(icon, null, click, null);
     }
 
-    public TabFragmentMenu(String label, Runnable click) {
+    public TabToolMenu(String label, Runnable click) {
         this(null, label, click, null);
     }
 }

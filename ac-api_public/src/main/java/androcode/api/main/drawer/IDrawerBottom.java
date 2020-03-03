@@ -2,16 +2,16 @@ package androcode.api.main.drawer;
 
 import androidx.annotation.Nullable;
 
-import androcode.api.main.drawerbottom.ITabFragment;
+import androcode.api.main.drawerbottom.ITabTool;
 
 public interface IDrawerBottom extends IDrawer {
-    void addTabFragment(ITabFragment iTabFragment, Boolean select);
+    void addTabFragment(ITabTool iTabTool, Boolean select);
 
-    void removeTabFragment(ITabFragment iTabFragment);
+    void removeTabFragment(ITabTool iTabTool);
 
-    void selectTabFragment(ITabFragment iTabFragment);
+    void selectTabFragment(ITabTool iTabTool);
 
     @Nullable
-    ITabFragment getTabFragment( int id);
+    ITabTool getTabFragment(int id);
 
 }

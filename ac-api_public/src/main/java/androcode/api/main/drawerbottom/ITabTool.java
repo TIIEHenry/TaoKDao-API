@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public interface ITabFragment {
+public interface ITabTool {
     int id();
 
     String getLabel();
@@ -15,8 +15,8 @@ public interface ITabFragment {
 
     Fragment getFragment();
 
-    ArrayList<TabFragmentMenu> getStartMenuList();
+    ArrayList<TabToolMenu> getStartMenuList();
 
-    ArrayList<TabFragmentMenu> getEndMenuList();
+    ArrayList<TabToolMenu> getEndMenuList();
 
 }

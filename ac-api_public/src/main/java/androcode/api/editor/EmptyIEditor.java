@@ -1,13 +1,11 @@
 package androcode.api.editor;
 
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import androcode.api.editor.edit.IBlockEditor;
 import androcode.api.editor.edit.IDataManager;
-import androcode.api.editor.edit.ILineEditor;
 import androcode.api.editor.edit.ISearcher;
 import androcode.api.editor.io.IIOManager;
 import androcode.api.editor.select.ICursorController;
@@ -16,11 +14,6 @@ import androcode.api.editor.ui.IIMEController;
 import androcode.api.editor.edit.IUndoManager;
 
 public class EmptyIEditor implements IEditor<Object, Integer> {
-    @NonNull
-    @Override
-    public View getView() {
-        return null;
-    }
 
     @Nullable
     @Override
@@ -28,17 +21,6 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
         return null;
     }
 
-    @Nullable
-    @Override
-    public IFormatter<Object> getFormatter() {
-        return null;
-    }
-
-    @Nullable
-    @Override
-    public ILineEditor<Object> getLineEditor() {
-        return null;
-    }
 
     @Nullable
     @Override

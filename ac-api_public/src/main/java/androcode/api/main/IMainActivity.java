@@ -12,18 +12,18 @@ import java.io.File;
 import androcode.api.main.drawer.IDrawerBottom;
 import androcode.api.main.drawer.IDrawerStart;
 import androcode.api.editor.IEditor;
-import androcode.api.explorer.IFileOpenerManager;
 import androcode.api.plugin.IPluginManager;
 import androcode.api.project.IProjectCreator;
 import androcode.api.project.IProjectLoader;
-import androcode.api.main.content.ITabWinIOManager;
-import androcode.api.main.content.ITabWinManager;
+import androcode.api.main.content.ITabContentIOManager;
+import androcode.api.main.content.ITabContentManager;
 import dalvik.system.DexClassLoader;
 
 public interface IMainActivity extends LifecycleOwner {
-    ITabWinManager getTabWinManager();
 
-    ITabWinIOManager getTabWinIOManager();
+    ITabContentManager getTabContentManager();
+
+    ITabContentIOManager getTabContentIOManager();
 
     IPluginManager getPluginManager();
 
@@ -32,7 +32,6 @@ public interface IMainActivity extends LifecycleOwner {
 
     IProjectCreator getProjectCreator();
 
-    IFileOpenerManager getFileOpenerManager();
 
     LayoutInflater getLayoutInflater();
 

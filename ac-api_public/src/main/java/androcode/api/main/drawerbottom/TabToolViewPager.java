@@ -10,17 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
-public class TabFragmentViewPager extends ViewPager {
+public class TabToolViewPager extends ViewPager {
     public static int dp2px(float dpValue) {
         return (int) (0.5f + dpValue * Resources.getSystem().getDisplayMetrics().density);
     }
 
-    public TabFragmentViewPager(@NonNull Context context) {
+    public TabToolViewPager(@NonNull Context context) {
         super(context);
         init();
     }
 
-    public TabFragmentViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public TabToolViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 

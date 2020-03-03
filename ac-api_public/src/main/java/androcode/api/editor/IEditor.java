@@ -22,28 +22,11 @@ import androcode.api.editor.edit.IUndoManager;
 public interface IEditor<D, I> {
 
     /**
-     * 获取显示的布局
-     */
-    @NonNull
-    View getView();
-
-    /**
      * @return 撤销重做管理器
      */
     @Nullable
     IUndoManager getUndoManager();
 
-    /**
-     * @return 格式化工具
-     */
-    @Nullable
-    IFormatter<D> getFormatter();
-
-    /**
-     * @return 行编辑器
-     */
-    @Nullable
-    ILineEditor<D> getLineEditor();
 
     /**
      * @return 块编辑器

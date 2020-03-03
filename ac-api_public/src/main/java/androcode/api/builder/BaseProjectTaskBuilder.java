@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 import androcode.api.main.IMainActivity;
 import androcode.api.builder.base.ICallback;
-import androcode.api.main.progressbar.ProgressUser;
+import androcode.api.main.progressbar.ProgressUsers;
 import androcode.api.project.ProjectConfig;
 
 public abstract class BaseProjectTaskBuilder implements IProjectTaskBuilder {
@@ -23,7 +23,7 @@ public abstract class BaseProjectTaskBuilder implements IProjectTaskBuilder {
             @Override
             public void run() {
                 callback.onPrepareInThread();
-                ProgressUser.BOTTOM_HORIZONTAL.addUser(config.projectDirFile.getAbsolutePath());
+                ProgressUsers.BOTTOM_HORIZONTAL.addUser(config.projectDirFile.getAbsolutePath());
                 try {
                     runTask(activity, config);
                     callback.onDone(config);
@@ -31,7 +31,7 @@ public abstract class BaseProjectTaskBuilder implements IProjectTaskBuilder {
                     e.printStackTrace();
                     callback.onError(e.getMessage());
                 } finally {
-                    ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.projectDirFile.getAbsolutePath());
+                    ProgressUsers.BOTTOM_HORIZONTAL.removeUser(config.projectDirFile.getAbsolutePath());
                 }
             }
         });
@@ -45,7 +45,7 @@ public abstract class BaseProjectTaskBuilder implements IProjectTaskBuilder {
             @Override
             public void run() {
                 callback.onPrepareInThread();
-                ProgressUser.BOTTOM_HORIZONTAL.addUser(config.projectDirFile.getAbsolutePath());
+                ProgressUsers.BOTTOM_HORIZONTAL.addUser(config.projectDirFile.getAbsolutePath());
                 try {
                     buildTask(activity, config);
                     callback.onDone(config);
@@ -53,7 +53,7 @@ public abstract class BaseProjectTaskBuilder implements IProjectTaskBuilder {
                     e.printStackTrace();
                     callback.onError(e.getMessage());
                 } finally {
-                    ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.projectDirFile.getAbsolutePath());
+                    ProgressUsers.BOTTOM_HORIZONTAL.removeUser(config.projectDirFile.getAbsolutePath());
                 }
             }
         });

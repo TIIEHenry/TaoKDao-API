@@ -10,30 +10,30 @@ import java.util.ArrayList;
 
 import androcode.api.main.IMainActivity;
 
-public abstract class BaseTabFragment extends Fragment implements ITabFragment {
+public abstract class BaseTabTool extends Fragment implements ITabTool {
     private final IMainActivity main;
     private final int id;
     private final String label;
     private final Drawable icon;
-    private ArrayList<TabFragmentMenu> startMenus = new ArrayList<>();
-    private ArrayList<TabFragmentMenu> endMenus = new ArrayList<>();
+    private ArrayList<TabToolMenu> startMenus = new ArrayList<>();
+    private ArrayList<TabToolMenu> endMenus = new ArrayList<>();
 
-    public BaseTabFragment(IMainActivity main, int id, String label, Drawable icon) {
+    public BaseTabTool(IMainActivity main, int id, String label, Drawable icon) {
         this.id = id;
         this.main = main;
         this.label = label;
         this.icon = icon;
     }
 
-    public BaseTabFragment(IMainActivity main, @StringRes int label, @DrawableRes int icon) {
+    public BaseTabTool(IMainActivity main, @StringRes int label, @DrawableRes int icon) {
         this.id = label;
         this.main = main;
         this.label = main.getString(label);
         this.icon = main.getDrawable(icon);
     }
 
-    public ITabFragment addDefaultMenu() {
-        startMenus.add(new TabFragmentMenu(getIcon(), getLabel(), () -> {
+    public ITabTool addDefaultMenu() {
+        startMenus.add(new TabToolMenu(getIcon(), getLabel(), () -> {
 
         }));
         return this;
@@ -60,12 +60,12 @@ public abstract class BaseTabFragment extends Fragment implements ITabFragment {
     }
 
     @Override
-    public ArrayList<TabFragmentMenu> getStartMenuList() {
+    public ArrayList<TabToolMenu> getStartMenuList() {
         return startMenus;
     }
 
     @Override
-    public ArrayList<TabFragmentMenu> getEndMenuList() {
+    public ArrayList<TabToolMenu> getEndMenuList() {
         return endMenus;
     }
 

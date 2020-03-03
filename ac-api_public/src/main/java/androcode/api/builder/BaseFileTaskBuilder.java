@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 import androcode.api.main.IMainActivity;
 import androcode.api.builder.base.ICallback;
-import androcode.api.main.progressbar.ProgressUser;
+import androcode.api.main.progressbar.ProgressUsers;
 
 public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
     private static final ExecutorService mExecutorService;
@@ -31,7 +31,7 @@ public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
             @Override
             public void run() {
                 callback.onPrepareInThread();
-                ProgressUser.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
+                ProgressUsers.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
                 try {
                     runTask(activity, config);
                     callback.onDone(config);
@@ -39,7 +39,7 @@ public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
                     e.printStackTrace();
                     callback.onError(e.getMessage());
                 } finally {
-                    ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
+                    ProgressUsers.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
                 }
             }
         });
@@ -51,7 +51,7 @@ public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
         callback.onPrepare();
         mExecutorService.execute(() -> {
             callback.onPrepareInThread();
-            ProgressUser.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
+            ProgressUsers.BOTTOM_HORIZONTAL.addUser(config.getAbsolutePath());
             try {
                 buildTask(activity, config);
                 callback.onDone(config);
@@ -62,7 +62,7 @@ public abstract class BaseFileTaskBuilder implements IFileTaskBuilder {
                 e.printStackTrace();
                 callback.onError(e.getMessage());
             } finally {
-                ProgressUser.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
+                ProgressUsers.BOTTOM_HORIZONTAL.removeUser(config.getAbsolutePath());
             }
         });
         return true;

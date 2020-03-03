@@ -1,6 +1,6 @@
 package androcode.api.main.content;
 
-public interface ITabWinIOManager {
+public interface ITabContentIOManager {
     void saveCurrent();
 
     void saveAllAsync();
