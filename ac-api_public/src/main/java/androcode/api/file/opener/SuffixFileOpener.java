@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import androcode.api.annotation.MainConstructor;
 import androcode.api.file.FileUtils;
 import androcode.api.main.IMainActivity;
-import androcode.api.main.content.ITabContentManager;
+import androcode.api.ui.content.ITabContentManager;
+import androcode.base.annotation.relation.MainConstructor;
 
 /**
  * FileOpener的包装，根据文件后缀匹配
@@ -30,7 +30,6 @@ public class SuffixFileOpener extends FileOpener {
     public SuffixFileOpener(String[] suffixes, String id, @Nullable Drawable icon, String label, String description, Callback click) {
         super(id, icon, label, description, null);
         supportSuffix.addAll(Arrays.asList(suffixes));
-        this.checker = file -> supportSuffix.contains(FileUtils.getSuffix(file));
     }
 
     public SuffixFileOpener(String[] suffixes, String id, String label, String description, Callback click) {
@@ -76,6 +75,11 @@ public class SuffixFileOpener extends FileOpener {
             return true;
         }
         return super.longClick(main, manager, file);
+    }
+
+    @Override
+    public boolean isSupport(@NonNull File file) {
+        return supportSuffix.contains(FileUtils.getSuffix(file));
     }
 
     public interface Callback {

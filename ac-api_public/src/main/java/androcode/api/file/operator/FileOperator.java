@@ -2,50 +2,63 @@ package androcode.api.file.operator;
 
 import android.graphics.drawable.Drawable;
 
-import java.io.File;
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-import androcode.api.annotation.MainConstructor;
+import java.io.File;
+
 import androcode.api.main.IMainActivity;
+import androcode.base.annotation.relation.MainConstructor;
 
 
 /**
  * 文件浏览器界面长按的菜单
  * 实现对文件操作
  */
-public class FileOperator {
+public class FileOperator implements IFileOperator, FileOperatorCallback {
     public String label;
     public Drawable icon;
-    private Callback callback;
-    public Checker checker;
+    private FileOperatorChecker checker;
+    private FileOperatorCallback callback;
 
 
     @MainConstructor
-    public FileOperator(Drawable icon, String label, Callback callback, Checker checker) {
+    public FileOperator(Drawable icon, String label, FileOperatorCallback callback, FileOperatorChecker checker) {
         this.icon = icon;
         this.label = label;
         this.callback = callback;
         this.checker = checker;
     }
 
-    public FileOperator(String label, Callback callback, Checker checker) {
+    public FileOperator(String label, FileOperatorCallback callback, FileOperatorChecker checker) {
         this(null, label, callback, checker);
     }
 
+    @Override
+    public boolean isSupport(File file) {
+        return checker.isSupport(file);
+    }
 
+    @Override
     public boolean call(IMainActivity main, File file) {
-        return callback.onAction(main, file);
+        return callback.call(main, file);
     }
 
-    public interface Callback {
-        boolean onAction(IMainActivity main, File file);
+    @Nullable
+    @Override
+    public Drawable getIcon() {
+        return icon;
     }
 
-    /**
-     * check support can operate
-     */
-    public interface Checker {
-        boolean isSupport(File file);
+    @NonNull
+    @Override
+    public String getLabel() {
+        return label;
     }
 
+    @NonNull
+    @Override
+    public String id() {
+        return label;
+    }
 }

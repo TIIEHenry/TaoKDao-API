@@ -1,21 +1,22 @@
 package androcode.api.project;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 
 import java.io.File;
-import java.util.List;
-import java.util.Map;
 
 public interface IProjectLoader {
-    //    void loadProject();
-//    void buildProject();
-//    void runProject();
-    File getProjectConfigFile(File projectDirFile);
+    default File getProjectConfigFile(File projectDir) {
+        return new File(projectDir, ProjectConfig.configFileName);
+    }
 
-    Map<String, File> getProjectStructureMapFromConfigFile(File configFile);
+    @NonNull
+    default ProjectConfig loadProjectConfigFromDir(@NonNull File projectDir) throws Exception {
+        return loadProjectConfigFromFile(getProjectConfigFile(projectDir));
+    }
 
-    List<File> getProjectDirListWithDependencies(File projectDirFile);
+    @NonNull
+    ProjectConfig loadProjectConfigFromFile(@NonNull File configFile) throws Exception;
 
-    @Nullable
-    ProjectConfig loadProjectConfigFromFile(File configFile);
+    @NonNull
+    Project loadProject(@NonNull ProjectConfig config) throws ProjectLoaderException;
 }

@@ -1,5 +1,6 @@
 package com.xuexiang.xui.widget.dialog.materialdialog;
 
+import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 
@@ -16,6 +17,7 @@ public class MDDialog extends MaterialDialog {
         super(builder);
     }
 
+    @SuppressLint("PrivateResource")
     @Override
     Drawable getButtonSelector(DialogAction which, boolean isStacked) {
         if (isStacked) {
@@ -31,7 +33,7 @@ public class MDDialog extends MaterialDialog {
             return ThemeUtils.resolveDrawable(getContext(), R.attr.md_btn_stacked_selector);
         } else {
             Drawable d;
-            if(which==DialogAction.NEUTRAL){
+            if (which == DialogAction.NEUTRAL) {
                 if (builder.btnSelectorNeutral != 0) {
                     return ResourcesCompat.getDrawable(
                             builder.context.getResources(), builder.btnSelectorNeutral, getContext().getTheme());
@@ -44,7 +46,7 @@ public class MDDialog extends MaterialDialog {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     RippleHelper.applyColor(d, builder.buttonRippleColor);
                 }
-            }else if(which==DialogAction.NEGATIVE){
+            } else if (which == DialogAction.NEGATIVE) {
                 if (builder.btnSelectorNegative != 0) {
                     return ResourcesCompat.getDrawable(
                             builder.context.getResources(), builder.btnSelectorNegative, getContext().getTheme());
@@ -57,7 +59,7 @@ public class MDDialog extends MaterialDialog {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     RippleHelper.applyColor(d, builder.buttonRippleColor);
                 }
-            }else {
+            } else {
                 if (builder.btnSelectorPositive != 0) {
                     return ResourcesCompat.getDrawable(
                             builder.context.getResources(), builder.btnSelectorPositive, getContext().getTheme());

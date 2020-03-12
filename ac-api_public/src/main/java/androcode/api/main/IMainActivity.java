@@ -1,74 +1,101 @@
 package androcode.api.main;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LifecycleOwner;
 
 import java.io.File;
 
-import androcode.api.main.drawer.IDrawerBottom;
-import androcode.api.main.drawer.IDrawerStart;
-import androcode.api.editor.IEditor;
+import androcode.api.builder.IBuilderManager;
 import androcode.api.plugin.IPluginManager;
-import androcode.api.project.IProjectCreator;
-import androcode.api.project.IProjectLoader;
-import androcode.api.main.content.ITabContentIOManager;
-import androcode.api.main.content.ITabContentManager;
-import dalvik.system.DexClassLoader;
+import androcode.api.project.IProjectManager;
+import androcode.api.project.template.IProjectTemplateCreator;
+import androcode.api.setting.ISharedPreferencesManager;
+import androcode.api.setting.language.ILanguageManager;
+import androcode.api.ui.content.ITabContentIOManager;
+import androcode.api.ui.content.ITabContentManager;
+import androcode.api.ui.windows.explorer.IExplorerWindow;
+import androcode.api.ui.windows.tabtool.ITabToolWindow;
 
 public interface IMainActivity extends LifecycleOwner {
 
+    /**
+     * 资源浏览器窗口
+     *
+     * @return
+     */
+    IExplorerWindow getExplorerWindow();
+
+    /**
+     * 内容主窗口
+     *
+     * @return
+     */
     ITabContentManager getTabContentManager();
+
+    /**
+     * 工具窗口
+     *
+     * @return
+     */
+    ITabToolWindow getTabToolWindow();
 
     ITabContentIOManager getTabContentIOManager();
 
+    /**
+     * 插件管理器
+     *
+     * @return
+     */
     IPluginManager getPluginManager();
 
-    IProjectLoader getProjectLoader();
-//    IProjectBuilder getProjectBuilder();
+    /**
+     * 构建管理器
+     *
+     * @return
+     */
+    IBuilderManager getBuilderManager();
 
-    IProjectCreator getProjectCreator();
+    /**
+     * 项目生成器
+     *
+     * @return
+     */
+    IProjectTemplateCreator getProjectTemplateCreator();
+
+    /**
+     * 项目管理器
+     *
+     * @return
+     */
+    IProjectManager getProjectManager();
+
+    /**
+     * 存储管理器
+     *
+     * @return
+     */
+    ISharedPreferencesManager getSharedPreferencesManager();
+
+    /**
+     * 语言管理器
+     *
+     * @return
+     */
+    ILanguageManager getLanguageManager();
 
 
-    LayoutInflater getLayoutInflater();
-
-    void runOnUiThread(Runnable runnable);
+    void runOnUIThread(@NonNull Runnable runnable);
 
     void reloadPlugin();
 
     void updateIndicatorText(String txt);
 
-    AppCompatActivity getActivity();
-
-    IEditor getCurrentEditor();
-
-    String getLanguageCountry();
-
-    @Nullable
-    String getProject();
-
-    void setProject(@Nullable String project);
-
-    IDrawerStart getDrawerStart();
-
-    IDrawerBottom getDrawerBottom();
-
-    @Nullable
-    String getCurrentEditingPath();
-
-//    void setCurrentEditingPath(@Nullable String path);
-
-    void toast(Object o);
-
-    void toast(int id);
-
-
-    DexClassLoader loadDex(String filePath);
-
-    DexClassLoader loadDexFile(File file);
 
     /**
      * 与explorer打开相同
@@ -77,11 +104,23 @@ public interface IMainActivity extends LifecycleOwner {
 
     Boolean openFile(File file, String openerId);
 
-    /**
-     * 与explorer打开相同
-     */
-    boolean openProject(File ideFile);
 
+    void toast(Object o);
+
+    void toast(int id);
+
+
+    IDexLoader getDexLoader();
+
+    Resources getResources();
+
+    Context getContext();
+
+    AppCompatActivity getActivity();
+
+    /**
+     * 资源类
+     */
     Drawable getDrawable(int id);
 
     String getString(int id);
@@ -89,4 +128,7 @@ public interface IMainActivity extends LifecycleOwner {
     int getAttrColor(int id);
 
     int getDimen(int id);
+
+    LayoutInflater getLayoutInflater();
+
 }

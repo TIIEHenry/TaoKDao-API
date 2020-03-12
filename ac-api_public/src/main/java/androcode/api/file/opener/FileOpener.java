@@ -7,14 +7,12 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
-import androcode.api.annotation.MainConstructor;
-import androcode.api.main.IMainActivity;
-import androcode.api.main.content.ITabContentManager;
+import androcode.base.annotation.relation.MainConstructor;
 
 /**
  * 实现对文件的打开操作
  */
-public abstract class FileOpener {
+public abstract class FileOpener implements IFileOpener {
     public final String id;
     @Nullable
     public Drawable icon;
@@ -23,10 +21,11 @@ public abstract class FileOpener {
     @NonNull
     public String description;
     @NonNull
-    public Checker checker;
+    private
+    FileOpenerChecker checker;
 
     @MainConstructor
-    public FileOpener(String id, @Nullable Drawable icon, @NonNull String label, @NonNull String description, @NonNull Checker checker) {
+    public FileOpener(String id, @Nullable Drawable icon, @NonNull String label, @NonNull String description, @NonNull FileOpenerChecker checker) {
         this.id = id;
         this.icon = icon;
         this.label = label;
@@ -34,7 +33,7 @@ public abstract class FileOpener {
         this.checker = checker;
     }
 
-    public FileOpener(String id, String label, String description, Checker checker) {
+    public FileOpener(String id, String label, String description, FileOpenerChecker checker) {
         this(id, null, label, description, checker);
     }
 
@@ -56,13 +55,32 @@ public abstract class FileOpener {
         return "opener{id:" + id + "label:" + label + "}" + super.toString();
     }
 
-    public abstract void click(@NonNull IMainActivity main, @NonNull ITabContentManager manager, @NonNull File file);
-
-    public boolean longClick(@NonNull IMainActivity main, @NonNull ITabContentManager manager, @NonNull File file) {
-        return false;
+    @Nullable
+    @Override
+    public Drawable getIcon() {
+        return icon;
     }
 
-    public interface Checker {
-        boolean isSupport(File file);
+    @NonNull
+    @Override
+    public String getLabel() {
+        return label;
+    }
+
+    @NonNull
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public boolean isSupport(@NonNull File file) {
+        return checker.isSupport(file);
+    }
+
+    @NonNull
+    @Override
+    public String id() {
+        return id;
     }
 }

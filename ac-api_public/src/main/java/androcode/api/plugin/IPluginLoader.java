@@ -1,30 +1,32 @@
 package androcode.api.plugin;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 
+/**
+ * 负责加载插件
+ */
 public interface IPluginLoader {
 
-    void loadPluginList();
+    default File getPluginManifestFile(File projectDirFile) {
+        return new File(projectDirFile, PluginManifest.manifestFileName);
+    }
 
-    void initPluginModules();
+    @NonNull
+    PluginManifest loadPluginManifestFromZIP(@NonNull File zipFile) throws PluginLoaderException;
 
-    void initPluginModule(PluginInfo pluginInfo);
+    @NonNull
+    PluginManifest loadPluginManifestFromAPK(@NonNull File apkFile) throws PluginLoaderException;
 
-    void runPluginModule(PluginInfo pluginInfo);
+    @NonNull
+    default PluginManifest loadPluginManifestFromDir(@NonNull File pluginDir) throws PluginLoaderException {
+        return loadPluginManifestFromFile(getPluginManifestFile(pluginDir));
+    }
 
-    PluginInfo getPluginInfo(String id);
+    @NonNull
+    PluginManifest loadPluginManifestFromFile(@NonNull File manifestFile) throws PluginLoaderException;
 
-    PluginInfo getPluginInfoFromFile(File infoFile);
-
-    PluginInfo getPluginInfoFromDir(File dir);
-
-    PluginInfo getPluginInfoFromAPK(File apk);
-
-    PluginInfo getPluginInfoFromZIP(File zip);
-
-
-    void runPluginModuleFunc(String funcName, String id);
-
-    void runPluginModuleFunc(String funcName);
-
+    @NonNull
+    Plugin loadPlugin(@NonNull PluginManifest pluginManifest) throws PluginLoaderException;
 }

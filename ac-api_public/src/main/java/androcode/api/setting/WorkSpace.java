@@ -1,5 +1,7 @@
 package androcode.api.setting;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 
 /**
@@ -9,29 +11,6 @@ import java.io.File;
  * @date 2019/04/25
  */
 public class WorkSpace {
-    public static class Dir {
-        public static String workDir;
-        public static String backupDir;
-        public static String crashDir;
-        public static String editorDir;
-        public static String exportedDir;
-        public static String publicDir;
-        public static String projectDir;
-        public static String pluginDir;
-        public static String themeDir;
-
-        public static class Editor {
-            public static String fontDir;
-            public static String themeDir;
-        }
-
-        public static class Public {
-            public static String libsDir;
-            public static String jniLibsDir;
-            public static String m2repositoryDir;
-        }
-    }
-
     public static String init(File workPath) {
         Dir.workDir = workPath.getAbsolutePath() + "/";
         Dir.backupDir = Dir.workDir + "Backup/";
@@ -63,5 +42,33 @@ public class WorkSpace {
         new File(Dir.Public.jniLibsDir).mkdirs();
         new File(Dir.Public.m2repositoryDir).mkdirs();
         return Dir.workDir;
+    }
+
+    public static class Dir {
+        public static String workDir;
+        public static String backupDir;
+        public static String crashDir;
+        public static String editorDir;
+        public static String exportedDir;
+        public static String publicDir;
+        public static String projectDir;
+        public static String pluginDir;
+        public static String themeDir;
+
+        public static class Editor {
+            public static String fontDir;
+            public static String themeDir;
+        }
+
+        public static class Public {
+            public static String libsDir;
+            public static String jniLibsDir;
+            public static String m2repositoryDir;
+        }
+    }
+
+    public static class DEX {
+        @NonNull
+        public static String srcDir;
     }
 }
