@@ -128,13 +128,5 @@
         <item name="main_content_float_foreground_color">#ffffff</item>
     </style>
 
-    <style name="ActivitySplash" parent="AppTheme">
-        <item name="windowActionModeOverlay">true</item>
-        <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/splash_background</item>
-        <item name="colorPrimary">@color/splash_background</item>
-        <item name="colorPrimaryDark">@color/splash_background</item>
-        <item name="android:windowBackground">@drawable/app_splash</item>
-    </style>
+
 </resources>

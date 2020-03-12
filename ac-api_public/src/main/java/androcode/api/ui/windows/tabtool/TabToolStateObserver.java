@@ -15,12 +15,12 @@ public interface TabToolStateObserver {
     void onHide();
 
     /**
-     * 被添加
+     * 正在添加，还未添加进去
      */
-    void onAdded();
+    void onAdding();
 
     /**
-     * 被移除
+     * 被移除，已经移除
      */
     void onRemoved();
 }

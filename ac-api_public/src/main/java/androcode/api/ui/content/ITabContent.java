@@ -9,6 +9,7 @@ import java.util.List;
 
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.content.editor.IEditor;
+import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.base.annotation.Identifier;
 import androcode.base.annotation.maintain.LongTerm;
 import androcode.base.fragment.StateFragment;

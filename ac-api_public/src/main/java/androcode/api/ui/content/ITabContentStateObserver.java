@@ -17,7 +17,7 @@ public interface ITabContentStateObserver {
     /**
      * 正在添加，还未添加进去
      */
-    void onAdd();
+    void onAdding();
 
     /**
      * 被移除，已经移除

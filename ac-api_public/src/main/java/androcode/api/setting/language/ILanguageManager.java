@@ -18,6 +18,11 @@ public interface ILanguageManager {
         }
     }
 
+    /**
+     * 需要 baseContext.createConfigurationContext(config)才生效
+     * @param configuration
+     * @param locale
+     */
     static void setLocale(@NonNull Configuration configuration, @NonNull Locale locale) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             configuration.setLocale(locale);

@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 import androcode.api.setting.preference.base.IPreference;
+import androcode.api.ui.windows.tabtool.menu.TabToolMenu;
 import androcode.base.annotation.Identifier;
 import androcode.base.annotation.maintain.LongTerm;
 import androcode.base.fragment.StateFragment;

@@ -6,9 +6,6 @@ import androidx.annotation.Nullable;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import androcode.api.file.opener.FileOpener;
-import androcode.api.ui.content.editor.IEditor;
-
 public interface ITabContentManager {
 
 

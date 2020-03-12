@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import androcode.api.plugin.engine.IPluginEngine;
+import androcode.api.plugin.loader.PluginManifest;
 import androcode.base.annotation.Identifier;
 import androcode.base.annotation.todo.NeedSet;
 

@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.List;
 
+import androcode.api.plugin.loader.IPluginLoader;
+
 //install uninstall  file manage
 public interface IPluginManager {
     IPluginLoader getPluginLoader();

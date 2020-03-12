@@ -14,13 +14,14 @@ public interface ExplorerStateObserver {
      */
     void onHide();
 
-    /**
-     * 被添加
-     */
-    void onAdded();
 
     /**
-     * 被移除
+     * 正在添加，还未添加进去
+     */
+    void onAdding();
+
+    /**
+     * 被移除，已经移除
      */
     void onRemoved();
 }

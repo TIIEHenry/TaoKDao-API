@@ -1,9 +1,6 @@
 package androcode.api.ui.content;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-
-import androcode.api.file.opener.FileOpener;
 
 public interface ITabContentIOManager {
     void saveCurrent();

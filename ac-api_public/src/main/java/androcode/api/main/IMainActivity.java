@@ -11,11 +11,13 @@ import androidx.lifecycle.LifecycleOwner;
 
 import java.io.File;
 
+import androcode.api.dynamic.dex.IDexLoader;
 import androcode.api.builder.IBuilderManager;
+import androcode.api.file.system.IFileSystem;
 import androcode.api.plugin.IPluginManager;
 import androcode.api.project.IProjectManager;
 import androcode.api.project.template.IProjectTemplateCreator;
-import androcode.api.setting.ISharedPreferencesManager;
+import androcode.api.setting.preference.base.ISharedPreferencesManager;
 import androcode.api.setting.language.ILanguageManager;
 import androcode.api.ui.content.ITabContentIOManager;
 import androcode.api.ui.content.ITabContentManager;
@@ -88,6 +90,13 @@ public interface IMainActivity extends LifecycleOwner {
      * @return
      */
     ILanguageManager getLanguageManager();
+
+    /**
+     * 文件系统
+     *
+     * @return
+     */
+    IFileSystem getFileSystem();
 
 
     void runOnUIThread(@NonNull Runnable runnable);

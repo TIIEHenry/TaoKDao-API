@@ -11,6 +11,7 @@ import java.util.Set;
 
 import androcode.api.main.IMainActivity;
 import androcode.api.project.builder.IProjectBuilder;
+import androcode.api.project.loader.ProjectConfig;
 import androcode.api.project.plugin.IProjectPlugin;
 import androcode.base.annotation.todo.NeedSet;
 
