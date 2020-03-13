@@ -3,18 +3,25 @@ package androcode.api.ui.content.editor.io;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 
 public interface IIOManager<D> {
     /**
-     * @param path    文件路径
-     * @param charset StandardCharsets.UTF_8
+     * @param path 文件路径 可能为网络
      * @throws IOException e
      */
-    void save(@NonNull String path, @NonNull Charset charset) throws IOException;
+    void write(@NonNull String path) throws IOException;
 
-    D read(@NonNull String path, @NonNull Charset charset) throws IOException;
+    D read(@NonNull String path) throws IOException;
+
+    boolean canRead();
+
+    void setReadable(boolean readable);
+
+    boolean canWrite();
+
+    void setWritable(boolean writable);
 
     /**
      * 设置read的数据
@@ -25,8 +32,8 @@ public interface IIOManager<D> {
     boolean open(@Nullable D data);
 
     /**
-     * @param path 文件路径
+     * @param file 文件路径
      * @return 文件是否成功关闭，通常是判断save成功与否
      */
-    boolean close(@NonNull String path);
+    boolean close(@NonNull File file);
 }

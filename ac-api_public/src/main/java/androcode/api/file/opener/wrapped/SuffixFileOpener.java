@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import androcode.api.bean.Properties;
 import androcode.api.file.util.FileUtils;
 import androcode.api.main.IMainActivity;
 import androcode.api.ui.content.ITabContentManager;
@@ -27,21 +28,23 @@ public class SuffixFileOpener extends FileOpener {
     public List<String> supportSuffix = new ArrayList<>();
 
     @MainConstructor
-    public SuffixFileOpener(String[] suffixes, String id, @Nullable Drawable icon, String label, String description, Callback click) {
-        super(id, icon, label, description, null);
+    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, @Nullable Drawable icon, @Nullable Callback click, @Nullable Callback longClick) {
+        super(properties,icon, null);
         supportSuffix.addAll(Arrays.asList(suffixes));
+        this.click=click;
+        this.longClick=longClick;
     }
 
-    public SuffixFileOpener(String[] suffixes, String id, String label, String description, Callback click) {
-        this(suffixes, id, null, label, description, click);
+    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, @Nullable Drawable icon, @Nullable Callback click) {
+        this(suffixes,properties,icon, click,null);
     }
 
-    public SuffixFileOpener(String[] suffixes, String id, Drawable icon, String label, String description) {
-        this(suffixes, id, icon, label, description, null);
+    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, Callback click) {
+        this(suffixes,properties,null, click,null);
     }
 
-    public SuffixFileOpener(String[] suffixes, String id, String label, String description) {
-        this(suffixes, id, null, label, description, null);
+    public SuffixFileOpener(String[] suffixes,  @NonNull Properties properties) {
+        this(suffixes,properties,null,null,null);
     }
 
     @Override

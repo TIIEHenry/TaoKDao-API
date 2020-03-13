@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import androcode.api.bean.Properties;
 import androcode.api.file.operator.FileOperatorCallback;
 import androcode.api.file.operator.FileOperatorChecker;
 import androcode.api.file.operator.IFileOperator;
@@ -19,6 +20,8 @@ import androcode.base.annotation.relation.MainConstructor;
  * 实现对文件操作
  */
 public class FileOperator implements IFileOperator, FileOperatorCallback {
+    private final String description;
+    private final String id;
     public String label;
     public Drawable icon;
     private FileOperatorChecker checker;
@@ -26,15 +29,17 @@ public class FileOperator implements IFileOperator, FileOperatorCallback {
 
 
     @MainConstructor
-    public FileOperator(Drawable icon, String label, FileOperatorCallback callback, FileOperatorChecker checker) {
+    public FileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback, FileOperatorChecker checker) {
+        this.id = properties.id;
+        this.label = properties.label;
+        this.description = properties.des;
         this.icon = icon;
-        this.label = label;
         this.callback = callback;
         this.checker = checker;
     }
 
-    public FileOperator(String label, FileOperatorCallback callback, FileOperatorChecker checker) {
-        this(null, label, callback, checker);
+    public FileOperator(@NonNull Properties properties, FileOperatorCallback callback, FileOperatorChecker checker) {
+        this(properties, null, callback, checker);
     }
 
     @Override
@@ -59,9 +64,15 @@ public class FileOperator implements IFileOperator, FileOperatorCallback {
         return label;
     }
 
+    @Nullable
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
     @NonNull
     @Override
     public String id() {
-        return label;
+        return id;
     }
 }

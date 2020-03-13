@@ -2,18 +2,15 @@ package androcode.api.ui.windows.explorer.wrapped;
 
 import android.graphics.drawable.Drawable;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 
 import java.util.ArrayList;
 
-import androcode.api.main.IMainActivity;
+import androcode.api.bean.Properties;
 import androcode.api.setting.preference.base.IPreference;
-import androcode.api.ui.windows.explorer.menu.ExplorerMenu;
 import androcode.api.ui.windows.explorer.IExplorer;
-import androcode.base.annotation.Identifier;
+import androcode.api.ui.windows.explorer.menu.ExplorerMenu;
 import androcode.base.annotation.relation.MainConstructor;
 import androcode.base.fragment.StateFragment;
 
@@ -26,9 +23,9 @@ public class Explorer implements IExplorer {
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
 
     @MainConstructor
-    public Explorer(@NonNull String id, @NonNull String label, @Nullable Drawable icon, @NonNull StateFragment fragment) {
-        this.id = id;
-        this.label = label;
+    public Explorer(@NonNull Properties properties, @Nullable Drawable icon, @NonNull StateFragment fragment) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         this.fragment = fragment;
         fragment.setOnPauseObserver(() -> {
@@ -41,9 +38,11 @@ public class Explorer implements IExplorer {
         });
     }
 
-    public Explorer(@NonNull String id, IMainActivity main, @Identifier @StringRes int label, @DrawableRes int icon, StateFragment fragment) {
-        this(id, main.getString(label), main.getDrawable(icon), fragment);
+    @MainConstructor
+    public Explorer(@NonNull Properties properties, @NonNull StateFragment fragment) {
+        this(properties, null, fragment);
     }
+
 
     @NonNull
     @Override

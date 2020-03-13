@@ -7,27 +7,26 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+import androcode.api.bean.IProperties;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.windows.tabtool.menu.TabToolMenu;
-import androcode.base.annotation.Identifier;
 import androcode.base.annotation.maintain.LongTerm;
 import androcode.base.fragment.StateFragment;
 
 @LongTerm
-public interface ITabTool {
-//    T newInstance();
-//
-//    @NonNull
-//    String getInstanceName();
-
-    @Identifier
-    int id();
+public interface ITabTool extends IProperties {
 
     @Nullable
     Drawable getIcon();
 
     @NonNull
     String getLabel();
+
+    @Nullable
+    @Override
+    default String getDescription() {
+        return null;
+    }
 
     @NonNull
     StateFragment getFragment();

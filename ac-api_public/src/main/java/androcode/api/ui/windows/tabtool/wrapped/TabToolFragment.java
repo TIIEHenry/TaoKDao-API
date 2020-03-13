@@ -13,6 +13,7 @@ import androidx.annotation.StringRes;
 
 import java.util.ArrayList;
 
+import androcode.api.bean.Properties;
 import androcode.api.main.IMainActivity;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.windows.tabtool.ITabTool;
@@ -23,7 +24,7 @@ import androcode.base.fragment.StateFragment;
 
 public abstract class TabToolFragment extends StateFragment implements ITabTool {
     @Identifier
-    private final int id;
+    private final String id;
     private final String label;
     private final Drawable icon;
 
@@ -37,39 +38,30 @@ public abstract class TabToolFragment extends StateFragment implements ITabTool 
     private View layout = null;
 
     @MultiConstructor
-    public TabToolFragment(View layout, @Identifier int id, String label, Drawable icon) {
-        this.id = id;
-        this.label = label;
+    public TabToolFragment(@NonNull Properties properties, @Nullable Drawable icon, View layout) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         setObservers();
         this.layout = layout;
     }
 
-    public TabToolFragment(View layout, IMainActivity main, @Identifier int id, @StringRes int label, @DrawableRes int icon) {
-        this(layout, id, main.getString(label), main.getDrawable(icon));
-    }
-
-    public TabToolFragment(View layout, IMainActivity main, @StringRes int label, @DrawableRes int icon) {
-        this(layout, main, label, label, icon);
+    public TabToolFragment(@NonNull Properties properties, View layout) {
+        this(properties,null,layout);
     }
 
     @MultiConstructor
-    public TabToolFragment(@LayoutRes int layoutId, @Identifier int id, String label, Drawable icon) {
-        this.id = id;
-        this.label = label;
+    public TabToolFragment(@NonNull Properties properties, @Nullable Drawable icon,@LayoutRes int layoutId) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         this.layoutId = layoutId;
         setObservers();
     }
 
-    public TabToolFragment(@LayoutRes int layoutId, IMainActivity main, @Identifier int id, @StringRes int label, @DrawableRes int icon) {
-        this(layoutId, id, main.getString(label), main.getDrawable(icon));
+    public TabToolFragment(@NonNull Properties properties,@LayoutRes int layoutId) {
+        this(properties,null,layoutId);
     }
-
-    public TabToolFragment(@LayoutRes int layoutId, IMainActivity main, @StringRes int label, @DrawableRes int icon) {
-        this(layoutId, main, label, label, icon);
-    }
-
 
     @NonNull
     @Override
@@ -92,7 +84,7 @@ public abstract class TabToolFragment extends StateFragment implements ITabTool 
 
     @Identifier
     @Override
-    public int id() {
+    public String id() {
         return id;
     }
 

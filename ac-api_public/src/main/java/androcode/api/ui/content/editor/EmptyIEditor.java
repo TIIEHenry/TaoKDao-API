@@ -54,7 +54,7 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
 
     @NonNull
     @Override
-    public IDataController<Object> getDataManager() {
+    public IDataController<Object> getDataController() {
         return null;
     }
 

@@ -41,4 +41,9 @@ public interface IPreference<V> extends Identifiable<String>, IEnable {
     IGroupPreference getGroup();
 
     void setGroup(IGroupPreference group);
+
+    /**
+     * 立即触发
+     */
+    void load() ;
 }

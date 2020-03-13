@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 
 import androcode.api.setting.preference.IViewPreference;
 import androcode.api.setting.preference.base.IGroupPreference;
+import androcode.api.bean.Properties;
 import androcode.base.annotation.relation.MainConstructor;
 
 public abstract class ViewPreference implements IViewPreference {
@@ -19,20 +20,17 @@ public abstract class ViewPreference implements IViewPreference {
     private boolean enable = true;
 
     @MainConstructor
-    public ViewPreference(@NonNull String id, Drawable icon, String title, String description) {
-        this.id = id;
-        this.icon = icon;
-        this.title = title;
-        this.description = description;
+    public ViewPreference(@NonNull Properties properties, Drawable icon) {
+        this.id = properties.id;
+        this.title = properties.label;
+        this.description = properties.des;
+        this.icon=icon;
     }
 
-    public ViewPreference(@NonNull String id, String title, String description) {
-        this(id, null, title, description);
+    public ViewPreference(@NonNull Properties properties) {
+        this(properties,null);
     }
 
-    public ViewPreference(@NonNull String id, String title) {
-        this(id, null, title, null);
-    }
 
     @NonNull
     @Override

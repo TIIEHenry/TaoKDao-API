@@ -11,17 +11,21 @@ public enum MainAction {
     onPause("onPause"), onResume("onResume"),
     onStart("onStart"), onStop("onStop"),
     onAny("onAny"),
+
     onProjectOpened("onProjectOpened"),
     onProjectClosed("onProjectClosed"),
+
     onFileRenamed("onFileRenamed"),
     onFileCreated("onFileCreated"),
     onFileDeleted("onFileDeleted"),
+
     //screen onOrientationChanged
     onOrientationChanged("onOrientationChanged"),
     onLandscape("onLandscape"),
     onPortrait("onPortrait"),
 
-    AllFilesSaved("AllFilesSaved"), AllFilesSavedInThread("AllFilesSavedInThread");
+    CurrentFileSaved("CurrentFileSaved"),
+    AllFilesSaved("AllFilesSaved");
 
     public String name;
     public ArrayList<MainActionObserver> list = new ArrayList<>();

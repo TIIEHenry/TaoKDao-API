@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 
 import androcode.api.setting.preference.ITextPreference;
 import androcode.api.setting.preference.base.IGroupPreference;
+import androcode.api.bean.Properties;
 import androcode.base.annotation.relation.MainConstructor;
 
 
@@ -24,23 +25,20 @@ public class TextPreference implements ITextPreference {
     private boolean enable = true;
 
     @MainConstructor
-    public TextPreference(@NonNull SharedPreferences sharedPreferences, @NonNull String defaultValue, @NonNull String id, Drawable icon, String title, String description, Listener listener) {
+    public TextPreference(@NonNull SharedPreferences sharedPreferences, @NonNull String defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.sharedPreferences = sharedPreferences;
         this.defaultValue = defaultValue;
-        this.id = id;
-        this.icon = icon;
-        this.title = title;
-        this.description = description;
+        this.id = properties.id;
+        this.title = properties.label;
+        this.description = properties.des;
+        this.icon=icon;
         this.listener = listener;
     }
 
-    public TextPreference(@NonNull SharedPreferences sharedPreferences, @NonNull String defaultValue, @NonNull String id, String title, String description, Listener listener) {
-        this(sharedPreferences, defaultValue, id, null, title, description, listener);
+    public TextPreference(@NonNull SharedPreferences sharedPreferences, @NonNull String defaultValue,@NonNull Properties properties,Listener listener) {
+        this(sharedPreferences, defaultValue, properties, null,  listener);
     }
 
-    public TextPreference(@NonNull SharedPreferences sharedPreferences, @NonNull String defaultValue, @NonNull String id, String title, Listener listener) {
-        this(sharedPreferences, defaultValue, id, null, title, null, listener);
-    }
 
     @NonNull
     @Override

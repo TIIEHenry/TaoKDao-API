@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import androcode.api.bean.Properties;
 import androcode.api.file.opener.FileOpenerChecker;
 import androcode.api.file.opener.IFileOpener;
 import androcode.base.annotation.relation.MainConstructor;
@@ -20,23 +21,23 @@ public abstract class FileOpener implements IFileOpener {
     public Drawable icon;
     @NonNull
     public String label;
-    @NonNull
+    @Nullable
     public String description;
     @NonNull
     private
     FileOpenerChecker checker;
 
     @MainConstructor
-    public FileOpener(String id, @Nullable Drawable icon, @NonNull String label, @NonNull String description, @NonNull FileOpenerChecker checker) {
-        this.id = id;
+    public FileOpener(@NonNull Properties properties, @Nullable Drawable icon, @NonNull FileOpenerChecker checker) {
+        this.id = properties.id;
+        this.label = properties.label;
+        this.description = properties.des;
         this.icon = icon;
-        this.label = label;
-        this.description = description;
         this.checker = checker;
     }
 
-    public FileOpener(String id, String label, String description, FileOpenerChecker checker) {
-        this(id, null, label, description, checker);
+    public FileOpener(@NonNull Properties properties,  FileOpenerChecker checker) {
+        this(properties,null, checker);
     }
 
     @Override
@@ -69,7 +70,7 @@ public abstract class FileOpener implements IFileOpener {
         return label;
     }
 
-    @NonNull
+    @Nullable
     @Override
     public String getDescription() {
         return description;

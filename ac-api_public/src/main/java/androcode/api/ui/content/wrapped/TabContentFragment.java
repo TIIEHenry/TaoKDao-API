@@ -11,10 +11,11 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.ArrayList;
 
+import androcode.api.bean.Properties;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.content.ITabContent;
-import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.api.ui.content.editor.IEditor;
+import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.base.annotation.relation.MainConstructor;
 import androcode.base.fragment.StateFragment;
 
@@ -35,27 +36,30 @@ public abstract class TabContentFragment extends StateFragment implements ITabCo
     private ArrayList<TabContentMenu> menuList = new ArrayList<>();
 
     @MainConstructor
-    public TabContentFragment(@NonNull String id, View layout, @Nullable Drawable icon, @NonNull String label, @NonNull String path, @NonNull IEditor editor) {
-        this.id = id;
+    public TabContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor editor) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
-        this.label = label;
         this.path = path;
         this.editor = editor;
         this.layout = layout;
         setObservers();
     }
 
-    public TabContentFragment(@NonNull String id, View layout, @NonNull String label, @NonNull String path, @NonNull IEditor editor) {
-        this(id, layout, null, label, path, editor);
+    public TabContentFragment(@NonNull Properties properties, @NonNull String path, View layout, @NonNull IEditor editor) {
+        this(properties, null, path, layout, editor);
     }
 
-    public TabContentFragment(@NonNull String id, View layout, @Nullable Drawable icon, @NonNull File file, @NonNull IEditor editor) {
-        this(id, layout, icon, file.getName(), file.getAbsolutePath(), editor);
+    public TabContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, View layout, @NonNull IEditor editor) {
+        this(properties, icon, file.getAbsolutePath(), layout, editor);
+        this.label = file.getName();
     }
 
-    public TabContentFragment(@NonNull String id, View layout, @NonNull File file, @NonNull IEditor editor) {
-        this(id, layout, null, file.getName(), file.getAbsolutePath(), editor);
+    public TabContentFragment(@NonNull Properties properties, @NonNull File file, View layout, @NonNull IEditor editor) {
+        this(properties, null, file.getAbsolutePath(), layout, editor);
+        this.label = file.getName();
     }
+
 
     private void setObservers() {
         setOnPauseObserver(() -> {

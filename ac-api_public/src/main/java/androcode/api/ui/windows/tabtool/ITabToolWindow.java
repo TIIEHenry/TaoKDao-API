@@ -15,7 +15,7 @@ public interface ITabToolWindow extends IWindow {
     void showTabTool(@NonNull ITabTool tabTool);
 
     @Nullable
-    ITabTool getTabTool(int id);
+    ITabTool getTabTool(@NonNull String id);
 
     @NonNull
     List<ITabTool> getTabToolList();

@@ -2,11 +2,11 @@ package androcode.api.plugin.engine;
 
 import androidx.annotation.NonNull;
 
+import androcode.api.bean.IProperties;
 import androcode.api.plugin.Plugin;
 import androcode.base.identifiable.Identifiable;
 
-public interface IPluginEngine extends Identifiable<String> {
-    String getName();
+public interface IPluginEngine extends IProperties {
 
     void onCreateEngine();
 

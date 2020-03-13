@@ -7,19 +7,17 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import androcode.api.bean.IProperties;
 import androcode.api.main.IMainActivity;
 import androcode.api.ui.content.ITabContentManager;
 import androcode.base.identifiable.Identifiable;
 
-public interface IFileOpener extends Identifiable<String>, FileOpenerChecker {
+public interface IFileOpener extends IProperties, FileOpenerChecker {
     @Nullable
     Drawable getIcon();
 
     @NonNull
     String getLabel();
-
-    @NonNull
-    String getDescription();
 
     void click(@NonNull IMainActivity main, @NonNull ITabContentManager manager, @NonNull File file);
 

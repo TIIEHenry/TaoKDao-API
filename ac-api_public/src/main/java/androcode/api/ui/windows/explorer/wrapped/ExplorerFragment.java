@@ -5,18 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 
 import java.util.ArrayList;
 
-import androcode.api.main.IMainActivity;
+import androcode.api.bean.Properties;
 import androcode.api.setting.preference.base.IPreference;
-import androcode.api.ui.windows.explorer.menu.ExplorerMenu;
 import androcode.api.ui.windows.explorer.IExplorer;
+import androcode.api.ui.windows.explorer.menu.ExplorerMenu;
 import androcode.base.annotation.relation.MultiConstructor;
 import androcode.base.fragment.StateFragment;
 
@@ -35,29 +33,29 @@ public abstract class ExplorerFragment extends StateFragment implements IExplore
 
 
     @MultiConstructor
-    public ExplorerFragment(@NonNull String id, @NonNull View layout, @NonNull String label, @Nullable Drawable icon) {
-        this.id = id;
-        this.label = label;
+    public ExplorerFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull View layout) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         this.layout = layout;
         setObservers();
     }
 
-    public ExplorerFragment(@NonNull String id, View layout, IMainActivity main, @StringRes int label, @DrawableRes int icon) {
-        this(id, layout, main.getString(label), main.getDrawable(icon));
+    public ExplorerFragment(@NonNull Properties properties, @NonNull View layout) {
+        this(properties, null, layout);
     }
 
     @MultiConstructor
-    public ExplorerFragment(@NonNull String id, int layoutId, String label, Drawable icon) {
-        this.id = id;
-        this.label = label;
+    public ExplorerFragment(@NonNull Properties properties, @Nullable Drawable icon, int layoutId) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         this.layoutId = layoutId;
         setObservers();
     }
 
-    public ExplorerFragment(@NonNull String id, @LayoutRes int layoutId, IMainActivity main, @StringRes int label, @DrawableRes int icon) {
-        this(id, layoutId, main.getString(label), main.getDrawable(icon));
+    public ExplorerFragment(@NonNull Properties properties, int layoutId) {
+        this(properties, null, layoutId);
     }
 
     private void setObservers() {

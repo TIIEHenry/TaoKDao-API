@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import androcode.api.bean.Properties;
 import androcode.base.annotation.relation.MainConstructor;
 
 public abstract class OppositeStatePreference implements IOppositeStatePreference {
@@ -21,23 +22,20 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     private boolean enable = true;
 
     @MainConstructor
-    public OppositeStatePreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, Drawable icon, String title, String description, Listener listener) {
+    public OppositeStatePreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.sharedPreferences = sharedPreferences;
         this.defaultValue = defaultValue;
-        this.id = id;
-        this.icon = icon;
-        this.title = title;
-        this.description = description;
+        this.id = properties.id;
+        this.title = properties.label;
+        this.description = properties.des;
+        this.icon=icon;
         this.listener = listener;
     }
 
-    public OppositeStatePreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, String title, String description, Listener listener) {
-        this(sharedPreferences, defaultValue, id, null, title, description, listener);
+    public OppositeStatePreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue,@NonNull Properties properties, Listener listener) {
+        this(sharedPreferences, defaultValue, properties,null, listener);
     }
 
-    public OppositeStatePreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, String title, Listener listener) {
-        this(sharedPreferences, defaultValue, id, null, title, null, listener);
-    }
 
     @Override
     public void saveValue(@NonNull Boolean value) {

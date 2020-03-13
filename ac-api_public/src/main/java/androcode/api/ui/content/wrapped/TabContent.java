@@ -8,12 +8,13 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.ArrayList;
 
+import androcode.api.bean.Properties;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.content.ITabContent;
-import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.api.ui.content.editor.IEditor;
-import androcode.base.annotation.relation.MainConstructor;
+import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.base.annotation.maintain.LongTerm;
+import androcode.base.annotation.relation.MainConstructor;
 import androcode.base.fragment.StateFragment;
 
 @LongTerm
@@ -38,10 +39,10 @@ public class TabContent implements ITabContent {
 //    public ITabContentLifecycle lifecycle = new TabContentBaseLifecycle();
 
     @MainConstructor
-    public TabContent(@NonNull String id, @Nullable Drawable icon, @NonNull String label, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
-        this.id = id;
+    public TabContent(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
-        this.label = label;
         this.path = path;
         this.fragment = fragment;
         this.editor = editor;
@@ -55,16 +56,14 @@ public class TabContent implements ITabContent {
         });
     }
 
-    public TabContent(@NonNull String id, @NonNull String label, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
-        this(id, null, label, path, fragment, editor);
+    public TabContent(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+        this(properties, icon, file.getAbsolutePath(), fragment, editor);
+        this.label = file.getName();
     }
 
-    public TabContent(@NonNull String id, @Nullable Drawable icon, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
-        this(id, icon, file.getName(), file.getAbsolutePath(), fragment, editor);
-    }
-
-    public TabContent(@NonNull String id, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
-        this(id, null, file.getName(), file.getAbsolutePath(), fragment, editor);
+    public TabContent(@NonNull Properties properties, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+        this(properties, null, file.getAbsolutePath(), fragment, editor);
+        this.label = file.getName();
     }
 
     @NonNull

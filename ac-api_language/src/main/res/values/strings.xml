@@ -61,5 +61,25 @@
     <string name="genkey_state_name">State Name:</string>
     <string name="genkey_country">Country@</string>
     <string name="splash_initializing">Initializing</string>
+    <string name="codeeditor_setting_font">Font</string>
+    <string name="codeeditor_setting_block">Block</string>
+    <string name="codeeditor_setting_fontsize">FontSize</string>
+    <string name="codeeditor_setting_fontfolder">FontFolder</string>
+    <string name="codeeditor_setting_customfont">CustomFont</string>
+    <string name="codeeditor_setting_fontfolder_des" translatable="false">default.ttf,bold.ttf,italic.ttf</string>
+    <string name="codeeditor_setting_wordwrap">WordWrap</string>
+    <string name="codeeditor_setting_showmagnifier">ShowMagnifier</string>
+    <string name="codeeditor_setting_showmagnifier_des">Android P+ Supported</string>
+    <string name="codeeditor_setting_usetab">UseTab</string>
+    <string name="codeeditor_setting_tabwidth">TabWidth</string>
+    <string name="codeeditor_setting_tabwidth_des">space width as a unit</string>
+    <string name="codeeditor_setting_indentnumber">IndentNumber</string>
+    <string name="codeeditor_setting_indentnumber_des">number of space or tab</string>
+    <string name="codeeditor_setting_block_showblockline">ShowBlockLine</string>
+    <string name="codeeditor_setting_block_highlightblockline">HighlightBlockLine</string>
+    <string name="codeeditor_setting_showlinenumber">ShowLineNumber</string>
+    <string name="codeeditor_setting_navigate">Navigate</string>
+    <string name="codeeditor_setting_highlightrow">HighlightRow</string>
+    <string name="codeeditor_setting_edit">Edit</string>
 
 </resources>

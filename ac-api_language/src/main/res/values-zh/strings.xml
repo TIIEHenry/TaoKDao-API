@@ -60,4 +60,23 @@
 	<string name="genkey_state_name">地区：</string>
 	<string name="genkey_country">国家：</string>
     <string name="splash_initializing">正在初始化…</string>
+	<string name="codeeditor_setting_font">字体</string>
+	<string name="codeeditor_setting_block">区块</string>
+	<string name="codeeditor_setting_fontsize">字体大小</string>
+	<string name="codeeditor_setting_customfont">自定义字体</string>
+	<string name="codeeditor_setting_fontfolder">字体文件夹</string>
+	<string name="codeeditor_setting_wordwrap">自动换行</string>
+	<string name="codeeditor_setting_showmagnifier_des">安卓P以上支持</string>
+	<string name="codeeditor_setting_showmagnifier">显示放大镜</string>
+	<string name="codeeditor_setting_usetab">使用制表符</string>
+	<string name="codeeditor_setting_tabwidth">制表符宽度</string>
+	<string name="codeeditor_setting_tabwidth_des">以空格宽度为一个单位</string>
+	<string name="codeeditor_setting_indentnumber">缩进数量</string>
+	<string name="codeeditor_setting_indentnumber_des">空格或制表符数量</string>
+	<string name="codeeditor_setting_block_showblockline">显示区块线</string>
+	<string name="codeeditor_setting_block_highlightblockline">高亮区块线</string>
+	<string name="codeeditor_setting_showlinenumber">显示行号</string>
+	<string name="codeeditor_setting_navigate">导航</string>
+	<string name="codeeditor_setting_highlightrow">高亮行</string>
+	<string name="codeeditor_setting_edit">编辑</string>
 </resources>

@@ -11,6 +11,7 @@ import java.util.List;
 import androcode.api.setting.preference.ITitlePreference;
 import androcode.api.setting.preference.base.IGroupPreference;
 import androcode.api.setting.preference.base.IPreference;
+import androcode.api.bean.Properties;
 import androcode.base.annotation.relation.MainConstructor;
 
 public class TitlePreference implements ITitlePreference {
@@ -22,20 +23,15 @@ public class TitlePreference implements ITitlePreference {
     private boolean enable = true;
 
     @MainConstructor
-    public TitlePreference(@NonNull String id, Drawable icon, String title, String description) {
-        this.id = id;
-        this.icon = icon;
-        this.title = title;
-        this.description = description;
-
+    public TitlePreference(@NonNull Properties properties, Drawable icon) {
+        this.id = properties.id;
+        this.title = properties.label;
+        this.description = properties.des;
+        this.icon=icon;
     }
 
-    public TitlePreference(@NonNull String id, String title, String description) {
-        this(id, null, title, description);
-    }
-
-    public TitlePreference(@NonNull String id, String title) {
-        this(id, null, title, null);
+    public TitlePreference(@NonNull Properties properties) {
+        this(properties,null);
     }
 
     @NonNull

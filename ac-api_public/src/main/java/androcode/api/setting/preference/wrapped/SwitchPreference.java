@@ -7,21 +7,19 @@ import androidx.annotation.NonNull;
 
 import androcode.api.setting.preference.ISwitchPreference;
 import androcode.api.setting.preference.base.OppositeStatePreference;
+import androcode.api.bean.Properties;
 
 public class SwitchPreference extends OppositeStatePreference implements ISwitchPreference {
 
 
-    public SwitchPreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, Drawable icon, String title, String description, Listener listener) {
-        super(sharedPreferences, defaultValue, id, icon, title, description, listener);
+    public SwitchPreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+        super(sharedPreferences, defaultValue, properties, icon, listener);
     }
 
-    public SwitchPreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, String title, String description, Listener listener) {
-        super(sharedPreferences, defaultValue, id, title, description, listener);
+    public SwitchPreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull Properties properties, Listener listener) {
+        super(sharedPreferences, defaultValue, properties, listener);
     }
 
-    public SwitchPreference(@NonNull SharedPreferences sharedPreferences, boolean defaultValue, @NonNull String id, String title, Listener listener) {
-        super(sharedPreferences, defaultValue, id, title, listener);
-    }
 
 
 }

@@ -2,9 +2,13 @@ package androcode.api.file.operator.wrapped;
 
 import android.graphics.drawable.Drawable;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import java.io.File;
 import java.util.ArrayList;
 
+import androcode.api.bean.Properties;
 import androcode.api.file.operator.FileOperatorCallback;
 import androcode.api.file.operator.FileOperatorChecker;
 
@@ -25,12 +29,12 @@ public class SuffixFileOperator extends FileOperator implements FileOperatorChec
     public ArrayList<String> unsupportSuffix = new ArrayList<>();
 
 
-    public SuffixFileOperator(Drawable icon, String label, FileOperatorCallback callback) {
-        super(icon, label, callback, null);
+    public SuffixFileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback) {
+        super(properties, icon, callback, null);
     }
 
-    public SuffixFileOperator(String label, FileOperatorCallback callback) {
-        this(null, label, callback);
+    public SuffixFileOperator(@NonNull Properties properties,  FileOperatorCallback callback) {
+        this(properties, null, callback);
     }
 
     public boolean isSupportSuffix(String suffix) {

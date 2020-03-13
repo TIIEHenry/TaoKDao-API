@@ -7,9 +7,10 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import androcode.api.bean.IProperties;
 import androcode.base.identifiable.Identifiable;
 
-public interface IProjectTemplate extends Identifiable<String> {
+public interface IProjectTemplate extends IProperties {
     @Nullable
     Drawable getIcon();
 

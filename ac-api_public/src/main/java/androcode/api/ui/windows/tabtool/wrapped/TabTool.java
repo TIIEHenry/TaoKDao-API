@@ -9,6 +9,7 @@ import androidx.annotation.StringRes;
 
 import java.util.ArrayList;
 
+import androcode.api.bean.Properties;
 import androcode.api.main.IMainActivity;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.windows.tabtool.ITabTool;
@@ -19,7 +20,7 @@ import androcode.base.fragment.StateFragment;
 
 public class TabTool implements ITabTool {
     @Identifier
-    private final int id;
+    private final String id;
     private final String label;
     private final Drawable icon;
     private final StateFragment fragment;
@@ -27,9 +28,9 @@ public class TabTool implements ITabTool {
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
 
     @MainConstructor
-    public TabTool(@Identifier int id, String label, Drawable icon, StateFragment fragment) {
-        this.id = id;
-        this.label = label;
+    public TabTool(@NonNull Properties properties, Drawable icon, StateFragment fragment) {
+        this.id = properties.id;
+        this.label = properties.label;
         this.icon = icon;
         this.fragment = fragment;
         fragment.setOnPauseObserver(() -> {
@@ -42,13 +43,13 @@ public class TabTool implements ITabTool {
         });
     }
 
-    public TabTool(IMainActivity main, @Identifier @StringRes int label, @DrawableRes int icon, StateFragment fragment) {
-        this(label, main.getString(label), main.getDrawable(icon), fragment);
+    public TabTool(@NonNull Properties properties,  StateFragment fragment) {
+        this(properties,null, fragment);
     }
 
-    @Identifier
+    @NonNull
     @Override
-    public int id() {
+    public String id() {
         return id;
     }
 

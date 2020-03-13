@@ -11,6 +11,7 @@ import java.util.List;
 import androcode.api.setting.preference.ICategoryPreference;
 import androcode.api.setting.preference.base.IGroupPreference;
 import androcode.api.setting.preference.base.IPreference;
+import androcode.api.bean.Properties;
 import androcode.base.annotation.relation.MainConstructor;
 
 public class CategoryPreference implements ICategoryPreference {
@@ -22,20 +23,15 @@ public class CategoryPreference implements ICategoryPreference {
     private boolean enable = true;
 
     @MainConstructor
-    public CategoryPreference(@NonNull String id, Drawable icon, String title, String description) {
-        this.id = id;
+    public CategoryPreference(@NonNull Properties properties, Drawable icon) {
+        this.id = properties.id;
+        this.title = properties.label;
+        this.description = properties.des;
         this.icon = icon;
-        this.title = title;
-        this.description = description;
-
     }
 
-    public CategoryPreference(@NonNull String id, String title, String description) {
-        this(id, null, title, description);
-    }
-
-    public CategoryPreference(@NonNull String id, String title) {
-        this(id, null, title, null);
+    public CategoryPreference(@NonNull Properties properties) {
+        this(properties,null);
     }
 
     @NonNull
@@ -112,4 +108,5 @@ public class CategoryPreference implements ICategoryPreference {
     public String id() {
         return id;
     }
+
 }

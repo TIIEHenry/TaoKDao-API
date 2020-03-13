@@ -7,33 +7,36 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import androcode.api.bean.Properties;
 import androcode.api.project.template.IProjectTemplate;
 
 public class ProjectTemplate implements IProjectTemplate {
     @NonNull
-    public String id;
-    public Drawable icon;
-    public String label;
-    public String description;
-    public Callback onCreateTemplate;
-    public Callback onShowTemplateInfo;
+    private String id;
+    private Drawable icon;
+    private String label;
+    private String description;
+    private Callback onCreateTemplate;
+    private Callback onShowTemplateInfo;
 
-    public ProjectTemplate(@NonNull String id, Drawable icon, String label, String description, Callback onCreateTemplate, Callback onShowTemplateInfo) {
-        this.id = id;
+    public ProjectTemplate(@NonNull Properties properties, Drawable icon, Callback onCreateTemplate, Callback onShowTemplateInfo) {
+        this.id = properties.id;
+        this.label = properties.label;
+        this.description = properties.des;
         this.icon = icon;
-        this.label = label;
-        this.description = description;
         this.onCreateTemplate = onCreateTemplate;
         this.onShowTemplateInfo = onShowTemplateInfo;
     }
 
-    public ProjectTemplate(@NonNull String id, Drawable icon, String label, String description, Callback onCreateTemplate) {
-        this(id, icon, label, description, onCreateTemplate, null);
+    public ProjectTemplate(@NonNull Properties properties, Callback onCreateTemplate, Callback onShowTemplateInfo) {
+        this(properties, null, onCreateTemplate, onShowTemplateInfo);
     }
 
-    public ProjectTemplate(@NonNull String id, String label, String description, Callback onCreateTemplate) {
-        this(id, null, label, description, onCreateTemplate, null);
+
+    public ProjectTemplate(@NonNull Properties properties, Callback onCreateTemplate) {
+        this(properties, null, onCreateTemplate, null);
     }
+
 
     @Nullable
     @Override

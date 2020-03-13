@@ -7,18 +7,24 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
+import androcode.api.bean.IProperties;
 import androcode.api.setting.preference.base.IPreference;
 import androcode.api.ui.content.editor.IEditor;
 import androcode.api.ui.content.menu.TabContentMenu;
 import androcode.base.annotation.Identifier;
 import androcode.base.annotation.maintain.LongTerm;
 import androcode.base.fragment.StateFragment;
-import androcode.base.identifiable.Identifiable;
 
 @LongTerm
-public interface ITabContent extends Identifiable<String> {
+public interface ITabContent extends IProperties {
     @Nullable
     default Drawable getIcon() {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    default String getDescription() {
         return null;
     }
 

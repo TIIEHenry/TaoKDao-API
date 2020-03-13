@@ -11,5 +11,11 @@ public interface IGroupPreference extends IPreference<Object> {
 
     void setNumberList(@NonNull List<IPreference<?>> list);
 
-
+    @Override
+    default void load() {
+        List<IPreference<?>> list = getNumberList();
+        for (IPreference<?> iPreference : list) {
+            iPreference.load();
+        }
+    }
 }

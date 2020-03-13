@@ -6,5 +6,4 @@ public interface WindowStateObserver {
 
     void onWindowHide();
 
-    void onWindowCreated();
 }

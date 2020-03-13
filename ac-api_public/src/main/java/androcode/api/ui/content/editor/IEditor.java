@@ -65,7 +65,7 @@ public interface IEditor<D, I> {
      * @return 数据管理
      */
     @NonNull
-    IDataController<D> getDataManager();
+    IDataController<D> getDataController();
 
     /**
      * @return 搜索工具
