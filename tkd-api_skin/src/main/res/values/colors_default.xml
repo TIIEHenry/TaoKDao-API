@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_appbar_background_color_hint_light">@color/blueGrey_400</color>
+    <color name="main_appbar_background_color_light">@color/blueGrey_500</color>
+    <color name="main_appbar_background_color_accent_light">@color/blueGrey_600</color>
+    <color name="main_appbar_foreground_color_hint_light">@color/grey_400</color>
+    <color name="main_appbar_foreground_color_light">@color/grey_100</color>
+    <color name="main_appbar_foreground_color_accent_light">@color/grey_1100</color>
+
+    <color name="main_content_background_color_hint_light">@color/grey_300</color>
+    <color name="main_content_background_color_light">@color/grey_1100</color>
+    <color name="main_content_background_color_accent_light">@color/grey_300</color>
+    <color name="main_content_foreground_color_hint_light">@color/grey_600</color>
+    <color name="main_content_foreground_color_light">@color/grey_900</color>
+    <color name="main_content_foreground_color_accent_light">@color/grey_1000</color>
+
+    <color name="main_float_background_color_hint_light">#33000000</color>
+    <color name="main_float_background_color_light">#44000000</color>
+    <color name="main_float_background_color_accent_light">#66000000</color>
+    <color name="main_float_foreground_color_hint_light">#dddddd</color>
+    <color name="main_float_foreground_color_light">#eeeeee</color>
+    <color name="main_float_foreground_color_accent_light">#ffffff</color>
+
+    <color name="main_bottom_background_color_hint_light">@color/grey_300</color>
+    <color name="main_bottom_background_color_light">@color/grey_50</color>
+    <color name="main_bottom_background_color_accent_light">@color/grey_500</color>
+    <color name="main_bottom_foreground_color_hint_light">#303030</color>
+    <color name="main_bottom_foreground_color_light">#333333</color>
+    <color name="main_bottom_foreground_color_accent_light">#222222</color>
+
+
+    <color name="main_appbar_background_color_hint_dark">#424242</color>
+    <color name="main_appbar_background_color_dark">#2c2e2d</color>
+    <color name="main_appbar_background_color_accent_dark">#202121</color>
+    <color name="main_appbar_foreground_color_hint_dark">#bbbbbb</color>
+    <color name="main_appbar_foreground_color_dark">#dddddd</color>
+    <color name="main_appbar_foreground_color_accent_dark">#eeffffff</color>
+
+    <color name="main_content_background_color_hint_dark">#444444</color>
+    <color name="main_content_background_color_dark">#343635</color>
+    <color name="main_content_background_color_accent_dark">#202121</color>
+    <color name="main_content_foreground_color_hint_dark">#aaaaaa</color>
+    <color name="main_content_foreground_color_dark">#dddddd</color>
+    <color name="main_content_foreground_color_accent_dark">#ffffff</color>
+
+    <color name="main_float_background_color_hint_dark">#33000000</color>
+    <color name="main_float_background_color_dark">#44000000</color>
+    <color name="main_float_background_color_accent_dark">#55000000</color>
+    <color name="main_float_foreground_color_hint_dark">#dddddd</color>
+    <color name="main_float_foreground_color_dark">#eeeeee</color>
+    <color name="main_float_foreground_color_accent_dark">#ffffff</color>
+
+    <color name="main_bottom_background_color_hint_dark">#444444</color>
+    <color name="main_bottom_background_color_dark">#343635</color>
+    <color name="main_bottom_background_color_accent_dark">#202121</color>
+    <color name="main_bottom_foreground_color_hint_dark">#bbbbbb</color>
+    <color name="main_bottom_foreground_color_dark">#dddddd</color>
+    <color name="main_bottom_foreground_color_accent_dark">#eeffffff</color>
+
+
+</resources>

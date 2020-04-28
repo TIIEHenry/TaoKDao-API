@@ -1,0 +1,32 @@
+{
+    "name": "Demo",
+    "builder": "",
+    "plugins": [
+        {
+            "id": "projectStructure",
+            "parameters": [
+                {
+                    "folders": [
+                        {
+                            "alias": "dm2",
+                            "path": "/Demo2"
+                        }
+                    ],
+                    "files": [
+                        {
+                            "alias": "dm2s",
+                            "path": "/Demo2/lua"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "alias": "dm2",
+            "path": "/Demo2"
+        }
+    ],
+    "settings": {}
+}

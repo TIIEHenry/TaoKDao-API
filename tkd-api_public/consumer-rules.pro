@@ -1,0 +1,3 @@
+-keep class taokdao.api.**{
+*;
+}

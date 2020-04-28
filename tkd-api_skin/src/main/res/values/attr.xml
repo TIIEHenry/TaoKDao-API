@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Theme">
+        <!--background一般是背景-->
+        <!--foreground一般是文字-->
+        <!--hint表示淡化忽略，应用于文本暗示-->
+        <!--accent表示强调突出，应用于选中和按下效果-->
+        <!--        -->
+        <!--工具栏-->
+        <attr name="main_appbar_background_color_hint" format="color" />
+        <attr name="main_appbar_background_color" format="color" />
+        <attr name="main_appbar_background_color_accent" format="color" />
+        <attr name="main_appbar_foreground_color_hint" format="color" />
+        <attr name="main_appbar_foreground_color" format="color" />
+        <attr name="main_appbar_foreground_color_accent" format="color" />
+        <!--内容-->
+        <attr name="main_content_background_color_hint" format="color" />
+        <attr name="main_content_background_color" format="color" />
+        <attr name="main_content_background_color_accent" format="color" />
+        <attr name="main_content_foreground_color_hint" format="color" />
+        <attr name="main_content_foreground_color" format="color" />
+        <attr name="main_content_foreground_color_accent" format="color" />
+        <!--浮动控件-->
+        <attr name="main_float_background_color_hint" format="color" />
+        <attr name="main_float_background_color" format="color" />
+        <attr name="main_float_background_color_accent" format="color" />
+        <attr name="main_float_foreground_color_hint" format="color" />
+        <attr name="main_float_foreground_color" format="color" />
+        <attr name="main_float_foreground_color_accent" format="color" />
+        <!--底栏-->
+        <attr name="main_bottom_background_color_hint" format="color" />
+        <attr name="main_bottom_background_color" format="color" />
+        <attr name="main_bottom_background_color_accent" format="color" />
+        <attr name="main_bottom_foreground_color_hint" format="color" />
+        <attr name="main_bottom_foreground_color" format="color" />
+        <attr name="main_bottom_foreground_color_accent" format="color" />
+
+    </declare-styleable>
+</resources>

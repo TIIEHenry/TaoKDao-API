@@ -1,0 +1,30 @@
+{
+    "id": "com.id",
+    "type":"engine",
+    "vsesion": {
+        "code": 100,
+        "name": "1.0",
+        "downgrade": true
+    },
+    "information": {
+        "author": "TIIEHenry",
+        "label": "Plugin1",
+        "icon": "icon.png",
+        "description": "介绍",
+        "tags": [   ],
+        "readme": "README.MD"
+    },
+    "languages": [
+        "zh-CN"
+    ],
+    "tabcontents": [
+        "androcode.codeeditor"
+    ],
+    "engine": {
+        "id": "rhino",
+        "entrance": "init.js",
+        "parameters": [
+            ""
+        ]
+    }
+}

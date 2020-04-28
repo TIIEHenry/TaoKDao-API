@@ -1,0 +1,146 @@
+<resources>
+	
+	<style name="MainBaseLightDefault" parent="MainBaseDefault">
+		<item name="android:statusBarColor">@color/main_appbar_background_color_light</item>
+		<item name="colorPrimaryDark">@color/main_appbar_background_color_light</item>
+		<item name="colorPrimary">@color/main_appbar_background_color_light</item>
+		<item name="xui_actionbar_color">@color/main_appbar_background_color_light</item>
+		
+		<item name="xui_actionbar_text_color">@color/main_appbar_foreground_color_light</item>
+		
+		<item name="colorControlNormal">@color/main_content_background_color_hint_light</item>
+		<item name="android:colorControlNormal">@color/main_content_background_color_hint_light</item>
+		<item name="xui_config_color_disable">@color/main_content_background_color_hint_light</item>
+		<item name="xui_config_color_separator_light">@color/main_content_background_color_hint_light</item>
+		<item name="xui_config_color_background">@color/main_content_background_color_light</item>
+		<item name="md_background_color">@color/main_content_background_color_light</item>
+		<item name="xui_config_color_separator_dark">@color/main_content_background_color_accent_light</item>
+		<item name="xui_config_color_pressed">@color/main_content_background_color_accent_light</item>
+		<item name="android:colorControlHighlight">@color/main_content_background_color_accent_light</item>
+		<item name="colorControlHighlight">@color/main_content_background_color_accent_light</item>
+		
+		<item name="xui_config_color_explain_text">@color/main_content_foreground_color_hint_light</item>
+		<item name="xui_config_color_hint_text">@color/main_content_foreground_color_hint_light</item>
+		<item name="xui_config_color_stroke">@color/main_content_foreground_color_light</item>
+		<item name="xui_config_color_content_text">@color/main_content_foreground_color_light</item>
+		<item name="xui_config_color_title_text">@color/main_content_foreground_color_light</item>
+		<item name="xui_config_color_input_text">@color/main_content_foreground_color_light</item>
+		<item name="android:textColor">@color/main_content_foreground_color_light</item>
+		<item name="android:editTextColor">@color/main_content_foreground_color_light</item>
+		<item name="android:textColorPrimary">@color/main_content_foreground_color_light</item>
+		<item name="colorAccent">@color/main_content_foreground_color_light</item>
+		
+		<item name="android:windowBackground">@color/main_bottom_background_color_light</item>
+		<item name="android:navigationBarColor">@color/main_bottom_background_color_light</item>
+		
+		<item name="main_appbar_background_color_hint">@color/main_appbar_background_color_hint_light</item>
+		<item name="main_appbar_background_color">@color/main_appbar_background_color_light</item>
+		<item name="main_appbar_background_color_accent">@color/main_appbar_background_color_accent_light</item>
+		
+		<item name="main_appbar_foreground_color_hint">@color/main_appbar_foreground_color_hint_light</item>
+		<item name="main_appbar_foreground_color">@color/main_appbar_foreground_color_light</item>
+		<item name="main_appbar_foreground_color_accent">@color/main_appbar_foreground_color_accent_light</item>
+		
+		<item name="main_content_background_color_hint">@color/main_content_background_color_hint_light</item>
+		<item name="main_content_background_color">@color/main_content_background_color_light</item>
+		<item name="main_content_background_color_accent">@color/main_content_background_color_accent_light</item>
+		
+		<item name="main_content_foreground_color_hint">@color/main_content_foreground_color_hint_light</item>
+		<item name="main_content_foreground_color">@color/main_content_foreground_color_light</item>
+		<item name="main_content_foreground_color_accent">@color/main_content_foreground_color_accent_light</item>
+		
+		<item name="main_float_background_color_hint">@color/main_float_background_color_hint_light</item>
+		<item name="main_float_background_color">@color/main_float_background_color_light</item>
+		<item name="main_float_background_color_accent">@color/main_float_background_color_accent_light</item>
+		
+		<item name="main_float_foreground_color_hint">@color/main_float_foreground_color_hint_light</item>
+		<item name="main_float_foreground_color">@color/main_float_foreground_color_light</item>
+		<item name="main_float_foreground_color_accent">@color/main_float_foreground_color_accent_light</item>
+		
+		<item name="main_bottom_background_color_hint">@color/main_bottom_background_color_hint_light</item>
+		<item name="main_bottom_background_color">@color/main_bottom_background_color_light</item>
+		<item name="main_bottom_background_color_accent">@color/main_bottom_background_color_accent_light</item>
+		
+		<item name="main_bottom_foreground_color_hint">@color/main_bottom_foreground_color_hint_light</item>
+		<item name="main_bottom_foreground_color">@color/main_bottom_foreground_color_light</item>
+		<item name="main_bottom_foreground_color_accent">@color/main_bottom_foreground_color_accent_light</item>
+	</style>
+	
+	<style name="MainBaseDarkDefault" parent="MainBaseDefault">
+		<item name="android:statusBarColor">@color/main_appbar_background_color_dark</item>
+		<item name="colorPrimaryDark">@color/main_appbar_background_color_dark</item>
+		<item name="colorPrimary">@color/main_appbar_background_color_dark</item>
+		<item name="xui_actionbar_color">@color/main_appbar_background_color_dark</item>
+		
+		<item name="xui_actionbar_text_color">@color/main_appbar_foreground_color_dark</item>
+		
+		<item name="colorControlNormal">@color/main_content_background_color_hint_dark</item>
+		<item name="android:colorControlNormal">@color/main_content_background_color_hint_dark</item>
+		<item name="xui_config_color_disable">@color/main_content_background_color_hint_dark</item>
+		<item name="xui_config_color_separator_light">@color/main_content_background_color_hint_dark</item>
+		<item name="xui_config_color_background">@color/main_content_background_color_dark</item>
+		<item name="md_background_color">@color/main_content_background_color_dark</item>
+		<item name="xui_config_color_separator_dark">@color/main_content_background_color_accent_dark</item>
+		<item name="xui_config_color_pressed">@color/main_content_background_color_accent_dark</item>
+		<item name="android:colorControlHighlight">@color/main_content_background_color_accent_dark</item>
+		<item name="colorControlHighlight">@color/main_content_background_color_accent_dark</item>
+		
+		<item name="xui_config_color_explain_text">@color/main_content_foreground_color_hint_dark</item>
+		<item name="xui_config_color_hint_text">@color/main_content_foreground_color_hint_dark</item>
+		<item name="xui_config_color_stroke">@color/main_content_foreground_color_dark</item>
+		<item name="xui_config_color_content_text">@color/main_content_foreground_color_dark</item>
+		<item name="xui_config_color_title_text">@color/main_content_foreground_color_dark</item>
+		<item name="xui_config_color_input_text">@color/main_content_foreground_color_dark</item>
+		<item name="android:textColor">@color/main_content_foreground_color_dark</item>
+		<item name="android:editTextColor">@color/main_content_foreground_color_dark</item>
+		<item name="android:textColorPrimary">@color/main_content_foreground_color_dark</item>
+		<item name="colorAccent">@color/main_content_foreground_color_dark</item>
+		
+		<item name="android:windowBackground">@color/main_bottom_background_color_dark</item>
+		<item name="android:navigationBarColor">@color/main_bottom_background_color_dark</item>
+		
+		<item name="main_appbar_background_color_hint">@color/main_appbar_background_color_hint_dark</item>
+		<item name="main_appbar_background_color">@color/main_appbar_background_color_dark</item>
+		<item name="main_appbar_background_color_accent">@color/main_appbar_background_color_accent_dark</item>
+		
+		<item name="main_appbar_foreground_color_hint">@color/main_appbar_foreground_color_hint_dark</item>
+		<item name="main_appbar_foreground_color">@color/main_appbar_foreground_color_dark</item>
+		<item name="main_appbar_foreground_color_accent">@color/main_appbar_foreground_color_accent_dark</item>
+		
+		<item name="main_content_background_color_hint">@color/main_content_background_color_hint_dark</item>
+		<item name="main_content_background_color">@color/main_content_background_color_dark</item>
+		<item name="main_content_background_color_accent">@color/main_content_background_color_accent_dark</item>
+		
+		<item name="main_content_foreground_color_hint">@color/main_content_foreground_color_hint_dark</item>
+		<item name="main_content_foreground_color">@color/main_content_foreground_color_dark</item>
+		<item name="main_content_foreground_color_accent">@color/main_content_foreground_color_accent_dark</item>
+		
+		<item name="main_float_background_color_hint">@color/main_float_background_color_hint_dark</item>
+		<item name="main_float_background_color">@color/main_float_background_color_dark</item>
+		<item name="main_float_background_color_accent">@color/main_float_background_color_accent_dark</item>
+		
+		<item name="main_float_foreground_color_hint">@color/main_float_foreground_color_hint_dark</item>
+		<item name="main_float_foreground_color">@color/main_float_foreground_color_dark</item>
+		<item name="main_float_foreground_color_accent">@color/main_float_foreground_color_accent_dark</item>
+		
+		<item name="main_bottom_background_color_hint">@color/main_bottom_background_color_hint_dark</item>
+		<item name="main_bottom_background_color">@color/main_bottom_background_color_dark</item>
+		<item name="main_bottom_background_color_accent">@color/main_bottom_background_color_accent_dark</item>
+		
+		<item name="main_bottom_foreground_color_hint">@color/main_bottom_foreground_color_hint_dark</item>
+		<item name="main_bottom_foreground_color">@color/main_bottom_foreground_color_dark</item>
+		<item name="main_bottom_foreground_color_accent">@color/main_bottom_foreground_color_accent_dark</item>
+	</style>
+	
+	<style name="MainBaseDefault" parent="AppTheme">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="android:windowActionModeOverlay">true</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+	<style name="AppTheme" parent="XUITheme.Phone">
+		<!--        <item name="android:windowBackground">@drawable/app_splash</item>-->
+		<!--        <item name="android:windowTranslucentNavigation">true</item>-->
+		<!--        <item name="android:windowTranslucentStatus">true</item>-->
+	</style>
+</resources>
