@@ -11,6 +11,10 @@ public class InnerIdentifier {
 
     public static class TabToolIdentifier {
         public static String EVENT = "taokdao.tabtool.event";
+        public static String TIPS = "taokdao.tabtool.tips";
+        public static String BUILD = "taokdao.tabtool.build";
+        public static String SEARCH = "taokdao.tabtool.search";
+        public static String LOGCAT = "taokdao.tabtool.logcat";
     }
 
 

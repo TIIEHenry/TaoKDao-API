@@ -112,5 +112,6 @@
     <string name="event_explorer_prefix" translatable="false">Explorer</string>
     <string name="event_progressbar_prefix" translatable="false">ProgressBar</string>
     <string name="event_plugin_engine_prefix" translatable="false">PluginEngine</string>
+	<string name="copy_text">Copy</string>
 
 </resources>

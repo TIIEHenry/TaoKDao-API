@@ -1,0 +1,10 @@
+ext {
+    mavens = [
+            aliyun_public       : 'https://maven.aliyun.com/repository/public/',//jcenter和central
+            aliyun_google       : 'https://maven.aliyun.com/repository/google/',
+            aliyun_gradle_plugin: 'https://maven.aliyun.com/repository/gradle-plugin/',
+            jitpack             : "https://jitpack.io",
+            fabric_public       : "https://maven.fabric.io/public",
+            clojars             : "https://clojars.org/repo/",
+    ]
+}

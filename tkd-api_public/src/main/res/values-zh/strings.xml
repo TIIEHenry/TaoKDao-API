@@ -103,4 +103,5 @@
 	<string name="main_setting_darktheme_default">默认</string>
 	<string name="main_setting_language_followsystem">跟随系统</string>
 	<string name="tabtool_event_label">事件</string>
+	<string name="copy_text">复制</string>
 </resources>

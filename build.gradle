@@ -1,33 +1,32 @@
 buildscript {
 
-    ext {
-        versions.kotlin = '1.3.50'
-    }
+    apply from: 'properties/ext-repositories.gradle'
+    apply from: 'properties/ext-build_plugins.gradle'
+    apply from: 'properties/ext-sdk_versions.gradle'
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public/' } //jcenter和central
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
-        maven { url 'https://maven.fabric.io/public' }
+        maven { url mavens.aliyun_public }
+        maven { url mavens.aliyun_google }
+        maven { url mavens.aliyun_gradle_plugin }
+        maven { url mavens.fabric_public }
         google()
         mavenLocal()
         mavenCentral()
     }
     dependencies {
-
-        classpath 'com.android.tools.build:gradle:3.5.3'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
-        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$versions.kotlin"
+        classpath build_plugins.android_gradle
+        classpath build_plugins.kotlin_gradle
+        classpath build_plugins.kotlin_android_extensions
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/public/' } //jcenter和central
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url mavens.aliyun_public }
+        maven { url mavens.aliyun_google }
+        maven { url mavens.aliyun_gradle_plugin }
+        maven { url mavens.jitpack }
         maven { url 'https://dl.bintray.com/ppartisan/maven/' }
-        maven { url "https://clojars.org/repo/" }
-        maven { url "https://jitpack.io" }
+        maven { url mavens.clojars }
         mavenLocal()
         mavenCentral()
         google()
@@ -37,11 +36,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-ext {
-    compileSdkVersion = 29
-    targetSdkVersion = 29
-
-    minSdkVersion = 21
-    //googleServiceVersion = "15.0.2"
 }
