@@ -38,7 +38,7 @@ public interface ITabTool extends IProperties {
     ArrayList<IPreference<?>> getSettingList();
 
     /**
-     * 管理TabContent的状态，不要用Fragment的生命周期
+     * 管理TabTool的状态，不要用Fragment的生命周期
      */
     @Nullable
     default TabToolStateObserver getStateObserver() {

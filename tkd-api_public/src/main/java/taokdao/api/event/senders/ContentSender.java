@@ -2,8 +2,8 @@ package taokdao.api.event.senders;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.event.sender.IEventSender;
-import taokdao.api.event.sender.wrapped.EventSender;
+import taokdao.api.event.send.IEventSender;
+import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.ContentTag;
 import taokdao.api.ui.content.IContent;
 import taokdao.base.annotation.impl.InternalImpl;
@@ -15,6 +15,14 @@ public class ContentSender {
 
     public ContentSender(@NonNull IContent content) {
         this.content = content;
+    }
+
+    public static IEventSender messageGlobal(@NonNull String message) {
+        return new EventSender(ContentTag.getGlobal(), /*"Message: " +*/ message);
+    }
+
+    public static IEventSender fileOpened(@NonNull String message, String path) {
+        return new EventSender(ContentTag.getGlobal(), message + ": " + path);
     }
 
     public IEventSender saveSuccess(@NonNull String path) {
@@ -35,14 +43,6 @@ public class ContentSender {
 
     public IEventSender message(@NonNull String message) {
         return new EventSender(new ContentTag(content), /*"Message: " +*/ message);
-    }
-
-    public static IEventSender messageGlobal(@NonNull String message) {
-        return new EventSender(ContentTag.getGlobal(), /*"Message: " +*/ message);
-    }
-
-    public static IEventSender fileOpened(@NonNull String message, String path) {
-        return new EventSender(ContentTag.getGlobal(), message + ": " + path);
     }
 
 //    public IEventSender open(@NonNull String path) {

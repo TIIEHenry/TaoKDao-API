@@ -39,8 +39,12 @@ public abstract class StateFragment extends Fragment {
         if (rootView != null) {
             ViewGroup parent = (ViewGroup) rootView.getParent();
             if (null != parent) {
+//                Log.e(getClass().getSimpleName(), "onDestroyView: "+rootView );
+//                if (rootView instanceof ViewGroup)
+//                    ((ViewGroup) rootView).removeAllViewsInLayout();
                 parent.removeView(rootView);
             }
+
         }
     }
 
@@ -80,4 +84,5 @@ public abstract class StateFragment extends Fragment {
 
 
     public abstract void initView(@NonNull View view);
+
 }

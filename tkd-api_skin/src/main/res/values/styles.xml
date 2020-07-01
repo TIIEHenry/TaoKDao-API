@@ -1,11 +1,15 @@
 <resources>
 	
 	<style name="MainBaseLightDefault" parent="MainBaseDefault">
+		<!--状态栏颜色-->
 		<item name="android:statusBarColor">@color/main_appbar_background_color_light</item>
 		<item name="colorPrimaryDark">@color/main_appbar_background_color_light</item>
+		<!--api 21 可用 Appbar背景色-->
 		<item name="colorPrimary">@color/main_appbar_background_color_light</item>
 		<item name="xui_actionbar_color">@color/main_appbar_background_color_light</item>
 		
+		<!--ToolBar上的Title颜色-->
+		<item name="android:textColorPrimary">@color/main_appbar_foreground_color_light</item>
 		<item name="xui_actionbar_text_color">@color/main_appbar_foreground_color_light</item>
 		
 		<item name="colorControlNormal">@color/main_content_background_color_hint_light</item>
@@ -27,10 +31,10 @@
 		<item name="xui_config_color_input_text">@color/main_content_foreground_color_light</item>
 		<item name="android:textColor">@color/main_content_foreground_color_light</item>
 		<item name="android:editTextColor">@color/main_content_foreground_color_light</item>
-		<item name="android:textColorPrimary">@color/main_content_foreground_color_light</item>
 		<item name="colorAccent">@color/main_content_foreground_color_light</item>
 		
 		<item name="android:windowBackground">@color/main_bottom_background_color_light</item>
+		<!--api 21 可用 底部导航栏颜色-->
 		<item name="android:navigationBarColor">@color/main_bottom_background_color_light</item>
 		
 		<item name="main_appbar_background_color_hint">@color/main_appbar_background_color_hint_light</item>
@@ -67,11 +71,16 @@
 	</style>
 	
 	<style name="MainBaseDarkDefault" parent="MainBaseDefault">
+		<!--状态栏颜色-->
 		<item name="android:statusBarColor">@color/main_appbar_background_color_dark</item>
 		<item name="colorPrimaryDark">@color/main_appbar_background_color_dark</item>
+		<!--api 21 可用 Appbar背景色-->
+		<item name="android:colorPrimary">@color/main_appbar_background_color_dark</item>
 		<item name="colorPrimary">@color/main_appbar_background_color_dark</item>
 		<item name="xui_actionbar_color">@color/main_appbar_background_color_dark</item>
 		
+		<!--ToolBar上的Title颜色-->
+		<item name="android:textColorPrimary">@color/main_appbar_foreground_color_dark</item>
 		<item name="xui_actionbar_text_color">@color/main_appbar_foreground_color_dark</item>
 		
 		<item name="colorControlNormal">@color/main_content_background_color_hint_dark</item>
@@ -93,10 +102,10 @@
 		<item name="xui_config_color_input_text">@color/main_content_foreground_color_dark</item>
 		<item name="android:textColor">@color/main_content_foreground_color_dark</item>
 		<item name="android:editTextColor">@color/main_content_foreground_color_dark</item>
-		<item name="android:textColorPrimary">@color/main_content_foreground_color_dark</item>
 		<item name="colorAccent">@color/main_content_foreground_color_dark</item>
 		
 		<item name="android:windowBackground">@color/main_bottom_background_color_dark</item>
+		<!--api 21 可用 底部导航栏颜色-->
 		<item name="android:navigationBarColor">@color/main_bottom_background_color_dark</item>
 		
 		<item name="main_appbar_background_color_hint">@color/main_appbar_background_color_hint_dark</item>

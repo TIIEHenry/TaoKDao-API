@@ -30,13 +30,14 @@ public class Content implements IContent {
     @NonNull
     public StateFragment fragment;
     @NonNull
-    public IEditor editor;
+    public IEditor<?, ?> editor;
+    String openerId = "";
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
-    private ArrayList<ContentMenu> menuList = new ArrayList<>();
 
 
 //    @NonNull
 //    public ITabContentLifecycle lifecycle = new TabContentBaseLifecycle();
+    private ArrayList<ContentMenu> menuList = new ArrayList<>();
 
     @MainConstructor
     public Content(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
@@ -98,7 +99,7 @@ public class Content implements IContent {
 
     @NonNull
     @Override
-    public IEditor getEditor() {
+    public IEditor<?, ?> getEditor() {
         return editor;
     }
 
@@ -112,5 +113,16 @@ public class Content implements IContent {
     @Override
     public ArrayList<IPreference<?>> getSettingList() {
         return settingList;
+    }
+
+    @NonNull
+    @Override
+    public String getOpener() {
+        return openerId;
+    }
+
+    @Override
+    public void setOpener(@NonNull String openerId) {
+        this.openerId = openerId;
     }
 }

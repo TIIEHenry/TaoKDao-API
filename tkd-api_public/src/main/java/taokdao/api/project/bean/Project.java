@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import taokdao.api.main.IMainActivity;
-import taokdao.api.project.builder.IProjectBuilder;
+import taokdao.api.project.build.IProjectBuilder;
 import taokdao.api.project.plugin.IProjectPlugin;
 import taokdao.base.annotation.todo.NeedSet;
 

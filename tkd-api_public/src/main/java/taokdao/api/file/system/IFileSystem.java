@@ -33,7 +33,17 @@ public interface IFileSystem {
      */
     @NonNull
     default File getCrashDir() {
-        File file = new File(getWorkDir(), "Crash");
+        File file = new File(getConfigDir(), "Crash");
+        file.mkdirs();
+        return file;
+    }
+
+    /**
+     * @return 配置目录
+     */
+    @NonNull
+    default File getConfigDir() {
+        File file = new File(getWorkDir(), "Config");
         file.mkdirs();
         return file;
     }

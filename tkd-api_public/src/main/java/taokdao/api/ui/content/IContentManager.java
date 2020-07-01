@@ -3,14 +3,13 @@ package taokdao.api.ui.content;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 
-import taokdao.base.annotation.impl.InternalImpl;
-import taokdao.base.annotation.maintain.ShortTerm;
 import taokdao.base.annotation.relation.MainMethod;
 
 public interface IContentManager {
+
+    void init();
 
     @NonNull
     IContentIOController getIOController();
@@ -18,17 +17,12 @@ public interface IContentManager {
     /**
      * @param content IContent
      * @param select  显示
-     * @param opener  openerId
      */
     @MainMethod
-    void add(@NonNull IContent content, boolean select, @Nullable String opener);
+    void add(@NonNull IContent content, boolean select);
 
-    default void add(@NonNull IContent content, boolean select) {
-        add(content, select, null);
-    }
-
-   default void add(@NonNull IContent content, String opener) {
-        add(content, true, opener);
+    default void add(@NonNull IContent content) {
+        add(content, true);
     }
 
     void remove(@NonNull IContent content);
@@ -66,9 +60,5 @@ public interface IContentManager {
     void closeAllToTheLeft();
 
     void closeAllToTheRight();
-
-    @InternalImpl
-    @ShortTerm
-    LinkedHashMap<String, String> getPathOpenerMap();
 
 }

@@ -25,23 +25,12 @@ public interface IContentIOController {
     void saveAll();
 
     /**
-     *
      * @param path file
      * @return handled
      */
 
-    boolean open(String path);
-
-    /**
-     *
-     * @param path file
-     * @param opener opener id
-     * @return handled
-     */
-    boolean open(String path, String opener);
 
 //    List<String> getOpenedFilePaths();
 
 
-    boolean isOpened(String path);
 }

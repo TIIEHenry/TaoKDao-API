@@ -6,5 +6,5 @@ import taokdao.api.main.IMainActivity;
 import taokdao.api.ui.content.editor.IEditor;
 
 public interface MainMenuCallback {
-    void onMenuAction(IMainActivity main, @Nullable IEditor editor);
+    void onMenuAction(IMainActivity main, @Nullable IEditor<?, ?> editor);
 }

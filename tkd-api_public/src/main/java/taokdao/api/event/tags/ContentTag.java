@@ -16,14 +16,14 @@ public class ContentTag implements IEventTag {
     }
 
     @NonNull
-    @Override
-    public String getTag(@NonNull IMainActivity main) {
-        return getGlobal().getTag(main) + "(" + content.id() + ")";
+    public static IEventTag getGlobal() {
+        return main -> main.getString(R.string.event_content_prefix);
     }
 
     @NonNull
-    public static IEventTag getGlobal() {
-        return main -> main.getString(R.string.event_content_prefix);
+    @Override
+    public String getTag(@NonNull IMainActivity main) {
+        return getGlobal().getTag(main) + "(" + content.id() + ")";
     }
 
 }

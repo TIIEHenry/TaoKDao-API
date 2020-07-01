@@ -29,14 +29,14 @@ public abstract class ContentFragment extends StateFragment implements IContent 
     @NonNull
     public String path;
     @NonNull
-    public IEditor editor;
+    public IEditor<?, ?> editor;
+    String openerId = "";
     private View layout;
-
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
     private ArrayList<ContentMenu> menuList = new ArrayList<>();
 
     @MainConstructor
-    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor editor) {
+    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
         this.id = properties.id;
         this.label = properties.label;
         this.icon = icon;
@@ -46,20 +46,20 @@ public abstract class ContentFragment extends StateFragment implements IContent 
         setObservers();
     }
 
-    public ContentFragment(@NonNull Properties properties, @NonNull String path, View layout, @NonNull IEditor editor) {
+    public ContentFragment(@NonNull Properties properties, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, null, path, layout, editor);
     }
 
-    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, View layout, @NonNull IEditor editor) {
+    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, icon, file.getAbsolutePath(), layout, editor);
         this.label = file.getName();
     }
 
-    public ContentFragment(@NonNull Properties properties, @NonNull File file, View layout, @NonNull IEditor editor) {
+
+    public ContentFragment(@NonNull Properties properties, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, null, file.getAbsolutePath(), layout, editor);
         this.label = file.getName();
     }
-
 
     private void setObservers() {
         setOnPauseObserver(() -> {
@@ -110,7 +110,7 @@ public abstract class ContentFragment extends StateFragment implements IContent 
 
     @NonNull
     @Override
-    public IEditor getEditor() {
+    public IEditor<?, ?> getEditor() {
         return editor;
     }
 
@@ -124,5 +124,16 @@ public abstract class ContentFragment extends StateFragment implements IContent 
     @Override
     public ArrayList<IPreference<?>> getSettingList() {
         return settingList;
+    }
+
+    @NonNull
+    @Override
+    public String getOpener() {
+        return openerId;
+    }
+
+    @Override
+    public void setOpener(@NonNull String openerId) {
+        this.openerId = openerId;
     }
 }

@@ -30,7 +30,7 @@ public class Plugin {
     /**
      * 在对应tabcontent id 的时候打开插件窗口，会显示
      */
-    public List<String> tabcontent;
+    public List<String> content;
 
     public Plugin(PluginManifest manifest) {
         this.manifest = manifest;
@@ -40,38 +40,44 @@ public class Plugin {
         this.type = manifest.pluginType;
         this.version = manifest.version;
         this.language = Arrays.asList(manifest.languages);
-        this.tabcontent = Arrays.asList(manifest.tabcontents);
+        this.content = Arrays.asList(manifest.contents);
         this.information = new Information(manifest.pluginDir, manifest.information);
         this.engine = new Engine(manifest.engine);
     }
 
 
-    public void onInstall() {
-        engine.engine.onInstallPlugin(this);
+    public void onUpGrade() {
+        engine.engine.callPluginAction(this, PluginActions.onUpGrade);
     }
 
-    public void onUninstall() {
-        engine.engine.onUninstallPlugin(this);
-    }
-    public void onUpdate() {
-        engine.engine.onUpdatePlugin(this);
+    public void onDownGrade() {
+        engine.engine.callPluginAction(this, PluginActions.onDownGrade);
     }
 
-    public void onLoad() {
-        engine.engine.onLoadPlugin(this);
+    public void onCreate() {
+        engine.engine.callPluginAction(this, PluginActions.onCreate);
     }
 
     public void onInit() {
-        engine.engine.onInitPlugin(this);
+        engine.engine.callPluginAction(this, PluginActions.onInit);
     }
 
     public void onCall() {
-        engine.engine.onCallPlugin(this);
+        engine.engine.callPluginAction(this, PluginActions.onCall);
     }
 
     public void onDestroy() {
-        engine.engine.onDestroyPlugin(this);
+        engine.engine.callPluginAction(this, PluginActions.onDestroy);
     }
+
+    public void onPause() {
+        engine.engine.callPluginAction(this, PluginActions.onPause);
+    }
+
+    public void onResume() {
+        engine.engine.callPluginAction(this, PluginActions.onResume);
+    }
+
 
     public static class Information {
         public String author;

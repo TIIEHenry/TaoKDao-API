@@ -8,6 +8,10 @@ import taokdao.base.annotation.maintain.ShortTerm;
 public class FileUtils {
 
     public static String getSuffix(File file) {
-        return file.getPath().substring(file.getPath().lastIndexOf(".") + 1);
+        return getSuffix(file.getPath());
+    }
+
+    public static String getSuffix(String path) {
+        return path.substring(path.lastIndexOf(".") + 1);
     }
 }

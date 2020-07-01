@@ -2,8 +2,8 @@ package taokdao.api.event.senders;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.event.sender.IEventSender;
-import taokdao.api.event.sender.wrapped.EventSender;
+import taokdao.api.event.send.IEventSender;
+import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.PluginEngineTag;
 import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.plugin.engine.IPluginEngine;
@@ -18,6 +18,7 @@ public class PluginEngineSender {
 
     /**
      * Plugin入口错误
+     *
      * @param plugin
      * @param entrance
      * @return

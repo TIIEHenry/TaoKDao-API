@@ -11,14 +11,23 @@ public enum ProgressBarSet {
     BOTTOM_HORIZONTAL("bottom");
 
     public String label;
-
+    private ArrayList<Observer> observerList = new ArrayList<>();
+    private ArrayList<String> userList = new ArrayList<>();
     ProgressBarSet(@NonNull String label) {
         this.label = label;
     }
 
-    private ArrayList<Observer> observerList = new ArrayList<>();
-    private ArrayList<String> userList = new ArrayList<>();
+    public static void clearAllUser() {
+        for (ProgressBarSet value : values()) {
+            value.clearUser();
+        }
+    }
 
+    public static void clearAllObserver() {
+        for (ProgressBarSet value : values()) {
+            value.clearObserver();
+        }
+    }
 
     public void addUser(@NonNull String id) {
         userList.add(id);
@@ -62,19 +71,6 @@ public enum ProgressBarSet {
     @Override
     public String toString() {
         return "ProgressBar{" + label + "}";
-    }
-
-
-    public static void clearAllUser() {
-        for (ProgressBarSet value : values()) {
-            value.clearUser();
-        }
-    }
-
-    public static void clearAllObserver() {
-        for (ProgressBarSet value : values()) {
-            value.clearObserver();
-        }
     }
 
     public interface Observer {

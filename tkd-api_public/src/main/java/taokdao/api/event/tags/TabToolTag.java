@@ -2,8 +2,8 @@ package taokdao.api.event.tags;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.main.IMainActivity;
 import taokdao.api.event.tag.IEventTag;
+import taokdao.api.main.IMainActivity;
 import taokdao.api.ui.window.tabtool.ITabTool;
 import tiiehenry.taokdao.api.main.R;
 

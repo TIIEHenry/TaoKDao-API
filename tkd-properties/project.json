@@ -1,7 +1,7 @@
 {
     "name": "Demo",
     "builder": "",
-    "plugins": [
+    "plugins": [ 
         {
             "id": "projectStructure",
             "parameters": [

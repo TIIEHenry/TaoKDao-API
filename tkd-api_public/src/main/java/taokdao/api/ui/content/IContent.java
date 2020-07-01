@@ -38,6 +38,12 @@ public interface IContent extends IProperties {
     @NonNull
     StateFragment getFragment();
 
+    /**
+     * 不要改为 IEditor<?,?>
+     * 类型冲突
+     *
+     * @return
+     */
     @NonNull
     IEditor getEditor();
 
@@ -48,8 +54,13 @@ public interface IContent extends IProperties {
     @NonNull
     List<IPreference<?>> getSettingList();
 
+    @NonNull
+    String getOpener();
+
+    void setOpener(@NonNull String openerId);
+
     /**
-     * 管理TabContent的状态，不要用Fragment的生命周期
+     * 管理Content的状态，不要用Fragment的生命周期
      */
     @Nullable
     default ContentStateObserver getStateObserver() {

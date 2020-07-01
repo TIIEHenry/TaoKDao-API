@@ -4,12 +4,13 @@ package taokdao.api.ui.content.editor.wrapped;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.jetbrains.annotations.NotNull;
+
 import taokdao.api.ui.content.editor.IEditor;
-import taokdao.api.ui.content.editor.base.edit.IBlockEditor;
 import taokdao.api.ui.content.editor.base.edit.IDataController;
 import taokdao.api.ui.content.editor.base.edit.ISearcher;
 import taokdao.api.ui.content.editor.base.edit.IUndoManager;
-import taokdao.api.ui.content.editor.base.io.IIOManager;
+import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
@@ -22,11 +23,9 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
         return null;
     }
 
-
-    @Nullable
     @Override
-    public IBlockEditor getBlockEditor() {
-        return null;
+    public void setUndoManager(IUndoManager undoManager) {
+
     }
 
     @Nullable
@@ -35,10 +34,20 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
         return null;
     }
 
+    @Override
+    public void setSelector(ISelector<Object, Integer> selector) {
+
+    }
+
     @Nullable
     @Override
     public IIMEController getIMEController() {
         return null;
+    }
+
+    @Override
+    public void setIMEController(IIMEController imeController) {
+
     }
 
     @Nullable
@@ -47,10 +56,20 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
         return null;
     }
 
-    @Nullable
     @Override
-    public IIOManager<Object> getIOManager() {
+    public void setCursorController(ICursorController<Integer> cursorController) {
+
+    }
+
+    @NotNull
+    @Override
+    public IIOController<Object> getIOController() {
         return null;
+    }
+
+    @Override
+    public void setIOController(@NotNull IIOController<Object> ioController) {
+
     }
 
     @NonNull
@@ -59,10 +78,20 @@ public class EmptyIEditor implements IEditor<Object, Integer> {
         return null;
     }
 
+    @Override
+    public void setDataController(@NotNull IDataController<Object> dataController) {
+
+    }
+
     @Nullable
     @Override
     public ISearcher<Object, Integer> getSearcher() {
         return null;
+    }
+
+    @Override
+    public void setSearcher(ISearcher<Object, Integer> searcher) {
+
     }
 
     @Override

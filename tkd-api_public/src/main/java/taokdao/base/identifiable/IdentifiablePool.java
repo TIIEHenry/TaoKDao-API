@@ -1,6 +1,7 @@
 package taokdao.base.identifiable;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -24,6 +25,7 @@ public class IdentifiablePool<T extends Identifiable<D>, D> {
         return false;
     }
 
+    @Nullable
     public T get(@NonNull D id) {
         return map.get(id);
     }

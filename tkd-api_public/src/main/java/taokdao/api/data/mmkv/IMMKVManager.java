@@ -8,7 +8,6 @@ import com.tencent.mmkv.MMKV;
 import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.plugin.bean.PluginManifest;
 import taokdao.api.plugin.engine.IPluginEngine;
-import taokdao.api.plugin.engine.wrapped.PluginEngine;
 import taokdao.api.project.plugin.IProjectPlugin;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.window.explorer.IExplorer;
@@ -30,6 +29,7 @@ public interface IMMKVManager {
     default MMKV getPluginMMKV(@NonNull PluginManifest pluginManifest) {
         return getMMKV("plugin_" + pluginManifest.id);
     }
+
     @NonNull
     default MMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine) {
         return getMMKV("plugin_engine_" + pluginEngine.id());

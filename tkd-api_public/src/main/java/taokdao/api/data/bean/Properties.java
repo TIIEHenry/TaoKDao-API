@@ -5,10 +5,9 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.main.IMainActivity;
 import taokdao.base.annotation.relation.MainConstructor;
 
-public class Properties {
+public class Properties implements IProperties {
     @NonNull
     public String id;
 
@@ -32,21 +31,29 @@ public class Properties {
         this(id, null, null);
     }
 
-
-    public Properties(@NonNull Context main, @NonNull String id, int label) {
-        this(id, main.getString(label), null);
+    public Properties(@NonNull String id, @NonNull Context context, int label) {
+        this(id, context.getString(label), null);
     }
 
-    public Properties(@NonNull Context main, @NonNull String id, int label, int description) {
-        this(id, main.getString(label), main.getString(description));
+    public Properties(@NonNull String id, @NonNull Context context, int label, int description) {
+        this(id, context.getString(label), context.getString(description));
     }
 
 
-    public Properties(@NonNull IMainActivity main, @NonNull String id, int label) {
-        this(id, main.getString(label), null);
+    @Override
+    public String getLabel() {
+        return label;
     }
 
-    public Properties(@NonNull IMainActivity main, @NonNull String id, int label, int description) {
-        this(id, main.getString(label), main.getString(description));
+    @Nullable
+    @Override
+    public String getDescription() {
+        return des;
+    }
+
+    @NonNull
+    @Override
+    public String id() {
+        return id;
     }
 }

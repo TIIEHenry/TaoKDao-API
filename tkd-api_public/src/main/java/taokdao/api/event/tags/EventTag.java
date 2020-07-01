@@ -3,8 +3,8 @@ package taokdao.api.event.tags;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import taokdao.api.main.IMainActivity;
 import taokdao.api.event.tag.IEventTag;
+import taokdao.api.main.IMainActivity;
 
 public class EventTag implements IEventTag {
     private String label;

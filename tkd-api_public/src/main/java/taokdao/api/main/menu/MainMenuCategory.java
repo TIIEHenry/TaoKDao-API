@@ -33,18 +33,25 @@ public enum MainMenuCategory {
      * @return menu
      */
     public MainMenu addMenu(String label, MainMenuCallback mainMenuCallback) {
+        return addMenu(new MainMenu(label, mainMenuCallback));
+    }
+
+    /**
+     * @param menu MainMenu
+     * @return menu
+     */
+    public MainMenu addMenu(MainMenu menu) {
         MainMenu a = null;
         for (MainMenu it : list) {
-            if (it.label.equals(label)) {
+            if (it.label.equals(menu.label)) {
                 a = it;
             }
         }
         if (a != null) {
             list.remove(a);
         }
-        MainMenu action = new MainMenu(label, mainMenuCallback);
-        list.add(action);
-        return action;
+        list.add(menu);
+        return menu;
     }
 
     public void clear() {

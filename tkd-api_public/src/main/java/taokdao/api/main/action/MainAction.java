@@ -24,6 +24,10 @@ public enum MainAction {
     onLandscape("onLandscape"),
     onPortrait("onPortrait"),
 
+//    onUiDark("onUiDark"),
+//    onUiLight("onUiLight"),
+
+
     CurrentFileSaved("CurrentFileSaved"),
     AllFilesSaved("AllFilesSaved");
 

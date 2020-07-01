@@ -38,7 +38,7 @@ public class PluginManifest {
     /**
      * 在对应tabcontent id 的时候打开插件窗口，会显示
      */
-    public String[] tabcontents = new String[]{};
+    public String[] contents = new String[]{};
 
     public PluginManifest() {
     }

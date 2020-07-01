@@ -1,4 +1,5 @@
 package taokdao.api.ui.content.editor.base.theme;
+
 @Deprecated
 public class EditorTheme {
     public String name;

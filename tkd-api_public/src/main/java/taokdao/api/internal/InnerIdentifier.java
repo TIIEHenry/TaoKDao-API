@@ -18,8 +18,9 @@ public class InnerIdentifier {
     }
 
 
-    public static class TabContentIdentifier {
+    public static class ContentIdentifier {
         public static String CODE_EDITOR = "taokdao.tabcontent.codeeditor";
+        public static String CODE_TEMPLATE_EDITOR = "taokdao.tabcontent.codeetemplateditor";
         public static String OPEN_FAILED = "taokdao.tabcontent.openfailed";
     }
 

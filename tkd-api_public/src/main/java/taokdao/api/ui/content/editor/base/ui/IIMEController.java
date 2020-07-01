@@ -2,9 +2,9 @@ package taokdao.api.ui.content.editor.base.ui;
 
 public interface IIMEController {
 
-    void showIME(boolean isShow);
+    void showSoftInput(boolean isShow);
 
-    void showIME();
+    void showSoftInput();
 
-    void hideIME();
+    void hideSoftInput();
 }

@@ -3,11 +3,10 @@ package taokdao.api.ui.content.editor;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.ui.content.editor.base.edit.IBlockEditor;
 import taokdao.api.ui.content.editor.base.edit.IDataController;
 import taokdao.api.ui.content.editor.base.edit.ISearcher;
 import taokdao.api.ui.content.editor.base.edit.IUndoManager;
-import taokdao.api.ui.content.editor.base.io.IIOManager;
+import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
@@ -24,11 +23,15 @@ public interface IEditor<D, I> {
     @NonNull
     IDataController<D> getDataController();
 
+    void setDataController(@NonNull IDataController<D> dataController);
+
     /**
      * @return 数据输入输出管理
      */
-    @Nullable
-    IIOManager<D> getIOManager();
+    @NonNull
+    IIOController<D> getIOController();
+
+    void setIOController(@NonNull IIOController<D> ioController);
 
     /**
      * @return 撤销重做管理器
@@ -36,18 +39,15 @@ public interface IEditor<D, I> {
     @Nullable
     IUndoManager getUndoManager();
 
+    void setUndoManager(@Nullable IUndoManager undoManager);
+
     /**
      * @return 位置控制器
      */
     @Nullable
     ICursorController<I> getCursorController();
 
-    /**
-     * @return 块编辑器
-     */
-    @Nullable
-    IBlockEditor getBlockEditor();
-
+    void setCursorController(@Nullable ICursorController<I> cursorController);
 
     /**
      * @return 选择器
@@ -55,17 +55,23 @@ public interface IEditor<D, I> {
     @Nullable
     ISelector<D, I> getSelector();
 
+    void setSelector(@Nullable ISelector<D, I> selector);
+
     /**
      * @return 输入法控制器
      */
     @Nullable
     IIMEController getIMEController();
 
+    void setIMEController(@Nullable IIMEController imeController);
+
     /**
      * @return 搜索工具
      */
     @Nullable
     ISearcher<D, I> getSearcher();
+
+    void setSearcher(@Nullable ISearcher<D, I> searcher);
 //
 //    /**
 //     * @return 主题管理器
