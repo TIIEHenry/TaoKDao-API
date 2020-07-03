@@ -6,12 +6,13 @@ import androidx.annotation.Nullable;
 import taokdao.api.ui.window.IWindow;
 
 public interface IExplorerWindow extends IWindow {
-    void addExplorer(@NonNull IExplorer explorer);
+    void add(@NonNull IExplorer explorer);
 
-    boolean removeExplorer(@NonNull IExplorer explorer);
+    boolean remove(@NonNull IExplorer explorer);
 
-    void showExplorer(@NonNull IExplorer explorer);
+    void show(@NonNull IExplorer explorer);
 
     @Nullable
-    IExplorer getCurrentExplorer();
+    IExplorer getCurrent();
+
 }

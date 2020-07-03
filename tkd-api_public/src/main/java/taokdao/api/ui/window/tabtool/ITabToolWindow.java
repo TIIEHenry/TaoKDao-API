@@ -8,20 +8,22 @@ import java.util.List;
 import taokdao.api.ui.window.IWindow;
 
 public interface ITabToolWindow extends IWindow {
-    void addTabTool(@NonNull ITabTool tabTool, boolean select);
+    void init();
 
-    void removeTabTool(@NonNull ITabTool tabTool);
+    void add(@NonNull ITabTool tabTool, boolean select);
 
-    void showTabTool(@NonNull ITabTool tabTool);
+    void remove(@NonNull ITabTool tabTool);
+
+    void show(@NonNull ITabTool tabTool);
 
     @Nullable
-    ITabTool getTabTool(@NonNull String id);
+    ITabTool get(@NonNull String id);
 
     @NonNull
-    List<ITabTool> getTabToolList();
+    List<ITabTool> getList();
 
     @Nullable
-    ITabTool getCurrentTabTool();
+    ITabTool getCurrent();
 
     void refreshMenu();
 }

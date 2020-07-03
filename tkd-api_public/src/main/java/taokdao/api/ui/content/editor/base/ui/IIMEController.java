@@ -4,7 +4,11 @@ public interface IIMEController {
 
     void showSoftInput(boolean isShow);
 
-    void showSoftInput();
+    default void showSoftInput() {
+        showSoftInput(true);
+    }
 
-    void hideSoftInput();
+    default void hideSoftInput() {
+        showSoftInput(false);
+    }
 }

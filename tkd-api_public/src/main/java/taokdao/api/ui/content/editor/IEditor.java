@@ -9,6 +9,7 @@ import taokdao.api.ui.content.editor.base.edit.IUndoManager;
 import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
+import taokdao.api.ui.content.editor.base.theme.IUiModeManager;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
 
 /**
@@ -73,11 +74,11 @@ public interface IEditor<D, I> {
 
     void setSearcher(@Nullable ISearcher<D, I> searcher);
 //
-//    /**
-//     * @return 主题管理器
-//     */
-//    @Nullable
-//    IThemeManager getThemeManager();
+    /**
+     * @return 主题管理器
+     */
+    @NonNull
+    IUiModeManager getUiModeManager();
 
     boolean requestFocus();
 

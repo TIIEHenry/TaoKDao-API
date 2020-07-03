@@ -22,7 +22,7 @@ public interface IProjectTemplate extends IProperties {
     /**
      * 创建template的点击回调
      *
-     * @param dir templaate所在文件夹
+     * @param dir template所在文件夹
      */
     void generate(File dir);
 

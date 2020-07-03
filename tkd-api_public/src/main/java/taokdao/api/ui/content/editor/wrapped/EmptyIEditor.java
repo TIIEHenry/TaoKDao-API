@@ -13,89 +13,107 @@ import taokdao.api.ui.content.editor.base.edit.IUndoManager;
 import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
+import taokdao.api.ui.content.editor.base.theme.IUiModeManager;
+import taokdao.api.ui.content.editor.base.theme.UiMode;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
 
-public class EmptyIEditor implements IEditor<Object, Integer> {
+public interface EmptyIEditor extends IEditor<Object, Integer> {
 
     @Nullable
     @Override
-    public IUndoManager getUndoManager() {
+    default IUndoManager getUndoManager() {
         return null;
     }
 
     @Override
-    public void setUndoManager(IUndoManager undoManager) {
-
-    }
-
-    @Nullable
-    @Override
-    public ISelector<Object, Integer> getSelector() {
-        return null;
-    }
-
-    @Override
-    public void setSelector(ISelector<Object, Integer> selector) {
+    default void setUndoManager(IUndoManager undoManager) {
 
     }
 
     @Nullable
     @Override
-    public IIMEController getIMEController() {
+    default ISelector<Object, Integer> getSelector() {
         return null;
     }
 
     @Override
-    public void setIMEController(IIMEController imeController) {
+    default void setSelector(ISelector<Object, Integer> selector) {
 
     }
 
     @Nullable
     @Override
-    public ICursorController<Integer> getCursorController() {
+    default IIMEController getIMEController() {
         return null;
     }
 
     @Override
-    public void setCursorController(ICursorController<Integer> cursorController) {
+    default void setIMEController(IIMEController imeController) {
+
+    }
+
+    @Nullable
+    @Override
+    default ICursorController<Integer> getCursorController() {
+        return null;
+    }
+
+    @Override
+    default void setCursorController(ICursorController<Integer> cursorController) {
 
     }
 
     @NotNull
     @Override
-    public IIOController<Object> getIOController() {
+    default IIOController<Object> getIOController() {
         return null;
     }
 
     @Override
-    public void setIOController(@NotNull IIOController<Object> ioController) {
+    default void setIOController(@NotNull IIOController<Object> ioController) {
 
     }
 
     @NonNull
     @Override
-    public IDataController<Object> getDataController() {
+    default IDataController<Object> getDataController() {
         return null;
     }
 
     @Override
-    public void setDataController(@NotNull IDataController<Object> dataController) {
+    default void setDataController(@NotNull IDataController<Object> dataController) {
 
     }
 
     @Nullable
     @Override
-    public ISearcher<Object, Integer> getSearcher() {
+    default ISearcher<Object, Integer> getSearcher() {
         return null;
     }
 
     @Override
-    public void setSearcher(ISearcher<Object, Integer> searcher) {
+    default void setSearcher(ISearcher<Object, Integer> searcher) {
 
     }
 
     @Override
-    public boolean requestFocus() {
+    default boolean requestFocus() {
         return false;
+    }
+
+    @NonNull
+    @Override
+    default IUiModeManager getUiModeManager() {
+        return new IUiModeManager() {
+            @Override
+            public void setUiMode(UiMode mode) {
+
+            }
+
+            @Override
+            public UiMode getUiMode() {
+                return null;
+            }
+        };
     }
 }

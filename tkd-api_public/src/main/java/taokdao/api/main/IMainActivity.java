@@ -51,6 +51,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
     @NonNull
     IContentManager getContentManager();
 
+
     /**
      * 插件管理器
      *
@@ -75,6 +76,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
     @NonNull
     IPluginInstaller getPluginInstaller();
 
+
     /**
      * 图片管理器
      *
@@ -92,6 +94,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
     IBuildManager getBuildManager();
 
 
+
     /**
      * @return 文件模板生成器
      */
@@ -105,6 +108,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
      */
     @NonNull
     IProjectTemplateGenerator getProjectTemplateGenerator();
+
 
     /**
      * 项目管理器
@@ -155,6 +159,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
     @NonNull
     IDexLoader getDexLoader();
 
+
     /**
      * 文件操作
      *
@@ -170,6 +175,7 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
      */
     @NonNull
     IFileOpenManager getFileOpenManager();
+
 
 
     /**

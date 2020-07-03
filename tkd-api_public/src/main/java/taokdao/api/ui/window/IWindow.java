@@ -1,5 +1,7 @@
 package taokdao.api.ui.window;
 
+import androidx.annotation.NonNull;
+
 public interface IWindow {
     void showWindow();
 
@@ -7,7 +9,7 @@ public interface IWindow {
 
     boolean isWindowShown();
 
-    void addStateObserver(WindowStateObserver observer);
+    void addStateObserver(@NonNull WindowStateObserver observer);
 
-    boolean removeStateObserver(WindowStateObserver observer);
+    boolean removeStateObserver(@NonNull WindowStateObserver observer);
 }
