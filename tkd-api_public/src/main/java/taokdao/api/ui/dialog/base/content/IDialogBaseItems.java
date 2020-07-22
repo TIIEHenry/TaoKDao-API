@@ -4,7 +4,6 @@ import androidx.annotation.ArrayRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Collection;
 
@@ -26,7 +25,6 @@ public interface IDialogBaseItems<T> {
     T items(@NonNull CharSequence... items);
 
 
-
     T itemsGravity(@NonNull GravityEnum gravity);
 
     T itemsIds(@NonNull int[] idsArray);
@@ -43,7 +41,6 @@ public interface IDialogBaseItems<T> {
     T itemsDisabledIndices(@Nullable Integer... disabledIndices);
 
 
-
     /**
      * 设置对话框列表的点击效果
      *
@@ -51,9 +48,6 @@ public interface IDialogBaseItems<T> {
      * @return
      */
     T listSelector(@DrawableRes int selectorRes);
-
-
-
 
 
 }

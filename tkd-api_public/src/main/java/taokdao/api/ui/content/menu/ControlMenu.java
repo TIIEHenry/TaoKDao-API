@@ -14,19 +14,19 @@ import taokdao.base.annotation.relation.MainConstructor;
  * longClick,subMenuList不为空时，长按显示子菜单
  */
 @LongTerm
-public class ContentMenu extends BaseMenu<ContentMenu> {
+public class ControlMenu extends BaseMenu<ControlMenu> {
 
 
     @MainConstructor
-    public ContentMenu(@Nullable Drawable icon, @Nullable String label, @Nullable View.OnClickListener click, @Nullable View.OnClickListener longClick) {
+    public ControlMenu(@Nullable Drawable icon, @Nullable String label, @Nullable View.OnClickListener click, @Nullable View.OnClickListener longClick) {
         super(icon, label, click, longClick);
     }
 
-    public ContentMenu(Drawable icon, String label, View.OnClickListener click) {
+    public ControlMenu(Drawable icon, String label, View.OnClickListener click) {
         this(icon, label, click, null);
     }
 
-    public ContentMenu(String label, View.OnClickListener click) {
+    public ControlMenu(String label, View.OnClickListener click) {
         this(null, label, click, null);
     }
 

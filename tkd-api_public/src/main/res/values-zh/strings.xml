@@ -104,4 +104,11 @@
 	<string name="main_setting_language_followsystem">跟随系统</string>
 	<string name="tabtool_event_label">事件</string>
 	<string name="copy_text">复制</string>
+	<string name="plugin_manage_launcher_pluginitem_manage">管理</string>
+	<string name="plugin_manage_launcher_pluginitem_showall">全部</string>
+	<string name="plugin_manage_launcher_pluginitem_showsupported">默认</string>
+	<string name="plugin_manage_launcher_pluginitem_getmore">获取</string>
+	<string name="plugin_manage_launcher_search_hint">搜索插件</string>
+	<string name="plugin_manage_launcher_refresh_dialog_title">加载中…</string>
+	<string name="plugin_manage_launcher_refresh_dialog_task">加载中…</string>
 </resources>

@@ -21,6 +21,7 @@ public interface IDialogItemsCustom<T> /*extends IDialogBaseItems<T>*/ {
 
     /**
      * LinearLayoutManager VERTICAL
+     *
      * @param adapter
      * @return
      */

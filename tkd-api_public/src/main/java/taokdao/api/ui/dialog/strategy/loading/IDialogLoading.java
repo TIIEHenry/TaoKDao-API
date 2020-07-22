@@ -15,6 +15,7 @@ public interface IDialogLoading<T> {
 
     /**
      * execute loading task after show
+     * default true
      * @param auto
      * @return
      */

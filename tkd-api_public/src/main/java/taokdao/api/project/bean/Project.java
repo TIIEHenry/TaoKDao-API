@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.api.project.build.IProjectBuilder;
 import taokdao.api.project.plugin.IProjectPlugin;
 import taokdao.base.annotation.todo.NeedSet;
@@ -46,7 +46,7 @@ public class Project {
         this.setting = projectConfig.setting;
     }
 
-    public boolean buildDefault(IMainActivity main) {
+    public boolean buildDefault(IMainContext main) {
         return builder.getDefaultBuildOption().onBuild(main, this);
     }
 

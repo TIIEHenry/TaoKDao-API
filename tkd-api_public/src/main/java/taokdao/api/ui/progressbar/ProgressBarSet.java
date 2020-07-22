@@ -13,6 +13,7 @@ public enum ProgressBarSet {
     public String label;
     private ArrayList<Observer> observerList = new ArrayList<>();
     private ArrayList<String> userList = new ArrayList<>();
+
     ProgressBarSet(@NonNull String label) {
         this.label = label;
     }

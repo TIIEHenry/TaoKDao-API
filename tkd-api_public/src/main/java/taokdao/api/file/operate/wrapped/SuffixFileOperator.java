@@ -5,8 +5,6 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.File;
 import java.util.ArrayList;
 
@@ -45,7 +43,7 @@ public class SuffixFileOperator extends FileOperator implements FileOperatorChec
     }
 
     @Override
-    public boolean isSupport(@NotNull String path) {
+    public boolean isSupport(@NonNull String path) {
         File file = new File(path);
         if (type == Type.ALL)
             return true;

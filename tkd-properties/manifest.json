@@ -1,30 +1,36 @@
 {
-    "id": "com.id",
-    "type":"engine",
-    "vsesion": {
-        "code": 100,
-        "name": "1.0",
-        "downgrade": true
-    },
-    "information": {
-        "author": "TIIEHenry",
-        "label": "Plugin1",
-        "icon": "icon.png",
-        "description": "介绍",
-        "tags": [   ],
-        "readme": "README.MD"
-    },
-    "languages": [
-        "zh-CN"
+  "id": "com.id",
+  "type": "engine",
+  "version": {
+    "code": 100,
+    "name": "1.0",
+    "downgrade": true
+  },
+  "information": {
+    "author": "TIIEHenry",
+    "label": "Plugin1",
+    "icon": "icon.png",
+    "description": "介绍",
+    "tags": [],
+    "readme": "README.MD"
+  },
+  "languages": [
+    "zh-CN"
+  ],
+  "visibility": {
+    "type": "1",
+    "contents": [
+      "androcode.codeeditor"
     ],
-    "tabcontents": [
-        "androcode.codeeditor"
-    ],
-    "engine": {
-        "id": "rhino",
-        "entrance": "init.js",
-        "parameters": [
-            ""
-        ]
-    }
+    "suffixes": [
+      "js"
+    ]
+  },
+  "engine": {
+    "id": "rhino",
+    "entrance": "init.js",
+    "parameters": [
+      ""
+    ]
+  }
 }

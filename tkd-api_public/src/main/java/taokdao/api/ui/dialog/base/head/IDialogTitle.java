@@ -3,6 +3,8 @@ package taokdao.api.ui.dialog.base.head;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import taokdao.api.ui.dialog.GravityEnum;
+
 
 public interface IDialogTitle<T> {
 
@@ -16,4 +18,11 @@ public interface IDialogTitle<T> {
      */
     T title(@NonNull CharSequence title);
 
+    /**
+     * 设置标题的对齐方式
+     *
+     * @param gravity
+     * @return
+     */
+    T titleGravity(@NonNull GravityEnum gravity);
 }

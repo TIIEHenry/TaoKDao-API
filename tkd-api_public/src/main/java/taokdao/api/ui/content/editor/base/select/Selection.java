@@ -7,7 +7,7 @@ public class Selection extends ISelection<Integer> {
     }
 
     @Override
-    public Integer getLen() {
+    public Integer length() {
         return end - start;
     }
 }

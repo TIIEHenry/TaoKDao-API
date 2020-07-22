@@ -4,9 +4,7 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-import taokdao.base.identifiable.Identifiable;
-
-public interface IBuilder<I>  {
+public interface IBuilder<I> {
 
     @NonNull
     List<IBuildOption<I>> getBuildOptionList();

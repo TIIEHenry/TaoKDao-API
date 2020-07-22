@@ -1,7 +1,7 @@
 package taokdao.api.file.operate;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 public interface FileOperatorCallback {
-    boolean call(IMainActivity main, String path);
+    boolean call(IMainContext main, String path);
 }

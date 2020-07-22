@@ -5,13 +5,11 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.jetbrains.annotations.NotNull;
-
 import taokdao.api.data.bean.Properties;
 import taokdao.api.file.operate.FileOperatorCallback;
 import taokdao.api.file.operate.FileOperatorChecker;
 import taokdao.api.file.operate.IFileOperator;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.base.annotation.relation.MainConstructor;
 
 
@@ -43,12 +41,12 @@ public class FileOperator implements IFileOperator {
     }
 
     @Override
-    public boolean isSupport(@NotNull String path) {
+    public boolean isSupport(@NonNull String path) {
         return checker.isSupport(path);
     }
 
     @Override
-    public boolean call(IMainActivity main, String path) {
+    public boolean call(IMainContext main, String path) {
         return callback.call(main, path);
     }
 

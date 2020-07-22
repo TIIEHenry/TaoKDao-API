@@ -23,14 +23,11 @@ public class Plugin {
 
     public Information information;
 
-    public List<String> language;
+    public List<String> languages;
 
     public Engine engine;
 
-    /**
-     * 在对应tabcontent id 的时候打开插件窗口，会显示
-     */
-    public List<String> content;
+    public PluginVisibility visibility;
 
     public Plugin(PluginManifest manifest) {
         this.manifest = manifest;
@@ -39,8 +36,8 @@ public class Plugin {
         this.id = manifest.id;
         this.type = manifest.pluginType;
         this.version = manifest.version;
-        this.language = Arrays.asList(manifest.languages);
-        this.content = Arrays.asList(manifest.contents);
+        this.languages = Arrays.asList(manifest.languages);
+        this.visibility =manifest.visibility.parse();
         this.information = new Information(manifest.pluginDir, manifest.information);
         this.engine = new Engine(manifest.engine);
     }
@@ -85,7 +82,11 @@ public class Plugin {
         public Drawable icon;
         public String description;
         public String readme;
-        public List<String> tag;
+        public List<String> tags;
+
+        public Information() {
+
+        }
 
         public Information(File pluginDir, PluginManifest.Information information) {
             this.author = information.author;
@@ -93,7 +94,7 @@ public class Plugin {
             this.icon = Drawable.createFromPath(new File(pluginDir, information.icon).getAbsolutePath());
             this.description = information.description;
             this.readme = information.readme;
-            this.tag = Arrays.asList(information.tags);
+            this.tags = Arrays.asList(information.tags);
         }
     }
 

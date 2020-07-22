@@ -9,6 +9,10 @@ import java.io.FileNotFoundException;
 import dalvik.system.DexClassLoader;
 
 public interface IDexLoader {
+//    void setClassLoader(DexClassLoader classLoader);
+
+    @NonNull
+    ClassLoader getClassLoader();
 
     /**
      * @return odex路径

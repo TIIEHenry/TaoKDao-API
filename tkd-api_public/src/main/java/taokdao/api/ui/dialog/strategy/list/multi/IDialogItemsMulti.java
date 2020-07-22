@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import taokdao.api.ui.dialog.callback.ListCallbackMultiChoice;
 import taokdao.api.ui.dialog.base.content.IDialogBaseItems;
+import taokdao.api.ui.dialog.callback.ListCallbackMultiChoice;
 
 public interface IDialogItemsMulti<T> extends IDialogBaseItems<T> {
     T checkBoxPrompt(

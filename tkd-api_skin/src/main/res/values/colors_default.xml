@@ -7,9 +7,9 @@
     <color name="main_appbar_foreground_color_light">@color/grey_100</color>
     <color name="main_appbar_foreground_color_accent_light">@color/grey_1100</color>
 
-    <color name="main_content_background_color_hint_light">@color/grey_300</color>
+    <color name="main_content_background_color_hint_light">@color/grey_200</color>
     <color name="main_content_background_color_light">@color/grey_1100</color>
-    <color name="main_content_background_color_accent_light">@color/grey_300</color>
+    <color name="main_content_background_color_accent_light">@color/grey_400</color>
     <color name="main_content_foreground_color_hint_light">@color/grey_600</color>
     <color name="main_content_foreground_color_light">@color/grey_900</color>
     <color name="main_content_foreground_color_accent_light">@color/grey_1000</color>

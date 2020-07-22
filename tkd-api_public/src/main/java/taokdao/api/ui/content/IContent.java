@@ -10,7 +10,9 @@ import java.util.List;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.editor.IEditor;
-import taokdao.api.ui.content.menu.ContentMenu;
+import taokdao.api.ui.content.manage.ContentStateObserver;
+import taokdao.api.ui.content.menu.ControlMenu;
+import taokdao.api.ui.content.menu.QuickMenu;
 import taokdao.base.annotation.Identifier;
 import taokdao.base.annotation.maintain.LongTerm;
 import taokdao.base.fragment.StateFragment;
@@ -48,7 +50,10 @@ public interface IContent extends IProperties {
     IEditor getEditor();
 
     @NonNull
-    List<ContentMenu> getMenuList();
+    List<ControlMenu> getControlMenuList();
+
+    @NonNull
+    List<QuickMenu> getQuickMenuList();
 
 
     @NonNull

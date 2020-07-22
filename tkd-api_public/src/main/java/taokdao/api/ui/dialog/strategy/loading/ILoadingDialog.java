@@ -2,7 +2,9 @@ package taokdao.api.ui.dialog.strategy.loading;
 
 import androidx.annotation.Nullable;
 
-public interface ILoadingDialog {
+import taokdao.api.ui.dialog.IDialog;
+
+public interface ILoadingDialog extends IDialog {
 
     void setLoadingText(@Nullable CharSequence text);
 

@@ -10,12 +10,14 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.content.editor.IEditor;
-import taokdao.api.ui.content.menu.ContentMenu;
+import taokdao.api.ui.content.menu.ControlMenu;
+import taokdao.api.ui.content.menu.QuickMenu;
 import taokdao.base.annotation.relation.MainConstructor;
 import taokdao.base.fragment.StateFragment;
 
@@ -33,7 +35,8 @@ public abstract class ContentFragment extends StateFragment implements IContent 
     String openerId = "";
     private View layout;
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
-    private ArrayList<ContentMenu> menuList = new ArrayList<>();
+    private ArrayList<ControlMenu> controlMenuList = new ArrayList<>();
+    private ArrayList<QuickMenu> quickMenuList = new ArrayList<>();
 
     @MainConstructor
     public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
@@ -116,8 +119,14 @@ public abstract class ContentFragment extends StateFragment implements IContent 
 
     @NonNull
     @Override
-    public ArrayList<ContentMenu> getMenuList() {
-        return menuList;
+    public ArrayList<ControlMenu> getControlMenuList() {
+        return controlMenuList;
+    }
+
+    @NonNull
+    @Override
+    public List<QuickMenu> getQuickMenuList() {
+        return quickMenuList;
     }
 
     @NonNull

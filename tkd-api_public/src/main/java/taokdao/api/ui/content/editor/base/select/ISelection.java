@@ -9,5 +9,5 @@ public abstract class ISelection<I> {
         this.end = end;
     }
 
-    public abstract I getLen();
+    public abstract I length();
 }

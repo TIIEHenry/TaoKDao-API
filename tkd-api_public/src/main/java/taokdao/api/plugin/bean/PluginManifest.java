@@ -35,10 +35,9 @@ public class PluginManifest {
      */
     public String[] languages = new String[]{};
     public Engine engine;
-    /**
-     * 在对应tabcontent id 的时候打开插件窗口，会显示
-     */
-    public String[] contents = new String[]{};
+
+
+    public PluginVisibility visibility;
 
     public PluginManifest() {
     }

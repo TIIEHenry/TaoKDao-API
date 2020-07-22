@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import taokdao.api.ui.dialog.IDialog;
 import taokdao.api.ui.dialog.builder.IBaseDialogBuilder;
 import taokdao.api.ui.dialog.callback.InputCallback;
 

@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import taokdao.api.data.bean.Properties;
-import taokdao.api.main.IMainActivity;
-import taokdao.api.ui.content.IContentManager;
+import taokdao.api.main.IMainContext;
+import taokdao.api.ui.content.manage.IContentManager;
 import taokdao.base.annotation.relation.MainConstructor;
 
 /**
@@ -64,13 +64,13 @@ public class SuffixFileOpener extends FileOpener {
     }
 
     @Override
-    public void click(@NonNull IMainActivity main, @NonNull IContentManager manager, @NonNull String path) {
+    public void click(@NonNull IMainContext main, @NonNull IContentManager manager, @NonNull String path) {
         if (click != null)
             click.onAction(main, manager, path);
     }
 
     @Override
-    public boolean longClick(@NonNull IMainActivity main, @NonNull IContentManager manager, @NonNull String path) {
+    public boolean longClick(@NonNull IMainContext main, @NonNull IContentManager manager, @NonNull String path) {
         if (longClick != null) {
             longClick.onAction(main, manager, path);
             return true;
@@ -84,6 +84,6 @@ public class SuffixFileOpener extends FileOpener {
     }
 
     public interface Callback {
-        void onAction(IMainActivity main, IContentManager manager, String path);
+        void onAction(IMainContext main, IContentManager manager, String path);
     }
 }

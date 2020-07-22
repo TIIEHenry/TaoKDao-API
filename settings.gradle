@@ -1,0 +1,4 @@
+rootProject.name = "TaoKDao-API"
+
+include ':tkd-api_public',
+        ':tkd-api_skin'

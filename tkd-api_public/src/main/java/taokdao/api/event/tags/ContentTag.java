@@ -3,7 +3,7 @@ package taokdao.api.event.tags;
 import androidx.annotation.NonNull;
 
 import taokdao.api.event.tag.IEventTag;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.api.ui.content.IContent;
 import tiiehenry.taokdao.api.main.R;
 
@@ -22,7 +22,7 @@ public class ContentTag implements IEventTag {
 
     @NonNull
     @Override
-    public String getTag(@NonNull IMainActivity main) {
+    public String getTag(@NonNull IMainContext main) {
         return getGlobal().getTag(main) + "(" + content.id() + ")";
     }
 

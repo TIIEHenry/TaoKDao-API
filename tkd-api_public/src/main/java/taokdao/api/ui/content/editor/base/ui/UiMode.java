@@ -1,4 +1,4 @@
-package taokdao.api.ui.content.editor.base.theme;
+package taokdao.api.ui.content.editor.base.ui;
 
 import android.content.res.Configuration;
 

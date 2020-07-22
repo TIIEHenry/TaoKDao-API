@@ -3,8 +3,6 @@ package taokdao.api.ui.dialog.base.button;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import taokdao.api.ui.dialog.DialogAction;
-import taokdao.api.ui.dialog.IDialog;
 import taokdao.api.ui.dialog.callback.SingleButtonCallback;
 
 public interface IDialogNegative<T> {

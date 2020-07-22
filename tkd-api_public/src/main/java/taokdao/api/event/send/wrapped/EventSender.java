@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.tag.IEventTag;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 public class EventSender implements IEventSender {
     private final IEventTag eventTag;
@@ -16,17 +16,17 @@ public class EventSender implements IEventSender {
     }
 
     @Override
-    public void log(@NonNull IMainActivity main) {
+    public void log(@NonNull IMainContext main) {
         main.log(eventTag, message);
     }
 
     @Override
-    public void notify(@NonNull IMainActivity main) {
+    public void notify(@NonNull IMainContext main) {
         main.notify(eventTag, message);
     }
 
     @Override
-    public void send(@NonNull IMainActivity main) {
+    public void send(@NonNull IMainContext main) {
         main.send(eventTag, message);
     }
 

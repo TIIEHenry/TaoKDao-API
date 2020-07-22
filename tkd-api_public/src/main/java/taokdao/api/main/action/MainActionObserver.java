@@ -1,7 +1,7 @@
 package taokdao.api.main.action;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 public interface MainActionObserver {
-    void onAction(IMainActivity main);
+    void onAction(IMainContext main);
 }

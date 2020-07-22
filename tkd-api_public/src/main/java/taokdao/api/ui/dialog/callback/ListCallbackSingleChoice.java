@@ -1,6 +1,5 @@
 package taokdao.api.ui.dialog.callback;
 
-import android.content.DialogInterface;
 import android.view.View;
 
 import taokdao.api.ui.dialog.IDialog;

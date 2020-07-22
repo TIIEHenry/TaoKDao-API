@@ -11,7 +11,7 @@ import java.util.List;
 
 import taokdao.base.annotation.relation.MainConstructor;
 
-public class BaseMenu<T extends BaseMenu> {
+public class BaseMenu<T extends BaseMenu<?>> {
     @Nullable
     public Drawable icon;
     @Nullable

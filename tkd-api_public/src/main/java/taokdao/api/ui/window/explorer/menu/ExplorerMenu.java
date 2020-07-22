@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.api.ui.base.BaseMenu;
 
 public class ExplorerMenu extends BaseMenu<ExplorerMenu> {
@@ -21,11 +21,11 @@ public class ExplorerMenu extends BaseMenu<ExplorerMenu> {
         this(icon, label, click, null);
     }
 
-    public ExplorerMenu(IMainActivity main, @DrawableRes int icon, @StringRes int label, View.OnClickListener click, @Nullable View.OnClickListener longClick) {
+    public ExplorerMenu(IMainContext main, @DrawableRes int icon, @StringRes int label, View.OnClickListener click, @Nullable View.OnClickListener longClick) {
         this(main.getDrawable(icon), main.getString(label), click, longClick);
     }
 
-    public ExplorerMenu(IMainActivity main, @DrawableRes int icon, @StringRes int label, View.OnClickListener click) {
+    public ExplorerMenu(IMainContext main, @DrawableRes int icon, @StringRes int label, View.OnClickListener click) {
         this(main, icon, label, click, null);
     }
 

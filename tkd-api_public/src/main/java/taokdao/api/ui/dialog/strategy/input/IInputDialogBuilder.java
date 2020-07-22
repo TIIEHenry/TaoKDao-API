@@ -1,6 +1,5 @@
 package taokdao.api.ui.dialog.strategy.input;
 
-import taokdao.api.ui.dialog.IDialog;
 import taokdao.api.ui.dialog.builder.IBaseDialogBuilder;
 
 public interface IInputDialogBuilder extends IBaseDialogBuilder<IInputDialogBuilder>, IDialogInput<IInputDialogBuilder> {
@@ -10,7 +9,7 @@ public interface IInputDialogBuilder extends IBaseDialogBuilder<IInputDialogBuil
 
     @Override
     default IInputDialog show() {
-        IInputDialog dialog= build();
+        IInputDialog dialog = build();
         dialog.show();
         return dialog;
     }

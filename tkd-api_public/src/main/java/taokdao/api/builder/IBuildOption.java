@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import taokdao.api.data.bean.IProperties;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 /**
  * 构建选项
@@ -22,7 +22,7 @@ public interface IBuildOption<I> extends IProperties, IBuildCallback<I> {
     String getLabel();
 
 
-    default boolean onBuild(IMainActivity main, I config) {
+    default boolean onBuild(IMainContext main, I config) {
         return onBuild(main, config, this);
     }
 }

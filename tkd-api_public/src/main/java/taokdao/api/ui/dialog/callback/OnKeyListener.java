@@ -1,6 +1,5 @@
 package taokdao.api.ui.dialog.callback;
 
-import android.content.DialogInterface;
 import android.view.KeyEvent;
 
 import taokdao.api.ui.dialog.IDialog;
@@ -15,12 +14,12 @@ public interface OnKeyListener {
      * Called when a key is dispatched to a dialog. This allows listeners to
      * get a chance to respond before the dialog.
      *
-     * @param dialog the dialog the key has been dispatched to
+     * @param dialog  the dialog the key has been dispatched to
      * @param keyCode the code for the physical key that was pressed
-     * @param event the KeyEvent object containing full information about
-     *              the event
+     * @param event   the KeyEvent object containing full information about
+     *                the event
      * @return {@code true} if the listener has consumed the event,
-     *         {@code false} otherwise
+     * {@code false} otherwise
      */
     boolean onKey(IDialog dialog, int keyCode, KeyEvent event);
 }

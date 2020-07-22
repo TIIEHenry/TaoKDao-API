@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import taokdao.api.builder.IBuildCallback;
 import taokdao.api.builder.IBuildOption;
 import taokdao.api.data.bean.Properties;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.base.annotation.relation.MainConstructor;
 
 public class BuildOption<I> implements IBuildOption<I> {
@@ -59,7 +59,7 @@ public class BuildOption<I> implements IBuildOption<I> {
     }
 
     @Override
-    public boolean onBuild(IMainActivity main, I config, IBuildOption<I> option) {
+    public boolean onBuild(IMainContext main, I config, IBuildOption<I> option) {
         return callback.onBuild(main, config, option);
     }
 

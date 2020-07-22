@@ -4,11 +4,11 @@ import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 
 import taokdao.api.ui.dialog.IDialog;
-import taokdao.api.ui.dialog.base.window.IDialogCancelable;
-import taokdao.api.ui.dialog.base.window.IDialogListener;
 import taokdao.api.ui.dialog.base.button.IDialogButtons;
 import taokdao.api.ui.dialog.base.head.IDialogIcon;
 import taokdao.api.ui.dialog.base.head.IDialogTitle;
+import taokdao.api.ui.dialog.base.window.IDialogCancelable;
+import taokdao.api.ui.dialog.base.window.IDialogListener;
 
 public interface IBaseDialogBuilder<T>
         extends IDialogListener<T>, IDialogCancelable<T>
@@ -20,8 +20,8 @@ public interface IBaseDialogBuilder<T>
     IDialog build();
 
     @UiThread
-   default IDialog show(){
-        IDialog dialog= build();
+    default IDialog show() {
+        IDialog dialog = build();
         dialog.show();
         return dialog;
     }

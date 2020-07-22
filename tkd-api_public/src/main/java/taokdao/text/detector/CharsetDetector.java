@@ -103,7 +103,7 @@ public class CharsetDetector {
     byte[] fInputBytes =       // The text to be checked.  Markup will have been
             new byte[kBufSize];  //   removed if appropriate.
     int fInputLen;          // Length of the byte data in fInputBytes.
-    short fByteStats[] =      // byte frequency statistics for the input text.
+    short[] fByteStats =      // byte frequency statistics for the input text.
             new short[256];  //   Value is percent, not absolute.
     boolean fC1Bytes =          // True if any bytes in the range 0x80 - 0x9F are in the input;
             false;
@@ -245,7 +245,7 @@ public class CharsetDetector {
 //          detectAll(), and cut it short as soon as a match with a high confidence
 //          is found.  This is something to be done later, after things are otherwise
 //          working.
-        CharsetMatch matches[] = detectAll();
+        CharsetMatch[] matches = detectAll();
 
         if (matches == null || matches.length == 0) {
             return null;

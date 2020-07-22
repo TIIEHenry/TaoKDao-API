@@ -1,6 +1,7 @@
 package taokdao.api.file.open;
 
-import org.jetbrains.annotations.NotNull;
+
+import androidx.annotation.NonNull;
 
 import java.util.HashSet;
 
@@ -23,7 +24,7 @@ public class FileOpenerPool extends IdentifiablePool<IFileOpener, String> {
     }
 
 
-    public HashSet<IFileOpener> getForPath(@NotNull String path) {
+    public HashSet<IFileOpener> getForPath(@NonNull String path) {
         HashSet<IFileOpener> list = new HashSet<>();
         for (IFileOpener value : getAll()) {
             if (value.isSupport(path)) {

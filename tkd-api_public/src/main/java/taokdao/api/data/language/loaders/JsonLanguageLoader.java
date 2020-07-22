@@ -5,19 +5,17 @@ import androidx.annotation.Nullable;
 
 import com.alibaba.fastjson.JSON;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashMap;
 
 import taokdao.api.data.language.load.ILanguageLoader;
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 public class JsonLanguageLoader implements ILanguageLoader<String> {
     private String defaultLan;
     private String currentLan;
     private HashMap<String, HashMap<String, String>> map = new HashMap<>();
 
-    public JsonLanguageLoader(IMainActivity main) {
+    public JsonLanguageLoader(IMainContext main) {
         currentLan = main.getLanguageManager().getLanguageCountry();
     }
 
@@ -85,7 +83,7 @@ public class JsonLanguageLoader implements ILanguageLoader<String> {
     }
 
     @Override
-    public void setCurrentLanguage(@NotNull String language) {
+    public void setCurrentLanguage(@NonNull String language) {
         this.currentLan = language;
     }
 }

@@ -1,10 +1,11 @@
-package taokdao.api.ui.content;
+package taokdao.api.ui.content.manage;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
 
+import taokdao.api.ui.content.IContent;
 import taokdao.base.annotation.relation.MainMethod;
 
 public interface IContentManager {
@@ -78,8 +79,5 @@ public interface IContentManager {
      */
     void saveAll();
 
-    /**
-     * @param path file
-     * @return handled
-     */
+    void refreshQuickMenu();
 }

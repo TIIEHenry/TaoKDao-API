@@ -21,78 +21,68 @@ import taokdao.api.setting.language.ILanguageManager;
 import taokdao.api.setting.theme.IThemeManager;
 import taokdao.api.template.file.IFileTemplateGenerator;
 import taokdao.api.template.project.IProjectTemplateGenerator;
-import taokdao.api.ui.content.IContentManager;
+import taokdao.api.ui.content.manage.IContentManager;
+import taokdao.api.ui.dialog.strategy.Dialogs;
 import taokdao.api.ui.window.explorer.IExplorerWindow;
 import taokdao.api.ui.window.tabtool.ITabToolWindow;
 
-public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder, ICoroutine {
+public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder, ICoroutine {
 
     /**
-     * 资源浏览器窗口
-     *
-     * @return
+     * @return 弹窗
+     */
+    @NonNull
+    Dialogs getDialogs();
+
+    /**
+     * @return 资源浏览器窗口
      */
     @NonNull
     IExplorerWindow getExplorerWindow();
 
     /**
-     * 工具窗口
-     *
-     * @return
+     * @return 工具窗口
      */
     @NonNull
     ITabToolWindow getTabToolWindow();
 
     /**
-     * 内容主窗口
-     *
-     * @return
+     * @return 内容主窗口
      */
     @NonNull
     IContentManager getContentManager();
 
 
     /**
-     * 插件管理器
-     *
-     * @return
+     * @return 插件管理器
      */
     @NonNull
     IPluginManager getPluginManager();
 
     /**
-     * 插件加载器
-     *
-     * @return
+     * @return 插件加载器
      */
     @NonNull
     IPluginLoader getPluginLoader();
 
     /**
-     * 插件安装器
-     *
-     * @return
+     * @return 插件安装器
      */
     @NonNull
     IPluginInstaller getPluginInstaller();
 
 
     /**
-     * 图片管理器
-     *
-     * @return
+     * @return 图片管理器
      */
     @NonNull
     IDrawableManager getDrawableManager();
 
     /**
-     * 构建管理器
-     *
-     * @return
+     * @return 构建管理器
      */
     @NonNull
     IBuildManager getBuildManager();
-
 
 
     /**
@@ -102,81 +92,69 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
     IFileTemplateGenerator getFileTemplateGenerator();
 
     /**
-     * 模板生成器
-     *
-     * @return
+     * @return 模板生成器
      */
     @NonNull
     IProjectTemplateGenerator getProjectTemplateGenerator();
 
 
     /**
-     * 项目管理器
-     *
-     * @return
+     * @return 项目管理器
      */
     @NonNull
     IProjectManager getProjectManager();
 
     /**
-     * 文件系统
-     *
-     * @return
+     * @return 文件系统
      */
     @NonNull
     IFileSystem getFileSystem();
 
     /**
-     * 存储管理器
-     *
-     * @return
+     * @return 存储管理器
      */
     @NonNull
     IMMKVManager getMMKVManager();
 
     /**
-     * 语言管理器
-     *
-     * @return
+     * @return 语言管理器
      */
     @NonNull
     ILanguageManager getLanguageManager();
 
     /**
-     * 主题管理器
-     *
-     * @return
+     * @return 主题管理器
      */
     @NonNull
     IThemeManager getThemeManager();
 
 
     /**
-     * dex动态加载工具
-     *
-     * @return
+     * @return dex动态加载工具
      */
     @NonNull
     IDexLoader getDexLoader();
 
 
     /**
-     * 文件操作
-     *
-     * @return
+     * @return 文件操作
      */
     @NonNull
     IFileOperateManager getFileOperateManager();
 
     /**
-     * 文件打开
-     *
-     * @return
+     * @return 文件打开
      */
     @NonNull
     IFileOpenManager getFileOpenManager();
 
-
+    /**
+     * @return 事件记录器
+     */
+    @NonNull
+    default IEventRecorder getEventRecorder() {
+        return this;
+    }
 
     /**
      * 设置指示文本
@@ -184,6 +162,5 @@ public interface IMainActivity extends LifecycleOwner, IActivity, IEventRecorder
      * @param txt 指示文本
      */
     void setIndicateText(@NonNull String txt);
-
 
 }

@@ -4,7 +4,7 @@ package taokdao.api.ui.content.editor.wrapped;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.jetbrains.annotations.NotNull;
+import java.io.IOException;
 
 import taokdao.api.ui.content.editor.IEditor;
 import taokdao.api.ui.content.editor.base.edit.IDataController;
@@ -13,8 +13,8 @@ import taokdao.api.ui.content.editor.base.edit.IUndoManager;
 import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
-import taokdao.api.ui.content.editor.base.theme.IUiModeManager;
-import taokdao.api.ui.content.editor.base.theme.UiMode;
+import taokdao.api.ui.content.editor.base.ui.IUiModeManager;
+import taokdao.api.ui.content.editor.base.ui.UiMode;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
 
 public interface EmptyIEditor extends IEditor<Object, Integer> {
@@ -63,25 +63,113 @@ public interface EmptyIEditor extends IEditor<Object, Integer> {
 
     }
 
-    @NotNull
+    @NonNull
     @Override
     default IIOController<Object> getIOController() {
-        return null;
+        return new IIOController<Object> (){
+            @Override
+            public void setReadable(boolean readable) {
+
+            }
+
+            @Override
+            public boolean canRead() {
+                return false;
+            }
+
+            @Override
+            public void setWritable(boolean writable) {
+
+            }
+
+            @Override
+            public boolean canWrite() {
+                return false;
+            }
+
+            @Nullable
+            @Override
+            public String getCurrentPath() {
+                return null;
+            }
+
+            @Override
+            public void setCurrentPath(@Nullable String path) {
+
+            }
+
+            @Override
+            public boolean open(@NonNull String path) {
+                return false;
+            }
+
+            @NonNull
+            @Override
+            public Object read() throws IOException {
+                return "";
+            }
+
+            @Override
+            public void importData(@NonNull Object data) throws Exception {
+
+            }
+
+            @NonNull
+            @Override
+            public Object exportData() throws Exception {
+                return "";
+            }
+
+            @Override
+            public void write(@NonNull Object data) throws IOException {
+
+            }
+
+            @Override
+            public void writeTo(@NonNull Object data, @NonNull String path) throws IOException {
+
+            }
+
+            @Override
+            public boolean close() {
+                return false;
+            }
+        };
     }
 
     @Override
-    default void setIOController(@NotNull IIOController<Object> ioController) {
+    default void setIOController(@NonNull IIOController<Object> ioController) {
 
     }
 
     @NonNull
     @Override
     default IDataController<Object> getDataController() {
-        return null;
+        return new IDataController<Object>(){
+            @Override
+            public Object getData() {
+                return null;
+            }
+
+            @Override
+            public void setData(Object s) {
+
+            }
+
+            @Override
+            public boolean isChanged() {
+                return false;
+            }
+
+            @Override
+            public void setChanged(boolean changed) {
+
+            }
+        };
     }
 
     @Override
-    default void setDataController(@NotNull IDataController<Object> dataController) {
+    default void setDataController(@NonNull IDataController<Object> dataController) {
 
     }
 
@@ -106,13 +194,13 @@ public interface EmptyIEditor extends IEditor<Object, Integer> {
     default IUiModeManager getUiModeManager() {
         return new IUiModeManager() {
             @Override
-            public void setUiMode(UiMode mode) {
-
+            public UiMode getUiMode() {
+                return UiMode.UI_MODE_NIGHT_NO;
             }
 
             @Override
-            public UiMode getUiMode() {
-                return null;
+            public void setUiMode(UiMode mode) {
+
             }
         };
     }

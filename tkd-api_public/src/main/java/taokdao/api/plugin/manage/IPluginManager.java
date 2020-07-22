@@ -12,6 +12,10 @@ import taokdao.api.plugin.bean.PluginType;
 //install uninstall  file manage
 public interface IPluginManager {
 
+    /**
+     * 显示插件启动器
+     */
+    void showPluginLauncher();
 
     /**
      * 重新加载已经安装的插件Manifest

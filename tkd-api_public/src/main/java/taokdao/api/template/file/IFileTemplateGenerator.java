@@ -2,8 +2,6 @@ package taokdao.api.template.file;
 
 import androidx.annotation.NonNull;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.File;
 import java.util.Map;
 
@@ -54,5 +52,5 @@ public interface IFileTemplateGenerator {
     @NonNull
     String getConfigFilePath(@NonNull FileTemplate name);
 
-    void generateFile(@NotNull FileTemplate fileTemplate, @NotNull File file, @NotNull Map<String, String> parameterMap);
+    void generateFile(@NonNull FileTemplate fileTemplate, @NonNull File file, @NonNull Map<String, String> parameterMap);
 }

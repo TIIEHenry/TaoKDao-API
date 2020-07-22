@@ -3,7 +3,6 @@ package taokdao.api.ui.dialog.base.button;
 import androidx.annotation.NonNull;
 
 import taokdao.api.ui.dialog.callback.OnAnyCallback;
-import taokdao.api.ui.dialog.callback.SingleButtonCallback;
 
 public interface IDialogButtons<T> extends IDialogNegative<T>, IDialogNeutral<T>, IDialogPositive<T> {
 

@@ -2,7 +2,7 @@ package taokdao.api.main.action;
 
 import java.util.ArrayList;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.base.annotation.todo.NeedClear;
 
 @NeedClear
@@ -27,6 +27,7 @@ public enum MainAction {
 //    onUiDark("onUiDark"),
 //    onUiLight("onUiLight"),
 
+    onPluginListReloaded("onPluginListReloaded"),
 
     CurrentFileSaved("CurrentFileSaved"),
     AllFilesSaved("AllFilesSaved");
@@ -52,7 +53,7 @@ public enum MainAction {
         list.remove(o);
     }
 
-    public void runObservers(IMainActivity main) {
+    public void runObservers(IMainContext main) {
         for (MainActionObserver o : list) {
             o.onAction(main);
         }

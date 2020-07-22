@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 
+group "tiiehenry.taokdao.api"
+version "1.0"
+
 android {
     compileSdkVersion sdk_versions.compileSdkVersion
 

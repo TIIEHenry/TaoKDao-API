@@ -1,4 +1,4 @@
-package taokdao.api.ui.content.editor.base.edit;
+package taokdao.api.ui.content.editor.base.edit.dec;
 
 public interface ILineEditor<D> {
 

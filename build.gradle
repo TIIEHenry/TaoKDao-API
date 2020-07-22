@@ -1,5 +1,7 @@
 buildscript {
 
+    ext.kotlin_version = "1.3.50"
+
     apply from: 'properties/ext-repositories.gradle'
     apply from: 'properties/ext-build_plugins.gradle'
     apply from: 'properties/ext-sdk_versions.gradle'

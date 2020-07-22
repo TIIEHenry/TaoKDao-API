@@ -12,6 +12,19 @@ public enum GravityEnum {
     END;
 
 
+    public static GravityEnum from(int gravity) {
+        switch (gravity) {
+            case Gravity.START:
+                return START;
+            case Gravity.CENTER_HORIZONTAL:
+                return CENTER;
+            case Gravity.END:
+                return END;
+            default:
+                return START;
+        }
+    }
+
     public int getGravityInt() {
         switch (this) {
             case START:
@@ -33,18 +46,6 @@ public enum GravityEnum {
                 return View.TEXT_ALIGNMENT_VIEW_END;
             default:
                 return View.TEXT_ALIGNMENT_VIEW_START;
-        }
-    }
-    public static GravityEnum from(int gravity){
-        switch (gravity){
-            case  Gravity.START:
-                return START;
-            case  Gravity.CENTER_HORIZONTAL:
-                return CENTER;
-            case  Gravity.END:
-                return END;
-            default:
-                return START;
         }
     }
 }

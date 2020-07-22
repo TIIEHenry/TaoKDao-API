@@ -2,11 +2,10 @@ package taokdao.api.ui.dialog.strategy.list.single;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.ui.dialog.callback.ListCallbackSingleChoice;
 import taokdao.api.ui.dialog.base.content.IDialogBaseItems;
+import taokdao.api.ui.dialog.callback.ListCallbackSingleChoice;
 
 public interface IDialogItemsSingle<T> extends IDialogBaseItems<T> {
-
 
 
     /**

@@ -8,12 +8,16 @@ import taokdao.api.ui.dialog.strategy.list.regular.IRegularListDialogBuilder;
 import taokdao.api.ui.dialog.strategy.list.single.ISingleListDialogBuilder;
 
 public interface IListDialogBuilder extends IRegularListDialogBuilder {
-    @NonNull IRegularListDialogBuilder typeRegular();
+    @NonNull
+    IRegularListDialogBuilder typeRegular();
 
-    @NonNull ICustomListDialogBuilder typeCustom();
+    @NonNull
+    ICustomListDialogBuilder typeCustom();
 
-    @NonNull  ISingleListDialogBuilder typeSingleChoice();
+    @NonNull
+    ISingleListDialogBuilder typeSingleChoice();
 
-    @NonNull  IMultiListDialogBuilder typeMultiChoice();
+    @NonNull
+    IMultiListDialogBuilder typeMultiChoice();
 
 }

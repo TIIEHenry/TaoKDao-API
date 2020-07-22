@@ -4,7 +4,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.setting.preference.base.PreferenceType;
 
@@ -15,7 +15,7 @@ public interface IViewPreference extends IPreference<Object> {
     }
 
     @NonNull
-    View onCreateView(IMainActivity main);
+    View onCreateView(IMainContext main);
 
     void onDestroyView(@NonNull View view);
 }

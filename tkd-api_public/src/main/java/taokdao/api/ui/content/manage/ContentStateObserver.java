@@ -1,4 +1,4 @@
-package taokdao.api.ui.content;
+package taokdao.api.ui.content.manage;
 
 import taokdao.base.annotation.maintain.LongTerm;
 

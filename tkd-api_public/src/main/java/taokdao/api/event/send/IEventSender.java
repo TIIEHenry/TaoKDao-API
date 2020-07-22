@@ -2,12 +2,12 @@ package taokdao.api.event.send;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.main.IMainActivity;
+import taokdao.api.main.IMainContext;
 
 public interface IEventSender {
-    void log(@NonNull IMainActivity main);
+    void log(@NonNull IMainContext main);
 
-    void notify(@NonNull IMainActivity main);
+    void notify(@NonNull IMainContext main);
 
-    void send(@NonNull IMainActivity main);
+    void send(@NonNull IMainContext main);
 }

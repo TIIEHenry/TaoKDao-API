@@ -10,6 +10,7 @@ import taokdao.base.annotation.maintain.ShortTerm;
 @ShortTerm
 public interface IBuildManager {
     void init();
+
     /**
      * @param buildDefault true 当list为1时自动默认BuildOption
      */
