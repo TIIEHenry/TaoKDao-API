@@ -1,34 +1,30 @@
 buildscript {
 
-    ext.kotlin_version = "1.3.50"
-
-    apply from: 'properties/ext-repositories.gradle'
-    apply from: 'properties/ext-build_plugins.gradle'
-    apply from: 'properties/ext-sdk_versions.gradle'
+    ext.kotlin_version = "1.3.72"
+    ext.build_gradle_version = '3.6.3'
     repositories {
-        maven { url mavens.aliyun_public }
-        maven { url mavens.aliyun_google }
-        maven { url mavens.aliyun_gradle_plugin }
-        maven { url mavens.fabric_public }
+        maven { url 'https://maven.aliyun.com/repository/public/' } //jcenter和central
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.fabric.io/public' }
         google()
         mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath build_plugins.android_gradle
-        classpath build_plugins.kotlin_gradle
-        classpath build_plugins.kotlin_android_extensions
+        classpath "com.android.tools.build:gradle:$build_gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
-        maven { url mavens.aliyun_public }
-        maven { url mavens.aliyun_google }
-        maven { url mavens.aliyun_gradle_plugin }
-        maven { url mavens.jitpack }
+        maven { url 'https://maven.aliyun.com/repository/public/' } //jcenter和central
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
         maven { url 'https://dl.bintray.com/ppartisan/maven/' }
-        maven { url mavens.clojars }
+        maven { url "https://clojars.org/repo/" }
+        maven { url "https://jitpack.io" }
         mavenLocal()
         mavenCentral()
         google()

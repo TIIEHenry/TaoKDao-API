@@ -19,13 +19,14 @@ public class ProjectConfig {
     public File projectDir;
     @NeedSet
     public File configFile;
+
     public String name;
     /**
-     * projectBuilder id
+     * project builder id
      */
     public String builder;
     /**
-     * projectPlugin id
+     * project plugin id
      */
     public List<Plugin> plugins = new ArrayList<>();
     public List<RelativeAliasPaths> projects = new ArrayList<>();
@@ -43,6 +44,8 @@ public class ProjectConfig {
         public String id;
         public List<?> parameters;
 
+        public Plugin() {
+        }
 
         @NonNull
         @Override

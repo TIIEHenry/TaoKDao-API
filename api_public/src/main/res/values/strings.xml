@@ -121,5 +121,7 @@
     <string name="plugin_manage_launcher_pluginitem_getmore">More</string>
     <string name="plugin_manage_launcher_refresh_dialog_title">Reloading…</string>
     <string name="plugin_manage_launcher_refresh_dialog_task">Reloading…</string>
+    <string name="codeeditor_setting_compatibilitymode">CompatibilityMode</string>
+    <string name="codeeditor_setting_compatibilitymode_description">compatibility mode for ime</string>
 
 </resources>

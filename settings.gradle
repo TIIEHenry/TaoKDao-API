@@ -1,4 +1,10 @@
 rootProject.name = "TaoKDao-API"
 
-include ':tkd-api_public',
-        ':tkd-api_skin'
+include ':api_public',
+        ':api_skin',
+        ':shadow-constant'
+
+rootProject.children.each {
+    /**设置构建脚本文件名*/
+    it.buildFileName = "tkd-"+it.name + '.gradle'
+}

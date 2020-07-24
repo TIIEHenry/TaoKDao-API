@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion sdk_versions.compileSdkVersion
+    compileSdkVersion 29
 
     group "tiiehenry.taokdao.api"
     version "1.0"
 
     defaultConfig {
-        minSdkVersion sdk_versions.minSdkVersion
-        targetSdkVersion sdk_versions.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 

@@ -111,4 +111,6 @@
 	<string name="plugin_manage_launcher_search_hint">搜索插件</string>
 	<string name="plugin_manage_launcher_refresh_dialog_title">加载中…</string>
 	<string name="plugin_manage_launcher_refresh_dialog_task">加载中…</string>
+	<string name="codeeditor_setting_compatibilitymode">兼容模式</string>
+	<string name="codeeditor_setting_compatibilitymode_description">切换输入法兼容模式</string>
 </resources>
