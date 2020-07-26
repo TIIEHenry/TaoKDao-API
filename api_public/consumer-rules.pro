@@ -1,3 +1,3 @@
--keep class taokdao.api.**{
+-keep class taokdao.api.*.*{
 *;
 }

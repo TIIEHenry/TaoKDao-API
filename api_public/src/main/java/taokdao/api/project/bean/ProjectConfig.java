@@ -29,7 +29,7 @@ public class ProjectConfig {
      * project plugin id
      */
     public List<Plugin> plugins = new ArrayList<>();
-    public List<RelativeAliasPaths> projects = new ArrayList<>();
+    public List<RelativePath> projects = new ArrayList<>();
     public Map<String, Object> setting;
 
     public ProjectConfig() {

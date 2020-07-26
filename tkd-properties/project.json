@@ -1,9 +1,9 @@
 {
     "name": "Demo",
     "builder": "",
-    "plugins": [ 
+    "plugins": [
         {
-            "id": "projectStructure",
+            "id": "taokdao.explorer.projectstructure",
             "parameters": [
                 {
                     "folders": [

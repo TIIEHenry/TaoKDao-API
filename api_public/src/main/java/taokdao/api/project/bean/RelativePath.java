@@ -1,6 +1,7 @@
 package taokdao.api.project.bean;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.io.File;
 
@@ -9,13 +10,17 @@ public class RelativePath {
     /**
      * 路径 非一般路径
      */
+    @Nullable
+    public String alias;
 
+    @NonNull
     public String path;
 
     public RelativePath() {
     }
 
-    public RelativePath(@NonNull String path) {
+    public RelativePath(@Nullable String alias, @NonNull String path) {
+        this.alias=alias;
         this.path = path;
     }
 
@@ -39,7 +44,9 @@ public class RelativePath {
     @Override
     public String toString() {
         return "RelativePath{" +
-                "path='" + path + '\'' +
+                "realFile=" + realFile +
+                ", alias='" + alias + '\'' +
+                ", path='" + path + '\'' +
                 '}';
     }
 }
