@@ -1,6 +1,7 @@
 {
   "id": "com.id",
   "type": "engine",
+  "api":"1.0",
   "version": {
     "code": 100,
     "name": "1.0",
@@ -20,7 +21,7 @@
   "visibility": {
     "type": "1",
     "contents": [
-      "androcode.codeeditor"
+      "taokdao.contents.codeeditor"
     ],
     "suffixes": [
       "js"

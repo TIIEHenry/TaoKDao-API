@@ -9,13 +9,13 @@
                     "folders": [
                         {
                             "alias": "dm2",
-                            "paths": "/Demo2"
+                            "paths": ["/Demo2"]
                         }
                     ],
                     "files": [
                         {
                             "alias": "dm2s",
-                            "paths": ["/Demo2/lua"]
+                            "path": "/Demo2/lua"
                         }
                     ]
                 }

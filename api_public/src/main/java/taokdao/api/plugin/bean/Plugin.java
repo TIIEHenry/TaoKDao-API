@@ -17,6 +17,8 @@ public class Plugin {
     @Identifier
     public String id;
 
+    public String api;
+
     public PluginType type;
 
     public PluginVersion version;
@@ -34,6 +36,7 @@ public class Plugin {
         this.pluginDir = manifest.pluginDir;
         this.manifestFile = manifest.manifestFile;
         this.id = manifest.id;
+        this.api = manifest.api;
         this.type = manifest.pluginType;
         this.version = manifest.version;
         this.languages = Arrays.asList(manifest.languages);

@@ -13,4 +13,5 @@ public interface IInputDialogBuilder extends IBaseDialogBuilder<IInputDialogBuil
         dialog.show();
         return dialog;
     }
+
 }

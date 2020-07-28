@@ -1,6 +1,7 @@
 package taokdao.api.event.senders;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
@@ -33,6 +34,11 @@ public class PluginEngineSender {
 
 
     public IEventSender errorMsg(@NonNull String message) {
+        return new EventSender(new PluginEngineTag(pluginEngine), "Message: " + message);
+    }
+
+
+    public IEventSender callError(@Nullable String message) {
         return new EventSender(new PluginEngineTag(pluginEngine), "Message: " + message);
     }
 

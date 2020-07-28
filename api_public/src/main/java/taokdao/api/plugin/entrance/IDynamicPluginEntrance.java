@@ -1,6 +1,10 @@
-package taokdao.api.plugin.internal;
+package taokdao.api.plugin.entrance;
+
+import android.content.res.AssetManager;
+import android.content.res.Resources;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 
 import taokdao.api.main.IMainContext;
@@ -9,7 +13,8 @@ import taokdao.api.plugin.bean.PluginManifest;
 /**
  * java实现的plugin需要实现该接口
  */
-public interface IDexPlugin {
+public interface IDynamicPluginEntrance {
+    void onDynamicLoaded(@NonNull ClassLoader classLoader, @Nullable AssetManager assetManager, @Nullable Resources resources);
 
     void onUpGrade(@NonNull IMainContext main, PluginManifest manifest);
 

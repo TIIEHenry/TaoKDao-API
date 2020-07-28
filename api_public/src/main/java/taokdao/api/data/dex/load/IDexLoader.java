@@ -36,6 +36,9 @@ public interface IDexLoader {
     DexClassLoader loadInstalledApkDex(@NonNull String packageName);
 
     @Nullable
+    DexClassLoader loadApk(@NonNull File apkFile);
+
+    @Nullable
     DexClassLoader loadDex(@NonNull String path) throws FileNotFoundException;
 
     @Nullable

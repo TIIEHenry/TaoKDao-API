@@ -10,34 +10,42 @@ public class InnerIdentifier {
 
 
     public static class TabTool {
-        public static String EVENT = "taokdao.tabtool.event";
-        public static String TIPS = "taokdao.tabtool.tips";
-        public static String BUILD = "taokdao.tabtool.build";
-        public static String SEARCH = "taokdao.tabtool.search";
-        public static String LOGCAT = "taokdao.tabtool.logcat";
+        public static final String EVENT = "taokdao.tabtools.event";
+        public static final String TIPS = "taokdao.tabtools.tips";
+        public static final String BUILD = "taokdao.tabtools.build";
+        public static final String SEARCH = "taokdao.tabtools.search";
+        public static final String LOGCAT = "taokdao.tabtools.logcat";
     }
 
 
     public static class Content {
-        public static String CODE_EDITOR = "taokdao.content.codeeditor";
-        public static String CODE_TEMPLATE_EDITOR = "taokdao.content.codeetemplateditor";
-        public static String OPEN_FAILED = "taokdao.content.openfailed";
+        public static final String CODE_EDITOR = "taokdao.contents.codeeditor";
+        public static final String CODE_TEMPLATE_EDITOR = "taokdao.contents.codeetemplateditor";
+        public static final String OPEN_FAILED = "taokdao.contents.openfailed";
     }
 
     public static class Explorer {
-        public static String FILE_EXPLORER = "taokdao.explorer.fileexplorer";
-        public static String PROJECT_FILES = "taokdao.explorer.projectfiles";
-        public static String PROJECT_STRUCTURE = "taokdao.explorer.projectstructure";
+        public static final String FILE_EXPLORER = "taokdao.explorers.fileexplorer";
+        public static final String PROJECT_FILES = "taokdao.explorers.projectfiles";
+        public static final String PROJECT_STRUCTURE = "taokdao.explorers.projectstructure";
     }
 
 
     public static class ProjectPlugin {
-        public static String PROJECT_FILES = Explorer.PROJECT_FILES;
-        public static String PROJECT_STRUCTURE = Explorer.PROJECT_STRUCTURE;
+        public static final String PROJECT_FILES = Explorer.PROJECT_FILES;
+        public static final String PROJECT_STRUCTURE = Explorer.PROJECT_STRUCTURE;
     }
 
     public static class PluginEngine {
-        public static String RHINO = "taokdao.plugin.engine.rhino";
-        public static String DEX = "taokdao.plugin.engine.dex";
+        public static final String RHINO = "taokdao.plugin.engines.rhino";
+        public static final String DEX = "taokdao.plugin.engines.dex";
+        public static final String APK = "taokdao.plugin.engines.apk";
+    }
+
+    public static class Intent {
+        public static final String PARAMETER_ACTION = "taokdao.main.intent.parameter.action";
+        public static final String PARAMETER_PATH = "taokdao.main.intent.parameter.path";
+        public static final String PARAMETER_PACKAGE = "taokdao.main.intent.parameter.package";
+        public static final String ACTION_INSTALL_PLUGIN = "taokdao.main.intent.action.install_plugin";
     }
 }

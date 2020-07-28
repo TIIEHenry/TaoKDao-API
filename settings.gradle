@@ -1,8 +1,8 @@
 rootProject.name = "TaoKDao-API"
 
 include ':api_public',
-        ':api_skin',
-        ':shadow-constant'
+        ':api_skin'
+//,':shadow-constant'
 
 rootProject.children.each {
     /**设置构建脚本文件名*/

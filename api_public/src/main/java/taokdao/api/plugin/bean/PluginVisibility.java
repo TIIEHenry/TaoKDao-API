@@ -55,4 +55,15 @@ public class PluginVisibility {
         suffixList.addAll(Arrays.asList(suffixes));
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "PluginVisibility{" +
+                "type='" + type + '\'' +
+                ", contents=" + Arrays.toString(contents) +
+                ", suffixes=" + Arrays.toString(suffixes) +
+                ", contentList=" + contentList +
+                ", suffixList=" + suffixList +
+                '}';
+    }
 }

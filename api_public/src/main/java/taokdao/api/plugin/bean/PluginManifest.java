@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSON;
 
 import java.io.File;
+import java.util.Arrays;
 
 import taokdao.base.annotation.Identifier;
 import taokdao.base.annotation.todo.NeedSet;
@@ -28,6 +29,7 @@ public class PluginManifest {
      * 插件类型决定了加载次序 engine
      */
     public String type;
+    public String api;
     public PluginVersion version;
     public Information information;
     /**
@@ -60,9 +62,21 @@ public class PluginManifest {
             throw new Exception("Plugin type is incorrect");
     }
 
-    @NonNull
+    @Override
     public String toString() {
-        return "PluginManifest(file=" + this.manifestFile + ",id=" + this.id + ")";
+        return "PluginManifest{" +
+                "pluginDir=" + pluginDir +
+                ", manifestFile=" + manifestFile +
+                ", pluginType=" + pluginType +
+                ", id='" + id + '\'' +
+                ", type='" + type + '\'' +
+                ", api='" + api + '\'' +
+                ", version=" + version +
+                ", information=" + information +
+                ", languages=" + Arrays.toString(languages) +
+                ", engine=" + engine +
+                ", visibility=" + visibility +
+                '}';
     }
 
     public int hashCode() {
@@ -84,6 +98,18 @@ public class PluginManifest {
             if (label == null)
                 throw new Exception("Information don't have label");
         }
+
+        @Override
+        public String toString() {
+            return "Information{" +
+                    "author='" + author + '\'' +
+                    ", label='" + label + '\'' +
+                    ", icon='" + icon + '\'' +
+                    ", description='" + description + '\'' +
+                    ", readme='" + readme + '\'' +
+                    ", tags=" + Arrays.toString(tags) +
+                    '}';
+        }
     }
 
     public static class Engine {
@@ -94,9 +120,21 @@ public class PluginManifest {
         public String entrance;
         public String[] parameters = new String[]{};
 
+        public Engine() {
+        }
+
         public void check() throws Exception {
             if (id == null)
                 throw new Exception("Engine don't have id");
+        }
+
+        @Override
+        public String toString() {
+            return "Engine{" +
+                    "id='" + id + '\'' +
+                    ", entrance='" + entrance + '\'' +
+                    ", parameters=" + Arrays.toString(parameters) +
+                    '}';
         }
     }
 }

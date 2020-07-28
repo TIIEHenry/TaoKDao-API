@@ -9,4 +9,13 @@ public class PluginVersion {
         if (name == null)
             throw new Exception("Version don't have name");
     }
+
+    @Override
+    public String toString() {
+        return "PluginVersion{" +
+                "code=" + code +
+                ", name='" + name + '\'' +
+                ", downgrade=" + downgrade +
+                '}';
+    }
 }
