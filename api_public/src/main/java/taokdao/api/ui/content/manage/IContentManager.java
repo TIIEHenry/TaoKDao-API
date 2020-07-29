@@ -3,8 +3,10 @@ package taokdao.api.ui.content.manage;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
 import taokdao.base.annotation.relation.MainMethod;
 
@@ -80,4 +82,16 @@ public interface IContentManager {
     void saveAll();
 
     void refreshQuickMenu();
+
+
+    default void showSettingWindow() {
+        IContent current = getCurrent();
+        if (current != null) {
+            showSettingWindow(current.getSettingList());
+        }else {
+            showSettingWindow(new ArrayList<>());
+        }
+    }
+
+    void showSettingWindow(List<IPreference<?>> settingList);
 }

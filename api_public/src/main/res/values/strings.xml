@@ -39,8 +39,9 @@
     <string name="plugin_install_dialog_item_readme">Readme</string>
     <string name="plugin_install_dialog_item_readme_review">Click To Review</string>
     <string name="plugin_install_dialog_item_author">Author</string>
-    <string name="plugin_install_dialog_upgrade">Upgrade</string>
-    <string name="plugin_install_dialog_degrade">Degrade</string>
+    <string name="plugin_install_dialog_action_upgrade">Upgrade</string>
+    <string name="plugin_install_dialog_action_degrade">Degrade</string>
+    <string name="plugin_install_dialog_action_recover">Recover</string>
     <string name="plugin_install_dialog_install_success">Plugin Install Success</string>
     <string name="plugin_install_dialog_install_failed">Plugin Install Failed</string>
     <string name="plugin_uninstall_dialog_uninstall_success">Plugin Uninstall Success</string>

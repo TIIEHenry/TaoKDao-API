@@ -37,8 +37,9 @@
     <string name="plugin_install_dialog_item_readme_review">点击查看</string>
     <string name="plugin_install_dialog_item_author">作者</string>
     <string name="plugin_install_dialog_item_id">标识符</string>
-    <string name="plugin_install_dialog_upgrade">升级</string>
-    <string name="plugin_install_dialog_degrade">降级</string>
+    <string name="plugin_install_dialog_action_upgrade">升级</string>
+    <string name="plugin_install_dialog_action_degrade">降级</string>
+    <string name="plugin_install_dialog_action_recover">覆盖</string>
     <string name="plugin_install_dialog_installing">正在安装</string>
     <string name="plugin_install_dialog_install_failed">插件安装失败</string>
     <string name="plugin_install_dialog_install_success">插件安装成功</string>
