@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 group "tiiehenry.taokdao.api"
-version "1.1.4"
+version "1.1.6"
 
 android {
     compileSdkVersion 29
@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    api "tiiehenry.android.ui.dialogs:public_api:1.0"
     api "androidx.lifecycle:lifecycle-runtime:2.2.0"
 //    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
 //

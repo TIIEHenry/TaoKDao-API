@@ -7,18 +7,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PluginVisibility {
-    public String type=TYPE_NONE;
-    public String[] contents = new String[]{};
-    public String[] suffixes = new String[]{};
-
-    public List<String> contentList = new ArrayList<>();
-    public List<String> suffixList = new ArrayList<>();
-
     public static final String TYPE_NONE = "TYPE_NONE";
     public static final String TYPE_CONTENT = "TYPE_CONTENT";
     public static final String TYPE_SUFFIX = "TYPE_SUFFIX";
     public static final String TYPE_CONTENT_AND_SUFFIX = "TYPE_CONTENT_AND_SUFFIX";
     public static final String TYPE_CONTENT_OR_SUFFIX = "TYPE_CONTENT_OR_SUFFIX";
+    public String type = TYPE_NONE;
+    public String[] contents = new String[]{};
+    public String[] suffixes = new String[]{};
+    public List<String> contentList = new ArrayList<>();
+    public List<String> suffixList = new ArrayList<>();
 
     public PluginVisibility() {
     }

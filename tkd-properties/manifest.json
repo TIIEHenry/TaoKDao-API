@@ -1,7 +1,7 @@
 {
   "id": "com.id",
   "type": "engine",
-  "api":"1.0",
+  "api": "1.0",
   "version": {
     "code": 100,
     "name": "1.0",

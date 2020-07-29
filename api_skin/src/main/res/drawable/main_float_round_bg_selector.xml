@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-	android:color="?attr/main_float_background_color_accent">
-	<item>
-		<selector
-			android:enterFadeDuration="300"
-			android:exitFadeDuration="300">
-			<item
-				android:drawable="@drawable/main_float_round_bg"
-				android:state_pressed="false" />
-			<item
-				android:drawable="@drawable/main_float_round_selected"
-				android:state_focused="true" />
-			<item
-				android:drawable="@drawable/main_float_round_selected"
-				android:state_pressed="true" />
-		</selector>
-	</item>
+    android:color="?attr/main_float_background_color_accent">
+    <item>
+        <selector
+            android:enterFadeDuration="300"
+            android:exitFadeDuration="300">
+            <item
+                android:drawable="@drawable/main_float_round_bg"
+                android:state_pressed="false" />
+            <item
+                android:drawable="@drawable/main_float_round_selected"
+                android:state_focused="true" />
+            <item
+                android:drawable="@drawable/main_float_round_selected"
+                android:state_pressed="true" />
+        </selector>
+    </item>
 </ripple>

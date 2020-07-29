@@ -22,9 +22,9 @@ import taokdao.api.setting.theme.IThemeManager;
 import taokdao.api.template.file.IFileTemplateGenerator;
 import taokdao.api.template.project.IProjectTemplateGenerator;
 import taokdao.api.ui.content.manage.IContentManager;
-import taokdao.api.ui.dialog.strategy.Dialogs;
 import taokdao.api.ui.window.explorer.IExplorerWindow;
 import taokdao.api.ui.window.tabtool.ITabToolWindow;
+import tiiehenry.android.ui.dialogs.api.strategy.Dialogs;
 
 public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder, ICoroutine {
 

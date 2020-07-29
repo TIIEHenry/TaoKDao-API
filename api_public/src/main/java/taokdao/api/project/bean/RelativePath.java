@@ -20,7 +20,7 @@ public class RelativePath {
     }
 
     public RelativePath(@Nullable String alias, @NonNull String path) {
-        this.alias=alias;
+        this.alias = alias;
         this.path = path;
     }
 

@@ -1,17 +1,17 @@
 {
-    "defaultLanguage": "zh",
-    "mapper": {
-        "name": {
-            "zh": "名称",
-            "en": "Name"
-        }
-    },
-    "mapper2": {
-        "zh": {
-            "name": "名称"
-        },
-        "en": {
-            "name": "Name"
-        }
+  "defaultLanguage": "zh",
+  "mapper": {
+    "name": {
+      "zh": "名称",
+      "en": "Name"
     }
+  },
+  "mapper2": {
+    "zh": {
+      "name": "名称"
+    },
+    "en": {
+      "name": "Name"
+    }
+  }
 }

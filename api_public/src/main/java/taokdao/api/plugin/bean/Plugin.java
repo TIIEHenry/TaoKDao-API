@@ -40,7 +40,7 @@ public class Plugin {
         this.type = manifest.pluginType;
         this.version = manifest.version;
         this.languages = Arrays.asList(manifest.languages);
-        this.visibility =manifest.visibility.parse();
+        this.visibility = manifest.visibility.parse();
         this.information = new Information(manifest.pluginDir, manifest.information);
         this.engine = new Engine(manifest.engine);
     }

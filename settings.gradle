@@ -6,5 +6,5 @@ include ':api_public',
 
 rootProject.children.each {
     /**设置构建脚本文件名*/
-    it.buildFileName = "tkd-"+it.name + '.gradle'
+    it.buildFileName = "tkd-" + it.name + '.gradle'
 }

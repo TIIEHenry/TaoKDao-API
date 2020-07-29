@@ -1,32 +1,34 @@
 {
-    "name": "Demo",
-    "builder": "",
-    "plugins": [
+  "name": "Demo",
+  "builder": "",
+  "plugins": [
+    {
+      "id": "taokdao.explorer.projectstructure",
+      "parameters": [
         {
-            "id": "taokdao.explorer.projectstructure",
-            "parameters": [
-                {
-                    "folders": [
-                        {
-                            "alias": "dm2",
-                            "paths": ["/Demo2"]
-                        }
-                    ],
-                    "files": [
-                        {
-                            "alias": "dm2s",
-                            "path": "/Demo2/lua"
-                        }
-                    ]
-                }
-            ]
+          "folders": [
+            {
+              "alias": "dm2",
+              "paths": [
+                "/Demo2"
+              ]
+            }
+          ],
+          "files": [
+            {
+              "alias": "dm2s",
+              "path": "/Demo2/lua"
+            }
+          ]
         }
-    ],
-    "projects": [
-        {
-            "alias": "dm2",
-            "path": "/Demo2"
-        }
-    ],
-    "settings": {}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "alias": "dm2",
+      "path": "/Demo2"
+    }
+  ],
+  "settings": {}
 }

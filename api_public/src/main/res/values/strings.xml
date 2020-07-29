@@ -47,7 +47,7 @@
     <string name="plugin_uninstall_dialog_uninstall_failed">Plugin Uninstall Failed</string>
     <string name="plugin_install_dialog_uninstall">Unistall</string>
     <string name="plugin_manage_launcher_search_hint">Search Plugin</string>
-    
+
     <string name="project_structure_projectscript" translatable="false">Project Script</string>
     <string name="genkey_key_type">Key Type:</string>
     <string name="genkey_key_path">Key Path:</string>
@@ -114,7 +114,7 @@
     <string name="event_explorer_prefix" translatable="false">Explorer</string>
     <string name="event_progressbar_prefix" translatable="false">ProgressBar</string>
     <string name="event_plugin_engine_prefix" translatable="false">PluginEngine</string>
-	<string name="copy_text">Copy</string>
+    <string name="copy_text">Copy</string>
     <string name="plugin_manage_launcher_pluginitem_manage">Manage</string>
     <string name="plugin_manage_launcher_pluginitem_showall">All</string>
     <string name="plugin_manage_launcher_pluginitem_showsupported">Supported</string>

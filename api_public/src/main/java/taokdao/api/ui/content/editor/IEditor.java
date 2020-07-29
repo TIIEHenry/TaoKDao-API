@@ -9,8 +9,8 @@ import taokdao.api.ui.content.editor.base.edit.IUndoManager;
 import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
-import taokdao.api.ui.content.editor.base.ui.IUiModeManager;
 import taokdao.api.ui.content.editor.base.ui.IIMEController;
+import taokdao.api.ui.content.editor.base.ui.IUiModeManager;
 
 /**
  * @param <D> 数据形式

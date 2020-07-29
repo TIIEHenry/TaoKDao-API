@@ -13,9 +13,9 @@ import taokdao.api.ui.content.editor.base.edit.IUndoManager;
 import taokdao.api.ui.content.editor.base.io.IIOController;
 import taokdao.api.ui.content.editor.base.select.ICursorController;
 import taokdao.api.ui.content.editor.base.select.ISelector;
+import taokdao.api.ui.content.editor.base.ui.IIMEController;
 import taokdao.api.ui.content.editor.base.ui.IUiModeManager;
 import taokdao.api.ui.content.editor.base.ui.UiMode;
-import taokdao.api.ui.content.editor.base.ui.IIMEController;
 
 public interface EmptyIEditor extends IEditor<Object, Integer> {
 
@@ -66,7 +66,7 @@ public interface EmptyIEditor extends IEditor<Object, Integer> {
     @NonNull
     @Override
     default IIOController<Object> getIOController() {
-        return new IIOController<Object> (){
+        return new IIOController<Object>() {
             @Override
             public void setReadable(boolean readable) {
 
@@ -145,7 +145,7 @@ public interface EmptyIEditor extends IEditor<Object, Integer> {
     @NonNull
     @Override
     default IDataController<Object> getDataController() {
-        return new IDataController<Object>(){
+        return new IDataController<Object>() {
             @Override
             public Object getData() {
                 return null;
