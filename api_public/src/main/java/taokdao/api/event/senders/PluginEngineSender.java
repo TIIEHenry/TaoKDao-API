@@ -43,6 +43,12 @@ public class PluginEngineSender {
     }
 
 
+    public IEventSender engineError(@Nullable String message) {
+        return new EventSender(new PluginEngineTag(pluginEngine), "Error: " + message);
+    }
+
+
+
 //    public IEventSender open(@NonNull String path) {
 //        return main -> main.send(new TabContentTag(tabContent), path + ": saved");
 //    }

@@ -59,10 +59,14 @@ public class BuildOption<I> implements IBuildOption<I> {
     }
 
     @Override
-    public boolean onBuild(IMainContext main, I config, IBuildOption<I> option) {
-        return callback.onBuild(main, config, option);
+    public boolean onBuild(@NonNull IMainContext main, @NonNull I config, @NonNull IBuildOption<I> option) {
+        return onBuild(main, config);
     }
 
+    @Override
+    public boolean onBuild(@NonNull IMainContext main, @NonNull I config) {
+        return callback.onBuild(main, config, this);
+    }
 }
 
 

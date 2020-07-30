@@ -1,5 +1,6 @@
 package taokdao.api.plugin.entrance;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 
@@ -14,7 +15,11 @@ import taokdao.api.plugin.bean.PluginManifest;
  * java实现的plugin需要实现该接口
  */
 public interface IDynamicPluginEntrance {
-    void onDynamicLoaded(@NonNull ClassLoader classLoader, @Nullable AssetManager assetManager, @Nullable Resources resources);
+    /**
+     *
+     * @param context context for plugin
+     */
+    void onAttach(@NonNull Context context);
 
     void onUpGrade(@NonNull IMainContext main, PluginManifest manifest);
 

@@ -21,8 +21,10 @@ public interface IBuildOption<I> extends IProperties, IBuildCallback<I> {
     @NonNull
     String getLabel();
 
+    boolean onBuild(@NonNull IMainContext main, @NonNull I config);
 
-    default boolean onBuild(IMainContext main, I config) {
-        return onBuild(main, config, this);
+    @Override
+    default boolean onBuild(@NonNull IMainContext main, @NonNull I config, @NonNull IBuildOption<I> option) {
+        return onBuild(main, config);
     }
 }
