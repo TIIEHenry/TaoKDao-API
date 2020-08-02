@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.window.tabtool.ITabTool;
+import taokdao.api.ui.window.tabtool.callback.TabToolStateObserver;
 import taokdao.api.ui.window.tabtool.menu.TabToolMenu;
 import taokdao.base.annotation.Identifier;
 import taokdao.base.annotation.relation.MultiConstructor;
@@ -114,4 +115,9 @@ public abstract class TabToolFragment extends StateFragment implements ITabTool 
         return settingList;
     }
 
+    @Nullable
+    @Override
+    public TabToolStateObserver getStateObserver() {
+        return null;
+    }
 }

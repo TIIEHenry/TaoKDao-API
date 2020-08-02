@@ -7,12 +7,16 @@ import java.util.List;
 
 import taokdao.api.ui.window.IWindow;
 
-public interface ITabToolWindow extends IWindow {
+public interface ITabToolWindow extends IWindow<ITabToolWindow> {
     void init();
 
     void add(@NonNull ITabTool tabTool, boolean select);
 
-    void remove(@NonNull ITabTool tabTool);
+    default void add(@NonNull ITabTool tabTool) {
+        add(tabTool, true);
+    }
+
+    boolean remove(@NonNull ITabTool tabTool);
 
     void show(@NonNull ITabTool tabTool);
 

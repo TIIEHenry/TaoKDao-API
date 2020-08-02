@@ -4,12 +4,14 @@ package taokdao.api.ui.window.tabtool.wrapped;
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.window.tabtool.ITabTool;
+import taokdao.api.ui.window.tabtool.callback.TabToolStateObserver;
 import taokdao.api.ui.window.tabtool.menu.TabToolMenu;
 import taokdao.base.annotation.Identifier;
 import taokdao.base.annotation.relation.MainConstructor;
@@ -21,15 +23,17 @@ public class TabTool implements ITabTool {
     private final String label;
     private final Drawable icon;
     private final StateFragment fragment;
+    private final TabToolStateObserver stateObserver;
     private ArrayList<TabToolMenu> menuList = new ArrayList<>();
     private ArrayList<IPreference<?>> settingList = new ArrayList<>();
 
     @MainConstructor
-    public TabTool(@NonNull Properties properties, Drawable icon, StateFragment fragment) {
+    public TabTool(@NonNull Properties properties, Drawable icon, @NonNull StateFragment fragment, @Nullable TabToolStateObserver stateObserver) {
         this.id = properties.id;
         this.label = properties.label;
         this.icon = icon;
         this.fragment = fragment;
+        this.stateObserver = stateObserver;
         fragment.setOnPauseObserver(() -> {
             if (getStateObserver() != null)
                 getStateObserver().onHide();
@@ -40,8 +44,8 @@ public class TabTool implements ITabTool {
         });
     }
 
-    public TabTool(@NonNull Properties properties, StateFragment fragment) {
-        this(properties, null, fragment);
+    public TabTool(@NonNull Properties properties, StateFragment fragment, @Nullable TabToolStateObserver stateObserver) {
+        this(properties, null, fragment, stateObserver);
     }
 
     @NonNull
@@ -79,4 +83,9 @@ public class TabTool implements ITabTool {
         return settingList;
     }
 
+    @Nullable
+    @Override
+    public TabToolStateObserver getStateObserver() {
+        return stateObserver;
+    }
 }

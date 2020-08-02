@@ -17,7 +17,7 @@ import taokdao.api.ui.content.editor.base.ui.IIMEController;
 import taokdao.api.ui.content.editor.base.ui.IUiModeManager;
 import taokdao.api.ui.content.editor.base.ui.UiMode;
 
-public interface EmptyIEditor extends IEditor<Object, Integer> {
+public interface IEmptyEditor extends IEditor<Object, Integer> {
 
     @Nullable
     @Override

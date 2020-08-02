@@ -2,14 +2,16 @@ package taokdao.api.ui.window;
 
 import androidx.annotation.NonNull;
 
-public interface IWindow {
+import taokdao.api.ui.window.callback.WindowStateObserver;
+
+public interface IWindow<T extends IWindow<?>> {
     void showWindow();
 
     void hideWindow();
 
     boolean isWindowShown();
 
-    void addStateObserver(@NonNull WindowStateObserver observer);
+    void addStateObserver(@NonNull WindowStateObserver<T> observer);
 
-    boolean removeStateObserver(@NonNull WindowStateObserver observer);
+    boolean removeStateObserver(@NonNull WindowStateObserver<T> observer);
 }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
+import taokdao.api.ui.window.tabtool.callback.TabToolStateObserver;
 import taokdao.api.ui.window.tabtool.menu.TabToolMenu;
 import taokdao.base.annotation.maintain.LongTerm;
 import taokdao.base.fragment.StateFragment;
@@ -41,7 +42,5 @@ public interface ITabTool extends IProperties {
      * 管理TabTool的状态，不要用Fragment的生命周期
      */
     @Nullable
-    default TabToolStateObserver getStateObserver() {
-        return null;
-    }
+    TabToolStateObserver getStateObserver();
 }

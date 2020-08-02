@@ -17,9 +17,9 @@ import taokdao.api.plugin.bean.PluginManifest;
 public interface IDynamicPluginEntrance {
     /**
      *
-     * @param context context for plugin
+     * @param pluginContext context for plugin
      */
-    void onAttach(@NonNull Context context);
+    void onAttach(@NonNull Context pluginContext);
 
     void onUpGrade(@NonNull IMainContext main, PluginManifest manifest);
 

@@ -22,7 +22,7 @@ public abstract class StateFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (null != rootView) {
+        if (rootView != null) {
             ViewGroup parent = (ViewGroup) rootView.getParent();
             if (null != parent) {
                 parent.removeView(rootView);

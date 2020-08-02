@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.builder.IBuildCallback;
+import taokdao.api.builder.callback.IBuildCallback;
 import taokdao.api.builder.IBuildOption;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.main.IMainContext;
