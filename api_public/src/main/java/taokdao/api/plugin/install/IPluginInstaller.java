@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 import taokdao.api.plugin.bean.Plugin;
-import taokdao.base.annotation.thread.BlockUI;
+import taokdao.api.base.annotation.thread.BlockUI;
 
 public interface IPluginInstaller {
 

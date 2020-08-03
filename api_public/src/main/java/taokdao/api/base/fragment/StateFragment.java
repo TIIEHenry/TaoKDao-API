@@ -1,4 +1,4 @@
-package taokdao.base.fragment;
+package taokdao.api.base.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import taokdao.base.annotation.maintain.LongTerm;
+import taokdao.api.base.annotation.maintain.LongTerm;
 
 @LongTerm
 public abstract class StateFragment extends Fragment {

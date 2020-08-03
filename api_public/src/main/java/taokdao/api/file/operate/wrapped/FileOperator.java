@@ -10,7 +10,7 @@ import taokdao.api.file.operate.FileOperatorCallback;
 import taokdao.api.file.operate.FileOperatorChecker;
 import taokdao.api.file.operate.IFileOperator;
 import taokdao.api.main.IMainContext;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 
 /**

@@ -18,8 +18,8 @@ import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.content.editor.IEditor;
 import taokdao.api.ui.content.menu.ControlMenu;
 import taokdao.api.ui.content.menu.QuickMenu;
-import taokdao.base.annotation.relation.MainConstructor;
-import taokdao.base.fragment.StateFragment;
+import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.base.fragment.StateFragment;
 
 public abstract class ContentFragment extends StateFragment implements IContent {
     @Nullable

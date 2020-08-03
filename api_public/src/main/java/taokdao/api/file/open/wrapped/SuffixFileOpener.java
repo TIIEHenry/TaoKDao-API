@@ -12,7 +12,7 @@ import java.util.List;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.main.IMainContext;
 import taokdao.api.ui.content.manage.IContentManager;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 /**
  * FileOpener的包装，根据文件后缀匹配

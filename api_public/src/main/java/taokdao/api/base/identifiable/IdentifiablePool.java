@@ -1,4 +1,4 @@
-package taokdao.base.identifiable;
+package taokdao.api.base.identifiable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

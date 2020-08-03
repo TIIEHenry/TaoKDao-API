@@ -5,7 +5,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class Properties implements IProperties {
     @NonNull

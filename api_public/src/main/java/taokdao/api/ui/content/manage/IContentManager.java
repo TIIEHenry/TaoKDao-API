@@ -8,7 +8,7 @@ import java.util.List;
 
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
-import taokdao.base.annotation.relation.MainMethod;
+import taokdao.api.base.annotation.relation.MainMethod;
 
 public interface IContentManager {
 

@@ -11,8 +11,8 @@ import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.window.tabtool.callback.TabToolStateObserver;
 import taokdao.api.ui.window.tabtool.menu.TabToolMenu;
-import taokdao.base.annotation.maintain.LongTerm;
-import taokdao.base.fragment.StateFragment;
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.fragment.StateFragment;
 
 @LongTerm
 public interface ITabTool extends IProperties {

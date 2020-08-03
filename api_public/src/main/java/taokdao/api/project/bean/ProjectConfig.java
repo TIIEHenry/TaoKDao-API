@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import taokdao.base.annotation.maintain.LongTerm;
-import taokdao.base.annotation.todo.NeedSet;
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.annotation.todo.NeedSet;
 
 @LongTerm
 public class ProjectConfig {

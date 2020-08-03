@@ -13,9 +13,9 @@ import taokdao.api.ui.content.editor.IEditor;
 import taokdao.api.ui.content.manage.callback.ContentStateObserver;
 import taokdao.api.ui.content.menu.ControlMenu;
 import taokdao.api.ui.content.menu.QuickMenu;
-import taokdao.base.annotation.Identifier;
-import taokdao.base.annotation.maintain.LongTerm;
-import taokdao.base.fragment.StateFragment;
+import taokdao.api.base.annotation.Identifier;
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.fragment.StateFragment;
 
 @LongTerm
 public interface IContent extends IProperties {

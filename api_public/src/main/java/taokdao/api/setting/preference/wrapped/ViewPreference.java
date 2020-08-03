@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.IViewPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public abstract class ViewPreference implements IViewPreference {
 

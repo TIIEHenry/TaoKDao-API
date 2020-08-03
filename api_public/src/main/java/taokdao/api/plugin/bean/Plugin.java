@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import taokdao.api.plugin.engine.IPluginEngine;
-import taokdao.base.annotation.Identifier;
-import taokdao.base.annotation.todo.NeedSet;
+import taokdao.api.base.annotation.Identifier;
+import taokdao.api.base.annotation.todo.NeedSet;
 
 public class Plugin {
     public final File pluginDir;

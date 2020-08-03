@@ -11,7 +11,7 @@ import com.tencent.mmkv.MMKV;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.IEditTextPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class EditTextPreference implements IEditTextPreference {
 

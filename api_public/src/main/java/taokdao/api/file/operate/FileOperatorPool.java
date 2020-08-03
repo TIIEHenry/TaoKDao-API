@@ -3,7 +3,7 @@ package taokdao.api.file.operate;
 import java.io.File;
 import java.util.HashSet;
 
-import taokdao.base.identifiable.IdentifiablePool;
+import taokdao.api.base.identifiable.IdentifiablePool;
 
 /**
  * FileOperator的统一管理

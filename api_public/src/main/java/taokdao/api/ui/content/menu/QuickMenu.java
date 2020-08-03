@@ -6,8 +6,8 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import taokdao.api.ui.base.BaseMenu;
-import taokdao.base.annotation.maintain.LongTerm;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 @LongTerm
 public class QuickMenu extends BaseMenu<ControlMenu> {

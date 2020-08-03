@@ -5,8 +5,8 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.base.enable.IEnable;
-import taokdao.base.identifiable.Identifiable;
+import taokdao.api.base.enable.IEnable;
+import taokdao.api.base.identifiable.Identifiable;
 
 public interface IPreference<V> extends Identifiable<String>, IEnable {
     /**

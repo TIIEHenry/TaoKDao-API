@@ -1,4 +1,4 @@
-package taokdao.base.enable;
+package taokdao.api.base.enable;
 
 public interface IEnable {
     void enable();

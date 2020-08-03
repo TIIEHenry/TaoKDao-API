@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import taokdao.api.project.bean.Project;
-import taokdao.base.identifiable.Identifiable;
+import taokdao.api.base.identifiable.Identifiable;
 
 public interface IProjectPlugin extends Identifiable<String> {
     @NonNull

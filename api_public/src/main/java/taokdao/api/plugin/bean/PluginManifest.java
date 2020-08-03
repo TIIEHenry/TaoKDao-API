@@ -6,8 +6,8 @@ import com.alibaba.fastjson.JSON;
 import java.io.File;
 import java.util.Arrays;
 
-import taokdao.base.annotation.Identifier;
-import taokdao.base.annotation.todo.NeedSet;
+import taokdao.api.base.annotation.Identifier;
+import taokdao.api.base.annotation.todo.NeedSet;
 
 
 public class PluginManifest {

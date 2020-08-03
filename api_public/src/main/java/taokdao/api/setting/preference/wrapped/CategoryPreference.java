@@ -12,7 +12,7 @@ import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.ICategoryPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.setting.preference.base.IPreference;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class CategoryPreference implements ICategoryPreference {
     private final String id;

@@ -3,7 +3,7 @@ package taokdao.api.main.action;
 import java.util.ArrayList;
 
 import taokdao.api.main.IMainContext;
-import taokdao.base.annotation.todo.NeedClear;
+import taokdao.api.base.annotation.todo.NeedClear;
 
 @NeedClear
 public enum MainAction {

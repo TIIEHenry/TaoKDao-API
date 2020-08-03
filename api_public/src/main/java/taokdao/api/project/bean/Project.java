@@ -12,7 +12,7 @@ import java.util.Set;
 import taokdao.api.main.IMainContext;
 import taokdao.api.project.build.IProjectBuilder;
 import taokdao.api.project.plugin.IProjectPlugin;
-import taokdao.base.annotation.todo.NeedSet;
+import taokdao.api.base.annotation.todo.NeedSet;
 
 public class Project {
     public ProjectConfig projectConfig;

@@ -13,9 +13,9 @@ import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.window.tabtool.ITabTool;
 import taokdao.api.ui.window.tabtool.callback.TabToolStateObserver;
 import taokdao.api.ui.window.tabtool.menu.TabToolMenu;
-import taokdao.base.annotation.Identifier;
-import taokdao.base.annotation.relation.MainConstructor;
-import taokdao.base.fragment.StateFragment;
+import taokdao.api.base.annotation.Identifier;
+import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.base.fragment.StateFragment;
 
 public class TabTool implements ITabTool {
     @Identifier

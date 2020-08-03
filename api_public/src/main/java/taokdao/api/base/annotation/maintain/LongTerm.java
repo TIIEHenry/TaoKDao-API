@@ -1,4 +1,4 @@
-package taokdao.base.annotation.maintain;
+package taokdao.api.base.annotation.maintain;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

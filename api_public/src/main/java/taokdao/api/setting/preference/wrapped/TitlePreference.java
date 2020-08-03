@@ -12,7 +12,7 @@ import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.ITitlePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.setting.preference.base.IPreference;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class TitlePreference implements ITitlePreference {
     private final String id;

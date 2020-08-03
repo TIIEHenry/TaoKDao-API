@@ -38,15 +38,14 @@ public class PluginEngineSender {
     }
 
 
-    public IEventSender callError(@Nullable String message) {
-        return new EventSender(new PluginEngineTag(pluginEngine), "Message: " + message);
+    public IEventSender callError(@NonNull  Plugin plugin,@NonNull Throwable e) {
+        return new EventSender(new PluginEngineTag(pluginEngine), "Plugin:"+plugin.information.label+"\n"+"Message: " + e.getMessage());
     }
 
 
     public IEventSender engineError(@Nullable String message) {
         return new EventSender(new PluginEngineTag(pluginEngine), "Error: " + message);
     }
-
 
 
 //    public IEventSender open(@NonNull String path) {

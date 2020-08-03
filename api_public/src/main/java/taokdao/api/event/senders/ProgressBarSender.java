@@ -6,7 +6,7 @@ import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.ProgressBarTag;
 import taokdao.api.ui.progressbar.ProgressBarSet;
-import taokdao.base.annotation.impl.InternalImpl;
+import taokdao.api.base.annotation.impl.InternalImpl;
 
 @InternalImpl
 public class ProgressBarSender {

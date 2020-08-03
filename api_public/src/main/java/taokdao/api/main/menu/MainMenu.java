@@ -2,7 +2,7 @@ package taokdao.api.main.menu;
 
 import android.graphics.drawable.Drawable;
 
-import taokdao.base.annotation.Identifier;
+import taokdao.api.base.annotation.Identifier;
 
 public class MainMenu {
 

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.file.open.FileOpenerChecker;
 import taokdao.api.file.open.IFileOpener;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 /**
  * 实现对文件的打开操作

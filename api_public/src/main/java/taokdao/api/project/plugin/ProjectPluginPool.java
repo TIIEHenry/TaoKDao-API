@@ -1,6 +1,6 @@
 package taokdao.api.project.plugin;
 
-import taokdao.base.identifiable.IdentifiablePool;
+import taokdao.api.base.identifiable.IdentifiablePool;
 
 public class ProjectPluginPool extends IdentifiablePool<IProjectPlugin, String> {
     private static ProjectPluginPool instance = new ProjectPluginPool();

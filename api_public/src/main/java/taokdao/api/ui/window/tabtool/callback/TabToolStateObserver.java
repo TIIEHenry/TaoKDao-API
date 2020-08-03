@@ -1,6 +1,6 @@
 package taokdao.api.ui.window.tabtool.callback;
 
-import taokdao.base.annotation.maintain.LongTerm;
+import taokdao.api.base.annotation.maintain.LongTerm;
 
 @LongTerm
 public interface TabToolStateObserver {

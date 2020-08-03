@@ -1,6 +1,6 @@
 package taokdao.api.plugin.engine;
 
-import taokdao.base.identifiable.IdentifiablePool;
+import taokdao.api.base.identifiable.IdentifiablePool;
 
 public class PluginEnginePool extends IdentifiablePool<IPluginEngine, String> {
     private static PluginEnginePool instance = new PluginEnginePool();

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import com.tencent.mmkv.MMKV;
 
 import taokdao.api.data.bean.Properties;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public abstract class OppositeStatePreference implements IOppositeStatePreference {
 

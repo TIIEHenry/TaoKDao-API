@@ -9,7 +9,7 @@ import taokdao.api.builder.callback.IBuildCallback;
 import taokdao.api.builder.IBuildOption;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.main.IMainContext;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class BuildOption<I> implements IBuildOption<I> {
     private final String id;

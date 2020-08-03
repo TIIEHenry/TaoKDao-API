@@ -15,8 +15,8 @@ import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.window.explorer.IExplorer;
 import taokdao.api.ui.window.explorer.menu.ExplorerMenu;
-import taokdao.base.annotation.relation.MultiConstructor;
-import taokdao.base.fragment.StateFragment;
+import taokdao.api.base.annotation.relation.MultiConstructor;
+import taokdao.api.base.fragment.StateFragment;
 
 
 public abstract class ExplorerFragment extends StateFragment implements IExplorer {

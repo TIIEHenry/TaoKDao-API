@@ -14,7 +14,7 @@ import java.util.Set;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.setting.preference.IMultiChoicePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
-import taokdao.base.annotation.relation.MainConstructor;
+import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class MultiChoicePreference implements IMultiChoicePreference {
 
