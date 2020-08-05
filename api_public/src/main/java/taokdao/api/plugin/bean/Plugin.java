@@ -2,13 +2,15 @@ package taokdao.api.plugin.bean;
 
 import android.graphics.drawable.Drawable;
 
+import androidx.annotation.Nullable;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import taokdao.api.plugin.engine.IPluginEngine;
 import taokdao.api.base.annotation.Identifier;
 import taokdao.api.base.annotation.todo.NeedSet;
+import taokdao.api.plugin.engine.IPluginEngine;
 
 public class Plugin {
     public final File pluginDir;
@@ -82,6 +84,8 @@ public class Plugin {
     public static class Information {
         public String author;
         public String label;
+        @Nullable
+        @NeedSet
         public Drawable icon;
         public String description;
         public String readme;
@@ -94,7 +98,6 @@ public class Plugin {
         public Information(File pluginDir, PluginManifest.Information information) {
             this.author = information.author;
             this.label = information.label;
-            this.icon = Drawable.createFromPath(new File(pluginDir, information.icon).getAbsolutePath());
             this.description = information.description;
             this.readme = information.readme;
             this.tags = Arrays.asList(information.tags);

@@ -1,71 +1,66 @@
 package taokdao.api.file.build;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
 
 
 public class FileBuilderPool {
+    private static FileBuilderPool instance = new FileBuilderPool();
 
-    private static ArrayList<String> suffixes = new ArrayList<>();
-    private static ArrayList<IFileBuilder> fileBuilders = new ArrayList<>();
+    public static FileBuilderPool getInstance() {
+        return instance;
+    }
+
+    public static FileBuilderPool newInstance() {
+        instance = new FileBuilderPool();
+        return instance;
+    }
+
+    private HashMap<String, ArrayList<IFileBuilder>> fileBuilderMap = new HashMap<>();
 
 
-    @Nullable
-    public static IFileBuilder getFileBuilder(File config) {
+    @NonNull
+    public ArrayList<IFileBuilder> getList(File config) {
         String suffix = getSuffix(config).toLowerCase(Locale.getDefault());
-        return getFileBuilder(suffix);
+        return getList(suffix);
     }
 
-    @Nullable
-    public static IFileBuilder getFileBuilder(String suffix) {
-        for (IFileBuilder builder : getFileBuilderList()) {
-            if (builder.getSuffixes().contains(suffix))
-                return builder;
+    @NonNull
+    public ArrayList<IFileBuilder> getList(String suffix) {
+        ArrayList<IFileBuilder> list = fileBuilderMap.get(suffix);
+        if (list == null) {
+            list = new ArrayList<>();
         }
-        return null;
+        fileBuilderMap.put(suffix, list);
+        return list;
     }
 
-    public static ArrayList<IFileBuilder> getFileBuilderList() {
-        return fileBuilders;
-    }
-
-    public static boolean addFileBuilder(IFileBuilder builder) {
+    public void add(IFileBuilder builder) {
         for (String it : builder.getSuffixes()) {
-            if (suffixes.contains(it))
-                return false;
+            getList(it).add(builder);
         }
-        fileBuilders.add(builder);
-        suffixes.addAll(builder.getSuffixes());
-        return true;
     }
 
-    public static boolean removeFileBuilder(IFileBuilder builder) {
-        suffixes.removeAll(builder.getSuffixes());
-        return fileBuilders.remove(builder);
+    public void remove(IFileBuilder builder) {
+        for (String it : builder.getSuffixes()) {
+            getList(it).remove(builder);
+        }
     }
 
-    public static IFileBuilder removeFileBuilder(String suffix) {
-        IFileBuilder builder = null;
-        for (IFileBuilder b : fileBuilders) {
-            if (b.getSuffixes().contains(suffix))
-                builder = b;
-        }
-        if (builder != null) {
-            fileBuilders.remove(builder);
-            suffixes.removeAll(builder.getSuffixes());
-        }
-        return builder;
+
+    public void removeFileBuilders(String suffix) {
+        getList(suffix).clear();
     }
 
-    private static String getSuffix(File file) {
+    private String getSuffix(File file) {
         return file.getPath().substring(file.getPath().lastIndexOf(".") + 1);
     }
 
-    public static void clear() {
-        suffixes.clear();
-        fileBuilders.clear();
+    public void clear() {
+        fileBuilderMap.clear();
     }
 }

@@ -16,6 +16,8 @@ public interface IContext extends IDisplay {
 
     Context getContext();
 
+    Context getApplicationContext();
+
     /**
      * 资源类
      */

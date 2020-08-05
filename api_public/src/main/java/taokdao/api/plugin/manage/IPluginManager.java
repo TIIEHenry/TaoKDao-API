@@ -1,5 +1,7 @@
 package taokdao.api.plugin.manage;
 
+import android.graphics.drawable.Drawable;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -119,4 +121,7 @@ public interface IPluginManager {
      * @return 是否启用
      */
     boolean isPluginEnabled(@NonNull Plugin plugin);
+
+    Drawable loadPluginIcon(@NonNull Plugin plugin);
+
 }
