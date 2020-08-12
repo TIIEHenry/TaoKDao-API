@@ -2,8 +2,8 @@ package taokdao.api.setting.theme;
 
 import androidx.annotation.NonNull;
 
-import taokdao.api.setting.theme.colors.ColorParts;
-import taokdao.api.setting.theme.colors.ThemeColors;
+import taokdao.api.setting.theme.resource.ThemeColors;
+import taokdao.api.setting.theme.resource.ThemeDrawables;
 
 public interface IThemeManager {
 
@@ -42,5 +42,7 @@ public interface IThemeManager {
         return getThemeId(shouldDark());
     }
 
-    ThemeColors getThemeColors(@NonNull ColorParts colorParts);
+    ThemeColors getThemeColors(@NonNull ThemeParts themeParts);
+
+    ThemeDrawables getThemeDrawables(@NonNull ThemeParts themeParts);
 }

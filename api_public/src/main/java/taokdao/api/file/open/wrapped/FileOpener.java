@@ -5,78 +5,25 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.file.open.FileOpenerChecker;
-import taokdao.api.file.open.IFileOpener;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 /**
  * 实现对文件的打开操作
  */
-public abstract class FileOpener implements IFileOpener {
-    public final String id;
-    @Nullable
-    public Drawable icon;
+public abstract class FileOpener extends BaseFileOpener {
     @NonNull
-    public String label;
-    @Nullable
-    public String description;
-    @NonNull
-    private
-    FileOpenerChecker checker;
+    protected FileOpenerChecker checker;
 
     @MainConstructor
     public FileOpener(@NonNull Properties properties, @Nullable Drawable icon, @NonNull FileOpenerChecker checker) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
-        this.icon = icon;
+        super(properties, icon);
         this.checker = checker;
     }
 
     public FileOpener(@NonNull Properties properties, FileOpenerChecker checker) {
         this(properties, null, checker);
-    }
-
-    @Override
-    public boolean equals(@Nullable Object obj) {
-        if (obj instanceof SuffixFileOpener)
-            return id.equals(((SuffixFileOpener) obj).id);
-        return false;
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return "FileOpen{" +
-                "id='" + id + '\'' +
-                ", icon=" + icon +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
-                ", checker=" + checker +
-                '}';
-    }
-
-    @Nullable
-    @Override
-    public Drawable getIcon() {
-        return icon;
-    }
-
-    @NonNull
-    @Override
-    public String getLabel() {
-        return label;
-    }
-
-    @Nullable
-    @Override
-    public String getDescription() {
-        return description;
     }
 
     @Override
@@ -86,7 +33,14 @@ public abstract class FileOpener implements IFileOpener {
 
     @NonNull
     @Override
-    public String id() {
-        return id;
+    public String toString() {
+        return "FileOpener{" +
+                "checker=" + checker +
+                ", id='" + id + '\'' +
+                ", icon=" + icon +
+                ", label='" + label + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
+
 }

@@ -5,34 +5,22 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.file.operate.FileOperatorCallback;
 import taokdao.api.file.operate.FileOperatorChecker;
-import taokdao.api.file.operate.IFileOperator;
-import taokdao.api.main.IMainContext;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 
 /**
  * 文件浏览器界面长按的菜单
  * 实现对文件操作
  */
-public class FileOperator implements IFileOperator {
-    private final String description;
-    private final String id;
-    public String label;
-    public Drawable icon;
-    private FileOperatorChecker checker;
-    private FileOperatorCallback callback;
-
+public class FileOperator extends BaseFileOperator {
+    protected FileOperatorChecker checker;
 
     @MainConstructor
     public FileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback, FileOperatorChecker checker) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
-        this.icon = icon;
-        this.callback = callback;
+        super(properties, icon, callback);
         this.checker = checker;
     }
 
@@ -45,43 +33,15 @@ public class FileOperator implements IFileOperator {
         return checker.isSupport(path);
     }
 
-    @Override
-    public boolean call(IMainContext main, String path) {
-        return callback.call(main, path);
-    }
-
-    @Nullable
-    @Override
-    public Drawable getIcon() {
-        return icon;
-    }
-
     @NonNull
-    @Override
-    public String getLabel() {
-        return label;
-    }
-
-    @Nullable
-    @Override
-    public String getDescription() {
-        return description;
-    }
-
-    @NonNull
-    @Override
-    public String id() {
-        return id;
-    }
-
     @Override
     public String toString() {
-        return "FileOperate{" +
-                "description='" + description + '\'' +
+        return "FileOperator{" +
+                "checker=" + checker +
+                ", description='" + description + '\'' +
                 ", id='" + id + '\'' +
                 ", label='" + label + '\'' +
                 ", icon=" + icon +
-                ", checker=" + checker +
                 ", callback=" + callback +
                 '}';
     }

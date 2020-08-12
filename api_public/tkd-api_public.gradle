@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 group "tiiehenry.taokdao.api"
-version "1.1.7"
+version "1.1.8"
 
 android {
     compileSdkVersion 29
@@ -24,11 +24,11 @@ android {
 
 dependencies {
 //    api "io.noties.markwon:core:4.4.0"
-    api "tiiehenry.android.ui.dialogs:public_api:1.0"
+    api "tiiehenry.android.ui.dialogs:public_api:+"
     api "androidx.lifecycle:lifecycle-runtime:2.2.0"
 //    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
 //
-    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.appcompat:appcompat:1.2.0'
 //    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     api 'androidx.annotation:annotation:1.1.0'
     api 'androidx.fragment:fragment:1.2.5'
@@ -48,5 +48,6 @@ dependencies {
 //    implementation 'com.github.xuexiangjys:XUI:1.1.4'
     api 'com.alibaba:fastjson:1.1.71.android'
     api 'com.tencent:mmkv-static:1.0.24'
+    api 'androidx.documentfile:documentfile:1.0.1'
 //    api 'net.lingala.zip4j:zip4j:2.4.0'
 }

@@ -9,15 +9,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.Properties;
 import taokdao.api.main.IMainContext;
 import taokdao.api.ui.content.manage.IContentManager;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 /**
  * FileOpener的包装，根据文件后缀匹配
  */
-public class SuffixFileOpener extends FileOpener {
+public class SuffixFileOpener extends BaseFileOpener {
+
     @Nullable
     public Callback click;
     @Nullable
@@ -27,7 +28,7 @@ public class SuffixFileOpener extends FileOpener {
 
     @MainConstructor
     public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, @Nullable Drawable icon, @Nullable Callback click, @Nullable Callback longClick) {
-        super(properties, icon, null);
+        super(properties, icon);
         supportSuffix.addAll(Arrays.asList(suffixes));
         this.click = click;
         this.longClick = longClick;

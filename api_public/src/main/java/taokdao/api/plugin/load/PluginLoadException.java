@@ -5,6 +5,6 @@ import taokdao.api.plugin.bean.PluginManifest;
 public class PluginLoadException extends Exception {
 
     public PluginLoadException(PluginManifest config, String message) {
-        super("LoadPluginFailed{manifest:" + config.manifestFile + ",message:" + message + "}");
+        super("LoadPluginFailed{label:" + config.information.label + ",id:" + config.id + ",message:" + message + "}");
     }
 }

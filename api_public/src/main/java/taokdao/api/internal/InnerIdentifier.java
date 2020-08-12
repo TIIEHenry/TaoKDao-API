@@ -37,9 +37,8 @@ public class InnerIdentifier {
     }
 
     public static class PluginEngine {
-        public static final String RHINO = "taokdao.plugin.engines.rhino";
-        public static final String DEX = "taokdao.plugin.engines.dex";
-        public static final String APK = "taokdao.plugin.engines.apk";
+        public static final String DEX = "taokdao.plugins.engine.dex";
+        public static final String APK = "taokdao.plugins.engine.apk";
     }
 
     public static class Intent {

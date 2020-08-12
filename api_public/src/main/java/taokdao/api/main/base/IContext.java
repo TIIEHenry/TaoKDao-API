@@ -1,22 +1,40 @@
 package taokdao.api.main.base;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.LayoutInflater;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
 
+import java.util.concurrent.Executor;
+
 public interface IContext extends IDisplay {
+
+//    AssetManager getAssets();
 
     Resources getResources();
 
     Context getContext();
 
     Context getApplicationContext();
+
+    PackageManager getPackageManager();
+
+    ContentResolver getContentResolver();
+
+    Looper getMainLooper();
+
+    Executor getMainExecutor();
+
 
     /**
      * 资源类

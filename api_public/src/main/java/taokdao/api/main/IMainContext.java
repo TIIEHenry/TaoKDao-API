@@ -10,6 +10,7 @@ import taokdao.api.data.mmkv.IMMKVManager;
 import taokdao.api.event.record.IEventRecorder;
 import taokdao.api.file.open.IFileOpenManager;
 import taokdao.api.file.operate.IFileOperateManager;
+import taokdao.api.file.provider.IFileProvider;
 import taokdao.api.file.system.IFileSystem;
 import taokdao.api.main.base.IActivity;
 import taokdao.api.main.base.ICoroutine;
@@ -109,6 +110,12 @@ public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder,
      */
     @NonNull
     IFileSystem getFileSystem();
+
+    /**
+     * @return 文件提供者
+     */
+    @NonNull
+    IFileProvider getFileProvider();
 
     /**
      * @return 存储管理器

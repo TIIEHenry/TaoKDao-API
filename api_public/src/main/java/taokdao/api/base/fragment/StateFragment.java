@@ -1,5 +1,6 @@
 package taokdao.api.base.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,12 @@ public abstract class StateFragment extends Fragment {
 
     @Nullable
     @Override
+    public Context getContext() {
+        return super.getContext();
+    }
+
+    @Nullable
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView != null) {
             ViewGroup parent = (ViewGroup) rootView.getParent();
@@ -28,7 +35,8 @@ public abstract class StateFragment extends Fragment {
                 parent.removeView(rootView);
             }
         } else {
-            rootView = getView(inflater, container);
+//            rootView = getView(inflater, container);
+            rootView = getView(LayoutInflater.from(getContext()), container);
         }
         return rootView;
     }

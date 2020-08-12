@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import java.io.File;
 
 import taokdao.api.plugin.bean.Plugin;
+import taokdao.api.plugin.bean.PluginManifest;
 
 /**
  * work 工作目录
@@ -102,7 +103,7 @@ public interface IFileSystem {
      * @return 安装目录
      */
     @NonNull
-    default File getPluginDir(@NonNull Plugin plugin) {
+    default File getPluginDir(@NonNull PluginManifest plugin) {
         File file = new File(getPluginDir(), plugin.id);
         file.mkdirs();
         return file;
@@ -113,7 +114,7 @@ public interface IFileSystem {
      * @return 工作目录
      */
     @NonNull
-    default File getPluginWorkDir(@NonNull Plugin plugin) {
+    default File getPluginWorkDir(@NonNull PluginManifest plugin) {
         File file = new File(getPluginWorkDir(), plugin.id);
         file.mkdirs();
         return file;
@@ -124,7 +125,7 @@ public interface IFileSystem {
      * @return 缓存目录
      */
     @NonNull
-    default File getPluginCacheDir(@NonNull Plugin plugin) {
+    default File getPluginCacheDir(@NonNull PluginManifest plugin) {
         File file = new File(getPluginCacheDir(), plugin.id);
         file.mkdirs();
         return file;

@@ -2,6 +2,7 @@ package taokdao.api.plugin.bean;
 
 import android.graphics.drawable.Drawable;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.File;
@@ -10,9 +11,11 @@ import java.util.List;
 
 import taokdao.api.base.annotation.Identifier;
 import taokdao.api.base.annotation.todo.NeedSet;
+import taokdao.api.plugin.bridge.invoke.IInvokeCallback;
+import taokdao.api.plugin.bridge.invoke.IInvoker;
 import taokdao.api.plugin.engine.IPluginEngine;
 
-public class Plugin {
+public class Plugin implements IInvoker {
     public final File pluginDir;
     public final File manifestFile;
     public PluginManifest manifest;
@@ -80,6 +83,11 @@ public class Plugin {
         engine.engine.callPluginAction(this, PluginActions.onResume);
     }
 
+    @Nullable
+    @Override
+    public String onInvoke(@NonNull String method, @Nullable String params, @Nullable IInvokeCallback invokeCallback) {
+        return engine.engine.invokePlugin(this,method,params,invokeCallback);
+    }
 
     public static class Information {
         public String author;

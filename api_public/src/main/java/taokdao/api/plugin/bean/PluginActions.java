@@ -20,5 +20,9 @@ public enum PluginActions {
     /**
      * 暂停，恢复
      */
-    onPause, onResume
+    onPause, onResume,
+    /**
+     * 被调用
+     */
+    onInvoke
 }

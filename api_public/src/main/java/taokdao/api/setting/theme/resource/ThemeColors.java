@@ -1,4 +1,4 @@
-package taokdao.api.setting.theme.colors;
+package taokdao.api.setting.theme.resource;
 
 /**
  * hint 提示性
