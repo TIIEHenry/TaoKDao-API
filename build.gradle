@@ -36,7 +36,7 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-task restartTaoKDao(){
+task restartTaoKDao() {
     doLast{
         Runtime.getRuntime().exec("adb shell am force-stop tiiehenry.taokdao").waitFor()
         Runtime.getRuntime().exec("adb shell am start -S -n tiiehenry.taokdao/taokdao.main.MainActivity")
