@@ -56,6 +56,6 @@ public class InnerIdentifier {
     public static class MetaData {
         public static final String PARAMETER_TYPE = "taokdao.plugin.type";
         public static final String TYPE_PLUGIN_SETUP = "taokdao.plugin.setup";
-        public static final String PARAMETER_PLUGIN_SRC_PATH = "taokdao.plugin.src";
+        public static final String PARAMETER_PLUGIN_SRC_PATH = "taokdao.plugin.source";
     }
 }
