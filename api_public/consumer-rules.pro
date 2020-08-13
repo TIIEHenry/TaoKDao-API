@@ -1,31 +1,4 @@
 
--keep class androidx**
--keep interface androidx**
--keep enum androidx**
-
--keep class androidx**{
-    *;
-}
--keep interface androidx**{
-    *;
-}
--keep enum androidx**{
-    *;
-}
-
--keep class com.google.android.material**
--keep interface com.google.android.material**
--keep enum com.google.android.material**
-
--keep class com.google.android.material**{
-    *;
-}
--keep interface com.google.android.material**{
-    *;
-}
--keep enum com.google.android.material**{
-    *;
-}
 
 #指定代码的压缩级别，在0-7之间，一般是5，不需要修改
 -optimizationpasses 5

@@ -47,8 +47,15 @@ public class InnerIdentifier {
         public static final String PARAMETER_PACKAGE = "taokdao.main.intent.parameter.package";
         public static final String ACTION_INSTALL_PLUGIN = "taokdao.main.intent.action.install_plugin";
     }
+
     public static class FileBuilder {
         public static final String HTML_VIEWER = "taokdao.builder.html.viewer";
         public static final String ANDROLUA_RUNNER = "taokdao.builder.lua.runner";
+    }
+
+    public static class MetaData {
+        public static final String PARAMETER_TYPE = "taokdao.plugin.type";
+        public static final String TYPE_PLUGIN_SETUP = "taokdao.plugin.setup";
+        public static final String PARAMETER_PLUGIN_SRC_PATH = "taokdao.plugin.src";
     }
 }

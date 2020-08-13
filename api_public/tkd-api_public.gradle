@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        consumerProguardFiles 'consumer-rules.pro','consumer-api_library.pro','consumer-internal_library.pro'
+        consumerProguardFiles 'consumer-rules.pro','consumer-rules-androidx.pro','consumer-rules-kotlin.pro','consumer-rules-api_library.pro','consumer-rules-internal_library.pro'
     }
 
     compileOptions {
