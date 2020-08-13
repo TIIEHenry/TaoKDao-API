@@ -1,17 +1,31 @@
--keep class taokdao.api.**
--keep interface taokdao.api.**
--keep enum taokdao.api.**
 
--keep class taokdao.api.**{
+-keep class androidx**
+-keep interface androidx**
+-keep enum androidx**
+
+-keep class androidx**{
     *;
 }
--keep interface taokdao.api.**{
+-keep interface androidx**{
     *;
 }
--keep enum taokdao.api.**{
+-keep enum androidx**{
     *;
 }
 
+-keep class com.google.android.material**
+-keep interface com.google.android.material**
+-keep enum com.google.android.material**
+
+-keep class com.google.android.material**{
+    *;
+}
+-keep interface com.google.android.material**{
+    *;
+}
+-keep enum com.google.android.material**{
+    *;
+}
 
 #指定代码的压缩级别，在0-7之间，一般是5，不需要修改
 -optimizationpasses 5
@@ -19,7 +33,7 @@
 #混淆时不使用大小写混合，混淆后的类名为小写
 -dontusemixedcaseclassnames
 
-# 混淆时是否做预校验（Android不需要preverify，去掉这一步可加快混淆速度）
+# Android不需要预校验
 -dontpreverify
 
 #有了verbose这句话，混淆后就会生成映射文件

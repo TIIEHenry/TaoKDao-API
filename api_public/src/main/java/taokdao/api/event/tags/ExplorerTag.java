@@ -2,10 +2,10 @@ package taokdao.api.event.tags;
 
 import androidx.annotation.NonNull;
 
+import taokdao.api.api_public.R;
 import taokdao.api.event.tag.IEventTag;
 import taokdao.api.main.IMainContext;
 import taokdao.api.ui.window.explorer.IExplorer;
-import tiiehenry.taokdao.api.main.R;
 
 
 public class ExplorerTag implements IEventTag {

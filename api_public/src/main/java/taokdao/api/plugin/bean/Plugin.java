@@ -18,6 +18,7 @@ import taokdao.api.plugin.engine.IPluginEngine;
 public class Plugin implements IInvoker {
     public final File pluginDir;
     public final File manifestFile;
+
     public PluginManifest manifest;
     @Identifier
     public String id;
