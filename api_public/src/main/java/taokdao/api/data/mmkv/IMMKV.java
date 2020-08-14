@@ -4,6 +4,9 @@ import android.os.Parcelable;
 
 import java.util.Set;
 
+/**
+ * 参考 @link{https://github.com/Tencent/MMKV/blob/master/readme_cn.md}
+ */
 public interface IMMKV {
     boolean encode(String key, boolean value);
 

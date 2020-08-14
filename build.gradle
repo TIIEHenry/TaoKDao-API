@@ -33,6 +33,7 @@ task clean(type: Delete) {
 task restartTaoKDao() {
     doLast{
         Runtime.getRuntime().exec("adb shell am force-stop tiiehenry.taokdao").waitFor()
+        Thread.sleep(1500)
         Runtime.getRuntime().exec("adb shell am start -S -n tiiehenry.taokdao/taokdao.main.MainActivity")
     }
 }

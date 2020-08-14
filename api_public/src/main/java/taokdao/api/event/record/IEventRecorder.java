@@ -6,6 +6,9 @@ import androidx.annotation.StringRes;
 
 import taokdao.api.event.tag.IEventTag;
 
+/**
+ * send=log+notify
+ */
 public interface IEventRecorder {
 
     /**

@@ -1,18 +1,7 @@
 package taokdao.api.ui.window.explorer;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import taokdao.api.ui.window.ITabWindow;
 
-import taokdao.api.ui.window.IWindow;
-
-public interface IExplorerWindow extends IWindow<IExplorerWindow> {
-    void add(@NonNull IExplorer explorer);
-
-    boolean remove(@NonNull IExplorer explorer);
-
-    void show(@NonNull IExplorer explorer);
-
-    @Nullable
-    IExplorer getCurrent();
+public interface IExplorerWindow extends ITabWindow<IExplorerWindow,IExplorer> {
 
 }

@@ -80,6 +80,7 @@ public abstract class TabToolFragment extends StateFragment implements ITabTool 
         });
     }
 
+    @NonNull
     @Identifier
     @Override
     public String id() {

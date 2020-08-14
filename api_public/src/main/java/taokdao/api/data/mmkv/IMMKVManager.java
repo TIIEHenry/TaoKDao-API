@@ -1,6 +1,5 @@
 package taokdao.api.data.mmkv;
 
-
 import androidx.annotation.NonNull;
 
 import taokdao.api.plugin.bean.Plugin;
@@ -10,80 +9,50 @@ import taokdao.api.project.plugin.IProjectPlugin;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.window.explorer.IExplorer;
 import taokdao.api.ui.window.tabtool.ITabTool;
-
 /**
  * 保存各种设置
  */
 public interface IMMKVManager {
-
     @NonNull
     IMMKV getGlobalMMKV();
 
     @NonNull
     IMMKV getMMKV(@NonNull String name);
 
-    default IMMKV getProjectPluginMMKV(@NonNull String id) {
-        return getMMKV("project_plugin_" + id);
-    }
+    IMMKV getProjectPluginMMKV(@NonNull String id);
 
     @NonNull
-    default IMMKV getPluginMMKV(@NonNull String id) {
-        return getMMKV("plugin_" + id);
-    }
+    IMMKV getPluginMMKV(@NonNull String id);
 
     @NonNull
-    default IMMKV getPluginEngineMMKV(@NonNull String id) {
-        return getMMKV("plugin_engine_" + id);
-    }
+    IMMKV getPluginEngineMMKV(@NonNull String id);
 
     @NonNull
-    default IMMKV getContentMMKV(@NonNull String id) {
-        return getMMKV("content_" + id);
-    }
+    IMMKV getContentMMKV(@NonNull String id);
 
     @NonNull
-    default IMMKV getTabToolMMKV(@NonNull String id) {
-        return getMMKV("tabtool_" + id);
-    }
+    IMMKV getTabToolMMKV(@NonNull String id);
 
     @NonNull
-    default IMMKV getExplorerMMKV(@NonNull String id) {
-        return getMMKV("explorer_" + id);
-    }
+    IMMKV getExplorerMMKV(@NonNull String id);
 
-
-    default IMMKV getProjectPluginMMKV(@NonNull IProjectPlugin projectPlugin) {
-        return getProjectPluginMMKV(projectPlugin.id());
-    }
+    IMMKV getProjectPluginMMKV(@NonNull IProjectPlugin projectPlugin);
 
     @NonNull
-    default IMMKV getPluginMMKV(@NonNull PluginManifest pluginManifest) {
-        return getPluginMMKV(pluginManifest.id);
-    }
+    IMMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine);
 
     @NonNull
-    default IMMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine) {
-        return getPluginEngineMMKV(pluginEngine.id());
-    }
+    IMMKV getPluginMMKV(@NonNull PluginManifest pluginManifest);
 
     @NonNull
-    default IMMKV getPluginMMKV(@NonNull Plugin plugin) {
-        return getPluginMMKV(plugin.id);
-    }
+    IMMKV getPluginMMKV(@NonNull Plugin plugin);
 
     @NonNull
-    default IMMKV getContentMMKV(@NonNull IContent tabContent) {
-        return getContentMMKV(tabContent.id());
-    }
+    IMMKV getContentMMKV(@NonNull IContent tabContent);
 
     @NonNull
-    default IMMKV getTabToolMMKV(@NonNull ITabTool tabTool) {
-        return getTabToolMMKV(tabTool.id());
-    }
+    IMMKV getTabToolMMKV(@NonNull ITabTool tabTool);
 
     @NonNull
-    default IMMKV getExplorerMMKV(@NonNull IExplorer explorer) {
-        return getExplorerMMKV(explorer.id());
-    }
-
+    IMMKV getExplorerMMKV(@NonNull IExplorer explorer);
 }

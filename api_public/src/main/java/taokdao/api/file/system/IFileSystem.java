@@ -4,9 +4,7 @@ import androidx.annotation.NonNull;
 
 import java.io.File;
 
-import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.plugin.bean.PluginManifest;
-
 /**
  * work 工作目录
  * cache 缓存目录
@@ -23,31 +21,19 @@ public interface IFileSystem {
     File getSettingDir();
 
     @NonNull
-    default File getProjectDir() {
-        File file = new File(getWorkDir(), "Project");
-        file.mkdirs();
-        return file;
-    }
+    File getProjectDir();
 
     /**
      * @return 崩溃日志目录
      */
     @NonNull
-    default File getCrashDir() {
-        File file = new File(getConfigDir(), "Crash");
-        file.mkdirs();
-        return file;
-    }
+    File getCrashDir();
 
     /**
      * @return 配置目录
      */
     @NonNull
-    default File getConfigDir() {
-        File file = new File(getWorkDir(), "Config");
-        file.mkdirs();
-        return file;
-    }
+    File getConfigDir();
 
     @NonNull
     File getInternalWorkDir();
@@ -57,7 +43,6 @@ public interface IFileSystem {
 
     @NonNull
     File getExternalWorkDir();
-
 
     @NonNull
     File getInternalCacheDir();
@@ -72,63 +57,38 @@ public interface IFileSystem {
      * @return 所有插件安装目录
      */
     @NonNull
-    default File getPluginDir() {
-        File file = new File(getWorkDir(), "Plugin");
-        file.mkdirs();
-        return file;
-    }
+    File getPluginDir();
 
     /**
      * @return 所有插件工作目录
      */
     @NonNull
-    default File getPluginWorkDir() {
-        File file = new File(getExternalWorkDir(), "Plugin");
-        file.mkdirs();
-        return file;
-    }
+    File getPluginWorkDir();
 
     /**
      * @return 所有插件缓存目录
      */
     @NonNull
-    default File getPluginCacheDir() {
-        File file = new File(getExternalWorkDir(), "cache");
-        file.mkdirs();
-        return file;
-    }
+    File getPluginCacheDir();
 
     /**
      * @param plugin 插件
      * @return 安装目录
      */
     @NonNull
-    default File getPluginDir(@NonNull PluginManifest plugin) {
-        File file = new File(getPluginDir(), plugin.id);
-        file.mkdirs();
-        return file;
-    }
+    File getPluginDir(@NonNull PluginManifest plugin);
 
     /**
      * @param plugin 插件
      * @return 工作目录
      */
     @NonNull
-    default File getPluginWorkDir(@NonNull PluginManifest plugin) {
-        File file = new File(getPluginWorkDir(), plugin.id);
-        file.mkdirs();
-        return file;
-    }
+    File getPluginWorkDir(@NonNull PluginManifest plugin);
 
     /**
      * @param plugin 插件
      * @return 缓存目录
      */
     @NonNull
-    default File getPluginCacheDir(@NonNull PluginManifest plugin) {
-        File file = new File(getPluginCacheDir(), plugin.id);
-        file.mkdirs();
-        return file;
-    }
-
+    File getPluginCacheDir(@NonNull PluginManifest plugin);
 }
