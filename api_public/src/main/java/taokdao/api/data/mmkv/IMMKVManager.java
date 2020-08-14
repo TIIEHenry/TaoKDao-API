@@ -22,38 +22,68 @@ public interface IMMKVManager {
     @NonNull
     IMMKV getMMKV(@NonNull String name);
 
+    default IMMKV getProjectPluginMMKV(@NonNull String id) {
+        return getMMKV("project_plugin_" + id);
+    }
+
+    @NonNull
+    default IMMKV getPluginMMKV(@NonNull String id) {
+        return getMMKV("plugin_" + id);
+    }
+
+    @NonNull
+    default IMMKV getPluginEngineMMKV(@NonNull String id) {
+        return getMMKV("plugin_engine_" + id);
+    }
+
+    @NonNull
+    default IMMKV getContentMMKV(@NonNull String id) {
+        return getMMKV("content_" + id);
+    }
+
+    @NonNull
+    default IMMKV getTabToolMMKV(@NonNull String id) {
+        return getMMKV("tabtool_" + id);
+    }
+
+    @NonNull
+    default IMMKV getExplorerMMKV(@NonNull String id) {
+        return getMMKV("explorer_" + id);
+    }
+
+
     default IMMKV getProjectPluginMMKV(@NonNull IProjectPlugin projectPlugin) {
-        return getMMKV("project_plugin_" + projectPlugin.id());
+        return getProjectPluginMMKV(projectPlugin.id());
     }
 
     @NonNull
     default IMMKV getPluginMMKV(@NonNull PluginManifest pluginManifest) {
-        return getMMKV("plugin_" + pluginManifest.id);
+        return getPluginMMKV(pluginManifest.id);
     }
 
     @NonNull
     default IMMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine) {
-        return getMMKV("plugin_engine_" + pluginEngine.id());
+        return getPluginEngineMMKV(pluginEngine.id());
     }
 
     @NonNull
     default IMMKV getPluginMMKV(@NonNull Plugin plugin) {
-        return getMMKV("plugin_" + plugin.id);
+        return getPluginMMKV(plugin.id);
     }
 
     @NonNull
     default IMMKV getContentMMKV(@NonNull IContent tabContent) {
-        return getMMKV("content_" + tabContent.id());
+        return getContentMMKV(tabContent.id());
     }
 
     @NonNull
     default IMMKV getTabToolMMKV(@NonNull ITabTool tabTool) {
-        return getMMKV("tabtool_" + tabTool.id());
+        return getTabToolMMKV(tabTool.id());
     }
 
     @NonNull
     default IMMKV getExplorerMMKV(@NonNull IExplorer explorer) {
-        return getMMKV("explorer_" + explorer.id());
+        return getExplorerMMKV(explorer.id());
     }
 
 }
