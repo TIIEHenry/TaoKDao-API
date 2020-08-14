@@ -8,6 +8,10 @@ import java.util.List;
 public interface IFileOpenManager {
     void init();
 
+    /**
+     * @param path
+     * @return 是否已处理
+     */
     boolean requestOpen(@NonNull String path);
 
     /**
