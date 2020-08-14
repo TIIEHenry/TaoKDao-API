@@ -5,13 +5,12 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.tencent.mmkv.MMKV;
-
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 import taokdao.api.data.bean.Properties;
+import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.IMultiChoicePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.base.annotation.relation.MainConstructor;
@@ -22,7 +21,7 @@ public class MultiChoicePreference implements IMultiChoicePreference {
     private final Drawable icon;
     private final String title;
     private final String description;
-    private final MMKV mmkv;
+    private final IMMKV mmkv;
     private final Listener listener;
     private final Set<String> defaultValue;
     private IGroupPreference group;
@@ -31,7 +30,7 @@ public class MultiChoicePreference implements IMultiChoicePreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public MultiChoicePreference(@NonNull MMKV mmkv, Set<String> defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public MultiChoicePreference(@NonNull IMMKV mmkv, Set<String> defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
         this.id = properties.id;
@@ -42,19 +41,19 @@ public class MultiChoicePreference implements IMultiChoicePreference {
     }
 
 
-    public MultiChoicePreference(@NonNull MMKV mmkv, Set<String> defaultValue, @NonNull Properties properties, Listener listener) {
+    public MultiChoicePreference(@NonNull IMMKV mmkv, Set<String> defaultValue, @NonNull Properties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 
     @NonNull
     @Override
     public Set<String> loadValue() {
-        return mmkv.getStringSet(getIdWithGroup(), defaultValue);
+        return mmkv.decodeStringSet(getIdWithGroup(), defaultValue);
     }
 
     @Override
     public void saveValue(Set<String> value) {
-        mmkv.edit().putStringSet(getIdWithGroup(), value).apply();
+        mmkv.encode(getIdWithGroup(), value);
     }
 
     @NonNull

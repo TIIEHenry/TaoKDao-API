@@ -1,5 +1,7 @@
 package taokdao.api.plugin.load;
 
+import android.graphics.drawable.Drawable;
+
 import androidx.annotation.NonNull;
 
 import java.io.File;
@@ -32,4 +34,7 @@ public interface IPluginLoader {
 
     @NonNull
     Plugin loadPlugin(@NonNull PluginManifest pluginManifest) throws PluginLoadException;
+
+
+    Drawable loadPluginIcon(@NonNull Plugin plugin);
 }

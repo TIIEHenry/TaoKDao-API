@@ -5,10 +5,9 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.tencent.mmkv.MMKV;
-
 import taokdao.api.data.bean.Properties;
 import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.data.mmkv.IMMKV;
 
 public abstract class OppositeStatePreference implements IOppositeStatePreference {
 
@@ -16,7 +15,7 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     private final Drawable icon;
     private final String title;
     private final String description;
-    private final MMKV mmkv;
+    private final IMMKV mmkv;
     private final Listener listener;
     private final boolean defaultValue;
     private IGroupPreference group;
@@ -24,7 +23,7 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public OppositeStatePreference(@NonNull MMKV mmkv, boolean defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
         this.id = properties.id;
@@ -36,7 +35,7 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     }
 
 
-    public OppositeStatePreference(@NonNull MMKV mmkv, boolean defaultValue, @NonNull Properties properties, Listener listener) {
+    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull Properties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 
@@ -48,7 +47,7 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     @NonNull
     @Override
     public Boolean loadValue() {
-        return mmkv.getBoolean(getIdWithGroup(), defaultValue);
+        return mmkv.decodeBool(getIdWithGroup(), defaultValue);
     }
 
     @NonNull

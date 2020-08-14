@@ -1,7 +1,5 @@
 package taokdao.api.plugin.manage;
 
-import android.graphics.drawable.Drawable;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -105,23 +103,22 @@ public interface IPluginManager {
     /**
      * 禁用插件
      *
-     * @param plugin 已经安装的Plugin
+     * @param id 已经安装的Plugin id
      */
-    void disablePlugin(@NonNull Plugin plugin);
+    void disablePlugin(@NonNull String id);
 
     /**
      * 启用插件
      *
-     * @param plugin 已经安装的Plugin
+     * @param id 已经安装的Plugin id
      */
-    void enablePlugin(@NonNull Plugin plugin);
+    void enablePlugin(@NonNull String id);
 
     /**
-     * @param plugin plugin 已经安装的Plugin
+     * @param id 已经安装的Plugin id
      * @return 是否启用
      */
-    boolean isPluginEnabled(@NonNull Plugin plugin);
+    boolean isPluginEnabled(@NonNull String id);
 
-    Drawable loadPluginIcon(@NonNull Plugin plugin);
 
 }

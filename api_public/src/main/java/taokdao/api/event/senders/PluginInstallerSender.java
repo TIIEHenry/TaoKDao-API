@@ -15,4 +15,10 @@ public class PluginInstallerSender {
     public static IEventSender loadPluginError(@Nullable String message) {
         return new EventSender(new PluginInstallerTag(), "loadPluginError:" + message);
     }
+    public static IEventSender installError(@Nullable String message) {
+        return new EventSender(new PluginInstallerTag(), "installPluginError:" + message);
+    }
+    public static IEventSender uninstallError(@Nullable String message) {
+        return new EventSender(new PluginInstallerTag(), "uninstallPluginError:" + message);
+    }
 }

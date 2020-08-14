@@ -5,9 +5,8 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.tencent.mmkv.MMKV;
-
 import taokdao.api.data.bean.Properties;
+import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.ITextPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.base.annotation.relation.MainConstructor;
@@ -19,7 +18,7 @@ public class TextPreference implements ITextPreference {
     private final Drawable icon;
     private final String title;
     private final String description;
-    private final MMKV mmkv;
+    private final IMMKV mmkv;
     private final Listener listener;
     private final String defaultValue;
     private IGroupPreference group;
@@ -27,7 +26,7 @@ public class TextPreference implements ITextPreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public TextPreference(@NonNull MMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
         this.id = properties.id;
@@ -38,19 +37,19 @@ public class TextPreference implements ITextPreference {
     }
 
 
-    public TextPreference(@NonNull MMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Listener listener) {
+    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 
     @NonNull
     @Override
     public String loadValue() {
-        return mmkv.getString(getIdWithGroup(), defaultValue);
+        return mmkv.decodeString(getIdWithGroup(), defaultValue);
     }
 
     @Override
     public void saveValue(String value) {
-        mmkv.edit().putString(getIdWithGroup(), value).apply();
+        mmkv.encode(getIdWithGroup(), value);
     }
 
     @NonNull

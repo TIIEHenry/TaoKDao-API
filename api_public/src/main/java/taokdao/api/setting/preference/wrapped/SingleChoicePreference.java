@@ -5,9 +5,8 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.tencent.mmkv.MMKV;
-
 import taokdao.api.data.bean.Properties;
+import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.ISingleChoicePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.base.annotation.relation.MainConstructor;
@@ -18,7 +17,7 @@ public class SingleChoicePreference implements ISingleChoicePreference {
     private final Drawable icon;
     private final String title;
     private final String description;
-    private final MMKV mmkv;
+    private final IMMKV mmkv;
     private final Listener listener;
     private final int defaultValue;
     private IGroupPreference group;
@@ -27,7 +26,7 @@ public class SingleChoicePreference implements ISingleChoicePreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public SingleChoicePreference(@NonNull MMKV mmkv, int defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
         this.id = properties.id;
@@ -38,19 +37,19 @@ public class SingleChoicePreference implements ISingleChoicePreference {
     }
 
 
-    public SingleChoicePreference(@NonNull MMKV mmkv, int defaultValue, @NonNull Properties properties, Listener listener) {
+    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull Properties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 
     @NonNull
     @Override
     public Integer loadValue() {
-        return mmkv.getInt(getIdWithGroup(), defaultValue);
+        return mmkv.decodeInt(getIdWithGroup(), defaultValue);
     }
 
     @Override
     public void saveValue(Integer value) {
-        mmkv.edit().putInt(getIdWithGroup(), value).apply();
+        mmkv.encode(getIdWithGroup(), value);
     }
 
     @NonNull

@@ -10,30 +10,29 @@ public class InnerIdentifier {
 
 
     public static class TabTool {
-        public static final String EVENT = "taokdao.tabtools.event";
-        public static final String TIPS = "taokdao.tabtools.tips";
-        public static final String BUILD = "taokdao.tabtools.build";
-        public static final String SEARCH = "taokdao.tabtools.search";
-        public static final String LOGCAT = "taokdao.tabtools.logcat";
+        public static final String EVENT = "taokdao.tabtool.event";
+        public static final String TIPS = "taokdao.tabtool.tips";
+        public static final String BUILD = "taokdao.tabtool.build";
+        public static final String SEARCH = "taokdao.tabtool.search";
+        public static final String LOGCAT = "taokdao.tabtool.logcat";
     }
 
 
     public static class Content {
-        public static final String CODE_EDITOR = "taokdao.contents.codeeditor";
-        public static final String CODE_TEMPLATE_EDITOR = "taokdao.contents.codeetemplateditor";
-        public static final String OPEN_FAILED = "taokdao.contents.openfailed";
+        public static final String CODE_EDITOR = "taokdao.content.codeeditor";
+        public static final String CODE_TEMPLATE_EDITOR = "taokdao.content.codeetemplateditor";
+        public static final String OPEN_FAILED = "taokdao.content.openfailed";
     }
 
     public static class Explorer {
-        public static final String FILE_EXPLORER = "taokdao.explorers.fileexplorer";
-        public static final String PROJECT_FILES = "taokdao.explorers.projectfiles";
-        public static final String PROJECT_STRUCTURE = "taokdao.explorers.projectstructure";
+        public static final String FILE_EXPLORER = "taokdao.explorer.file.explorer";
+        public static final String PROJECT_FILES = "taokdao.explorer.project.files";
+        public static final String PROJECT_STRUCTURE = "taokdao.explorer.project.structure";
     }
 
-
     public static class ProjectPlugin {
-        public static final String PROJECT_FILES = Explorer.PROJECT_FILES;
-        public static final String PROJECT_STRUCTURE = Explorer.PROJECT_STRUCTURE;
+        public static final String PROJECT_FILES = "taokdao.project.plugin.explorer.files";
+        public static final String PROJECT_STRUCTURE = "taokdao.project.plugin.explorer.structure";
     }
 
     public static class PluginEngine {
@@ -49,8 +48,7 @@ public class InnerIdentifier {
     }
 
     public static class FileBuilder {
-        public static final String HTML_VIEWER = "taokdao.builder.html.viewer";
-        public static final String ANDROLUA_RUNNER = "taokdao.builder.lua.runner";
+        public static final String HTML_VIEWER = "taokdao.file.builder.html.viewer";
     }
 
     public static class MetaData {

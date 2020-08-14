@@ -3,8 +3,6 @@ package taokdao.api.data.mmkv;
 
 import androidx.annotation.NonNull;
 
-import com.tencent.mmkv.MMKV;
-
 import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.plugin.bean.PluginManifest;
 import taokdao.api.plugin.engine.IPluginEngine;
@@ -19,42 +17,43 @@ import taokdao.api.ui.window.tabtool.ITabTool;
 public interface IMMKVManager {
 
     @NonNull
-    MMKV getGlobalMMKV();
+    IMMKV getGlobalMMKV();
 
-    default MMKV getProjectPluginMMKV(@NonNull IProjectPlugin projectPlugin) {
+    @NonNull
+    IMMKV getMMKV(@NonNull String name);
+
+    default IMMKV getProjectPluginMMKV(@NonNull IProjectPlugin projectPlugin) {
         return getMMKV("project_plugin_" + projectPlugin.id());
     }
 
     @NonNull
-    default MMKV getPluginMMKV(@NonNull PluginManifest pluginManifest) {
+    default IMMKV getPluginMMKV(@NonNull PluginManifest pluginManifest) {
         return getMMKV("plugin_" + pluginManifest.id);
     }
 
     @NonNull
-    default MMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine) {
+    default IMMKV getPluginEngineMMKV(@NonNull IPluginEngine pluginEngine) {
         return getMMKV("plugin_engine_" + pluginEngine.id());
     }
 
     @NonNull
-    default MMKV getPluginMMKV(@NonNull Plugin plugin) {
+    default IMMKV getPluginMMKV(@NonNull Plugin plugin) {
         return getMMKV("plugin_" + plugin.id);
     }
 
     @NonNull
-    default MMKV getContentMMKV(@NonNull IContent tabContent) {
+    default IMMKV getContentMMKV(@NonNull IContent tabContent) {
         return getMMKV("content_" + tabContent.id());
     }
 
     @NonNull
-    default MMKV getTabToolMMKV(@NonNull ITabTool tabTool) {
+    default IMMKV getTabToolMMKV(@NonNull ITabTool tabTool) {
         return getMMKV("tabtool_" + tabTool.id());
     }
 
     @NonNull
-    default MMKV getExplorerMMKV(@NonNull IExplorer explorer) {
+    default IMMKV getExplorerMMKV(@NonNull IExplorer explorer) {
         return getMMKV("explorer_" + explorer.id());
     }
 
-    @NonNull
-    MMKV getMMKV(@NonNull String name);
 }
