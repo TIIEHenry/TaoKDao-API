@@ -57,21 +57,9 @@ public class Explorer implements IExplorer {
     }
 
     @Override
-    public String getDropDownLabel() {
-        return label;
-    }
-
-    @Override
     public Drawable getIcon() {
         return icon;
     }
-
-    @Nullable
-    @Override
-    public Drawable getDropDownIcon() {
-        return icon;
-    }
-
     @NonNull
     @Override
     public StateFragment getFragment() {

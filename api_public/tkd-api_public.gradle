@@ -30,7 +30,6 @@ dependencies {
 //
     api 'androidx.appcompat:appcompat:1.2.0'
 //    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    api 'androidx.annotation:annotation:1.1.0'
     api 'androidx.fragment:fragment:1.2.5'
 //    implementation 'androidx.viewpager:viewpager:1.0.0'
     api 'androidx.recyclerview:recyclerview:1.1.0'

@@ -15,19 +15,14 @@ import taokdao.api.base.fragment.StateFragment;
 
 public interface IExplorer extends IProperties {
 
-    String getDropDownLabel();
+    @Nullable
+    Drawable getIcon();
 
     @Nullable
     @Override
     default String getDescription() {
         return null;
     }
-
-    @Nullable
-    Drawable getIcon();
-
-    @Nullable
-    Drawable getDropDownIcon();
 
     @NonNull
     StateFragment getFragment();

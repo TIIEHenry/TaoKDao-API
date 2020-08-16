@@ -27,3 +27,17 @@
 -keep enum com.tencent.mmkv**{
     *;
 }
+
+-keep class tiiehenry.android**
+-keep interface tiiehenry.android**
+-keep enum tiiehenry.android**
+
+-keep class tiiehenry.android**{
+    *;
+}
+-keep interface tiiehenry.android**{
+    *;
+}
+-keep enum tiiehenry.android**{
+    *;
+}
