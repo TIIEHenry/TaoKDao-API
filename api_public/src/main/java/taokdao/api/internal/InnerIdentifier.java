@@ -9,7 +9,7 @@ import androidx.annotation.Keep;
 public class InnerIdentifier {
 
 
-    public static class TabTool {
+    public static class ToolGroup {
         public static final String EVENT = "taokdao.tabtool.event";
         public static final String TIPS = "taokdao.tabtool.tips";
         public static final String BUILD = "taokdao.tabtool.build";

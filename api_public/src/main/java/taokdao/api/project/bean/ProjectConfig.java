@@ -1,58 +1,45 @@
 package taokdao.api.project.bean;
 
-import androidx.annotation.NonNull;
-
 import com.alibaba.fastjson.JSON;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import taokdao.api.base.annotation.maintain.LongTerm;
-import taokdao.api.base.annotation.todo.NeedSet;
 
 @LongTerm
 public class ProjectConfig {
-    public static String configFileName = "project.json";
-    @NeedSet
     public File projectDir;
-    @NeedSet
+
     public File configFile;
 
     public String name;
-    /**
-     * project builder id
-     */
+
     public String builder;
-    /**
-     * project plugin id
-     */
-    public List<Plugin> plugins = new ArrayList<>();
-    public List<RelativePath> projects = new ArrayList<>();
+
+    public List<ProjectPluginJson> plugins;
+    public List<RelativePath> projects;
     public Map<String, Object> setting;
 
-    public ProjectConfig() {
+    public ProjectConfig(ProjectConfigJson projectConfigJson) {
 
+        this.name = projectConfigJson.name;
+        this.builder = projectConfigJson.builder;
+        this.plugins = projectConfigJson.plugins;
+        this.projects = projectConfigJson.projects;
+        this.setting = projectConfigJson.setting;
     }
 
-    public static ProjectConfig from(String text) {
+    public static ProjectConfig from(File configFile, String text) {
+        ProjectConfigJson projectConfigJson = ProjectConfigJson.from(text);
+        ProjectConfig projectConfig = new ProjectConfig(projectConfigJson);
+        projectConfig.configFile = configFile;
+        projectConfig.projectDir = configFile.getParentFile();
+        if (projectConfig.name == null)
+            projectConfig.name = configFile.getName();
+
         return JSON.parseObject(text, ProjectConfig.class);
     }
-
-    public static class Plugin {
-        public String id;
-        public List<?> parameters;
-
-        public Plugin() {
-        }
-
-        @NonNull
-        @Override
-        public String toString() {
-            return "Plugin{id=" + id + ",parameters=" + parameters + "}";
-        }
-    }
-
 
 }

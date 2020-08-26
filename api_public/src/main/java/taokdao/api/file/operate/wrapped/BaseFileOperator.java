@@ -6,9 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.operate.FileOperatorCallback;
-import taokdao.api.file.operate.FileOperatorChecker;
 import taokdao.api.file.operate.IFileOperator;
 import taokdao.api.main.IMainContext;
 
@@ -21,15 +20,15 @@ public abstract class BaseFileOperator implements IFileOperator {
 
 
     @MainConstructor
-    public BaseFileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
+    public BaseFileOperator(@NonNull IProperties properties, @Nullable Drawable icon, FileOperatorCallback callback) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.callback = callback;
     }
 
-    public BaseFileOperator(@NonNull Properties properties, FileOperatorCallback callback) {
+    public BaseFileOperator(@NonNull IProperties properties, FileOperatorCallback callback) {
         this(properties, null, callback);
     }
 

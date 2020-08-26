@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.open.FileOpenerChecker;
 
 /**
@@ -17,12 +17,12 @@ public abstract class FileOpener extends BaseFileOpener {
     protected FileOpenerChecker checker;
 
     @MainConstructor
-    public FileOpener(@NonNull Properties properties, @Nullable Drawable icon, @NonNull FileOpenerChecker checker) {
+    public FileOpener(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull FileOpenerChecker checker) {
         super(properties, icon);
         this.checker = checker;
     }
 
-    public FileOpener(@NonNull Properties properties, FileOpenerChecker checker) {
+    public FileOpener(@NonNull IProperties properties, FileOpenerChecker checker) {
         this(properties, null, checker);
     }
 

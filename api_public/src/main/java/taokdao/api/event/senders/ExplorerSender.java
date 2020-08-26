@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.ExplorerTag;
-import taokdao.api.ui.window.explorer.IExplorer;
+import taokdao.api.ui.explorer.IExplorer;
 
 
 public class ExplorerSender {

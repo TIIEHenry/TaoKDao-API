@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.open.IFileOpener;
 
 public abstract class BaseFileOpener implements IFileOpener {
@@ -19,10 +19,10 @@ public abstract class BaseFileOpener implements IFileOpener {
     protected String description;
 
     @MainConstructor
-    public BaseFileOpener(@NonNull Properties properties, @Nullable Drawable icon) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
+    public BaseFileOpener(@NonNull IProperties properties, @Nullable Drawable icon) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
     }
 

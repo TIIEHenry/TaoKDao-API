@@ -9,10 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import taokdao.api.main.IMainContext;
+import taokdao.api.base.annotation.todo.NeedSet;
 import taokdao.api.project.build.IProjectBuilder;
 import taokdao.api.project.plugin.IProjectPlugin;
-import taokdao.api.base.annotation.todo.NeedSet;
 
 public class Project {
     public ProjectConfig projectConfig;
@@ -37,17 +36,10 @@ public class Project {
 
     public Project(ProjectConfig projectConfig) {
         this.projectConfig = projectConfig;
-        if (projectConfig.name == null)
-            this.name = projectConfig.configFile.getName();
-        else
-            this.name = projectConfig.name;
+        this.name = projectConfig.name;
         this.projectDir = projectConfig.projectDir;
         this.configFile = projectConfig.configFile;
         this.setting = projectConfig.setting;
-    }
-
-    public boolean buildDefault(IMainContext main) {
-        return builder.getDefaultBuildOption().onBuild(main, this);
     }
 
     public static class Plugin {

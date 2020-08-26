@@ -4,6 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
 
@@ -14,13 +15,13 @@ public class Properties implements IProperties {
     public String label;
 
     @Nullable
-    public String des;
+    public String description;
 
     @MainConstructor
     public Properties(@NonNull String id, String label, @Nullable String description) {
         this.id = id;
         this.label = label;
-        this.des = description;
+        this.description = description;
     }
 
     public Properties(@NonNull String id, String label) {
@@ -31,11 +32,11 @@ public class Properties implements IProperties {
         this(id, null, null);
     }
 
-    public Properties(@NonNull String id, @NonNull Context context, int label) {
+    public Properties(@NonNull String id, @NonNull Context context,@StringRes int label) {
         this(id, context.getString(label), null);
     }
 
-    public Properties(@NonNull String id, @NonNull Context context, int label, int description) {
+    public Properties(@NonNull String id, @NonNull Context context, @StringRes int label, @StringRes int description) {
         this(id, context.getString(label), context.getString(description));
     }
 
@@ -48,7 +49,7 @@ public class Properties implements IProperties {
     @Nullable
     @Override
     public String getDescription() {
-        return des;
+        return description;
     }
 
     @NonNull

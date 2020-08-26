@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.template.project.IProjectTemplate;
 
 public class ProjectTemplate implements IProjectTemplate {
@@ -19,21 +19,21 @@ public class ProjectTemplate implements IProjectTemplate {
     private Callback onCreateTemplate;
     private Callback onShowTemplateInfo;
 
-    public ProjectTemplate(@NonNull Properties properties, Drawable icon, Callback onCreateTemplate, Callback onShowTemplateInfo) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
+    public ProjectTemplate(@NonNull IProperties properties, Drawable icon, Callback onCreateTemplate, Callback onShowTemplateInfo) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.onCreateTemplate = onCreateTemplate;
         this.onShowTemplateInfo = onShowTemplateInfo;
     }
 
-    public ProjectTemplate(@NonNull Properties properties, Callback onCreateTemplate, Callback onShowTemplateInfo) {
+    public ProjectTemplate(@NonNull IProperties properties, Callback onCreateTemplate, Callback onShowTemplateInfo) {
         this(properties, null, onCreateTemplate, onShowTemplateInfo);
     }
 
 
-    public ProjectTemplate(@NonNull Properties properties, Callback onCreateTemplate) {
+    public ProjectTemplate(@NonNull IProperties properties, Callback onCreateTemplate) {
         this(properties, null, onCreateTemplate, null);
     }
 

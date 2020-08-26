@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.ITitlePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.setting.preference.base.IPreference;
@@ -24,14 +24,14 @@ public class TitlePreference implements ITitlePreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public TitlePreference(@NonNull Properties properties, Drawable icon) {
-        this.id = properties.id;
-        this.title = properties.label;
-        this.description = properties.des;
+    public TitlePreference(@NonNull IProperties properties, Drawable icon) {
+        this.id = properties.id();
+        this.title = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
     }
 
-    public TitlePreference(@NonNull Properties properties) {
+    public TitlePreference(@NonNull IProperties properties) {
         this(properties, null);
     }
 

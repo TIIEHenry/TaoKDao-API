@@ -25,6 +25,8 @@ android {
 dependencies {
 //    api "io.noties.markwon:core:4.4.0"
     api "tiiehenry.android.ui.dialogs:public_api:+"
+//    api 'tiiehenry.nota.toolkit:android-base:+'
+
     api "androidx.lifecycle:lifecycle-runtime:2.2.0"
 //    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
 //

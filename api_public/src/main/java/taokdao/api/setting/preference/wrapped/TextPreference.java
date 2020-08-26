@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.ITextPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
@@ -26,18 +26,18 @@ public class TextPreference implements ITextPreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull IProperties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
-        this.id = properties.id;
-        this.title = properties.label;
-        this.description = properties.des;
+        this.id = properties.id();
+        this.title = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.listener = listener;
     }
 
 
-    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull Properties properties, Listener listener) {
+    public TextPreference(@NonNull IMMKV mmkv, @NonNull String defaultValue, @NonNull IProperties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 

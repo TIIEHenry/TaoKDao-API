@@ -5,13 +5,13 @@ import androidx.annotation.NonNull;
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.TabToolTag;
-import taokdao.api.ui.window.tabtool.ITabTool;
+import taokdao.api.ui.toolgroup.IToolGroup;
 
 
 public class TabToolSender {
-    private final ITabTool tabTool;
+    private final IToolGroup tabTool;
 
-    public TabToolSender(@NonNull ITabTool tabTool) {
+    public TabToolSender(@NonNull IToolGroup tabTool) {
         this.tabTool = tabTool;
     }
 

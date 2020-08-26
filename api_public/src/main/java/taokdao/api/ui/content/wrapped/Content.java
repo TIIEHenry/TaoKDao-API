@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.ArrayList;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.content.editor.IEditor;
@@ -42,9 +42,9 @@ public class Content implements IContent {
     private ArrayList<QuickMenu> quickMenuList = new ArrayList<>();
 
     @MainConstructor
-    public Content(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
-        this.id = properties.id;
-        this.label = properties.label;
+    public Content(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
         this.icon = icon;
         this.path = path;
         this.fragment = fragment;
@@ -59,12 +59,12 @@ public class Content implements IContent {
         });
     }
 
-    public Content(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+    public Content(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
         this(properties, icon, file.getAbsolutePath(), fragment, editor);
         this.label = file.getName();
     }
 
-    public Content(@NonNull Properties properties, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
+    public Content(@NonNull IProperties properties, @NonNull File file, @NonNull StateFragment fragment, @NonNull IEditor editor) {
         this(properties, null, file.getAbsolutePath(), fragment, editor);
         this.label = file.getName();
     }

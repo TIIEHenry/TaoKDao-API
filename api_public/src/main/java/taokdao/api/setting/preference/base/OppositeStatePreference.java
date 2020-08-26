@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.mmkv.IMMKV;
 
@@ -23,19 +23,19 @@ public abstract class OppositeStatePreference implements IOppositeStatePreferenc
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull IProperties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
-        this.id = properties.id;
-        this.title = properties.label;
-        this.description = properties.des;
+        this.id = properties.id();
+        this.title = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.listener = listener;
 
     }
 
 
-    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull Properties properties, Listener listener) {
+    public OppositeStatePreference(@NonNull IMMKV mmkv, boolean defaultValue, @NonNull IProperties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 

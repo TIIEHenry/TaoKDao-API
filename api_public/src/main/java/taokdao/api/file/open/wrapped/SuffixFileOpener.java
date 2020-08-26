@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.main.IMainContext;
 import taokdao.api.ui.content.manage.IContentManager;
 
@@ -27,22 +27,22 @@ public class SuffixFileOpener extends BaseFileOpener {
     public List<String> supportSuffix = new ArrayList<>();
 
     @MainConstructor
-    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, @Nullable Drawable icon, @Nullable Callback click, @Nullable Callback longClick) {
+    public SuffixFileOpener(String[] suffixes, @NonNull IProperties properties, @Nullable Drawable icon, @Nullable Callback click, @Nullable Callback longClick) {
         super(properties, icon);
         supportSuffix.addAll(Arrays.asList(suffixes));
         this.click = click;
         this.longClick = longClick;
     }
 
-    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, @Nullable Drawable icon, @Nullable Callback click) {
+    public SuffixFileOpener(String[] suffixes, @NonNull IProperties properties, @Nullable Drawable icon, @Nullable Callback click) {
         this(suffixes, properties, icon, click, null);
     }
 
-    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties, Callback click) {
+    public SuffixFileOpener(String[] suffixes, @NonNull IProperties properties, Callback click) {
         this(suffixes, properties, null, click, null);
     }
 
-    public SuffixFileOpener(String[] suffixes, @NonNull Properties properties) {
+    public SuffixFileOpener(String[] suffixes, @NonNull IProperties properties) {
         this(suffixes, properties, null, null, null);
     }
 

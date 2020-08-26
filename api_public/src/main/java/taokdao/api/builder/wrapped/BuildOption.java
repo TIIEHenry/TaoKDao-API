@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 
 import taokdao.api.builder.callback.IBuildCallback;
 import taokdao.api.builder.IBuildOption;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.main.IMainContext;
 import taokdao.api.base.annotation.relation.MainConstructor;
 
@@ -19,17 +19,17 @@ public class BuildOption<I> implements IBuildOption<I> {
     private final IBuildCallback<I> callback;
 
     @MainConstructor
-    public BuildOption(@NonNull Properties properties, @Nullable Drawable icon, @NonNull IBuildCallback<I> callback) {
-        this.id = properties.id;
-        this.label = properties.label;
-        this.description = properties.des;
+    public BuildOption(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull IBuildCallback<I> callback) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.callback = callback;
     }
 
 
     @MainConstructor
-    public BuildOption(@NonNull Properties properties, @NonNull IBuildCallback<I> callback) {
+    public BuildOption(@NonNull IProperties properties, @NonNull IBuildCallback<I> callback) {
         this(properties, null, callback);
     }
 

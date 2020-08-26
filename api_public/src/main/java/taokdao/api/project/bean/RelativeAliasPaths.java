@@ -29,7 +29,7 @@ public class RelativeAliasPaths {
     public List<File> getRealPathFileList(@NonNull File projectDir) {
         ArrayList<File> list = new ArrayList<>();
         for (RelativePath path : paths) {
-            list.add(path.getRealPathFile(projectDir));
+            list.add(path.getRealFile(projectDir));
         }
         return list;
     }

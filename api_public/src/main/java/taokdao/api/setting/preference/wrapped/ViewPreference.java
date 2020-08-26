@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.IViewPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.base.annotation.relation.MainConstructor;
@@ -20,14 +20,14 @@ public abstract class ViewPreference implements IViewPreference {
     private boolean enable = true;
 
     @MainConstructor
-    public ViewPreference(@NonNull Properties properties, Drawable icon) {
-        this.id = properties.id;
-        this.title = properties.label;
-        this.description = properties.des;
+    public ViewPreference(@NonNull IProperties properties, Drawable icon) {
+        this.id = properties.id();
+        this.title = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
     }
 
-    public ViewPreference(@NonNull Properties properties) {
+    public ViewPreference(@NonNull IProperties properties) {
         this(properties, null);
     }
 

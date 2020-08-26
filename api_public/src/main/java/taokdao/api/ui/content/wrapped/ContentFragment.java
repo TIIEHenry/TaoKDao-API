@@ -12,7 +12,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.content.editor.IEditor;
@@ -39,9 +39,9 @@ public abstract class ContentFragment extends StateFragment implements IContent 
     private ArrayList<QuickMenu> quickMenuList = new ArrayList<>();
 
     @MainConstructor
-    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
-        this.id = properties.id;
-        this.label = properties.label;
+    public ContentFragment(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
+        this.id = properties.id();
+        this.label = properties.getLabel();
         this.icon = icon;
         this.path = path;
         this.editor = editor;
@@ -49,17 +49,17 @@ public abstract class ContentFragment extends StateFragment implements IContent 
         setObservers();
     }
 
-    public ContentFragment(@NonNull Properties properties, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
+    public ContentFragment(@NonNull IProperties properties, @NonNull String path, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, null, path, layout, editor);
     }
 
-    public ContentFragment(@NonNull Properties properties, @Nullable Drawable icon, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
+    public ContentFragment(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, icon, file.getAbsolutePath(), layout, editor);
         this.label = file.getName();
     }
 
 
-    public ContentFragment(@NonNull Properties properties, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
+    public ContentFragment(@NonNull IProperties properties, @NonNull File file, View layout, @NonNull IEditor<?, ?> editor) {
         this(properties, null, file.getAbsolutePath(), layout, editor);
         this.label = file.getName();
     }

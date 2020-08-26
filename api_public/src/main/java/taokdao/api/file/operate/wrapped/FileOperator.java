@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.operate.FileOperatorCallback;
 import taokdao.api.file.operate.FileOperatorChecker;
 
@@ -19,12 +19,12 @@ public class FileOperator extends BaseFileOperator {
     protected FileOperatorChecker checker;
 
     @MainConstructor
-    public FileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback, FileOperatorChecker checker) {
+    public FileOperator(@NonNull IProperties properties, @Nullable Drawable icon, FileOperatorCallback callback, FileOperatorChecker checker) {
         super(properties, icon, callback);
         this.checker = checker;
     }
 
-    public FileOperator(@NonNull Properties properties, FileOperatorCallback callback, FileOperatorChecker checker) {
+    public FileOperator(@NonNull IProperties properties, FileOperatorCallback callback, FileOperatorChecker checker) {
         this(properties, null, callback, checker);
     }
 

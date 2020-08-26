@@ -23,8 +23,8 @@ import taokdao.api.setting.theme.IThemeManager;
 import taokdao.api.template.file.IFileTemplateGenerator;
 import taokdao.api.template.project.IProjectTemplateGenerator;
 import taokdao.api.ui.content.manage.IContentManager;
-import taokdao.api.ui.window.explorer.IExplorerWindow;
-import taokdao.api.ui.window.tabtool.ITabToolWindow;
+import taokdao.api.ui.explorer.IExplorerWindow;
+import taokdao.api.ui.toolgroup.IToolGroupWindow;
 import tiiehenry.android.ui.dialogs.api.strategy.Dialogs;
 
 public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder, ICoroutine {
@@ -45,7 +45,7 @@ public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder,
      * @return 工具窗口
      */
     @NonNull
-    ITabToolWindow getTabToolWindow();
+    IToolGroupWindow getToolGroupWindow();
 
     /**
      * @return 内容主窗口

@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.ISingleChoicePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
@@ -26,18 +26,18 @@ public class SingleChoicePreference implements ISingleChoicePreference {
     private boolean idUseGroup = true;
 
     @MainConstructor
-    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull Properties properties, Drawable icon, Listener listener) {
+    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull IProperties properties, Drawable icon, Listener listener) {
         this.mmkv = mmkv;
         this.defaultValue = defaultValue;
-        this.id = properties.id;
-        this.title = properties.label;
-        this.description = properties.des;
+        this.id = properties.id();
+        this.title = properties.getLabel();
+        this.description = properties.getDescription();
         this.icon = icon;
         this.listener = listener;
     }
 
 
-    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull Properties properties, Listener listener) {
+    public SingleChoicePreference(@NonNull IMMKV mmkv, int defaultValue, @NonNull IProperties properties, Listener listener) {
         this(mmkv, defaultValue, properties, null, listener);
     }
 

@@ -24,7 +24,7 @@ public class RelativePath {
         this.path = path;
     }
 
-    public File getRealPathFile(@NonNull File projectDir) {
+    public File getRealFile(@NonNull File projectDir) {
         if (realFile == null) {
             if (path.startsWith("/")) {
                 realFile = new File(path);
@@ -41,6 +41,7 @@ public class RelativePath {
         return realFile;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "RelativePath{" +

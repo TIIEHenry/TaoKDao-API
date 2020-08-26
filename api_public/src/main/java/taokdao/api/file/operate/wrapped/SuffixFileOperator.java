@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.ArrayList;
 
-import taokdao.api.data.bean.Properties;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.base.FileType;
 import taokdao.api.file.operate.FileOperatorCallback;
 
@@ -29,11 +29,11 @@ public class SuffixFileOperator extends BaseFileOperator {
     protected ArrayList<String> unSupportSuffix = new ArrayList<>();
 
 
-    public SuffixFileOperator(@NonNull Properties properties, @Nullable Drawable icon, FileOperatorCallback callback) {
+    public SuffixFileOperator(@NonNull IProperties properties, @Nullable Drawable icon, FileOperatorCallback callback) {
         super(properties, icon, callback);
     }
 
-    public SuffixFileOperator(@NonNull Properties properties, FileOperatorCallback callback) {
+    public SuffixFileOperator(@NonNull IProperties properties, FileOperatorCallback callback) {
         this(properties, null, callback);
     }
 
