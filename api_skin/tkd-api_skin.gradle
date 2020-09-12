@@ -19,3 +19,6 @@ android {
 dependencies {
 
 }
+
+
+apply from: "../properties/maven-publish.gradle"

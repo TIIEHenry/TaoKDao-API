@@ -8,7 +8,7 @@ import taokdao.api.plugin.engine.IPluginEngine;
 import taokdao.api.project.plugin.IProjectPlugin;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.explorer.IExplorer;
-import taokdao.api.ui.toolgroup.IToolGroup;
+import taokdao.api.ui.toolpage.IToolPage;
 /**
  * 保存各种设置
  */
@@ -51,7 +51,7 @@ public interface IMMKVManager {
     IMMKV getContentMMKV(@NonNull IContent tabContent);
 
     @NonNull
-    IMMKV getTabToolMMKV(@NonNull IToolGroup tabTool);
+    IMMKV getTabToolMMKV(@NonNull IToolPage tabTool);
 
     @NonNull
     IMMKV getExplorerMMKV(@NonNull IExplorer explorer);
