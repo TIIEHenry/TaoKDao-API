@@ -45,7 +45,7 @@ public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder,
      * @return 工具窗口
      */
     @NonNull
-    IToolPageWindow getToolGroupWindow();
+    IToolPageWindow getToolPageWindow();
 
     /**
      * @return 内容主窗口

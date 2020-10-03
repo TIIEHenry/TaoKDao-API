@@ -31,17 +31,17 @@ public abstract class ViewToolGroupFragment extends BaseToolGroupFragment<View> 
     public abstract ViewGroup getViewContainer();
 
     @Override
-    public void attachContent(View content) {
+    public void attachContent(@NonNull View content) {
         getViewContainer().addView(content, -1, -1);
     }
 
     @Override
-    public void detachContent(View content) {
+    public void detachContent(@NonNull View content) {
         ((ViewGroup) content.getParent()).removeView(content);
     }
 
     @Override
-    public boolean isContentAttached(View content) {
+    public boolean isContentAttached(@NonNull View content) {
         return content.getParent() != null;
     }
 }

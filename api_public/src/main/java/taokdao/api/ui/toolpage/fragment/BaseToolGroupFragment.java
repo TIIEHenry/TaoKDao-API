@@ -39,12 +39,11 @@ public abstract class BaseToolGroupFragment<C> extends ToolPageFragment implemen
         super(properties, layoutId);
     }
 
-    public abstract void attachContent(C content);
+    public abstract void attachContent(@NonNull C content);
 
-    public abstract boolean isContentAttached(C content);
+    public abstract boolean isContentAttached(@NonNull C content);
 
-    public abstract void detachContent(C content);
-
+    public abstract void detachContent(@NonNull C content);
 
     @Override
     public void attachAdapter(ITabChooserAdapter toolTabAdapter) {

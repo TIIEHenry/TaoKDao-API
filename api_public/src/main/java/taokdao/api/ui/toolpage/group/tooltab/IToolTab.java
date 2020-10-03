@@ -15,7 +15,7 @@ import taokdao.api.ui.toolpage.menu.ToolPageMenu;
 
 
 @LongTerm
-public interface IToolTab<C> extends IProperties {
+public interface IToolTab<C extends Object> extends IProperties {
 
     @Nullable
     Drawable getIcon();

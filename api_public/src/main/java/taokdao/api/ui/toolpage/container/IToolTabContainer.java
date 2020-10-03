@@ -9,7 +9,7 @@ import taokdao.api.ui.toolpage.container.tabchoose.ITabChooserAdapter;
 import taokdao.api.ui.toolpage.container.tabchoose.TabChooserStyle;
 import taokdao.api.ui.toolpage.group.tooltab.IToolTab;
 
-public interface IToolTabContainer<C> extends ITab<String, IToolTab<C>> {
+public interface IToolTabContainer<C extends  Object> extends ITab<String, IToolTab<C>> {
     void attachAdapter(ITabChooserAdapter toolTabBinder);
 
     void detachAdapter();

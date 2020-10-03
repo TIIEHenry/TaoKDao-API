@@ -22,8 +22,10 @@ public class ProjectConfig {
     public List<RelativePath> projects;
     public Map<String, Object> setting;
 
-    public ProjectConfig(ProjectConfigJson projectConfigJson) {
+    public ProjectConfig() {
+    }
 
+    public ProjectConfig(ProjectConfigJson projectConfigJson) {
         this.name = projectConfigJson.name;
         this.builder = projectConfigJson.builder;
         this.plugins = projectConfigJson.plugins;
