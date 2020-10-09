@@ -33,7 +33,7 @@ public abstract class BaseFileOperator implements IFileOperator {
     }
 
     @Override
-    public boolean call(IMainContext main, String path) {
+    public boolean call(@NonNull IMainContext main, @NonNull String path) {
         return callback.call(main, path);
     }
 

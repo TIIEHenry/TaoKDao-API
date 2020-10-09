@@ -1,4 +1,4 @@
-package taokdao.api.template.project.wrapped;
+package taokdao.api.project.template.wrapped;
 
 import android.graphics.drawable.Drawable;
 
@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 
 import taokdao.api.data.bean.IProperties;
-import taokdao.api.template.project.IProjectTemplate;
+import taokdao.api.project.template.IProjectTemplate;
 
 public class ProjectTemplate implements IProjectTemplate {
     @NonNull

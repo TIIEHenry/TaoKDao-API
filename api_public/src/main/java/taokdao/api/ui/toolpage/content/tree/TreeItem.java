@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TreeItem {
     @Nullable
@@ -36,6 +37,24 @@ public class TreeItem {
     public void removeChild(TreeItem child) {
         children.remove(child);
         child.parent = null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TreeItem treeItem = (TreeItem) o;
+        return Objects.equals(icon, treeItem.icon) &&
+                Objects.equals(title, treeItem.title) &&
+                Objects.equals(hint, treeItem.hint) &&
+                Objects.equals(message, treeItem.message) &&
+                Objects.equals(parent, treeItem.parent) &&
+                Objects.equals(callback, treeItem.callback);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(icon, title, hint, message, parent, callback);
     }
 
     @Override

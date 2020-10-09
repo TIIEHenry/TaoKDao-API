@@ -1,6 +1,7 @@
 package taokdao.api.ui.toolpage.fragment;
 
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -92,10 +93,6 @@ public abstract class BaseToolGroupFragment<C> extends ToolPageFragment implemen
     @Override
     public void clear() {
         currToolTab = null;
-        toolTabList.clear();
-        if (toolTabAdapter != null) {
-            toolTabAdapter.clear();
-        }
         for (IToolTab<C> toolTab : getAll()) {
             if (isContentAttached(toolTab.getContent())) {
                 detachContent(toolTab.getContent());
@@ -105,10 +102,21 @@ public abstract class BaseToolGroupFragment<C> extends ToolPageFragment implemen
                 }
             }
         }
+        toolTabList.clear();
+        if (toolTabAdapter != null) {
+            toolTabAdapter.clear();
+        }
+        clearContainer();
     }
 
     private void removeFromContainer(IToolTab<C> toolTab) {
-        clearContainer();
+        if (isContentAttached(toolTab.getContent())) {
+            detachContent(toolTab.getContent());
+            ToolTabStateObserver observer = toolTab.getStateObserver();
+            if (observer != null) {
+                observer.onHidden();
+            }
+        }
     }
 
     private void clearContainer() {

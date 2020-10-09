@@ -1,4 +1,4 @@
-package taokdao.api.template.file;
+package taokdao.api.file.template;
 
 import java.util.List;
 

@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
 import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.main.IMainContext;
 
 public class Properties implements IProperties {
     @NonNull
@@ -32,12 +33,20 @@ public class Properties implements IProperties {
         this(id, null, null);
     }
 
-    public Properties(@NonNull String id, @NonNull Context context,@StringRes int label) {
+    public Properties(@NonNull String id, @NonNull Context context, @StringRes int label) {
         this(id, context.getString(label), null);
     }
 
     public Properties(@NonNull String id, @NonNull Context context, @StringRes int label, @StringRes int description) {
         this(id, context.getString(label), context.getString(description));
+    }
+
+    public Properties(@NonNull String id, @NonNull IMainContext main, @StringRes int label) {
+        this(id, main.getContext(), label);
+    }
+
+    public Properties(@NonNull String id, @NonNull IMainContext main, @StringRes int label, @StringRes int description) {
+        this(id, main.getContext(), label, description);
     }
 
 

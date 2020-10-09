@@ -1,4 +1,4 @@
-package taokdao.api.template.project;
+package taokdao.api.project.template;
 
 import android.graphics.drawable.Drawable;
 

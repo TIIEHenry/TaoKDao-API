@@ -9,10 +9,10 @@ import taokdao.api.ui.content.IContent;
 
 
 public class ContentTag implements IEventTag {
-    private final IContent content;
+    private final String id;
 
-    public ContentTag(@NonNull IContent content) {
-        this.content = content;
+    public ContentTag(@NonNull String id) {
+        this.id = id;
     }
 
     @NonNull
@@ -23,7 +23,7 @@ public class ContentTag implements IEventTag {
     @NonNull
     @Override
     public String getTag(@NonNull IMainContext main) {
-        return getGlobal().getTag(main) + "(" + content.id() + ")";
+        return getGlobal().getTag(main) + "(" + id + ")";
     }
 
 }
