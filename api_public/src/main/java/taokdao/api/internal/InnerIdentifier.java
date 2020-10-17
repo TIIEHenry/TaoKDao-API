@@ -10,11 +10,11 @@ public class InnerIdentifier {
 
 
     public static class ToolGroup {
-        public static final String EVENT = "taokdao.tabtool.event";
-        public static final String TIPS = "taokdao.tabtool.tips";
-        public static final String BUILD = "taokdao.tabtool.build";
-        public static final String SEARCH = "taokdao.tabtool.search";
-        public static final String LOGCAT = "taokdao.tabtool.logcat";
+        public static final String EVENT = "taokdao.toolgroup.event";
+        public static final String TIPS = "taokdao.toolgroup.tips";
+        public static final String BUILD = "taokdao.toolgroup.build";
+        public static final String SEARCH = "taokdao.toolgroup.search";
+        public static final String LOGCAT = "taokdao.toolgroup.logcat";
     }
 
 

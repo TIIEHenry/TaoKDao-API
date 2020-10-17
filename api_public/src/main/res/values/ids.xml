@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="main_menu_file" type="id" />
-    <item name="main_menu_edit" type="id" />
-    <item name="main_menu_build" type="id" />
-    <item name="main_menu_project" type="id" />
-    <item name="main_menu_display" type="id" />
-    <item name="main_menu_tool" type="id" />
-    <item name="main_menu_setting" type="id" />
+    <item name="iv_main_menu_file" type="id" />
+    <item name="iv_main_menu_edit" type="id" />
+    <item name="iv_main_menu_build" type="id" />
+    <item name="iv_main_menu_project" type="id" />
+    <item name="iv_main_menu_display" type="id" />
+    <item name="iv_main_menu_tool" type="id" />
+    <item name="iv_main_menu_setting" type="id" />
 
 
 </resources>

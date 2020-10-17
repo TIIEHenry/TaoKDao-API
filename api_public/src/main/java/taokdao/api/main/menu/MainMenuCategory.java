@@ -6,13 +6,13 @@ import taokdao.api.api_public.R;
 
 
 public enum MainMenuCategory {
-    FILE(R.id.main_menu_file),
-    EDIT(R.id.main_menu_edit),
-    BUILD(R.id.main_menu_build),
-    PROJECT(R.id.main_menu_project),
-    DISPLAY(R.id.main_menu_display),
-    TOOL(R.id.main_menu_tool),
-    SETTING(R.id.main_menu_setting);
+    FILE(R.id.iv_main_menu_file),
+    EDIT(R.id.iv_main_menu_edit),
+    BUILD(R.id.iv_main_menu_build),
+    PROJECT(R.id.iv_main_menu_project),
+    DISPLAY(R.id.iv_main_menu_display),
+    TOOL(R.id.iv_main_menu_tool),
+    SETTING(R.id.iv_main_menu_setting);
 
     //view
     public int id;
