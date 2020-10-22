@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.PluginEngineTag;
+import taokdao.api.main.IMainContext;
 import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.plugin.engine.IPluginEngine;
 
@@ -38,8 +39,8 @@ public class PluginEngineSender {
     }
 
 
-    public IEventSender callError(@NonNull  Plugin plugin,@NonNull Throwable e) {
-        return new EventSender(new PluginEngineTag(pluginEngine), "Plugin:"+plugin.information.label+"\n"+"Message: " + e.getMessage());
+    public IEventSender callError(@NonNull Plugin plugin, @NonNull Throwable e, IMainContext main) {
+        return new EventSender(new PluginEngineTag(pluginEngine), "Plugin:"+plugin.getInformation(main).label+"\n"+"Message: " + e.getMessage());
     }
 
 

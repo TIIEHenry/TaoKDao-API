@@ -3,7 +3,7 @@ package taokdao.api.ui.window;
 public enum Windows {
     //各种drawer
     EXPLORER("START"), END("END"),
-    TOP("TOP"), TABTOOL("BOTTOM");
+    TOP("TOP"), TOOL_PAGES("BOTTOM");
 
     public String name;
     public IWindow window;
@@ -36,5 +36,11 @@ public enum Windows {
             }
         }
         return false;
+    }
+
+    public static void clear() {
+        for (Windows value : values()) {
+            value.window = null;
+        }
     }
 }

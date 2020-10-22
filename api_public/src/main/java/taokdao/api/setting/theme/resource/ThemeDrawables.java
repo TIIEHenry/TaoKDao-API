@@ -1,12 +1,16 @@
 package taokdao.api.setting.theme.resource;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
+
+import androidx.core.content.ContextCompat;
 
 import taokdao.api.main.IMainContext;
 
 /**
  * hint 提示性
  * accent 强调性
+ * 注: plugin的Context不能用来获取host的资源
  */
 public class ThemeDrawables {
 

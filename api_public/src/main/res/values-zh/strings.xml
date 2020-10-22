@@ -235,4 +235,5 @@
 	<string name="contents_guider_project">工程</string>
 	<string name="contents_guider_help">帮助</string>
 	<string name="contents_guider_file">文件</string>
+	<string name="toolpages_logcat_filter_clear">清除</string>
 </resources>

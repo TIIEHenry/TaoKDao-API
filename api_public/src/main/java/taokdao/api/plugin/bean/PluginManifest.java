@@ -1,13 +1,20 @@
 package taokdao.api.plugin.bean;
 
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.alibaba.fastjson.JSON;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 import taokdao.api.base.annotation.Identifier;
 import taokdao.api.base.annotation.todo.NeedSet;
+import taokdao.api.main.IMainContext;
 
 
 public class PluginManifest {
@@ -29,11 +36,13 @@ public class PluginManifest {
     public String type;
     public String api;
     public PluginVersion version;
-    public Information information;
+    //    public Information information;
+    //language to information
+    public List<Information> information;
     /**
      * 插件支持的语言，如zh-CN
      */
-    public String[] languages = new String[]{};
+//    public String[] languages = new String[]{};
     public Engine engine;
 
 
@@ -52,7 +61,9 @@ public class PluginManifest {
         version.check();
         if (information == null)
             throw new Exception("Plugin don't have information");
-        information.check();
+        for (Information information1 : information) {
+            information1.check(id);
+        }
         if (engine == null)
             throw new Exception("Plugin don't have engine");
         engine.check();
@@ -71,7 +82,7 @@ public class PluginManifest {
                 ", api='" + api + '\'' +
                 ", version=" + version +
                 ", information=" + information +
-                ", languages=" + Arrays.toString(languages) +
+//                ", languages=" + Arrays.toString(languages) +
                 ", engine=" + engine +
                 ", visibility=" + visibility +
                 '}';
@@ -81,7 +92,26 @@ public class PluginManifest {
         return manifestFile != null ? manifestFile.hashCode() : 0;
     }
 
+    public Information getInformation(@NonNull String languageCountry) {
+        for (Information information1 : information) {
+            if (information1.languages.contains(languageCountry)) {
+                return information1;
+            }
+        }
+        for (Information information1 : information) {
+            if (information1.languages.contains("default")) {
+                return information1;
+            }
+        }
+        return information.get(0);
+    }
+
+    public Information getInformation(@NonNull IMainContext mainContext) {
+        return getInformation(mainContext.getLanguageManager().getLanguageCountry());
+    }
+
     public static class Information {
+        public List<String> languages;
         public String author;
         public String label;
         public String icon;
@@ -92,15 +122,18 @@ public class PluginManifest {
         public String readme;
         public String[] tags = new String[]{};
 
-        public void check() throws Exception {
+        public void check(String id) throws Exception {
+            if (languages == null)
+                throw new Exception("plugin "+id+" information don't have languages");
             if (label == null)
-                throw new Exception("Information don't have label");
+                throw new Exception("plugin "+id+" information don't have label");
         }
 
         @Override
         public String toString() {
             return "Information{" +
                     "author='" + author + '\'' +
+                    ", languages='" + languages + '\'' +
                     ", label='" + label + '\'' +
                     ", icon='" + icon + '\'' +
                     ", description='" + description + '\'' +

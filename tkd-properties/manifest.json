@@ -7,14 +7,17 @@
     "name": "1.0",
     "downgrade": true
   },
-  "information": {
+  "information": [
+  {
+  "languages":["default"],
     "author": "TIIEHenry",
     "label": "Plugin1",
     "icon": "icon.png",
     "description": "介绍",
     "tags": [],
     "readme": "README.MD"
-  },
+  }
+  ],
   "languages": [
     "zh-CN"
   ],
