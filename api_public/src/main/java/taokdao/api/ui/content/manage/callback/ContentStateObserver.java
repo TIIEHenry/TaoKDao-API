@@ -22,5 +22,5 @@ public interface ContentStateObserver {
     /**
      * 被移除，已经移除
      */
-    void onRemove();
+    void onRemoved();
 }

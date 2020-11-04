@@ -236,4 +236,6 @@
 	<string name="contents_guider_help">帮助</string>
 	<string name="contents_guider_file">文件</string>
 	<string name="toolpages_logcat_filter_clear">清除</string>
+	<string name="codeeditor_setting_display">显示</string>
+	<string name="codeeditor_setting_display_language">语言</string>
 </resources>

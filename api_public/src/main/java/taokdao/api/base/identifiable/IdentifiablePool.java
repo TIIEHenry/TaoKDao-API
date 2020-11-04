@@ -40,8 +40,8 @@ public class IdentifiablePool<T extends Identifiable<D>, D> {
         return map.remove(id);
     }
 
-    public void remove(@NonNull T template) {
-        remove(template.id());
+    public void remove(@NonNull T o) {
+        remove(o.id());
     }
 
     public void removeAll(@NonNull T[] os) {
@@ -60,16 +60,16 @@ public class IdentifiablePool<T extends Identifiable<D>, D> {
         return map.get(id) != null;
     }
 
-    public boolean contains(@NonNull T template) {
-        return contains(template.id());
+    public boolean contains(@NonNull T o) {
+        return contains(o.id());
     }
 
-    public boolean containsAll(@NonNull T[] template) {
-        return containsAll(Arrays.asList(template));
+    public boolean containsAll(@NonNull T[] os) {
+        return containsAll(Arrays.asList(os));
     }
 
-    public boolean containsAll(@NonNull Collection<T> template) {
-        return getAll().containsAll(template);
+    public boolean containsAll(@NonNull Collection<T> os) {
+        return getAll().containsAll(os);
     }
 
     public HashSet<T> getAll() {

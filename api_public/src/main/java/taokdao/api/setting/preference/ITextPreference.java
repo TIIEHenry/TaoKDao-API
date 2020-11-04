@@ -18,6 +18,6 @@ public interface ITextPreference extends IPreference<String> {
     void onChanged(@NonNull String text);
 
     interface Listener {
-        void onChanged(@NonNull String text);
+        void onChanged(@NonNull ITextPreference textPreference, @NonNull String text);
     }
 }

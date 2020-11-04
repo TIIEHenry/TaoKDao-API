@@ -28,6 +28,7 @@ public enum MainAction {
 //    onUiLight("onUiLight"),
 
     onPluginListReloaded("onPluginListReloaded"),
+    onContentSettingChanged("onContentSettingChanged"),
 
     CurrentFileSaved("CurrentFileSaved"),
     AllFilesSaved("AllFilesSaved");

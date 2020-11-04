@@ -17,7 +17,7 @@ public class BaseContentStateObserver implements ContentStateObserver {
     }
 
     @Override
-    public void onRemove() {
+    public void onRemoved() {
 
     }
 }

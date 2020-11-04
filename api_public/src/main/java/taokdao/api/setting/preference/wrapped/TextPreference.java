@@ -117,7 +117,7 @@ public class TextPreference implements ITextPreference {
     public void onChanged(@NonNull String text) {
         saveValue(text);
         if (listener != null)
-            listener.onChanged(text);
+            listener.onChanged(this, text);
     }
 
 }

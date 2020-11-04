@@ -66,6 +66,7 @@
     <string name="business_theme_manage_changetheme_dialog_title">Theme</string>
     <string name="business_toolpage_window_newtooltab_dialog_title">new ToolTab tab</string>
 
+    <string name="codeeditor_setting_display">Display</string>
     <string name="codeeditor_setting_block">Block</string>
     <string name="codeeditor_setting_block_highlightblockline">Highlight Block Line</string>
     <string name="codeeditor_setting_block_showblockline">Show Block Line</string>
@@ -263,4 +264,5 @@
     <string name="toolpages_logcat_label">Logcat</string>
     <string name="toolpages_logcat_menu_clear">clear</string>
     <string name="toolpages_logcat_menu_tobottom">To Bottom</string>
+    <string name="codeeditor_setting_display_language">Language</string>
 </resources>
