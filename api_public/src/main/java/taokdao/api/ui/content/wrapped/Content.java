@@ -8,15 +8,16 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.util.ArrayList;
 
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.base.fragment.StateFragment;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
 import taokdao.api.ui.content.editor.IEditor;
 import taokdao.api.ui.content.menu.ControlMenu;
 import taokdao.api.ui.content.menu.QuickMenu;
-import taokdao.api.base.annotation.maintain.LongTerm;
-import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.base.fragment.StateFragment;
+import taokdao.api.ui.content.state.ContentState;
 
 @LongTerm
 public class Content implements IContent {
@@ -40,6 +41,7 @@ public class Content implements IContent {
 //    public ITabContentLifecycle lifecycle = new TabContentBaseLifecycle();
     private ArrayList<ControlMenu> controlMenuList = new ArrayList<>();
     private ArrayList<QuickMenu> quickMenuList = new ArrayList<>();
+    private ContentState contentState = ContentState.STATE_NONE;
 
     @MainConstructor
     public Content(@NonNull IProperties properties, @Nullable Drawable icon, @NonNull String path, @NonNull StateFragment fragment, @NonNull IEditor editor) {
@@ -50,12 +52,16 @@ public class Content implements IContent {
         this.fragment = fragment;
         this.editor = editor;
         fragment.setOnPauseObserver(() -> {
-            if (getStateObserver() != null)
+            if (getStateObserver() != null) {
+                setContentState(ContentState.STATE_HIDDEN);
                 getStateObserver().onHide();
+            }
         });
         fragment.setOnResumeObserver(() -> {
-            if (getStateObserver() != null)
+            if (getStateObserver() != null) {
+                setContentState(ContentState.STATE_SHOWING);
                 getStateObserver().onShow();
+            }
         });
     }
 
@@ -132,5 +138,16 @@ public class Content implements IContent {
     @Override
     public void setOpener(@NonNull String openerId) {
         this.openerId = openerId;
+    }
+
+    @NonNull
+    @Override
+    public ContentState getContentState() {
+        return contentState;
+    }
+
+    @Override
+    public void setContentState(@NonNull ContentState contentState) {
+        this.contentState = contentState;
     }
 }

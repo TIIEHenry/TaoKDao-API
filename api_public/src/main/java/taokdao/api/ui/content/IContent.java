@@ -7,15 +7,16 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
+import taokdao.api.base.annotation.Identifier;
+import taokdao.api.base.annotation.maintain.LongTerm;
+import taokdao.api.base.fragment.StateFragment;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.editor.IEditor;
 import taokdao.api.ui.content.manage.callback.ContentStateObserver;
 import taokdao.api.ui.content.menu.ControlMenu;
 import taokdao.api.ui.content.menu.QuickMenu;
-import taokdao.api.base.annotation.Identifier;
-import taokdao.api.base.annotation.maintain.LongTerm;
-import taokdao.api.base.fragment.StateFragment;
+import taokdao.api.ui.content.state.ContentState;
 
 @LongTerm
 public interface IContent extends IProperties {
@@ -63,6 +64,11 @@ public interface IContent extends IProperties {
     String getOpener();
 
     void setOpener(@NonNull String openerId);
+
+    @NonNull
+    ContentState getContentState();
+
+    void setContentState(@NonNull ContentState contentState);
 
     /**
      * 管理Content的状态，不要用Fragment的生命周期

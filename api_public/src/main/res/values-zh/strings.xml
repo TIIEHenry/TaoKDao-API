@@ -238,4 +238,17 @@
 	<string name="toolpages_logcat_filter_clear">清除</string>
 	<string name="codeeditor_setting_display">显示</string>
 	<string name="codeeditor_setting_display_language">语言</string>
+	<string name="back">返回</string>
+	<string name="file_builders_markdownviewer_label">预览</string>
+	<string name="file_builders_htmlviewer_preview_label">预览</string>
+	<string name="file_builders_markdownviewer_preview_label">预览</string>
+	<string name="codeeditor_setting_encode_defaultreadencode">读入编码</string>
+	<string name="codeeditor_setting_encode_defaultwriteencode">写出编码</string>
+	<string name="codeeditor_setting_encode">编码</string>
+	<string name="codeeditor_setting_encode_reloadwithencode">以指定编码重载</string>
+	<string name="codeeditor_setting_encode_converttoencode">转换为指定编码</string>
+	<string name="string.codeeditor_setting_encode_autodetect">自动检测</string>
+	<string name="codeeditor_setting_encode_keepreadencode">保持读入的编码</string>
+	<string name="content_nocontent_opened">没有打开的内容</string>
+	<string name="business_project_manage_openfailed_error_plugin">打开工程错误：插件不兼容</string>
 </resources>

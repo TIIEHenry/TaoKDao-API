@@ -4,16 +4,16 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-public class ProjectPluginJson {
+public class ProjectBuilderJson {
     public String id;
-    public List<?> parameters;
+    public List<String> parameters;
 
-    public ProjectPluginJson() {
+    public ProjectBuilderJson() {
     }
 
     @NonNull
     @Override
     public String toString() {
-        return "ProjectPluginJson{id=" + id + ",parameters=" + parameters + "}";
+        return "ProjectBuilderJson{id=" + id + ",parameters=" + parameters + "}";
     }
 }

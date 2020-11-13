@@ -49,6 +49,7 @@ public class InnerIdentifier {
 
     public static class FileBuilder {
         public static final String HTML_VIEWER = "taokdao.file.builder.html.viewer";
+        public static final String MARKDOWN_VIEWER = "taokdao.file.builder.markdown.viewer";
     }
 
     public static class MetaData {

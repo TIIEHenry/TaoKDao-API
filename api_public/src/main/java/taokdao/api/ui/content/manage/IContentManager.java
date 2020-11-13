@@ -6,9 +6,9 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import taokdao.api.base.annotation.relation.MainMethod;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.content.IContent;
-import taokdao.api.base.annotation.relation.MainMethod;
 
 public interface IContentManager {
 
@@ -88,10 +88,16 @@ public interface IContentManager {
         IContent current = getCurrent();
         if (current != null) {
             showSettingWindow(current.getSettingList());
-        }else {
+        } else {
             showSettingWindow(new ArrayList<>());
         }
     }
 
-    void showSettingWindow(List<IPreference<?>> settingList);
+    void showSettingWindow(@NonNull List<IPreference<?>> settingList);
+
+    default void showListWindow() {
+        showListWindow(getList());
+    }
+
+    void showListWindow(@NonNull List<IContent> contentList);
 }

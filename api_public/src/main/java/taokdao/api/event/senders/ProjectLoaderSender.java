@@ -12,4 +12,10 @@ public class ProjectLoaderSender {
     public static IEventSender loadConfigError(@Nullable String message) {
         return new EventSender(new ProjectLoaderTag(), "loadConfigError:" + message);
     }
+    public static IEventSender exception(@Nullable String message) {
+        return new EventSender(new ProjectLoaderTag(),  message);
+    }
+    public static IEventSender pluginIncompatible(int message) {
+        return new EventSender(new ProjectLoaderTag(), message);
+    }
 }

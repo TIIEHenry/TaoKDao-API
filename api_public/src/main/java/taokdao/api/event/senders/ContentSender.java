@@ -41,7 +41,7 @@ public class ContentSender {
     }
 
     public static IEventSender write(@NonNull String path, @NonNull Charset charset) {
-        return new EventSender(ContentTag.getGlobal(), path + ": read in " + charset.displayName());
+        return new EventSender(ContentTag.getGlobal(), path + ": write with " + charset.displayName());
     }
 
     public IEventSender saveSuccess(@NonNull String path) {

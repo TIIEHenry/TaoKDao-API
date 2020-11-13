@@ -16,7 +16,7 @@ public class ProjectConfig {
 
     public String name;
 
-    public String builder;
+    public ProjectBuilderJson builder;
 
     public List<ProjectPluginJson> plugins;
     public List<RelativePath> projects;

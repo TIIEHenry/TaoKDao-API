@@ -24,6 +24,7 @@ import taokdao.api.file.template.IFileTemplateGenerator;
 import taokdao.api.project.template.IProjectTemplateGenerator;
 import taokdao.api.ui.content.manage.IContentManager;
 import taokdao.api.ui.explorer.IExplorerWindow;
+import taokdao.api.ui.indicate.IIndicatorManager;
 import taokdao.api.ui.toolpage.IToolPageWindow;
 import tiiehenry.android.ui.dialogs.api.strategy.Dialogs;
 
@@ -163,11 +164,7 @@ public interface IMainContext extends LifecycleOwner, IActivity, IEventRecorder,
         return this;
     }
 
-    /**
-     * 设置指示文本
-     *
-     * @param txt 指示文本
-     */
-    void setIndicateText(@NonNull String txt);
+    @NonNull
+    IIndicatorManager getIndicatorManager();
 
 }

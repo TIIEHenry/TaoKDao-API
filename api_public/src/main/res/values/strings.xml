@@ -265,4 +265,17 @@
     <string name="toolpages_logcat_menu_clear">clear</string>
     <string name="toolpages_logcat_menu_tobottom">To Bottom</string>
     <string name="codeeditor_setting_display_language">Language</string>
+	<string name="back">Back</string>
+	<string name="file_builders_markdownviewer_label">Preview</string>
+    <string name="file_builders_htmlviewer_preview_label">Preview</string>
+    <string name="file_builders_markdownviewer_preview_label">Preview</string>
+    <string name="codeeditor_setting_encode_defaultreadencode">Default Read Encode</string>
+    <string name="codeeditor_setting_encode_defaultwriteencode">Default Write Encode</string>
+    <string name="codeeditor_setting_encode">Encode</string>
+    <string name="codeeditor_setting_encode_reloadwithencode">Reload With Encode</string>
+    <string name="codeeditor_setting_encode_converttoencode">Convert To Encode</string>
+    <string name="string.codeeditor_setting_encode_autodetect">Auto Detect</string>
+    <string name="codeeditor_setting_encode_keepreadencode">Keep Readed Encode</string>
+	<string name="content_nocontent_opened">No content opened!</string>
+    <string name="business_project_manage_openfailed_error_plugin">open project error: plugin incompatibility</string>
 </resources>

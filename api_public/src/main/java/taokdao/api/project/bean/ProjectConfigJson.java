@@ -11,10 +11,8 @@ import java.util.Map;
 public class ProjectConfigJson {
 
     public String name;
-    /**
-     * project builder id
-     */
-    public String builder;
+
+    public ProjectBuilderJson builder;
     /**
      * project plugins
      */
