@@ -251,4 +251,5 @@
 	<string name="codeeditor_setting_encode_keepreadencode">保持读入的编码</string>
 	<string name="content_nocontent_opened">没有打开的内容</string>
 	<string name="business_project_manage_openfailed_error_plugin">打开工程错误：插件不兼容</string>
+	<string name="main_menu_build_buildproject">构建项目</string>
 </resources>

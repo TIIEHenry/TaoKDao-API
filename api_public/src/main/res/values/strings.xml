@@ -167,6 +167,7 @@
     <string name="genkey_store_pass">Keystore Password:</string>
 
     <string name="main_menu_build_buildfile">Build File</string>
+    <string name="main_menu_build_buildproject">Build Project</string>
     <string name="main_menu_build_buildoption">Build Option</string>
     <string name="main_menu_display_changefullscreen">Toggle Full-screen</string>
     <string name="main_menu_display_showcontentsetting">Content Setting</string>
