@@ -5,11 +5,11 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.ITextPreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 
 public class TextPreference implements ITextPreference {

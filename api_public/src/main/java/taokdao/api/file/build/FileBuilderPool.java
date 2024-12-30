@@ -10,6 +10,7 @@ import java.util.Locale;
 
 public class FileBuilderPool {
     private static FileBuilderPool instance = new FileBuilderPool();
+    private HashMap<String, ArrayList<IFileBuilder>> fileBuilderMap = new HashMap<>();
 
     public static FileBuilderPool getInstance() {
         return instance;
@@ -19,9 +20,6 @@ public class FileBuilderPool {
         instance = new FileBuilderPool();
         return instance;
     }
-
-    private HashMap<String, ArrayList<IFileBuilder>> fileBuilderMap = new HashMap<>();
-
 
     @NonNull
     public ArrayList<IFileBuilder> getList(File config) {

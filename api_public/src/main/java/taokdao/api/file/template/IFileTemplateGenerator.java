@@ -5,8 +5,6 @@ import androidx.annotation.NonNull;
 import java.io.File;
 import java.util.Map;
 
-import taokdao.api.file.template.FileTemplate;
-
 public interface IFileTemplateGenerator {
     void init();
 

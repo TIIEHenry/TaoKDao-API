@@ -5,6 +5,7 @@ public interface ToolTabStateObserver {
      * 已显示
      */
     void onShown();
+
     /**
      * 已隐藏
      */

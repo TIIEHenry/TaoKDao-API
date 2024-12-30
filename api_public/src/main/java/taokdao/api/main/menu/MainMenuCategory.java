@@ -2,7 +2,7 @@ package taokdao.api.main.menu;
 
 import java.util.ArrayList;
 
-import taokdao.api.api_public.R;
+import ideditor.api.R;
 
 
 public enum MainMenuCategory {

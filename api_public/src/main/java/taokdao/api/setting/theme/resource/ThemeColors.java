@@ -5,6 +5,7 @@ package taokdao.api.setting.theme.resource;
  * accent 强调性
  */
 public class ThemeColors {
+    public static final int COLOR_NONE = -1;
     /**
      * 前景色
      */
@@ -17,6 +18,4 @@ public class ThemeColors {
     public int backgroundColorHint = COLOR_NONE;
     public int backgroundColor = COLOR_NONE;
     public int backgroundColorAccent = COLOR_NONE;
-
-    public static final int COLOR_NONE = -1;
 }

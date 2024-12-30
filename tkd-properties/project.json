@@ -2,7 +2,10 @@
   "name": "Demo",
   "builder": {
     "id": "xxx",
-    "parameters": ["s","x"]
+    "parameters": [
+      "s",
+      "x"
+    ]
   },
   "plugins": [
     {

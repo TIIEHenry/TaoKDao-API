@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MDDialogs_Animation_MaterialDialog" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/mddialogs_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/mddialogs_dialog_exit</item>
+    </style>
+
+</resources>

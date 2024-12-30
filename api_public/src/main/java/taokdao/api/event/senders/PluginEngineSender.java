@@ -40,7 +40,7 @@ public class PluginEngineSender {
 
 
     public IEventSender callError(@NonNull Plugin plugin, @NonNull Throwable e, IMainContext main) {
-        return new EventSender(new PluginEngineTag(pluginEngine), "Plugin:"+plugin.getInformation(main).label+"\n"+"Message: " + e.getMessage());
+        return new EventSender(new PluginEngineTag(pluginEngine), "Plugin:" + plugin.getInformation(main).label + "\n" + "Message: " + e.getMessage());
     }
 
 

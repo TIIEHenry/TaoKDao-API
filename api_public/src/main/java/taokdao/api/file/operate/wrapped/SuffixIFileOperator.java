@@ -1,5 +1,7 @@
 package taokdao.api.file.operate.wrapped;
 
+import static taokdao.api.file.util.FileUtils.getSuffix;
+
 import androidx.annotation.NonNull;
 
 import java.io.File;
@@ -7,8 +9,6 @@ import java.util.ArrayList;
 
 import taokdao.api.file.base.FileType;
 import taokdao.api.file.operate.IFileOperator;
-
-import static taokdao.api.file.util.FileUtils.getSuffix;
 
 public abstract class SuffixIFileOperator implements IFileOperator {
     protected FileType supportType = FileType.ALL;
@@ -23,7 +23,7 @@ public abstract class SuffixIFileOperator implements IFileOperator {
 
     private boolean isSupportSuffix(String suffix) {
         return supportSuffix.contains(suffix) ||
-                (supportSuffix.size() == 0 && !unSupportSuffix.contains(suffix));
+               (supportSuffix.size() == 0 && !unSupportSuffix.contains(suffix));
     }
 
     @Override

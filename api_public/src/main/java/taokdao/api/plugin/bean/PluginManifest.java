@@ -1,8 +1,6 @@
 package taokdao.api.plugin.bean;
 
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.alibaba.fastjson.JSON;
@@ -10,7 +8,6 @@ import com.alibaba.fastjson.JSON;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import taokdao.api.base.annotation.Identifier;
 import taokdao.api.base.annotation.todo.NeedSet;
@@ -74,18 +71,18 @@ public class PluginManifest {
     @Override
     public String toString() {
         return "PluginManifest{" +
-                "pluginDir=" + pluginDir +
-                ", manifestFile=" + manifestFile +
-                ", pluginType=" + pluginType +
-                ", id='" + id + '\'' +
-                ", type='" + type + '\'' +
-                ", api='" + api + '\'' +
-                ", version=" + version +
-                ", information=" + information +
+               "pluginDir=" + pluginDir +
+               ", manifestFile=" + manifestFile +
+               ", pluginType=" + pluginType +
+               ", id='" + id + '\'' +
+               ", type='" + type + '\'' +
+               ", api='" + api + '\'' +
+               ", version=" + version +
+               ", information=" + information +
 //                ", languages=" + Arrays.toString(languages) +
-                ", engine=" + engine +
-                ", visibility=" + visibility +
-                '}';
+               ", engine=" + engine +
+               ", visibility=" + visibility +
+               '}';
     }
 
     public int hashCode() {
@@ -124,22 +121,22 @@ public class PluginManifest {
 
         public void check(String id) throws Exception {
             if (languages == null)
-                throw new Exception("plugin "+id+" information don't have languages");
+                throw new Exception("plugin " + id + " information don't have languages");
             if (label == null)
-                throw new Exception("plugin "+id+" information don't have label");
+                throw new Exception("plugin " + id + " information don't have label");
         }
 
         @Override
         public String toString() {
             return "Information{" +
-                    "author='" + author + '\'' +
-                    ", languages='" + languages + '\'' +
-                    ", label='" + label + '\'' +
-                    ", icon='" + icon + '\'' +
-                    ", description='" + description + '\'' +
-                    ", readme='" + readme + '\'' +
-                    ", tags=" + Arrays.toString(tags) +
-                    '}';
+                   "author='" + author + '\'' +
+                   ", languages='" + languages + '\'' +
+                   ", label='" + label + '\'' +
+                   ", icon='" + icon + '\'' +
+                   ", description='" + description + '\'' +
+                   ", readme='" + readme + '\'' +
+                   ", tags=" + Arrays.toString(tags) +
+                   '}';
         }
     }
 
@@ -162,10 +159,10 @@ public class PluginManifest {
         @Override
         public String toString() {
             return "Engine{" +
-                    "id='" + id + '\'' +
-                    ", entrance='" + entrance + '\'' +
-                    ", parameters=" + Arrays.toString(parameters) +
-                    '}';
+                   "id='" + id + '\'' +
+                   ", entrance='" + entrance + '\'' +
+                   ", parameters=" + Arrays.toString(parameters) +
+                   '}';
         }
     }
 }

@@ -1,5 +1,7 @@
 package taokdao.api.file.operate.wrapped;
 
+import static taokdao.api.file.util.FileUtils.getSuffix;
+
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
@@ -11,8 +13,6 @@ import java.util.ArrayList;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.base.FileType;
 import taokdao.api.file.operate.FileOperatorCallback;
-
-import static taokdao.api.file.util.FileUtils.getSuffix;
 
 /**
  * FileOperator的包装，根据文件后缀匹配
@@ -40,7 +40,7 @@ public class SuffixFileOperator extends BaseFileOperator {
 
     private boolean isSupportSuffix(String suffix) {
         return supportSuffix.contains(suffix) ||
-                (supportSuffix.size() == 0 && !unSupportSuffix.contains(suffix));
+               (supportSuffix.size() == 0 && !unSupportSuffix.contains(suffix));
     }
 
     @Override

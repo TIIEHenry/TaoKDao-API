@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class ProjectConfigJson {
 
+    public static String configFileName = "project.json";
     public String name;
-
     public ProjectBuilderJson builder;
     /**
      * project plugins
@@ -20,12 +20,10 @@ public class ProjectConfigJson {
     public List<RelativePath> projects = new ArrayList<>();
     public Map<String, Object> setting;
 
+
     public ProjectConfigJson() {
 
     }
-
-
-    public static String configFileName = "project.json";
 
     public static ProjectConfigJson from(String text) {
         return JSON.parseObject(text, ProjectConfigJson.class);
@@ -35,11 +33,11 @@ public class ProjectConfigJson {
     @Override
     public String toString() {
         return "ProjectConfigJson{" +
-                "name='" + name + '\'' +
-                ", builder='" + builder + '\'' +
-                ", plugins=" + plugins +
-                ", projects=" + projects +
-                ", setting=" + setting +
-                '}';
+               "name='" + name + '\'' +
+               ", builder='" + builder + '\'' +
+               ", plugins=" + plugins +
+               ", projects=" + projects +
+               ", setting=" + setting +
+               '}';
     }
 }

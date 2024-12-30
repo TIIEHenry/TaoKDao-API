@@ -8,11 +8,11 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.ITitlePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
 import taokdao.api.setting.preference.base.IPreference;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class TitlePreference implements ITitlePreference {
     private final String id;

@@ -1,7 +1,6 @@
 package taokdao.api.ui.toolpage.group.tooltab;
 
 import android.graphics.drawable.Drawable;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

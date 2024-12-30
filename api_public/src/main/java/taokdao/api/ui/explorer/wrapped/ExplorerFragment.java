@@ -11,12 +11,12 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+import taokdao.api.base.annotation.relation.MultiConstructor;
+import taokdao.api.base.fragment.StateFragment;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.explorer.IExplorer;
 import taokdao.api.ui.explorer.menu.ExplorerMenu;
-import taokdao.api.base.annotation.relation.MultiConstructor;
-import taokdao.api.base.fragment.StateFragment;
 
 
 public abstract class ExplorerFragment extends StateFragment implements IExplorer {
@@ -85,6 +85,7 @@ public abstract class ExplorerFragment extends StateFragment implements IExplore
     public Drawable getIcon() {
         return icon;
     }
+
     @NonNull
     @Override
     public StateFragment getFragment() {

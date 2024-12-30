@@ -35,12 +35,12 @@ public abstract class FileOpener extends BaseFileOpener {
     @Override
     public String toString() {
         return "FileOpener{" +
-                "checker=" + checker +
-                ", id='" + id + '\'' +
-                ", icon=" + icon +
-                ", label='" + label + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+               "checker=" + checker +
+               ", id='" + id + '\'' +
+               ", icon=" + icon +
+               ", label='" + label + '\'' +
+               ", description='" + description + '\'' +
+               '}';
     }
 
 }

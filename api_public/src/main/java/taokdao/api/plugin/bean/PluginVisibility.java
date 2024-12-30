@@ -57,11 +57,11 @@ public class PluginVisibility {
     @Override
     public String toString() {
         return "PluginVisibility{" +
-                "type='" + type + '\'' +
-                ", contents=" + Arrays.toString(contents) +
-                ", suffixes=" + Arrays.toString(suffixes) +
-                ", contentList=" + contentList +
-                ", suffixList=" + suffixList +
-                '}';
+               "type='" + type + '\'' +
+               ", contents=" + Arrays.toString(contents) +
+               ", suffixes=" + Arrays.toString(suffixes) +
+               ", contentList=" + contentList +
+               ", suffixList=" + suffixList +
+               '}';
     }
 }

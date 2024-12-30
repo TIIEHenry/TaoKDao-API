@@ -37,8 +37,8 @@ public class RelativeAliasPaths {
     @Override
     public String toString() {
         return "RelativePaths{" +
-                "alias='" + alias + '\'' +
-                ", paths=" + paths +
-                '}';
+               "alias='" + alias + '\'' +
+               ", paths=" + paths +
+               '}';
     }
 }

@@ -1,10 +1,29 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' } //jcenter和central
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+}
+
 rootProject.name = "TaoKDao-API"
 
 include ':api_public',
-        ':api_skin'
-//,':shadow-constant'
-
-rootProject.children.each {
-    /**设置构建脚本文件名*/
-    it.buildFileName = "tkd-" + it.name + '.gradle'
-}
+        ':api_skin',
+        ':dialog:dialog_api',
+        ':dialog:dialog_mdialogs'

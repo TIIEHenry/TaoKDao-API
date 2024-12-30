@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 import java.io.File;
 
 import taokdao.api.base.annotation.maintain.ShortTerm;
-import taokdao.api.project.template.IProjectTemplate;
 
 
 /**

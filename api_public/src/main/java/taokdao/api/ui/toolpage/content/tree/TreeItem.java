@@ -45,11 +45,11 @@ public class TreeItem {
         if (o == null || getClass() != o.getClass()) return false;
         TreeItem treeItem = (TreeItem) o;
         return Objects.equals(icon, treeItem.icon) &&
-                Objects.equals(title, treeItem.title) &&
-                Objects.equals(hint, treeItem.hint) &&
-                Objects.equals(message, treeItem.message) &&
-                Objects.equals(parent, treeItem.parent) &&
-                Objects.equals(callback, treeItem.callback);
+               Objects.equals(title, treeItem.title) &&
+               Objects.equals(hint, treeItem.hint) &&
+               Objects.equals(message, treeItem.message) &&
+               Objects.equals(parent, treeItem.parent) &&
+               Objects.equals(callback, treeItem.callback);
     }
 
     @Override
@@ -60,12 +60,12 @@ public class TreeItem {
     @Override
     public String toString() {
         return "TreeItem{" +
-                "icon=" + icon +
-                ", title='" + title + '\'' +
-                ", hint='" + hint + '\'' +
-                ", message='" + message + '\'' +
+               "icon=" + icon +
+               ", title='" + title + '\'' +
+               ", hint='" + hint + '\'' +
+               ", message='" + message + '\'' +
 //                ", parent=" + parent +
-                ", children=" + children +
-                '}';
+               ", children=" + children +
+               '}';
     }
 }

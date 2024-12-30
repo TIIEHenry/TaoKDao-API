@@ -1,7 +1,5 @@
 package taokdao.api.file.build.wrapped;
 
-import android.graphics.drawable.Drawable;
-
 import androidx.annotation.NonNull;
 
 import java.io.File;
@@ -11,13 +9,12 @@ import java.util.List;
 import taokdao.api.builder.IBuildOption;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.file.build.IFileBuilder;
-import taokdao.api.file.operate.FileOperatorCallback;
 
 public class FileBuilder implements IFileBuilder {
     protected final String id;
-    protected String label;
     public ArrayList<String> suffixes = new ArrayList<>();
     public ArrayList<IBuildOption<File>> buildOptionList = new ArrayList<>();
+    protected String label;
 
     public FileBuilder(@NonNull IProperties properties) {
         id = properties.id();

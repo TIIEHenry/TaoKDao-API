@@ -41,11 +41,11 @@ public abstract class BaseFileOpener implements IFileOpener {
     @Override
     public String toString() {
         return "FileOpen{" +
-                "id='" + id + '\'' +
-                ", icon=" + icon +
-                ", label='" + label + '\'' +
-                ", description='" + description +
-                '}';
+               "id='" + id + '\'' +
+               ", icon=" + icon +
+               ", label='" + label + '\'' +
+               ", description='" + description +
+               '}';
     }
 
     @Nullable

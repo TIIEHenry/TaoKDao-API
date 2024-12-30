@@ -9,11 +9,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.data.mmkv.IMMKV;
 import taokdao.api.setting.preference.IMultiChoicePreference;
 import taokdao.api.setting.preference.base.IGroupPreference;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class MultiChoicePreference implements IMultiChoicePreference {
 

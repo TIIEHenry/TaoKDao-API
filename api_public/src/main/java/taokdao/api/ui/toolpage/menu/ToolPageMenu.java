@@ -5,9 +5,9 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import taokdao.api.ui.base.BaseMenu;
 import taokdao.api.base.annotation.maintain.LongTerm;
 import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.ui.base.BaseMenu;
 
 /**
  * 当click为null,subMenuList不为空时，点击显示子菜单

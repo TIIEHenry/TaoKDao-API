@@ -2,8 +2,8 @@ package taokdao.api.main.action;
 
 import java.util.ArrayList;
 
-import taokdao.api.main.IMainContext;
 import taokdao.api.base.annotation.todo.NeedClear;
+import taokdao.api.main.IMainContext;
 
 @NeedClear
 public enum MainAction {

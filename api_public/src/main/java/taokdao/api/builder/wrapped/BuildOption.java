@@ -5,11 +5,11 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.builder.callback.IBuildCallback;
+import taokdao.api.base.annotation.relation.MainConstructor;
 import taokdao.api.builder.IBuildOption;
+import taokdao.api.builder.callback.IBuildCallback;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.main.IMainContext;
-import taokdao.api.base.annotation.relation.MainConstructor;
 
 public class BuildOption<I> implements IBuildOption<I> {
     private final String id;

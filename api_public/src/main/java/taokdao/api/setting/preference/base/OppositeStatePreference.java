@@ -5,8 +5,8 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import taokdao.api.data.bean.IProperties;
 import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.data.bean.IProperties;
 import taokdao.api.data.mmkv.IMMKV;
 
 public abstract class OppositeStatePreference implements IOppositeStatePreference {

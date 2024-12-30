@@ -12,21 +12,21 @@ public interface ITextIOController<D> extends IIOController<D> {
     @Nullable
     Charset getCurrentCharset();
 
+    @Nullable
+    Charset getReadCharset();
+
     /**
      * @param charset null for auto detect
      */
     void setReadCharset(@Nullable Charset charset);
 
     @Nullable
-    Charset getReadCharset();
+    Charset getWriteCharset();
 
     /**
      * @param charset null for read charset
      */
     void setWriteCharset(@Nullable Charset charset);
-
-    @Nullable
-    Charset getWriteCharset();
 
     /**
      * @param charset charset for reading

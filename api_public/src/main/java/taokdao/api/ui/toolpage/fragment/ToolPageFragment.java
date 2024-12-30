@@ -49,7 +49,7 @@ public abstract class ToolPageFragment extends BaseToolPageFragment {
 
     @MultiConstructor
     public ToolPageFragment(@NonNull IProperties properties, @Nullable Drawable icon, @LayoutRes int layoutId) {
-        this.id = properties.id()  ;
+        this.id = properties.id();
         this.label = properties.getLabel();
         this.icon = icon;
         this.layoutId = layoutId;

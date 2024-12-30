@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+group "tiiehenry.taokdao.api"
+version "1.0"
+
+android {
+    namespace "ideditor.api.skin"
+    compileSdkVersion = 35
+
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+
+}

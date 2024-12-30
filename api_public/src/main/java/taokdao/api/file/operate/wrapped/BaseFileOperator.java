@@ -64,11 +64,11 @@ public abstract class BaseFileOperator implements IFileOperator {
     @Override
     public String toString() {
         return "FileOperate{" +
-                "description='" + description + '\'' +
-                ", id='" + id + '\'' +
-                ", label='" + label + '\'' +
-                ", icon=" + icon +
-                ", callback=" + callback +
-                '}';
+               "description='" + description + '\'' +
+               ", id='" + id + '\'' +
+               ", label='" + label + '\'' +
+               ", icon=" + icon +
+               ", callback=" + callback +
+               '}';
     }
 }

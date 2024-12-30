@@ -34,6 +34,7 @@ public class FileUtils {
         int dotIndex = fileName.lastIndexOf('.');
         return dotIndex == -1 ? fileName : fileName.substring(0, dotIndex);
     }
+
     public static String getNameWithoutExtension(String file) {
         return getNameWithoutExtension(new File(file));
     }

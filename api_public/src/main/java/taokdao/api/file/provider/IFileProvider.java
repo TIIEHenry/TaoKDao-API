@@ -13,6 +13,50 @@ import java.io.File;
 import taokdao.api.file.util.FileUtils;
 
 public interface IFileProvider {
+    /**
+     * 获取 文件MimeType
+     *
+     * @param name
+     * @return
+     */
+    static String getMimeType(@NonNull String name) {
+        return MimeTypeMap.getSingleton().getMimeTypeFromExtension(FileUtils.getExtension(name));
+    }
+
+    static Uri getContentUri(String mimeType) {
+        Uri contentUri;
+        if (mimeType.startsWith("image")) {
+            contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+        } else if (mimeType.startsWith("video")) {
+            contentUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+        } else if (mimeType.startsWith("audio")) {
+            contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+        } else {
+            contentUri = MediaStore.Files.getContentUri("external");
+        }
+        return contentUri;
+    }
+
+    /**
+     * 获取 文件夹名称(根据mimeType)
+     *
+     * @param mimeType mimeType
+     * @return String dirName
+     */
+    public static String getDirName(@NonNull String mimeType) {
+        String dirName;
+        if (mimeType.startsWith("image")) {
+            dirName = Environment.DIRECTORY_PICTURES;
+        } else if (mimeType.startsWith("video")) {
+            dirName = Environment.DIRECTORY_PICTURES;
+        } else if (mimeType.startsWith("audio")) {
+            dirName = Environment.DIRECTORY_MUSIC;
+        } else {
+            dirName = Environment.DIRECTORY_DOCUMENTS;
+        }
+        return dirName;
+    }
+
     @NonNull
     String getAuthority();
 
@@ -54,56 +98,11 @@ public interface IFileProvider {
     /**
      * 获取 文件MimeType
      *
-     * @param name
-     * @return
-     */
-    static String getMimeType(@NonNull String name) {
-        return MimeTypeMap.getSingleton().getMimeTypeFromExtension(FileUtils.getExtension(name));
-    }
-
-    /**
-     * 获取 文件MimeType
-     *
      * @param uri
      * @return
      */
     @Nullable
     String getMimeType(@NonNull Uri uri);
-
-    static Uri getContentUri(String mimeType) {
-        Uri contentUri;
-        if (mimeType.startsWith("image")) {
-            contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-        } else if (mimeType.startsWith("video")) {
-            contentUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
-        } else if (mimeType.startsWith("audio")) {
-            contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-        } else {
-            contentUri = MediaStore.Files.getContentUri("external");
-        }
-        return contentUri;
-    }
-
-
-    /**
-     * 获取 文件夹名称(根据mimeType)
-     *
-     * @param mimeType mimeType
-     * @return String dirName
-     */
-    public static String getDirName(@NonNull String mimeType) {
-        String dirName;
-        if (mimeType.startsWith("image")) {
-            dirName = Environment.DIRECTORY_PICTURES;
-        } else if (mimeType.startsWith("video")) {
-            dirName = Environment.DIRECTORY_PICTURES;
-        } else if (mimeType.startsWith("audio")) {
-            dirName = Environment.DIRECTORY_MUSIC;
-        } else {
-            dirName = Environment.DIRECTORY_DOCUMENTS;
-        }
-        return dirName;
-    }
 
     /**
      * 复制文件到外部

@@ -7,12 +7,12 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+import taokdao.api.base.annotation.relation.MainConstructor;
+import taokdao.api.base.fragment.StateFragment;
 import taokdao.api.data.bean.IProperties;
 import taokdao.api.setting.preference.base.IPreference;
 import taokdao.api.ui.explorer.IExplorer;
 import taokdao.api.ui.explorer.menu.ExplorerMenu;
-import taokdao.api.base.annotation.relation.MainConstructor;
-import taokdao.api.base.fragment.StateFragment;
 
 public class Explorer implements IExplorer {
     private final String id;
@@ -60,6 +60,7 @@ public class Explorer implements IExplorer {
     public Drawable getIcon() {
         return icon;
     }
+
     @NonNull
     @Override
     public StateFragment getFragment() {

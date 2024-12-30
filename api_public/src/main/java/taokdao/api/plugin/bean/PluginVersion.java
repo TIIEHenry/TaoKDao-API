@@ -13,9 +13,9 @@ public class PluginVersion {
     @Override
     public String toString() {
         return "PluginVersion{" +
-                "code=" + code +
-                ", name='" + name + '\'' +
-                ", downgrade=" + downgrade +
-                '}';
+               "code=" + code +
+               ", name='" + name + '\'' +
+               ", downgrade=" + downgrade +
+               '}';
     }
 }

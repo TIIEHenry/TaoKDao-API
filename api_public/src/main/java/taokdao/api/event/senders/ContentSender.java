@@ -4,11 +4,11 @@ import androidx.annotation.NonNull;
 
 import java.nio.charset.Charset;
 
+import taokdao.api.base.annotation.impl.InternalImpl;
 import taokdao.api.event.send.IEventSender;
 import taokdao.api.event.send.wrapped.EventSender;
 import taokdao.api.event.tags.ContentTag;
 import taokdao.api.ui.content.IContent;
-import taokdao.api.base.annotation.impl.InternalImpl;
 
 
 @InternalImpl

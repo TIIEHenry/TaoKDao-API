@@ -2,7 +2,7 @@ package taokdao.api.setting.theme;
 
 import androidx.annotation.StringRes;
 
-import taokdao.api.api_public.R;
+import ideditor.api.R;
 
 
 public enum ThemeMode {

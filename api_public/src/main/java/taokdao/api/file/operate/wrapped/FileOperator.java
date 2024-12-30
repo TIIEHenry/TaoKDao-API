@@ -37,12 +37,12 @@ public class FileOperator extends BaseFileOperator {
     @Override
     public String toString() {
         return "FileOperator{" +
-                "checker=" + checker +
-                ", description='" + description + '\'' +
-                ", id='" + id + '\'' +
-                ", label='" + label + '\'' +
-                ", icon=" + icon +
-                ", callback=" + callback +
-                '}';
+               "checker=" + checker +
+               ", description='" + description + '\'' +
+               ", id='" + id + '\'' +
+               ", label='" + label + '\'' +
+               ", icon=" + icon +
+               ", callback=" + callback +
+               '}';
     }
 }

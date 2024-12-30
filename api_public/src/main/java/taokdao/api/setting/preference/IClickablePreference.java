@@ -24,7 +24,7 @@ public interface IClickablePreference extends IPreference<Object>, View.OnClickL
     }
 
     @Override
-    default void saveValue(Object value){
+    default void saveValue(Object value) {
 
     }
 

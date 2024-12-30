@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 
 import java.io.File;
 
-import taokdao.api.project.bean.Project;
 import taokdao.api.base.annotation.maintain.ShortTerm;
+import taokdao.api.project.bean.Project;
 
 @ShortTerm
 public interface IBuildManager {

@@ -27,12 +27,12 @@ public class FileTemplate {
     @Override
     public String toString() {
         return "FileTemplate{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", group='" + group + '\'' +
-                ", extension='" + extension + '\'' +
-                ", templateText='" + templateText + '\'' +
-                ", parameters=" + parameters +
-                '}';
+               "name='" + name + '\'' +
+               ", description='" + description + '\'' +
+               ", group='" + group + '\'' +
+               ", extension='" + extension + '\'' +
+               ", templateText='" + templateText + '\'' +
+               ", parameters=" + parameters +
+               '}';
     }
 }

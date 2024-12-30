@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import java.io.File;
 import java.io.IOException;
 
-import taokdao.api.plugin.bean.Plugin;
 import taokdao.api.base.annotation.thread.BlockUI;
+import taokdao.api.plugin.bean.Plugin;
 
 public interface IPluginInstaller {
 

@@ -45,9 +45,9 @@ public class RelativePath {
     @Override
     public String toString() {
         return "RelativePath{" +
-                "realFile=" + realFile +
-                ", alias='" + alias + '\'' +
-                ", path='" + path + '\'' +
-                '}';
+               "realFile=" + realFile +
+               ", alias='" + alias + '\'' +
+               ", path='" + path + '\'' +
+               '}';
     }
 }

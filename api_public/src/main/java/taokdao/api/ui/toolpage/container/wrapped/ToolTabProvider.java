@@ -8,8 +8,8 @@ import androidx.annotation.Nullable;
 import taokdao.api.base.annotation.Identifier;
 import taokdao.api.base.annotation.relation.MultiConstructor;
 import taokdao.api.data.bean.IProperties;
-import taokdao.api.ui.toolpage.group.tooltab.IToolTab;
 import taokdao.api.ui.toolpage.container.IToolTabProvider;
+import taokdao.api.ui.toolpage.group.tooltab.IToolTab;
 
 public class ToolTabProvider implements IToolTabProvider {
     @Identifier
