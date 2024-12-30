@@ -16,9 +16,13 @@ android {
         consumerProguardFiles 'consumer-rules.pro', 'consumer-rules-androidx.pro', 'consumer-rules-kotlin.pro', 'consumer-rules-api_library.pro', 'consumer-rules-internal_library.pro'
     }
 
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
     }
 
 }
